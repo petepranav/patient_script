@@ -1,0 +1,135 @@
+================================================================================
+║                   PATIENT DATA PIPELINE - PROCESSING STARTED                   ║
+================================================================================
+[21:19:48] ℹ️  Processing CSV file: orders1.csv
+================================================================================
+║                          PROCESSING DOCUMENT 9318974                           ║
+================================================================================
+[21:19:48] [DOC: 9318974] ℹ️  Facility/Agency: Dartmouth HH | Received Date: 05/30/2025
+[21:19:48] [DOC: 9318974] ℹ️  Agency mapping found: Dartmouth HH -> d404757d-5027-45d2-a235-24a1fe763c9a
+[21:19:48] [DOC: 9318974] 📋 [1/6] Extracting text from PDF
+[21:19:51] ℹ️  Document is text-based - using pdfplumber for extraction
+[21:19:51] [DOC: 9318974] ✅ Text extracted successfully using pdfplumber
+[21:19:51] [DOC: 9318974] ℹ️  Text extraction completed using pdfplumber: 7607 characters
+[21:19:51] [DOC: 9318974] ✅ Text extraction completed
+[21:19:51] [DOC: 9318974] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[21:19:51] [DOC: 9318974] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 7607
+[21:19:51] [DOC: 9318974] 📋 [2/6] Extracting patient data using AI
+[21:19:54] ✅ AI patient data extraction completed successfully
+[21:19:54] [DOC: 9318974] 📊 AI-Extracted Patient Data
+     └─ patientFName: Robert
+     └─ patientLName: Rezendes
+     └─ dob: 08/16/1940
+     └─ patientSex: M
+     └─ medicalRecordNo: 5680015
+     └─ billingProvider: Joseph Nakda, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 970 Lees River Ave
+     └─ patientCity: Somerset
+     └─ patientState: MA
+     └─ zip: 02726
+     └─ episodeDiagnoses: [{'startOfCare': '05/10/2025', 'startOfEpisode': '05/10/2025', 'endOfEpisode': '07/08/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': 'I50.43', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I25.5', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'I25.2'}]
+[21:19:54] [DOC: 9318974] 📋 [3/6] Processing and validating dates
+[21:19:54] [DOC: 9318974] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 05/10/2025
+     └─ Start of Episode: 05/10/2025
+     └─ End of Episode: 07/08/2025
+[21:19:54] [DOC: 9318974] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/10/2025
+     └─ Start of Episode: 05/10/2025
+     └─ End of Episode: 07/08/2025
+[21:19:54] [DOC: 9318974] 📊 Patient Data After Date Processing
+     └─ patientFName: Robert
+     └─ patientLName: Rezendes
+     └─ dob: 08/16/1940
+     └─ patientSex: M
+     └─ medicalRecordNo: 5680015
+     └─ billingProvider: Joseph Nakda, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 970 Lees River Ave
+     └─ patientCity: Somerset
+     └─ patientState: MA
+     └─ zip: 02726
+     └─ episodeDiagnoses: [{'startOfCare': '05/10/2025', 'startOfEpisode': '05/10/2025', 'endOfEpisode': '07/08/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': 'I50.43', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I25.5', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'I25.2'}]
+[21:19:54] [DOC: 9318974] 📋 [4/6] Creating or finding patient
+[21:19:54] 📊 Patient Data for Processing
+     └─ First Name: Robert
+     └─ Last Name: Rezendes
+     └─ DOB: 08/16/1940
+     └─ MRN: 5680015
+     └─ Address: 970 Lees River Ave
+     └─ City: Somerset
+     └─ State: MA
+     └─ ZIP: 02726
+[21:19:54] ✅ Patient already processed in this session: ROBERT REZENDES
+[21:19:54] [DOC: 9318974] ✅ Patient processed successfully with ID: f13844a6-7d38-4f53-8af3-a94137e27a4f
+[21:19:54] [DOC: 9318974] 📋 [5/6] Extracting order data
+[21:19:56] ✅ AI order data extraction completed successfully
+[21:19:56] [DOC: 9318974] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: 05/28/2025
+     └─ startOfCare: 05/10/2025
+     └─ episodeStartDate: 05/10/2025
+     └─ episodeEndDate: 07/08/2025
+     └─ documentID: None
+     └─ mrn: 5680015
+     └─ patientName: Rezendes, Robert J
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[21:19:56] [DOC: 9318974] 📋 [6/6] Processing order submission
+[21:19:57] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/10/2025
+     └─ End of Episode: 07/08/2025
+[21:19:57] [DOC: 9318974] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: 05/28/2025
+     └─ startOfCare: 05/10/2025
+     └─ episodeStartDate: 05/10/2025
+     └─ episodeEndDate: 07/08/2025
+     └─ documentID: None
+     └─ mrn: 5680015
+     └─ patientName: Rezendes, Robert J
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[21:19:57] [DOC: 9318974] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 5680015
+     └─ Order MRN (extracted): 5680015
+     └─ Final MRN: 5680015
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[21:19:57] [DOC: 9318974] 🔄 Preparing order for submission
+[21:19:57] [DOC: 9318974] 📊 Order Request Data
+     └─ Order No: Not set
+     └─ Patient ID: f13844a6-7d38-4f53-8af3-a94137e27a4f
+     └─ Company ID: d404757d-5027-45d2-a235-24a1fe763c9a
+     └─ Order Date: 05/28/2025
+     └─ Start of Care: 05/10/2025
+     └─ Episode Start: 05/10/2025
+     └─ Episode End: 07/08/2025
+[21:19:57] [DOC: 9318974] ℹ️  Generated fallback order number: 9318974_1
+[21:19:59] [DOC: 9318974] ✅ Order already exists in system with ID: ORD15797
+[21:19:59] [DOC: 9318974] ℹ️  This indicates the order was processed successfully in a previous run
+[21:19:59] [DOC: 9318974] ✅ Order processing completed successfully
+[21:19:59] [DOC: 9318974] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318964                           ║
+================================================================================
+[21:19:59] [DOC: 9318964] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/30/2025
+[21:19:59] [DOC: 9318964] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[21:19:59] [DOC: 9318964] 📋 [1/6] Extracting text from PDF

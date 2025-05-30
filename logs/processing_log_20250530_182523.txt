@@ -1,0 +1,2680 @@
+================================================================================
+║                   PATIENT DATA PIPELINE - PROCESSING STARTED                   ║
+================================================================================
+[18:25:24] ℹ️  Processing CSV file: orders1.csv
+================================================================================
+║                          PROCESSING DOCUMENT 9318974                           ║
+================================================================================
+[18:25:24] [DOC: 9318974] ℹ️  Facility/Agency: Dartmouth HH | Received Date: 05/30/2025
+[18:25:24] [DOC: 9318974] ℹ️  Agency mapping found: Dartmouth HH -> d404757d-5027-45d2-a235-24a1fe763c9a
+[18:25:24] [DOC: 9318974] 📋 [1/6] Extracting text from PDF
+[18:25:27] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:25:27] [DOC: 9318974] ✅ Text extracted successfully using pdfplumber
+[18:25:27] [DOC: 9318974] ℹ️  Text extraction completed using pdfplumber: 7607 characters
+[18:25:27] [DOC: 9318974] ✅ Text extraction completed
+[18:25:27] [DOC: 9318974] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[18:25:27] [DOC: 9318974] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 7607
+[18:25:27] [DOC: 9318974] 📋 [2/6] Extracting patient data using AI
+[18:25:31] ✅ AI patient data extraction completed successfully
+[18:25:31] [DOC: 9318974] 📊 AI-Extracted Patient Data
+     └─ patientFName: Robert
+     └─ patientLName: Rezendes
+     └─ dob: 08/16/1940
+     └─ patientSex: M
+     └─ medicalRecordNo: 5680015
+     └─ billingProvider: Joseph Nakda, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 970 Lees River Ave
+     └─ patientCity: Somerset
+     └─ patientState: MA
+     └─ zip: 02726
+     └─ episodeDiagnoses: [{'startOfCare': '05/10/2025', 'startOfEpisode': '05/10/2025', 'endOfEpisode': '07/08/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': 'I50.43', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I25.5', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'I25.2'}]
+[18:25:31] [DOC: 9318974] 📋 [3/6] Processing and validating dates
+[18:25:31] [DOC: 9318974] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 05/10/2025
+     └─ Start of Episode: 05/10/2025
+     └─ End of Episode: 07/08/2025
+[18:25:31] [DOC: 9318974] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/10/2025
+     └─ Start of Episode: 05/10/2025
+     └─ End of Episode: 07/08/2025
+[18:25:31] [DOC: 9318974] 📊 Patient Data After Date Processing
+     └─ patientFName: Robert
+     └─ patientLName: Rezendes
+     └─ dob: 08/16/1940
+     └─ patientSex: M
+     └─ medicalRecordNo: 5680015
+     └─ billingProvider: Joseph Nakda, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 970 Lees River Ave
+     └─ patientCity: Somerset
+     └─ patientState: MA
+     └─ zip: 02726
+     └─ episodeDiagnoses: [{'startOfCare': '05/10/2025', 'startOfEpisode': '05/10/2025', 'endOfEpisode': '07/08/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': 'I50.43', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I25.5', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'I25.2'}]
+[18:25:31] [DOC: 9318974] 📋 [4/6] Creating or finding patient
+[18:25:31] 📊 Patient Data for Processing
+     └─ First Name: Robert
+     └─ Last Name: Rezendes
+     └─ DOB: 08/16/1940
+     └─ MRN: 5680015
+     └─ Address: 970 Lees River Ave
+     └─ City: Somerset
+     └─ State: MA
+     └─ ZIP: 02726
+[18:25:31] ✅ Patient already processed in this session: ROBERT REZENDES
+[18:25:31] [DOC: 9318974] ✅ Patient processed successfully with ID: f13844a6-7d38-4f53-8af3-a94137e27a4f
+[18:25:31] [DOC: 9318974] 📋 [5/6] Extracting order data
+[18:25:35] ✅ AI order data extraction completed successfully
+[18:25:35] [DOC: 9318974] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 05/10/2025
+     └─ episodeStartDate: 05/10/2025
+     └─ episodeEndDate: 07/08/2025
+     └─ documentID: None
+     └─ mrn: 5680015
+     └─ patientName: Rezendes, Robert J
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:25:35] [DOC: 9318974] 📋 [6/6] Processing order submission
+[18:25:36] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/10/2025
+     └─ End of Episode: 07/08/2025
+[18:25:36] [DOC: 9318974] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 05/10/2025
+     └─ episodeStartDate: 05/10/2025
+     └─ episodeEndDate: 07/08/2025
+     └─ documentID: None
+     └─ mrn: 5680015
+     └─ patientName: Rezendes, Robert J
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:25:36] [DOC: 9318974] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 5680015
+     └─ Order MRN (extracted): 5680015
+     └─ Final MRN: 5680015
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:25:36] [DOC: 9318974] ❌ Order processing failed: 'NoneType' object has no attribute 'strip'
+[18:25:36] [DOC: 9318974] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318964                           ║
+================================================================================
+[18:25:36] [DOC: 9318964] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/30/2025
+[18:25:36] [DOC: 9318964] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[18:25:36] [DOC: 9318964] 📋 [1/6] Extracting text from PDF
+[18:25:50] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:25:50] [DOC: 9318964] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[18:26:08] [DOC: 9318964] ⚠️  YOLO+DocTR extraction failed: 'Line' object has no attribute 'value', trying basic OCR...
+[18:26:22] [DOC: 9318964] ✅ Text extracted successfully using tesseract_fallback
+[18:26:22] [DOC: 9318964] ℹ️  Text extraction completed using tesseract_fallback: 26408 characters
+[18:26:22] [DOC: 9318964] ✅ Text extraction completed
+[18:26:22] [DOC: 9318964] 📄 NON-FAXED DOCUMENT | Type: 485RECERT
+[18:26:22] [DOC: 9318964] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485RECERT
+     └─ Extraction Method: tesseract_fallback
+     └─ Text Length: 26408
+[18:26:22] [DOC: 9318964] 📋 [2/6] Extracting patient data using AI
+[18:26:26] ✅ AI patient data extraction completed successfully
+[18:26:26] [DOC: 9318964] 📊 AI-Extracted Patient Data
+     └─ patientFName: ELAINE
+     └─ patientLName: DAVEAU
+     └─ dob: 04/29/1941
+     └─ patientSex: F
+     └─ medicalRecordNo: 0200115707301
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 21 FATHER DEVALLES BLVD STE 104
+     └─ patientCity: FALLRIVER
+     └─ patientState: MA
+     └─ zip: 02723
+     └─ episodeDiagnoses: [{'startOfCare': '01/23/2025', 'startOfEpisode': '05/23/2025', 'endOfEpisode': '07/21/2025', 'firstDiagnosis': 'J44', 'secondDiagnosis': 'J40.9', 'thirdDiagnosis': '496.21', 'fourthDiagnosis': 'D50.9', 'fifthDiagnosis': 'I11.0', 'sixthDiagnosis': 'I50.9'}]
+[18:26:26] [DOC: 9318964] 📋 [3/6] Processing and validating dates
+[18:26:26] [DOC: 9318964] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 01/23/2025
+     └─ Start of Episode: 05/23/2025
+     └─ End of Episode: 07/21/2025
+[18:26:26] [DOC: 9318964] 📊 Parsed Episode Dates
+     └─ Start of Care: 01/23/2025
+     └─ Start of Episode: 05/23/2025
+     └─ End of Episode: 07/21/2025
+[18:26:26] [DOC: 9318964] 📊 Patient Data After Date Processing
+     └─ patientFName: ELAINE
+     └─ patientLName: DAVEAU
+     └─ dob: 04/29/1941
+     └─ patientSex: F
+     └─ medicalRecordNo: 0200115707301
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 21 FATHER DEVALLES BLVD STE 104
+     └─ patientCity: FALLRIVER
+     └─ patientState: MA
+     └─ zip: 02723
+     └─ episodeDiagnoses: [{'startOfCare': '01/23/2025', 'startOfEpisode': '05/23/2025', 'endOfEpisode': '07/21/2025', 'firstDiagnosis': 'J44', 'secondDiagnosis': 'J40.9', 'thirdDiagnosis': '496.21', 'fourthDiagnosis': 'D50.9', 'fifthDiagnosis': 'I11.0', 'sixthDiagnosis': 'I50.9'}]
+[18:26:26] [DOC: 9318964] 📋 [4/6] Creating or finding patient
+[18:26:26] 📊 Patient Data for Processing
+     └─ First Name: ELAINE
+     └─ Last Name: DAVEAU
+     └─ DOB: 04/29/1941
+     └─ MRN: 0200115707301
+     └─ Address: 21 FATHER DEVALLES BLVD STE 104
+     └─ City: FALLRIVER
+     └─ State: MA
+     └─ ZIP: 02723
+[18:26:26] ✅ Patient already processed in this session: ELAINE DAVEAU
+[18:26:26] [DOC: 9318964] ✅ Patient processed successfully with ID: 2840d6b2-1513-4d2e-af1f-4a31ec8e60d6
+[18:26:26] [DOC: 9318964] 📋 [5/6] Extracting order data
+[18:26:29] ✅ AI order data extraction completed successfully
+[18:26:29] [DOC: 9318964] 📊 AI-Extracted Order Data
+     └─ orderNo: HOME HEALTH CERTIFICATION AND PLAN OF CARE 12235467
+     └─ orderDate: 05/21/2025
+     └─ startOfCare: 05/21/2025
+     └─ episodeStartDate: 05/23/2025
+     └─ episodeEndDate: 07/21/2025
+     └─ documentID: C€0200115707301
+     └─ mrn: 712112025
+     └─ patientName: ELAINE DAVEAU
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 112312025
+     └─ companyId: 227203
+     └─ bit64Url: None
+     └─ documentName: None
+[18:26:29] [DOC: 9318964] 📋 [6/6] Processing order submission
+[18:26:30] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/23/2025
+     └─ End of Episode: 07/21/2025
+[18:26:30] [DOC: 9318964] 📊 Order Data After Date Processing
+     └─ orderNo: HOME HEALTH CERTIFICATION AND PLAN OF CARE 12235467
+     └─ orderDate: 05/21/2025
+     └─ startOfCare: 05/21/2025
+     └─ episodeStartDate: 05/23/2025
+     └─ episodeEndDate: 07/21/2025
+     └─ documentID: C€0200115707301
+     └─ mrn: 712112025
+     └─ patientName: ELAINE DAVEAU
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 112312025
+     └─ companyId: 227203
+     └─ bit64Url: None
+     └─ documentName: None
+[18:26:30] [DOC: 9318964] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 0200115707301
+     └─ Order MRN (extracted): 712112025
+     └─ Final MRN: 0200115707301
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:26:30] [DOC: 9318964] 🔄 Preparing order for submission
+[18:26:30] [DOC: 9318964] 📊 Order Request Data
+     └─ Order No: HOME HEALTH CERTIFICATION AND PLAN OF CARE 12235467
+     └─ Patient ID: 2840d6b2-1513-4d2e-af1f-4a31ec8e60d6
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/21/2025
+     └─ Start of Care: 05/21/2025
+     └─ Episode Start: 05/23/2025
+     └─ Episode End: 07/21/2025
+[18:26:31] [DOC: 9318964] ✅ Order already exists in system with ID: ORD15787
+[18:26:31] [DOC: 9318964] ℹ️  This indicates the order was processed successfully in a previous run
+[18:26:31] [DOC: 9318964] ✅ Order processing completed successfully
+[18:26:31] [DOC: 9318964] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318961                           ║
+================================================================================
+[18:26:31] [DOC: 9318961] ℹ️  Facility/Agency: Dartmouth HH | Received Date: 05/30/2025
+[18:26:31] [DOC: 9318961] ℹ️  Agency mapping found: Dartmouth HH -> d404757d-5027-45d2-a235-24a1fe763c9a
+[18:26:31] [DOC: 9318961] 📋 [1/6] Extracting text from PDF
+[18:26:33] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:26:33] [DOC: 9318961] ✅ Text extracted successfully using pdfplumber
+[18:26:33] [DOC: 9318961] ℹ️  Text extraction completed using pdfplumber: 3439 characters
+[18:26:33] [DOC: 9318961] ✅ Text extraction completed
+[18:26:33] [DOC: 9318961] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[18:26:33] [DOC: 9318961] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 3439
+[18:26:33] [DOC: 9318961] 📋 [2/6] Extracting patient data using AI
+[18:26:36] ✅ AI patient data extraction completed successfully
+[18:26:36] [DOC: 9318961] 📊 AI-Extracted Patient Data
+     └─ patientFName: Lyndall
+     └─ patientLName: Taber
+     └─ dob: 07/04/1947
+     └─ patientSex: F
+     └─ medicalRecordNo: 6455015
+     └─ billingProvider: Prajeena Mainali, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 16 Costa St
+     └─ patientCity: North Dartmouth
+     └─ patientState: MA
+     └─ zip: 02747
+     └─ episodeDiagnoses: [{'startOfCare': '04/30/2025', 'startOfEpisode': '04/30/2025', 'endOfEpisode': '06/28/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:26:36] [DOC: 9318961] 📋 [3/6] Processing and validating dates
+[18:26:36] [DOC: 9318961] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 04/30/2025
+     └─ Start of Episode: 04/30/2025
+     └─ End of Episode: 06/28/2025
+[18:26:36] [DOC: 9318961] 📊 Parsed Episode Dates
+     └─ Start of Care: 04/30/2025
+     └─ Start of Episode: 04/30/2025
+     └─ End of Episode: 06/28/2025
+[18:26:36] [DOC: 9318961] 📊 Patient Data After Date Processing
+     └─ patientFName: Lyndall
+     └─ patientLName: Taber
+     └─ dob: 07/04/1947
+     └─ patientSex: F
+     └─ medicalRecordNo: 6455015
+     └─ billingProvider: Prajeena Mainali, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 16 Costa St
+     └─ patientCity: North Dartmouth
+     └─ patientState: MA
+     └─ zip: 02747
+     └─ episodeDiagnoses: [{'startOfCare': '04/30/2025', 'startOfEpisode': '04/30/2025', 'endOfEpisode': '06/28/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:26:36] [DOC: 9318961] 📋 [4/6] Creating or finding patient
+[18:26:36] 📊 Patient Data for Processing
+     └─ First Name: Lyndall
+     └─ Last Name: Taber
+     └─ DOB: 07/04/1947
+     └─ MRN: 6455015
+     └─ Address: 16 Costa St
+     └─ City: North Dartmouth
+     └─ State: MA
+     └─ ZIP: 02747
+[18:26:36] ✅ Patient already processed in this session: LYNDALL TABER
+[18:26:36] [DOC: 9318961] ✅ Patient processed successfully with ID: 47ef04ff-25a8-4af6-b7b8-7424136620f7
+[18:26:36] [DOC: 9318961] 📋 [5/6] Extracting order data
+[18:26:39] ✅ AI order data extraction completed successfully
+[18:26:39] [DOC: 9318961] 📊 AI-Extracted Order Data
+     └─ orderNo: 
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 04/30/2025
+     └─ episodeStartDate: 04/30/2025
+     └─ episodeEndDate: 06/28/2025
+     └─ documentID: 6455015
+     └─ mrn: 
+     └─ patientName: Taber, Lyndall
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:26:39] [DOC: 9318961] 📋 [6/6] Processing order submission
+[18:26:40] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 04/30/2025
+     └─ End of Episode: 06/28/2025
+[18:26:40] [DOC: 9318961] 📊 Order Data After Date Processing
+     └─ orderNo: 
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 04/30/2025
+     └─ episodeStartDate: 04/30/2025
+     └─ episodeEndDate: 06/28/2025
+     └─ documentID: 6455015
+     └─ mrn: 
+     └─ patientName: Taber, Lyndall
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:26:40] [DOC: 9318961] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 6455015
+     └─ Order MRN (extracted): None
+     └─ Final MRN: 6455015
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:26:40] [DOC: 9318961] 🔄 Preparing order for submission
+[18:26:40] [DOC: 9318961] 📊 Order Request Data
+     └─ Order No: 
+     └─ Patient ID: 47ef04ff-25a8-4af6-b7b8-7424136620f7
+     └─ Company ID: d404757d-5027-45d2-a235-24a1fe763c9a
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 04/30/2025
+     └─ Episode Start: 04/30/2025
+     └─ Episode End: 06/28/2025
+[18:26:40] [DOC: 9318961] ℹ️  Generated fallback order number: 9318961_1
+[18:26:41] [DOC: 9318961] ✅ Order already exists in system with ID: ORD15788
+[18:26:41] [DOC: 9318961] ℹ️  This indicates the order was processed successfully in a previous run
+[18:26:41] [DOC: 9318961] ✅ Order processing completed successfully
+[18:26:41] [DOC: 9318961] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318953                           ║
+================================================================================
+[18:26:41] [DOC: 9318953] ℹ️  Facility/Agency: Dartmouth HH | Received Date: 05/30/2025
+[18:26:41] [DOC: 9318953] ℹ️  Agency mapping found: Dartmouth HH -> d404757d-5027-45d2-a235-24a1fe763c9a
+[18:26:41] [DOC: 9318953] 📋 [1/6] Extracting text from PDF
+[18:26:43] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:26:43] [DOC: 9318953] ✅ Text extracted successfully using pdfplumber
+[18:26:43] [DOC: 9318953] ℹ️  Text extraction completed using pdfplumber: 1153 characters
+[18:26:43] [DOC: 9318953] ✅ Text extraction completed
+[18:26:43] [DOC: 9318953] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[18:26:43] [DOC: 9318953] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1153
+[18:26:43] [DOC: 9318953] 📋 [2/6] Extracting patient data using AI
+[18:26:45] ✅ AI patient data extraction completed successfully
+[18:26:45] [DOC: 9318953] 📊 AI-Extracted Patient Data
+     └─ patientFName: Joseph
+     └─ patientLName: Raposa
+     └─ dob: 10/09/1947
+     └─ patientSex: M
+     └─ medicalRecordNo: 1826011
+     └─ billingProvider: Christopher S Joncas, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 700 Lee's River Avenue Unit 7
+     └─ patientCity: Somerset
+     └─ patientState: MA
+     └─ zip: 02725
+     └─ episodeDiagnoses: [{'startOfCare': '04/17/2025', 'startOfEpisode': '04/17/2025', 'endOfEpisode': '06/15/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:26:45] [DOC: 9318953] 📋 [3/6] Processing and validating dates
+[18:26:45] [DOC: 9318953] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 04/17/2025
+     └─ Start of Episode: 04/17/2025
+     └─ End of Episode: 06/15/2025
+[18:26:45] [DOC: 9318953] 📊 Parsed Episode Dates
+     └─ Start of Care: 04/17/2025
+     └─ Start of Episode: 04/17/2025
+     └─ End of Episode: 06/15/2025
+[18:26:45] [DOC: 9318953] 📊 Patient Data After Date Processing
+     └─ patientFName: Joseph
+     └─ patientLName: Raposa
+     └─ dob: 10/09/1947
+     └─ patientSex: M
+     └─ medicalRecordNo: 1826011
+     └─ billingProvider: Christopher S Joncas, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 700 Lee's River Avenue Unit 7
+     └─ patientCity: Somerset
+     └─ patientState: MA
+     └─ zip: 02725
+     └─ episodeDiagnoses: [{'startOfCare': '04/17/2025', 'startOfEpisode': '04/17/2025', 'endOfEpisode': '06/15/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:26:45] [DOC: 9318953] 📋 [4/6] Creating or finding patient
+[18:26:45] 📊 Patient Data for Processing
+     └─ First Name: Joseph
+     └─ Last Name: Raposa
+     └─ DOB: 10/09/1947
+     └─ MRN: 1826011
+     └─ Address: 700 Lee's River Avenue Unit 7
+     └─ City: Somerset
+     └─ State: MA
+     └─ ZIP: 02725
+[18:26:45] ✅ Patient already processed in this session: JOSEPH RAPOSA
+[18:26:45] [DOC: 9318953] ✅ Patient processed successfully with ID: 44a0b0f9-b082-466e-92bd-c6c4e281cf65
+[18:26:45] [DOC: 9318953] 📋 [5/6] Extracting order data
+[18:26:47] ✅ AI order data extraction completed successfully
+[18:26:47] [DOC: 9318953] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 04/17/2025
+     └─ episodeStartDate: 04/17/2025
+     └─ episodeEndDate: 06/15/2025
+     └─ documentID: 1826011
+     └─ mrn: None
+     └─ patientName: Raposa, Joseph K
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:26:47] [DOC: 9318953] 📋 [6/6] Processing order submission
+[18:26:49] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 04/17/2025
+     └─ End of Episode: 06/15/2025
+[18:26:49] [DOC: 9318953] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 04/17/2025
+     └─ episodeStartDate: 04/17/2025
+     └─ episodeEndDate: 06/15/2025
+     └─ documentID: 1826011
+     └─ mrn: None
+     └─ patientName: Raposa, Joseph K
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:26:49] [DOC: 9318953] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 1826011
+     └─ Order MRN (extracted): None
+     └─ Final MRN: 1826011
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:26:49] [DOC: 9318953] 🔄 Preparing order for submission
+[18:26:49] [DOC: 9318953] 📊 Order Request Data
+     └─ Order No: Not set
+     └─ Patient ID: 44a0b0f9-b082-466e-92bd-c6c4e281cf65
+     └─ Company ID: d404757d-5027-45d2-a235-24a1fe763c9a
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 04/17/2025
+     └─ Episode Start: 04/17/2025
+     └─ Episode End: 06/15/2025
+[18:26:49] [DOC: 9318953] ℹ️  Generated fallback order number: 9318953_1
+[18:26:50] [DOC: 9318953] ✅ Order already exists in system with ID: ORD15789
+[18:26:50] [DOC: 9318953] ℹ️  This indicates the order was processed successfully in a previous run
+[18:26:50] [DOC: 9318953] ✅ Order processing completed successfully
+[18:26:50] [DOC: 9318953] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318947                           ║
+================================================================================
+[18:26:50] [DOC: 9318947] ℹ️  Facility/Agency: Dartmouth HH | Received Date: 05/30/2025
+[18:26:50] [DOC: 9318947] ℹ️  Agency mapping found: Dartmouth HH -> d404757d-5027-45d2-a235-24a1fe763c9a
+[18:26:50] [DOC: 9318947] 📋 [1/6] Extracting text from PDF
+[18:26:52] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:26:52] [DOC: 9318947] ✅ Text extracted successfully using pdfplumber
+[18:26:52] [DOC: 9318947] ℹ️  Text extraction completed using pdfplumber: 1155 characters
+[18:26:52] [DOC: 9318947] ✅ Text extraction completed
+[18:26:52] [DOC: 9318947] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[18:26:52] [DOC: 9318947] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1155
+[18:26:52] [DOC: 9318947] 📋 [2/6] Extracting patient data using AI
+[18:26:55] ✅ AI patient data extraction completed successfully
+[18:26:55] [DOC: 9318947] 📊 AI-Extracted Patient Data
+     └─ patientFName: Theodore
+     └─ patientLName: Duvarney
+     └─ dob: 10/13/1960
+     └─ patientSex: M
+     └─ medicalRecordNo: 6472015
+     └─ billingProvider: Zein Farhat, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 680 Highland Ave
+     └─ patientCity: Westport
+     └─ patientState: MA
+     └─ zip: 02790
+     └─ episodeDiagnoses: [{'startOfCare': '05/05/2025', 'startOfEpisode': '05/05/2025', 'endOfEpisode': '07/03/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:26:55] [DOC: 9318947] 📋 [3/6] Processing and validating dates
+[18:26:55] [DOC: 9318947] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 05/05/2025
+     └─ Start of Episode: 05/05/2025
+     └─ End of Episode: 07/03/2025
+[18:26:55] [DOC: 9318947] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/05/2025
+     └─ Start of Episode: 05/05/2025
+     └─ End of Episode: 07/03/2025
+[18:26:55] [DOC: 9318947] 📊 Patient Data After Date Processing
+     └─ patientFName: Theodore
+     └─ patientLName: Duvarney
+     └─ dob: 10/13/1960
+     └─ patientSex: M
+     └─ medicalRecordNo: 6472015
+     └─ billingProvider: Zein Farhat, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 680 Highland Ave
+     └─ patientCity: Westport
+     └─ patientState: MA
+     └─ zip: 02790
+     └─ episodeDiagnoses: [{'startOfCare': '05/05/2025', 'startOfEpisode': '05/05/2025', 'endOfEpisode': '07/03/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:26:55] [DOC: 9318947] 📋 [4/6] Creating or finding patient
+[18:26:55] 📊 Patient Data for Processing
+     └─ First Name: Theodore
+     └─ Last Name: Duvarney
+     └─ DOB: 10/13/1960
+     └─ MRN: 6472015
+     └─ Address: 680 Highland Ave
+     └─ City: Westport
+     └─ State: MA
+     └─ ZIP: 02790
+[18:26:55] ✅ Patient already processed in this session: THEODORE DUVARNEY
+[18:26:55] [DOC: 9318947] ✅ Patient processed successfully with ID: a1995ae1-72a1-456d-938f-a993150febd2
+[18:26:55] [DOC: 9318947] 📋 [5/6] Extracting order data
+[18:26:57] ✅ AI order data extraction completed successfully
+[18:26:57] [DOC: 9318947] 📊 AI-Extracted Order Data
+     └─ orderNo: 
+     └─ orderDate: 05/15/2025
+     └─ startOfCare: 05/05/2025
+     └─ episodeStartDate: 05/05/2025
+     └─ episodeEndDate: 07/03/2025
+     └─ documentID: 6472015
+     └─ mrn: 
+     └─ patientName: Duvarney, Theodore
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:26:57] [DOC: 9318947] 📋 [6/6] Processing order submission
+[18:26:58] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/05/2025
+     └─ End of Episode: 07/03/2025
+[18:26:58] [DOC: 9318947] 📊 Order Data After Date Processing
+     └─ orderNo: 
+     └─ orderDate: 05/15/2025
+     └─ startOfCare: 05/05/2025
+     └─ episodeStartDate: 05/05/2025
+     └─ episodeEndDate: 07/03/2025
+     └─ documentID: 6472015
+     └─ mrn: 
+     └─ patientName: Duvarney, Theodore
+     └─ sentToPhysicianDate: 05/30/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:26:58] [DOC: 9318947] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 6472015
+     └─ Order MRN (extracted): None
+     └─ Final MRN: 6472015
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:26:58] [DOC: 9318947] 🔄 Preparing order for submission
+[18:26:58] [DOC: 9318947] 📊 Order Request Data
+     └─ Order No: 
+     └─ Patient ID: a1995ae1-72a1-456d-938f-a993150febd2
+     └─ Company ID: d404757d-5027-45d2-a235-24a1fe763c9a
+     └─ Order Date: 05/15/2025
+     └─ Start of Care: 05/05/2025
+     └─ Episode Start: 05/05/2025
+     └─ Episode End: 07/03/2025
+[18:26:58] [DOC: 9318947] ℹ️  Generated fallback order number: 9318947_1
+[18:26:59] [DOC: 9318947] ✅ Order already exists in system with ID: ORD15790
+[18:26:59] [DOC: 9318947] ℹ️  This indicates the order was processed successfully in a previous run
+[18:26:59] [DOC: 9318947] ✅ Order processing completed successfully
+[18:26:59] [DOC: 9318947] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318942                           ║
+================================================================================
+[18:26:59] [DOC: 9318942] ℹ️  Facility/Agency: Dartmouth HH | Received Date: 05/30/2025
+[18:26:59] [DOC: 9318942] ℹ️  Agency mapping found: Dartmouth HH -> d404757d-5027-45d2-a235-24a1fe763c9a
+[18:26:59] [DOC: 9318942] 📋 [1/6] Extracting text from PDF
+[18:27:02] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:27:02] [DOC: 9318942] ✅ Text extracted successfully using pdfplumber
+[18:27:02] [DOC: 9318942] ℹ️  Text extraction completed using pdfplumber: 15442 characters
+[18:27:02] [DOC: 9318942] ✅ Text extraction completed
+[18:27:02] [DOC: 9318942] 📄 NON-FAXED DOCUMENT | Type: 485CERT
+[18:27:02] [DOC: 9318942] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485CERT
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 15442
+[18:27:02] [DOC: 9318942] 📋 [2/6] Extracting patient data using AI
+[18:27:05] ✅ AI patient data extraction completed successfully
+[18:27:05] [DOC: 9318942] 📊 AI-Extracted Patient Data
+     └─ patientFName: David
+     └─ patientLName: Gonsalves
+     └─ dob: 12/03/1957
+     └─ patientSex: M
+     └─ medicalRecordNo: 227027
+     └─ billingProvider: Stephen R Butler, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 831 Main Road
+     └─ patientCity: Westport
+     └─ patientState: MA
+     └─ zip: 02790
+     └─ episodeDiagnoses: [{'startOfCare': '05/14/2025', 'startOfEpisode': '05/14/2025', 'endOfEpisode': '07/12/2025', 'firstDiagnosis': 'Z48.3', 'secondDiagnosis': 'D17.23', 'thirdDiagnosis': 'F41.9', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'Z87.891', 'sixthDiagnosis': 'Z87.81'}]
+[18:27:05] [DOC: 9318942] 📋 [3/6] Processing and validating dates
+[18:27:05] [DOC: 9318942] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 05/14/2025
+     └─ Start of Episode: 05/14/2025
+     └─ End of Episode: 07/12/2025
+[18:27:05] [DOC: 9318942] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/14/2025
+     └─ Start of Episode: 05/14/2025
+     └─ End of Episode: 07/12/2025
+[18:27:05] [DOC: 9318942] 📊 Patient Data After Date Processing
+     └─ patientFName: David
+     └─ patientLName: Gonsalves
+     └─ dob: 12/03/1957
+     └─ patientSex: M
+     └─ medicalRecordNo: 227027
+     └─ billingProvider: Stephen R Butler, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 831 Main Road
+     └─ patientCity: Westport
+     └─ patientState: MA
+     └─ zip: 02790
+     └─ episodeDiagnoses: [{'startOfCare': '05/14/2025', 'startOfEpisode': '05/14/2025', 'endOfEpisode': '07/12/2025', 'firstDiagnosis': 'Z48.3', 'secondDiagnosis': 'D17.23', 'thirdDiagnosis': 'F41.9', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'Z87.891', 'sixthDiagnosis': 'Z87.81'}]
+[18:27:05] [DOC: 9318942] 📋 [4/6] Creating or finding patient
+[18:27:05] 📊 Patient Data for Processing
+     └─ First Name: David
+     └─ Last Name: Gonsalves
+     └─ DOB: 12/03/1957
+     └─ MRN: 227027
+     └─ Address: 831 Main Road
+     └─ City: Westport
+     └─ State: MA
+     └─ ZIP: 02790
+[18:27:05] ✅ Patient already processed in this session: DAVID GONSALVES
+[18:27:05] [DOC: 9318942] ✅ Patient processed successfully with ID: f110421d-9df9-4df4-953a-b2983fbcecfc
+[18:27:05] [DOC: 9318942] 📋 [5/6] Extracting order data
+[18:27:08] ✅ AI order data extraction completed successfully
+[18:27:08] [DOC: 9318942] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 05/14/2025
+     └─ episodeStartDate: 05/14/2025
+     └─ episodeEndDate: 07/12/2025
+     └─ documentID: None
+     └─ mrn: 6540015
+     └─ patientName: Gonsalves, David
+     └─ sentToPhysicianDate: 05/29/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: CMS-485 HOME HEALTH CERTIFICATION AND PLAN OF CARE
+[18:27:08] [DOC: 9318942] 📋 [6/6] Processing order submission
+[18:27:09] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/14/2025
+     └─ End of Episode: 07/12/2025
+[18:27:09] [DOC: 9318942] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 05/14/2025
+     └─ episodeStartDate: 05/14/2025
+     └─ episodeEndDate: 07/12/2025
+     └─ documentID: None
+     └─ mrn: 6540015
+     └─ patientName: Gonsalves, David
+     └─ sentToPhysicianDate: 05/29/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: CMS-485 HOME HEALTH CERTIFICATION AND PLAN OF CARE
+[18:27:09] [DOC: 9318942] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 227027
+     └─ Order MRN (extracted): 6540015
+     └─ Final MRN: 227027
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:27:09] [DOC: 9318942] ❌ Order processing failed: 'NoneType' object has no attribute 'strip'
+[18:27:09] [DOC: 9318942] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318940                           ║
+================================================================================
+[18:27:09] [DOC: 9318940] ℹ️  Facility/Agency: Dartmouth HH | Received Date: 05/30/2025
+[18:27:09] [DOC: 9318940] ℹ️  Agency mapping found: Dartmouth HH -> d404757d-5027-45d2-a235-24a1fe763c9a
+[18:27:09] [DOC: 9318940] 📋 [1/6] Extracting text from PDF
+[18:27:14] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:27:14] [DOC: 9318940] ✅ Text extracted successfully using pdfplumber
+[18:27:14] [DOC: 9318940] ℹ️  Text extraction completed using pdfplumber: 12899 characters
+[18:27:14] [DOC: 9318940] ✅ Text extraction completed
+[18:27:14] [DOC: 9318940] 📄 NON-FAXED DOCUMENT | Type: 485CERT
+[18:27:14] [DOC: 9318940] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485CERT
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 12899
+[18:27:14] [DOC: 9318940] 📋 [2/6] Extracting patient data using AI
+[18:27:17] ✅ AI patient data extraction completed successfully
+[18:27:17] [DOC: 9318940] 📊 AI-Extracted Patient Data
+     └─ patientFName: Tony
+     └─ patientLName: Domonte
+     └─ dob: 06/28/1951
+     └─ patientSex: M
+     └─ medicalRecordNo: 3104015
+     └─ billingProvider: Neveen N Bassaly, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 227 Pleasant St
+     └─ patientCity: Fall River
+     └─ patientState: MA
+     └─ zip: 02723
+     └─ episodeDiagnoses: [{'startOfCare': '05/08/2025', 'startOfEpisode': '05/08/2025', 'endOfEpisode': '07/06/2025', 'firstDiagnosis': 'C32.9', 'secondDiagnosis': 'R13.12', 'thirdDiagnosis': 'Z43.1', 'fourthDiagnosis': 'I48.0', 'fifthDiagnosis': 'R63.4', 'sixthDiagnosis': 'I69.351'}]
+[18:27:17] [DOC: 9318940] 📋 [3/6] Processing and validating dates
+[18:27:17] [DOC: 9318940] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 05/08/2025
+     └─ Start of Episode: 05/08/2025
+     └─ End of Episode: 07/06/2025
+[18:27:17] [DOC: 9318940] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/08/2025
+     └─ Start of Episode: 05/08/2025
+     └─ End of Episode: 07/06/2025
+[18:27:17] [DOC: 9318940] 📊 Patient Data After Date Processing
+     └─ patientFName: Tony
+     └─ patientLName: Domonte
+     └─ dob: 06/28/1951
+     └─ patientSex: M
+     └─ medicalRecordNo: 3104015
+     └─ billingProvider: Neveen N Bassaly, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 227 Pleasant St
+     └─ patientCity: Fall River
+     └─ patientState: MA
+     └─ zip: 02723
+     └─ episodeDiagnoses: [{'startOfCare': '05/08/2025', 'startOfEpisode': '05/08/2025', 'endOfEpisode': '07/06/2025', 'firstDiagnosis': 'C32.9', 'secondDiagnosis': 'R13.12', 'thirdDiagnosis': 'Z43.1', 'fourthDiagnosis': 'I48.0', 'fifthDiagnosis': 'R63.4', 'sixthDiagnosis': 'I69.351'}]
+[18:27:17] [DOC: 9318940] 📋 [4/6] Creating or finding patient
+[18:27:17] 📊 Patient Data for Processing
+     └─ First Name: Tony
+     └─ Last Name: Domonte
+     └─ DOB: 06/28/1951
+     └─ MRN: 3104015
+     └─ Address: 227 Pleasant St
+     └─ City: Fall River
+     └─ State: MA
+     └─ ZIP: 02723
+[18:27:17] ✅ Patient already processed in this session: TONY DOMONTE
+[18:27:17] [DOC: 9318940] ✅ Patient processed successfully with ID: ba260595-0062-46eb-86d8-d907de937793
+[18:27:17] [DOC: 9318940] 📋 [5/6] Extracting order data
+[18:27:20] ✅ AI order data extraction completed successfully
+[18:27:20] [DOC: 9318940] 📊 AI-Extracted Order Data
+     └─ orderNo: 
+     └─ orderDate: 
+     └─ startOfCare: 05/08/2025
+     └─ episodeStartDate: 05/08/2025
+     └─ episodeEndDate: 07/06/2025
+     └─ documentID: 
+     └─ mrn: 3104015
+     └─ patientName: Domonte, Tony
+     └─ sentToPhysicianDate: 05/06/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: CMS-485 HOME HEALTH CERTIFICATION AND PLAN OF CARE
+[18:27:20] [DOC: 9318940] 📋 [6/6] Processing order submission
+[18:27:21] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/08/2025
+     └─ End of Episode: 07/06/2025
+[18:27:21] [DOC: 9318940] 📊 Order Data After Date Processing
+     └─ orderNo: 
+     └─ orderDate: 
+     └─ startOfCare: 05/08/2025
+     └─ episodeStartDate: 05/08/2025
+     └─ episodeEndDate: 07/06/2025
+     └─ documentID: 
+     └─ mrn: 3104015
+     └─ patientName: Domonte, Tony
+     └─ sentToPhysicianDate: 05/06/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: CMS-485 HOME HEALTH CERTIFICATION AND PLAN OF CARE
+[18:27:21] [DOC: 9318940] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 3104015
+     └─ Order MRN (extracted): 3104015
+     └─ Final MRN: 3104015
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:27:21] [DOC: 9318940] ⚠️  Missing required dates: ['orderDate'], using fallbacks
+[18:27:21] [DOC: 9318940] 🔄 Preparing order for submission
+[18:27:21] [DOC: 9318940] 📊 Order Request Data
+     └─ Order No: 
+     └─ Patient ID: ba260595-0062-46eb-86d8-d907de937793
+     └─ Company ID: d404757d-5027-45d2-a235-24a1fe763c9a
+     └─ Order Date: 05/30/2025
+     └─ Start of Care: 05/08/2025
+     └─ Episode Start: 05/08/2025
+     └─ Episode End: 07/06/2025
+[18:27:21] [DOC: 9318940] ℹ️  Generated fallback order number: 9318940_1
+[18:27:22] [DOC: 9318940] ✅ Order already exists in system with ID: ORD15799
+[18:27:22] [DOC: 9318940] ℹ️  This indicates the order was processed successfully in a previous run
+[18:27:22] [DOC: 9318940] ✅ Order processing completed successfully
+[18:27:22] [DOC: 9318940] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318536                           ║
+================================================================================
+[18:27:22] [DOC: 9318536] ℹ️  Facility/Agency: Alphacare Home Health Agency | Received Date: 05/29/2025
+[18:27:22] [DOC: 9318536] ℹ️  Agency mapping found: Alphacare Home Health Agency -> a3b932d4-be57-444e-afa4-8782d93be98d
+[18:27:22] [DOC: 9318536] 📋 [1/6] Extracting text from PDF
+[18:27:27] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:27:27] [DOC: 9318536] ✅ Text extracted successfully using pdfplumber
+[18:27:27] [DOC: 9318536] ℹ️  Text extraction completed using pdfplumber: 17939 characters
+[18:27:27] [DOC: 9318536] ✅ Text extraction completed
+[18:27:27] [DOC: 9318536] 📄 NON-FAXED DOCUMENT | Type: 485RECERT
+[18:27:27] [DOC: 9318536] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485RECERT
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 17939
+[18:27:27] [DOC: 9318536] 📋 [2/6] Extracting patient data using AI
+[18:27:30] ✅ AI patient data extraction completed successfully
+[18:27:30] [DOC: 9318536] 📊 AI-Extracted Patient Data
+     └─ patientFName: Maryna
+     └─ patientLName: Di
+     └─ dob: 02/19/1957
+     └─ patientSex: Male
+     └─ medicalRecordNo: 000003794
+     └─ billingProvider: Mendes, Manuela (MD (Dr. Alliance))
+     └─ physicianNPI: 1912904988
+     └─ nameOfAgency: AlphaCare Home Health Agency, Inc.
+     └─ patientAddress: 999 Rodman St
+     └─ patientCity: Fall River
+     └─ patientState: MA
+     └─ zip: 02723
+     └─ episodeDiagnoses: [{'startOfCare': '08/04/2023', 'startOfEpisode': '03/26/2025', 'endOfEpisode': '05/24/2025', 'firstDiagnosis': 'F33.2', 'secondDiagnosis': 'I25.810', 'thirdDiagnosis': 'I50.23', 'fourthDiagnosis': 'I27.20', 'fifthDiagnosis': 'D50.0', 'sixthDiagnosis': 'Z95.1'}]
+[18:27:30] [DOC: 9318536] 📋 [3/6] Processing and validating dates
+[18:27:30] [DOC: 9318536] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 08/04/2023
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 05/24/2025
+[18:27:30] [DOC: 9318536] 📊 Parsed Episode Dates
+     └─ Start of Care: 08/04/2023
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 05/24/2025
+[18:27:30] [DOC: 9318536] 📊 Patient Data After Date Processing
+     └─ patientFName: Maryna
+     └─ patientLName: Di
+     └─ dob: 02/19/1957
+     └─ patientSex: Male
+     └─ medicalRecordNo: 000003794
+     └─ billingProvider: Mendes, Manuela (MD (Dr. Alliance))
+     └─ physicianNPI: 1912904988
+     └─ nameOfAgency: AlphaCare Home Health Agency, Inc.
+     └─ patientAddress: 999 Rodman St
+     └─ patientCity: Fall River
+     └─ patientState: MA
+     └─ zip: 02723
+     └─ episodeDiagnoses: [{'startOfCare': '08/04/2023', 'startOfEpisode': '03/26/2025', 'endOfEpisode': '05/24/2025', 'firstDiagnosis': 'F33.2', 'secondDiagnosis': 'I25.810', 'thirdDiagnosis': 'I50.23', 'fourthDiagnosis': 'I27.20', 'fifthDiagnosis': 'D50.0', 'sixthDiagnosis': 'Z95.1'}]
+[18:27:30] [DOC: 9318536] 📋 [4/6] Creating or finding patient
+[18:27:30] 📊 Patient Data for Processing
+     └─ First Name: Maryna
+     └─ Last Name: Di
+     └─ DOB: 02/19/1957
+     └─ MRN: 000003794
+     └─ Address: 999 Rodman St
+     └─ City: Fall River
+     └─ State: MA
+     └─ ZIP: 02723
+[18:27:30] ✅ Patient already processed in this session: MARYNA DI
+[18:27:30] [DOC: 9318536] ✅ Patient processed successfully with ID: 9061e862-3491-4a0d-a48a-6ef369796d38
+[18:27:30] [DOC: 9318536] 📋 [5/6] Extracting order data
+[18:27:33] ✅ AI order data extraction completed successfully
+[18:27:33] [DOC: 9318536] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: 01/23/2025
+     └─ startOfCare: 08/04/2023
+     └─ episodeStartDate: 03/26/2025
+     └─ episodeEndDate: 05/24/2025
+     └─ documentID: None
+     └─ mrn: 000003794
+     └─ patientName: Di, Maryna
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: 708853
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: PLAN OF CARE
+[18:27:33] [DOC: 9318536] 📋 [6/6] Processing order submission
+[18:27:34] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 05/24/2025
+[18:27:34] [DOC: 9318536] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: 01/23/2025
+     └─ startOfCare: 08/04/2023
+     └─ episodeStartDate: 03/26/2025
+     └─ episodeEndDate: 05/24/2025
+     └─ documentID: None
+     └─ mrn: 000003794
+     └─ patientName: Di, Maryna
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: 708853
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: PLAN OF CARE
+[18:27:34] [DOC: 9318536] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 000003794
+     └─ Order MRN (extracted): 000003794
+     └─ Final MRN: 000003794
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:27:34] [DOC: 9318536] 🔄 Preparing order for submission
+[18:27:34] [DOC: 9318536] 📊 Order Request Data
+     └─ Order No: Not set
+     └─ Patient ID: 9061e862-3491-4a0d-a48a-6ef369796d38
+     └─ Company ID: a3b932d4-be57-444e-afa4-8782d93be98d
+     └─ Order Date: 01/23/2025
+     └─ Start of Care: 08/04/2023
+     └─ Episode Start: 03/26/2025
+     └─ Episode End: 05/24/2025
+[18:27:34] [DOC: 9318536] ℹ️  Generated fallback order number: 9318536_1
+[18:27:35] [DOC: 9318536] ✅ Order already exists in system with ID: ORD15800
+[18:27:35] [DOC: 9318536] ℹ️  This indicates the order was processed successfully in a previous run
+[18:27:35] [DOC: 9318536] ✅ Order processing completed successfully
+[18:27:35] [DOC: 9318536] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318493                           ║
+================================================================================
+[18:27:35] [DOC: 9318493] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/29/2025
+[18:27:35] [DOC: 9318493] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[18:27:35] [DOC: 9318493] 📋 [1/6] Extracting text from PDF
+[18:27:40] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:27:40] [DOC: 9318493] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[18:27:46] [DOC: 9318493] ✅ Text extracted successfully using yolo_doctr
+[18:27:46] [DOC: 9318493] ℹ️  Text extraction completed using yolo_doctr: 1683 characters
+[18:27:46] [DOC: 9318493] ✅ Text extraction completed
+[18:27:46] [DOC: 9318493] 📄 NON-FAXED DOCUMENT | Type: OTHER_EDITABLE
+[18:27:46] [DOC: 9318493] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: OTHER_EDITABLE
+     └─ Extraction Method: yolo_doctr
+     └─ Text Length: 1683
+[18:27:46] [DOC: 9318493] 📋 [2/6] Extracting patient data using AI
+[18:27:49] ✅ AI patient data extraction completed successfully
+[18:27:49] [DOC: 9318493] 📊 AI-Extracted Patient Data
+     └─ patientFName: KAREN
+     └─ patientLName: MARTIN
+     └─ dob: 12/18/1945
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200068405901
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 385 OAK ST
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': '04/13/2025', 'endOfEpisode': '06/11/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[18:27:49] [DOC: 9318493] 📋 [3/6] Processing and validating dates
+[18:27:49] [DOC: 9318493] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 04/13/2025
+     └─ End of Episode: 06/11/2025
+[18:27:49] [DOC: 9318493] 📊 Parsed Episode Dates
+     └─ Start of Care: 04/13/2025
+     └─ Start of Episode: 04/13/2025
+     └─ End of Episode: 06/11/2025
+[18:27:49] [DOC: 9318493] 📊 Patient Data After Date Processing
+     └─ patientFName: KAREN
+     └─ patientLName: MARTIN
+     └─ dob: 12/18/1945
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200068405901
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 385 OAK ST
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': '04/13/2025', 'startOfEpisode': '04/13/2025', 'endOfEpisode': '06/11/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[18:27:49] [DOC: 9318493] 📋 [4/6] Creating or finding patient
+[18:27:49] 📊 Patient Data for Processing
+     └─ First Name: KAREN
+     └─ Last Name: MARTIN
+     └─ DOB: 12/18/1945
+     └─ MRN: C0200068405901
+     └─ Address: 385 OAK ST
+     └─ City: FALL RIVER
+     └─ State: MA
+     └─ ZIP: 02721
+[18:27:49] ✅ Patient already processed in this session: KAREN MARTIN
+[18:27:49] [DOC: 9318493] ✅ Patient processed successfully with ID: 267c77f2-c0a9-4702-955b-7cbfcffbe0fb
+[18:27:49] [DOC: 9318493] 📋 [5/6] Extracting order data
+[18:27:51] ✅ AI order data extraction completed successfully
+[18:27:51] [DOC: 9318493] 📊 AI-Extracted Order Data
+     └─ orderNo: 12266
+     └─ orderDate: 05/28/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: 04/13/2025
+     └─ episodeEndDate: 06/11/2025
+     └─ documentID: None
+     └─ mrn: C0200068405901
+     └─ patientName: MARTIN, KAREN A
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:27:51] [DOC: 9318493] 📋 [6/6] Processing order submission
+[18:27:52] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 04/13/2025
+     └─ End of Episode: 06/11/2025
+[18:27:52] [DOC: 9318493] 📊 Order Data After Date Processing
+     └─ orderNo: 12266
+     └─ orderDate: 05/28/2025
+     └─ startOfCare: 04/13/2025
+     └─ episodeStartDate: 04/13/2025
+     └─ episodeEndDate: 06/11/2025
+     └─ documentID: None
+     └─ mrn: C0200068405901
+     └─ patientName: MARTIN, KAREN A
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:27:52] [DOC: 9318493] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): C0200068405901
+     └─ Order MRN (extracted): C0200068405901
+     └─ Final MRN: C0200068405901
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:27:52] [DOC: 9318493] 🔄 Preparing order for submission
+[18:27:52] [DOC: 9318493] 📊 Order Request Data
+     └─ Order No: 12266
+     └─ Patient ID: 267c77f2-c0a9-4702-955b-7cbfcffbe0fb
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/28/2025
+     └─ Start of Care: 04/13/2025
+     └─ Episode Start: 04/13/2025
+     └─ Episode End: 06/11/2025
+[18:27:53] [DOC: 9318493] ✅ Order already exists in system with ID: ORD15801
+[18:27:53] [DOC: 9318493] ℹ️  This indicates the order was processed successfully in a previous run
+[18:27:53] [DOC: 9318493] ✅ Order processing completed successfully
+[18:27:53] [DOC: 9318493] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318491                           ║
+================================================================================
+[18:27:53] [DOC: 9318491] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/29/2025
+[18:27:53] [DOC: 9318491] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[18:27:53] [DOC: 9318491] 📋 [1/6] Extracting text from PDF
+[18:27:58] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:27:58] [DOC: 9318491] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[18:28:05] [DOC: 9318491] ✅ Text extracted successfully using yolo_doctr
+[18:28:05] [DOC: 9318491] ℹ️  Text extraction completed using yolo_doctr: 1684 characters
+[18:28:05] [DOC: 9318491] ✅ Text extraction completed
+[18:28:05] [DOC: 9318491] 📄 NON-FAXED DOCUMENT | Type: OTHER_EDITABLE
+[18:28:05] [DOC: 9318491] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: OTHER_EDITABLE
+     └─ Extraction Method: yolo_doctr
+     └─ Text Length: 1684
+[18:28:05] [DOC: 9318491] 📋 [2/6] Extracting patient data using AI
+[18:28:08] ✅ AI patient data extraction completed successfully
+[18:28:08] [DOC: 9318491] 📊 AI-Extracted Patient Data
+     └─ patientFName: ALIAJ
+     └─ patientLName: BEHARE
+     └─ dob: 08/15/1958
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200241703301
+     └─ billingProvider: TIMOTHY WILSON-BYRNE, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 901 S MAIN ST
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02724
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '05/23/2025', 'endOfEpisode': '07/21/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:28:08] [DOC: 9318491] 📋 [3/6] Processing and validating dates
+[18:28:08] [DOC: 9318491] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 05/23/2025
+     └─ End of Episode: 07/21/2025
+[18:28:08] [DOC: 9318491] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/23/2025
+     └─ Start of Episode: 05/23/2025
+     └─ End of Episode: 07/21/2025
+[18:28:08] [DOC: 9318491] 📊 Patient Data After Date Processing
+     └─ patientFName: ALIAJ
+     └─ patientLName: BEHARE
+     └─ dob: 08/15/1958
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200241703301
+     └─ billingProvider: TIMOTHY WILSON-BYRNE, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 901 S MAIN ST
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02724
+     └─ episodeDiagnoses: [{'startOfCare': '05/23/2025', 'startOfEpisode': '05/23/2025', 'endOfEpisode': '07/21/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:28:08] [DOC: 9318491] 📋 [4/6] Creating or finding patient
+[18:28:08] 📊 Patient Data for Processing
+     └─ First Name: ALIAJ
+     └─ Last Name: BEHARE
+     └─ DOB: 08/15/1958
+     └─ MRN: C0200241703301
+     └─ Address: 901 S MAIN ST
+     └─ City: FALL RIVER
+     └─ State: MA
+     └─ ZIP: 02724
+[18:28:18] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[18:28:19] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[18:28:20] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[18:28:27] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[18:28:27] 🔄 Creating new patient...
+[18:28:27] 📊 Patient Creation Request
+     └─ patientFName: ALIAJ
+     └─ patientLName: BEHARE
+     └─ dob: 08/15/1958
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200241703301
+     └─ billingProvider: TIMOTHY WILSON-BYRNE, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: AccentCare Fall River
+     └─ patientAddress: 901 S MAIN ST
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02724
+     └─ episodeDiagnoses: [{'startOfCare': '05/23/2025', 'startOfEpisode': '05/23/2025', 'endOfEpisode': '07/21/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+     └─ companyId: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ daBackofficeID: 1202038
+     └─ pgCompanyId: d10f46ad-225d-4ba2-882c-149521fcead5
+     └─ physicianGroup: Prima Care
+     └─ physicianGroupNPI: 1265422596
+[18:28:28] ℹ️  Patient creation response - Status: 201
+[18:28:28] ✅ New patient created successfully with ID: d9091966-6912-4630-b3e9-03c3d17208e9
+[18:28:28] [DOC: 9318491] ✅ Patient processed successfully with ID: d9091966-6912-4630-b3e9-03c3d17208e9
+[18:28:28] [DOC: 9318491] 📋 [5/6] Extracting order data
+[18:28:30] ✅ AI order data extraction completed successfully
+[18:28:30] [DOC: 9318491] 📊 AI-Extracted Order Data
+     └─ orderNo: 12253
+     └─ orderDate: 05/25/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: 05/23/2025
+     └─ episodeEndDate: 07/21/2025
+     └─ documentID: None
+     └─ mrn: C0200241703301
+     └─ patientName: ALIAJ, BEHARE
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:28:30] [DOC: 9318491] 📋 [6/6] Processing order submission
+[18:28:31] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/23/2025
+     └─ End of Episode: 07/21/2025
+[18:28:31] [DOC: 9318491] 📊 Order Data After Date Processing
+     └─ orderNo: 12253
+     └─ orderDate: 05/25/2025
+     └─ startOfCare: 05/23/2025
+     └─ episodeStartDate: 05/23/2025
+     └─ episodeEndDate: 07/21/2025
+     └─ documentID: None
+     └─ mrn: C0200241703301
+     └─ patientName: ALIAJ, BEHARE
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:28:31] [DOC: 9318491] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): C0200241703301
+     └─ Order MRN (extracted): C0200241703301
+     └─ Final MRN: C0200241703301
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:28:31] [DOC: 9318491] 🔄 Preparing order for submission
+[18:28:31] [DOC: 9318491] 📊 Order Request Data
+     └─ Order No: 12253
+     └─ Patient ID: d9091966-6912-4630-b3e9-03c3d17208e9
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/25/2025
+     └─ Start of Care: 05/23/2025
+     └─ Episode Start: 05/23/2025
+     └─ Episode End: 07/21/2025
+[18:28:33] [DOC: 9318491] ✅ Order pushed successfully with ID: None
+[18:28:33] [DOC: 9318491] ✅ Order processing completed successfully
+[18:28:33] [DOC: 9318491] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318490                           ║
+================================================================================
+[18:28:33] [DOC: 9318490] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/29/2025
+[18:28:33] [DOC: 9318490] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[18:28:33] [DOC: 9318490] 📋 [1/6] Extracting text from PDF
+[18:28:36] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:28:36] [DOC: 9318490] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[18:28:42] [DOC: 9318490] ✅ Text extracted successfully using yolo_doctr
+[18:28:42] [DOC: 9318490] ℹ️  Text extraction completed using yolo_doctr: 1024 characters
+[18:28:42] [DOC: 9318490] ✅ Text extraction completed
+[18:28:42] [DOC: 9318490] 📄 NON-FAXED DOCUMENT | Type: OTHER_EDITABLE
+[18:28:42] [DOC: 9318490] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: OTHER_EDITABLE
+     └─ Extraction Method: yolo_doctr
+     └─ Text Length: 1024
+[18:28:42] [DOC: 9318490] 📋 [2/6] Extracting patient data using AI
+[18:28:45] ✅ AI patient data extraction completed successfully
+[18:28:45] [DOC: 9318490] 📊 AI-Extracted Patient Data
+     └─ patientFName: CLARISSA
+     └─ patientLName: DEVLIN
+     └─ dob: 08/05/1994
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200240842201
+     └─ billingProvider: PRAJEENA MAINALI, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 203 PLYMOUTH AVENUE BUILDING #7, SUITE 701
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02720
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': '05/12/2025', 'endOfEpisode': '07/10/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[18:28:45] [DOC: 9318490] 📋 [3/6] Processing and validating dates
+[18:28:45] [DOC: 9318490] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 05/12/2025
+     └─ End of Episode: 07/10/2025
+[18:28:45] [DOC: 9318490] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/12/2025
+     └─ Start of Episode: 05/12/2025
+     └─ End of Episode: 07/10/2025
+[18:28:45] [DOC: 9318490] 📊 Patient Data After Date Processing
+     └─ patientFName: CLARISSA
+     └─ patientLName: DEVLIN
+     └─ dob: 08/05/1994
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200240842201
+     └─ billingProvider: PRAJEENA MAINALI, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 203 PLYMOUTH AVENUE BUILDING #7, SUITE 701
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02720
+     └─ episodeDiagnoses: [{'startOfCare': '05/12/2025', 'startOfEpisode': '05/12/2025', 'endOfEpisode': '07/10/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[18:28:45] [DOC: 9318490] 📋 [4/6] Creating or finding patient
+[18:28:45] 📊 Patient Data for Processing
+     └─ First Name: CLARISSA
+     └─ Last Name: DEVLIN
+     └─ DOB: 08/05/1994
+     └─ MRN: C0200240842201
+     └─ Address: 203 PLYMOUTH AVENUE BUILDING #7, SUITE 701
+     └─ City: FALL RIVER
+     └─ State: MA
+     └─ ZIP: 02720
+[18:28:54] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[18:28:56] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[18:28:57] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[18:29:05] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[18:29:05] 🔄 Creating new patient...
+[18:29:05] 📊 Patient Creation Request
+     └─ patientFName: CLARISSA
+     └─ patientLName: DEVLIN
+     └─ dob: 08/05/1994
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200240842201
+     └─ billingProvider: PRAJEENA MAINALI, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: AccentCare Fall River
+     └─ patientAddress: 203 PLYMOUTH AVENUE BUILDING #7, SUITE 701
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02720
+     └─ episodeDiagnoses: [{'startOfCare': '05/12/2025', 'startOfEpisode': '05/12/2025', 'endOfEpisode': '07/10/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+     └─ companyId: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ daBackofficeID: 1200244
+     └─ pgCompanyId: d10f46ad-225d-4ba2-882c-149521fcead5
+     └─ physicianGroup: Prima Care
+     └─ physicianGroupNPI: 1265422596
+[18:29:06] ℹ️  Patient creation response - Status: 201
+[18:29:06] ✅ New patient created successfully with ID: 94e2e217-c805-4409-9af4-95fe1572bd84
+[18:29:06] [DOC: 9318490] ✅ Patient processed successfully with ID: 94e2e217-c805-4409-9af4-95fe1572bd84
+[18:29:06] [DOC: 9318490] 📋 [5/6] Extracting order data
+[18:29:08] ✅ AI order data extraction completed successfully
+[18:29:08] [DOC: 9318490] 📊 AI-Extracted Order Data
+     └─ orderNo: 12270
+     └─ orderDate: 05/29/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: 05/12/2025
+     └─ episodeEndDate: 07/10/2025
+     └─ documentID: None
+     └─ mrn: C0200240842201
+     └─ patientName: DEVLIN, CLARISSA G
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:29:08] [DOC: 9318490] 📋 [6/6] Processing order submission
+[18:29:09] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/12/2025
+     └─ End of Episode: 07/10/2025
+[18:29:09] [DOC: 9318490] 📊 Order Data After Date Processing
+     └─ orderNo: 12270
+     └─ orderDate: 05/29/2025
+     └─ startOfCare: 05/12/2025
+     └─ episodeStartDate: 05/12/2025
+     └─ episodeEndDate: 07/10/2025
+     └─ documentID: None
+     └─ mrn: C0200240842201
+     └─ patientName: DEVLIN, CLARISSA G
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[18:29:09] [DOC: 9318490] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): C0200240842201
+     └─ Order MRN (extracted): C0200240842201
+     └─ Final MRN: C0200240842201
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:29:09] [DOC: 9318490] 🔄 Preparing order for submission
+[18:29:09] [DOC: 9318490] 📊 Order Request Data
+     └─ Order No: 12270
+     └─ Patient ID: 94e2e217-c805-4409-9af4-95fe1572bd84
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/29/2025
+     └─ Start of Care: 05/12/2025
+     └─ Episode Start: 05/12/2025
+     └─ Episode End: 07/10/2025
+[18:29:11] [DOC: 9318490] ✅ Order pushed successfully with ID: None
+[18:29:11] [DOC: 9318490] ✅ Order processing completed successfully
+[18:29:11] [DOC: 9318490] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318488                           ║
+================================================================================
+[18:29:11] [DOC: 9318488] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/29/2025
+[18:29:11] [DOC: 9318488] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[18:29:11] [DOC: 9318488] 📋 [1/6] Extracting text from PDF
+[18:29:15] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:29:15] [DOC: 9318488] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[18:29:21] [DOC: 9318488] ✅ Text extracted successfully using yolo_doctr
+[18:29:21] [DOC: 9318488] ℹ️  Text extraction completed using yolo_doctr: 1270 characters
+[18:29:21] [DOC: 9318488] ✅ Text extraction completed
+[18:29:21] [DOC: 9318488] 📄 NON-FAXED DOCUMENT | Type: OTHER_EDITABLE
+[18:29:21] [DOC: 9318488] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: OTHER_EDITABLE
+     └─ Extraction Method: yolo_doctr
+     └─ Text Length: 1270
+[18:29:21] [DOC: 9318488] 📋 [2/6] Extracting patient data using AI
+[18:29:25] ✅ AI patient data extraction completed successfully
+[18:29:25] [DOC: 9318488] 📊 AI-Extracted Patient Data
+     └─ patientFName: GILBERTA
+     └─ patientLName: CABRAL
+     └─ dob: 04/05/1942
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200081179701
+     └─ billingProvider: EHAB SORIAL, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 96 ROY ST
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '10/07/2024', 'endOfEpisode': '10/11/2024', 'firstDiagnosis': 'HYPOXIA', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}, {'startOfCare': '', 'startOfEpisode': '03/20/2025', 'endOfEpisode': '03/25/2025', 'firstDiagnosis': 'HYPOXIA', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:29:25] [DOC: 9318488] 📋 [3/6] Processing and validating dates
+[18:29:25] [DOC: 9318488] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 10/07/2024
+     └─ End of Episode: 10/11/2024
+[18:29:25] [DOC: 9318488] 📊 Parsed Episode Dates
+     └─ Start of Care: 10/07/2024
+     └─ Start of Episode: 10/07/2024
+     └─ End of Episode: 10/11/2024
+[18:29:25] [DOC: 9318488] 📊 Patient Data After Date Processing
+     └─ patientFName: GILBERTA
+     └─ patientLName: CABRAL
+     └─ dob: 04/05/1942
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200081179701
+     └─ billingProvider: EHAB SORIAL, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 96 ROY ST
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': '10/07/2024', 'startOfEpisode': '10/07/2024', 'endOfEpisode': '10/11/2024', 'firstDiagnosis': 'HYPOXIA', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}, {'startOfCare': '', 'startOfEpisode': '03/20/2025', 'endOfEpisode': '03/25/2025', 'firstDiagnosis': 'HYPOXIA', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:29:25] [DOC: 9318488] 📋 [4/6] Creating or finding patient
+[18:29:25] 📊 Patient Data for Processing
+     └─ First Name: GILBERTA
+     └─ Last Name: CABRAL
+     └─ DOB: 04/05/1942
+     └─ MRN: C0200081179701
+     └─ Address: 96 ROY ST
+     └─ City: FALL RIVER
+     └─ State: MA
+     └─ ZIP: 02721
+[18:29:36] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[18:29:37] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[18:29:39] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[18:29:46] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[18:29:46] 🔄 Creating new patient...
+[18:29:46] 📊 Patient Creation Request
+     └─ patientFName: GILBERTA
+     └─ patientLName: CABRAL
+     └─ dob: 04/05/1942
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200081179701
+     └─ billingProvider: EHAB SORIAL, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: AccentCare Fall River
+     └─ patientAddress: 96 ROY ST
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': '10/07/2024', 'startOfEpisode': '10/07/2024', 'endOfEpisode': '10/11/2024', 'firstDiagnosis': 'HYPOXIA', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}, {'startOfCare': '', 'startOfEpisode': '03/20/2025', 'endOfEpisode': '03/25/2025', 'firstDiagnosis': 'HYPOXIA', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+     └─ companyId: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ daBackofficeID: 873274
+     └─ pgCompanyId: d10f46ad-225d-4ba2-882c-149521fcead5
+     └─ physicianGroup: Prima Care
+     └─ physicianGroupNPI: 1265422596
+[18:29:47] ℹ️  Patient creation response - Status: 201
+[18:29:47] ✅ New patient created successfully with ID: ebb0d0bf-5e5a-434e-b959-a8e4a37abba6
+[18:29:47] [DOC: 9318488] ✅ Patient processed successfully with ID: ebb0d0bf-5e5a-434e-b959-a8e4a37abba6
+[18:29:47] [DOC: 9318488] 📋 [5/6] Extracting order data
+[18:29:49] ✅ AI order data extraction completed successfully
+[18:29:49] [DOC: 9318488] 📊 AI-Extracted Order Data
+     └─ orderNo: 12269
+     └─ orderDate: 05/29/2025
+     └─ startOfCare: 05/25/2025
+     └─ episodeStartDate: 04/11/2025
+     └─ episodeEndDate: 06/09/2025
+     └─ documentID: 
+     └─ mrn: C0200081179701
+     └─ patientName: CABRAL, GILBERTA
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:29:49] [DOC: 9318488] 📋 [6/6] Processing order submission
+[18:29:50] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 04/11/2025
+     └─ End of Episode: 06/09/2025
+[18:29:50] [DOC: 9318488] 📊 Order Data After Date Processing
+     └─ orderNo: 12269
+     └─ orderDate: 05/29/2025
+     └─ startOfCare: 05/25/2025
+     └─ episodeStartDate: 04/11/2025
+     └─ episodeEndDate: 06/09/2025
+     └─ documentID: 
+     └─ mrn: C0200081179701
+     └─ patientName: CABRAL, GILBERTA
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:29:50] [DOC: 9318488] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): C0200081179701
+     └─ Order MRN (extracted): C0200081179701
+     └─ Final MRN: C0200081179701
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:29:50] [DOC: 9318488] 🔄 Preparing order for submission
+[18:29:50] [DOC: 9318488] 📊 Order Request Data
+     └─ Order No: 12269
+     └─ Patient ID: ebb0d0bf-5e5a-434e-b959-a8e4a37abba6
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/29/2025
+     └─ Start of Care: 05/25/2025
+     └─ Episode Start: 04/11/2025
+     └─ Episode End: 06/09/2025
+[18:29:52] [DOC: 9318488] ✅ Order pushed successfully with ID: None
+[18:29:52] [DOC: 9318488] ✅ Order processing completed successfully
+[18:29:52] [DOC: 9318488] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318483                           ║
+================================================================================
+[18:29:52] [DOC: 9318483] ℹ️  Facility/Agency: Alphacare Home Health Agency | Received Date: 05/29/2025
+[18:29:52] [DOC: 9318483] ℹ️  Agency mapping found: Alphacare Home Health Agency -> a3b932d4-be57-444e-afa4-8782d93be98d
+[18:29:52] [DOC: 9318483] 📋 [1/6] Extracting text from PDF
+[18:29:55] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:29:55] [DOC: 9318483] ✅ Text extracted successfully using pdfplumber
+[18:29:55] [DOC: 9318483] ℹ️  Text extraction completed using pdfplumber: 3055 characters
+[18:29:55] [DOC: 9318483] ✅ Text extraction completed
+[18:29:55] [DOC: 9318483] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[18:29:55] [DOC: 9318483] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 3055
+[18:29:55] [DOC: 9318483] 📋 [2/6] Extracting patient data using AI
+[18:29:57] ✅ AI patient data extraction completed successfully
+[18:29:57] [DOC: 9318483] 📊 AI-Extracted Patient Data
+     └─ patientFName: Trezur
+     └─ patientLName: Daniels
+     └─ dob: 08/18/1971
+     └─ patientSex: 
+     └─ medicalRecordNo: 000001752
+     └─ billingProvider: Labib, Ossama (MD (Dr. Alliance))
+     └─ physicianNPI: 1225033673
+     └─ nameOfAgency: AlphaCare Home Health Agency, Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': None, 'endOfEpisode': None, 'firstDiagnosis': 'I50.42', 'secondDiagnosis': 'I48.21', 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[18:29:57] [DOC: 9318483] 📋 [3/6] Processing and validating dates
+[18:29:57] [DOC: 9318483] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[18:29:57] [DOC: 9318483] 📊 Patient Data After Date Processing
+     └─ None
+[18:29:57] [DOC: 9318483] 📋 [4/6] Creating or finding patient
+[18:29:57] [DOC: 9318483] ❌ Patient creation/retrieval failed: 'NoneType' object has no attribute 'get'
+[18:29:57] [DOC: 9318483] ⚠️  Using error fallback patient ID
+[18:29:57] [DOC: 9318483] 📋 [5/6] Extracting order data
+[18:29:59] ✅ AI order data extraction completed successfully
+[18:29:59] [DOC: 9318483] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: 05/05/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: 05/02/2025
+     └─ episodeEndDate: 05/05/2025
+     └─ documentID: None
+     └─ mrn: 000001752
+     └─ patientName: Trezur Daniels
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: PHYSICIAN ORDERS
+[18:29:59] [DOC: 9318483] 📋 [6/6] Processing order submission
+[18:30:01] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/02/2025
+     └─ End of Episode: 05/05/2025
+[18:30:01] [DOC: 9318483] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: 05/05/2025
+     └─ startOfCare: 05/02/2025
+     └─ episodeStartDate: 05/02/2025
+     └─ episodeEndDate: 05/05/2025
+     └─ documentID: None
+     └─ mrn: 000001752
+     └─ patientName: Trezur Daniels
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: PHYSICIAN ORDERS
+[18:30:01] [DOC: 9318483] ⚠️  MRN synchronization failed: 'NoneType' object has no attribute 'get'
+[18:30:01] [DOC: 9318483] 🔄 Preparing order for submission
+[18:30:01] [DOC: 9318483] 📊 Order Request Data
+     └─ Order No: Not set
+     └─ Patient ID: ERROR_PATIENT_9318483
+     └─ Company ID: a3b932d4-be57-444e-afa4-8782d93be98d
+     └─ Order Date: 05/05/2025
+     └─ Start of Care: 05/02/2025
+     └─ Episode Start: 05/02/2025
+     └─ Episode End: 05/05/2025
+[18:30:01] [DOC: 9318483] ℹ️  Generated fallback order number: 9318483_1
+[18:30:02] [DOC: 9318483] ✅ Order pushed successfully with ID: None
+[18:30:02] [DOC: 9318483] ✅ Order processing completed successfully
+[18:30:02] [DOC: 9318483] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318478                           ║
+================================================================================
+[18:30:02] [DOC: 9318478] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/29/2025
+[18:30:02] [DOC: 9318478] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[18:30:02] [DOC: 9318478] 📋 [1/6] Extracting text from PDF
+[18:30:23] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:30:23] [DOC: 9318478] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[18:31:06] [DOC: 9318478] ⚠️  YOLO+DocTR extraction failed: 'Line' object has no attribute 'value', trying basic OCR...
+[18:31:24] [DOC: 9318478] ✅ Text extracted successfully using tesseract_fallback
+[18:31:24] [DOC: 9318478] ℹ️  Text extraction completed using tesseract_fallback: 28595 characters
+[18:31:24] [DOC: 9318478] ✅ Text extraction completed
+[18:31:24] [DOC: 9318478] 📄 NON-FAXED DOCUMENT | Type: OTHER_EDITABLE
+[18:31:24] [DOC: 9318478] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: OTHER_EDITABLE
+     └─ Extraction Method: tesseract_fallback
+     └─ Text Length: 28595
+[18:31:24] [DOC: 9318478] 📋 [2/6] Extracting patient data using AI
+[18:31:28] ✅ AI patient data extraction completed successfully
+[18:31:28] [DOC: 9318478] 📊 AI-Extracted Patient Data
+     └─ patientFName: MARK
+     └─ patientLName: NOGUEIRA
+     └─ dob: 05/04/1957
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200057780801
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 289 PLEASANT STREET BUILDING 4 SUITE 604
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '04/12/2025', 'endOfEpisode': '06/10/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': 'J96.01', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I50.30', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'E11.9'}]
+[18:31:28] [DOC: 9318478] 📋 [3/6] Processing and validating dates
+[18:31:28] [DOC: 9318478] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:31:28] [DOC: 9318478] 📊 Parsed Episode Dates
+     └─ Start of Care: 04/12/2025
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:31:28] [DOC: 9318478] 📊 Patient Data After Date Processing
+     └─ patientFName: MARK
+     └─ patientLName: NOGUEIRA
+     └─ dob: 05/04/1957
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200057780801
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 289 PLEASANT STREET BUILDING 4 SUITE 604
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': '04/12/2025', 'startOfEpisode': '04/12/2025', 'endOfEpisode': '06/10/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': 'J96.01', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I50.30', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'E11.9'}]
+[18:31:28] [DOC: 9318478] 📋 [4/6] Creating or finding patient
+[18:31:28] 📊 Patient Data for Processing
+     └─ First Name: MARK
+     └─ Last Name: NOGUEIRA
+     └─ DOB: 05/04/1957
+     └─ MRN: C0200057780801
+     └─ Address: 289 PLEASANT STREET BUILDING 4 SUITE 604
+     └─ City: FALL RIVER
+     └─ State: MA
+     └─ ZIP: 02721
+[18:31:38] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[18:31:39] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[18:31:40] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[18:31:47] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[18:31:47] 🔄 Creating new patient...
+[18:31:47] 📊 Patient Creation Request
+     └─ patientFName: MARK
+     └─ patientLName: NOGUEIRA
+     └─ dob: 05/04/1957
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200057780801
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: AccentCare Fall River
+     └─ patientAddress: 289 PLEASANT STREET BUILDING 4 SUITE 604
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': '04/12/2025', 'startOfEpisode': '04/12/2025', 'endOfEpisode': '06/10/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': 'J96.01', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I50.30', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'E11.9'}]
+     └─ companyId: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ daBackofficeID: 1000964
+     └─ pgCompanyId: d10f46ad-225d-4ba2-882c-149521fcead5
+     └─ physicianGroup: Prima Care
+     └─ physicianGroupNPI: 1265422596
+[18:31:48] ℹ️  Patient creation response - Status: 201
+[18:31:48] ✅ New patient created successfully with ID: f42cd606-b015-40c9-94f2-9da573183a27
+[18:31:48] [DOC: 9318478] ✅ Patient processed successfully with ID: f42cd606-b015-40c9-94f2-9da573183a27
+[18:31:48] [DOC: 9318478] 📋 [5/6] Extracting order data
+[18:31:52] ✅ AI order data extraction completed successfully
+[18:31:52] [DOC: 9318478] 📊 AI-Extracted Order Data
+     └─ orderNo: 12252762
+     └─ orderDate: 05/23/2025
+     └─ startOfCare: 
+     └─ episodeStartDate: 04/12/2025
+     └─ episodeEndDate: 06/10/2025
+     └─ documentID: 
+     └─ mrn: C0200057780801
+     └─ patientName: NOgueira SR, Mark J
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:31:52] [DOC: 9318478] 📋 [6/6] Processing order submission
+[18:31:53] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:31:53] [DOC: 9318478] 📊 Order Data After Date Processing
+     └─ orderNo: 12252762
+     └─ orderDate: 05/23/2025
+     └─ startOfCare: 04/12/2025
+     └─ episodeStartDate: 04/12/2025
+     └─ episodeEndDate: 06/10/2025
+     └─ documentID: 
+     └─ mrn: C0200057780801
+     └─ patientName: NOgueira SR, Mark J
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:31:53] [DOC: 9318478] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): C0200057780801
+     └─ Order MRN (extracted): C0200057780801
+     └─ Final MRN: C0200057780801
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:31:53] [DOC: 9318478] 🔄 Preparing order for submission
+[18:31:53] [DOC: 9318478] 📊 Order Request Data
+     └─ Order No: 12252762
+     └─ Patient ID: f42cd606-b015-40c9-94f2-9da573183a27
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/23/2025
+     └─ Start of Care: 04/12/2025
+     └─ Episode Start: 04/12/2025
+     └─ Episode End: 06/10/2025
+[18:31:54] [DOC: 9318478] ✅ Order pushed successfully with ID: None
+[18:31:54] [DOC: 9318478] ✅ Order processing completed successfully
+[18:31:54] [DOC: 9318478] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318474                           ║
+================================================================================
+[18:31:54] [DOC: 9318474] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/29/2025
+[18:31:54] [DOC: 9318474] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[18:31:54] [DOC: 9318474] 📋 [1/6] Extracting text from PDF
+[18:32:04] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:32:04] [DOC: 9318474] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[18:32:26] [DOC: 9318474] ⚠️  YOLO+DocTR extraction failed: 'Line' object has no attribute 'value', trying basic OCR...
+[18:32:30] [DOC: 9318474] ✅ Text extracted successfully using tesseract_fallback
+[18:32:30] [DOC: 9318474] ℹ️  Text extraction completed using tesseract_fallback: 6558 characters
+[18:32:30] [DOC: 9318474] ✅ Text extraction completed
+[18:32:30] [DOC: 9318474] 📄 NON-FAXED DOCUMENT | Type: OTHER_EDITABLE
+[18:32:30] [DOC: 9318474] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: OTHER_EDITABLE
+     └─ Extraction Method: tesseract_fallback
+     └─ Text Length: 6558
+[18:32:30] [DOC: 9318474] 📋 [2/6] Extracting patient data using AI
+[18:32:31] ⚠️  AI extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 40
+}
+]
+[18:32:35] ✅ AI patient data extraction completed successfully
+[18:32:35] [DOC: 9318474] 📊 AI-Extracted Patient Data
+     └─ patientFName: MARK
+     └─ patientLName: NOGUEIRA
+     └─ dob: 05/04/1957
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200057780801
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 289 PLEASANT STREET BUILDING 4 SUITE 604
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': '04/12/2025', 'endOfEpisode': '06/10/2025', 'firstDiagnosis': 'R53.1', 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[18:32:35] [DOC: 9318474] 📋 [3/6] Processing and validating dates
+[18:32:35] [DOC: 9318474] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:32:35] [DOC: 9318474] 📊 Parsed Episode Dates
+     └─ Start of Care: 04/12/2025
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:32:35] [DOC: 9318474] 📊 Patient Data After Date Processing
+     └─ patientFName: MARK
+     └─ patientLName: NOGUEIRA
+     └─ dob: 05/04/1957
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200057780801
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 289 PLEASANT STREET BUILDING 4 SUITE 604
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02721
+     └─ episodeDiagnoses: [{'startOfCare': '04/12/2025', 'startOfEpisode': '04/12/2025', 'endOfEpisode': '06/10/2025', 'firstDiagnosis': 'R53.1', 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[18:32:35] [DOC: 9318474] 📋 [4/6] Creating or finding patient
+[18:32:35] 📊 Patient Data for Processing
+     └─ First Name: MARK
+     └─ Last Name: NOGUEIRA
+     └─ DOB: 05/04/1957
+     └─ MRN: C0200057780801
+     └─ Address: 289 PLEASANT STREET BUILDING 4 SUITE 604
+     └─ City: FALL RIVER
+     └─ State: MA
+     └─ ZIP: 02721
+[18:32:35] ✅ Patient already processed in this session: MARK NOGUEIRA
+[18:32:35] [DOC: 9318474] ✅ Patient processed successfully with ID: f42cd606-b015-40c9-94f2-9da573183a27
+[18:32:35] [DOC: 9318474] 📋 [5/6] Extracting order data
+[18:32:35] ⚠️  AI order extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 35
+}
+]
+[18:32:39] ✅ AI order data extraction completed successfully
+[18:32:39] [DOC: 9318474] 📊 AI-Extracted Order Data
+     └─ orderNo: 12269681
+     └─ orderDate: 05/28/2025
+     └─ startOfCare: 
+     └─ episodeStartDate: 04/12/2025
+     └─ episodeEndDate: 06/10/2025
+     └─ documentID: 
+     └─ mrn: C0200057780801
+     └─ patientName: NOGUEIRA SR, MARK J
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:32:39] [DOC: 9318474] 📋 [6/6] Processing order submission
+[18:32:40] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:32:40] [DOC: 9318474] 📊 Order Data After Date Processing
+     └─ orderNo: 12269681
+     └─ orderDate: 05/28/2025
+     └─ startOfCare: 04/12/2025
+     └─ episodeStartDate: 04/12/2025
+     └─ episodeEndDate: 06/10/2025
+     └─ documentID: 
+     └─ mrn: C0200057780801
+     └─ patientName: NOGUEIRA SR, MARK J
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:32:40] [DOC: 9318474] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): C0200057780801
+     └─ Order MRN (extracted): C0200057780801
+     └─ Final MRN: C0200057780801
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:32:40] [DOC: 9318474] 🔄 Preparing order for submission
+[18:32:40] [DOC: 9318474] 📊 Order Request Data
+     └─ Order No: 12269681
+     └─ Patient ID: f42cd606-b015-40c9-94f2-9da573183a27
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/28/2025
+     └─ Start of Care: 04/12/2025
+     └─ Episode Start: 04/12/2025
+     └─ Episode End: 06/10/2025
+[18:32:41] [DOC: 9318474] ✅ Order pushed successfully with ID: None
+[18:32:41] [DOC: 9318474] ✅ Order processing completed successfully
+[18:32:41] [DOC: 9318474] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318469                           ║
+================================================================================
+[18:32:41] [DOC: 9318469] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 05/29/2025
+[18:32:41] [DOC: 9318469] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[18:32:41] [DOC: 9318469] 📋 [1/6] Extracting text from PDF
+[18:32:52] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:32:52] [DOC: 9318469] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[18:33:08] [DOC: 9318469] ✅ Text extracted successfully using yolo_doctr
+[18:33:08] [DOC: 9318469] ℹ️  Text extraction completed using yolo_doctr: 8033 characters
+[18:33:08] [DOC: 9318469] ✅ Text extraction completed
+[18:33:08] [DOC: 9318469] 📄 NON-FAXED DOCUMENT | Type: OTHER_EDITABLE
+[18:33:08] [DOC: 9318469] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: OTHER_EDITABLE
+     └─ Extraction Method: yolo_doctr
+     └─ Text Length: 8033
+[18:33:08] [DOC: 9318469] 📋 [2/6] Extracting patient data using AI
+[18:33:08] ⚠️  AI extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 2
+}
+]
+[18:33:12] ✅ AI patient data extraction completed successfully
+[18:33:12] [DOC: 9318469] 📊 AI-Extracted Patient Data
+     └─ patientFName: Mark
+     └─ patientLName: Nogueira
+     └─ dob: 05/04/1957
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200057780801
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 3918 NORTH MAIN STREET
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02720
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '04/12/2025', 'endOfEpisode': '06/10/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:33:12] [DOC: 9318469] 📋 [3/6] Processing and validating dates
+[18:33:12] [DOC: 9318469] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:33:12] [DOC: 9318469] 📊 Parsed Episode Dates
+     └─ Start of Care: 04/12/2025
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:33:12] [DOC: 9318469] 📊 Patient Data After Date Processing
+     └─ patientFName: Mark
+     └─ patientLName: Nogueira
+     └─ dob: 05/04/1957
+     └─ patientSex: 
+     └─ medicalRecordNo: C0200057780801
+     └─ billingProvider: RAJU SINGLA, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: ACCENTCARE OF MASS, INC. DBA AC HH OF MASS
+     └─ patientAddress: 3918 NORTH MAIN STREET
+     └─ patientCity: FALL RIVER
+     └─ patientState: MA
+     └─ zip: 02720
+     └─ episodeDiagnoses: [{'startOfCare': '04/12/2025', 'startOfEpisode': '04/12/2025', 'endOfEpisode': '06/10/2025', 'firstDiagnosis': 'J44.1', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:33:12] [DOC: 9318469] 📋 [4/6] Creating or finding patient
+[18:33:12] 📊 Patient Data for Processing
+     └─ First Name: Mark
+     └─ Last Name: Nogueira
+     └─ DOB: 05/04/1957
+     └─ MRN: C0200057780801
+     └─ Address: 3918 NORTH MAIN STREET
+     └─ City: FALL RIVER
+     └─ State: MA
+     └─ ZIP: 02720
+[18:33:12] ✅ Patient already processed in this session: MARK NOGUEIRA
+[18:33:12] [DOC: 9318469] ✅ Patient processed successfully with ID: f42cd606-b015-40c9-94f2-9da573183a27
+[18:33:12] [DOC: 9318469] 📋 [5/6] Extracting order data
+[18:33:14] ✅ AI order data extraction completed successfully
+[18:33:14] [DOC: 9318469] 📊 AI-Extracted Order Data
+     └─ orderNo: 12267
+     └─ orderDate: 05/28/2025
+     └─ startOfCare: 
+     └─ episodeStartDate: 04/12/2025
+     └─ episodeEndDate: 06/10/2025
+     └─ documentID: 
+     └─ mrn: C0200057780801
+     └─ patientName: NOGUEIRA SR, MARK J
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:33:14] [DOC: 9318469] 📋 [6/6] Processing order submission
+[18:33:16] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 04/12/2025
+     └─ End of Episode: 06/10/2025
+[18:33:16] [DOC: 9318469] 📊 Order Data After Date Processing
+     └─ orderNo: 12267
+     └─ orderDate: 05/28/2025
+     └─ startOfCare: 04/12/2025
+     └─ episodeStartDate: 04/12/2025
+     └─ episodeEndDate: 06/10/2025
+     └─ documentID: 
+     └─ mrn: C0200057780801
+     └─ patientName: NOGUEIRA SR, MARK J
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:33:16] [DOC: 9318469] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): C0200057780801
+     └─ Order MRN (extracted): C0200057780801
+     └─ Final MRN: C0200057780801
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:33:16] [DOC: 9318469] 🔄 Preparing order for submission
+[18:33:16] [DOC: 9318469] 📊 Order Request Data
+     └─ Order No: 12267
+     └─ Patient ID: f42cd606-b015-40c9-94f2-9da573183a27
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/28/2025
+     └─ Start of Care: 04/12/2025
+     └─ Episode Start: 04/12/2025
+     └─ Episode End: 06/10/2025
+[18:33:18] [DOC: 9318469] ✅ Order pushed successfully with ID: None
+[18:33:18] [DOC: 9318469] ✅ Order processing completed successfully
+[18:33:18] [DOC: 9318469] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318216                           ║
+================================================================================
+[18:33:18] [DOC: 9318216] ℹ️  Facility/Agency: Alphacare Home Health Agency | Received Date: 05/29/2025
+[18:33:18] [DOC: 9318216] ℹ️  Agency mapping found: Alphacare Home Health Agency -> a3b932d4-be57-444e-afa4-8782d93be98d
+[18:33:18] [DOC: 9318216] 📋 [1/6] Extracting text from PDF
+[18:33:20] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:33:20] [DOC: 9318216] ✅ Text extracted successfully using pdfplumber
+[18:33:20] [DOC: 9318216] ℹ️  Text extraction completed using pdfplumber: 3167 characters
+[18:33:20] [DOC: 9318216] ✅ Text extraction completed
+[18:33:20] [DOC: 9318216] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[18:33:20] [DOC: 9318216] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 3167
+[18:33:20] [DOC: 9318216] 📋 [2/6] Extracting patient data using AI
+[18:33:23] ✅ AI patient data extraction completed successfully
+[18:33:23] [DOC: 9318216] 📊 AI-Extracted Patient Data
+     └─ patientFName: Joseph
+     └─ patientLName: Blanchard
+     └─ dob: 07/14/1944
+     └─ patientSex: 
+     └─ medicalRecordNo: 000000065
+     └─ billingProvider: Labib, Ossama (MD (Dr. Alliance))
+     └─ physicianNPI: 1225033673
+     └─ nameOfAgency: AlphaCare Home Health Agency, Inc.
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '', 'firstDiagnosis': 'W18.12XD', 'secondDiagnosis': 'S22.41XD', 'thirdDiagnosis': 'S27.0XXD', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:33:23] [DOC: 9318216] 📋 [3/6] Processing and validating dates
+[18:33:23] [DOC: 9318216] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: Not found
+[18:33:23] [DOC: 9318216] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/07/2025
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[18:33:23] [DOC: 9318216] 📊 Patient Data After Date Processing
+     └─ patientFName: Joseph
+     └─ patientLName: Blanchard
+     └─ dob: 07/14/1944
+     └─ patientSex: 
+     └─ medicalRecordNo: 000000065
+     └─ billingProvider: Labib, Ossama (MD (Dr. Alliance))
+     └─ physicianNPI: 1225033673
+     └─ nameOfAgency: AlphaCare Home Health Agency, Inc.
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '05/07/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'W18.12XD', 'secondDiagnosis': 'S22.41XD', 'thirdDiagnosis': 'S27.0XXD', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:33:23] [DOC: 9318216] 📋 [4/6] Creating or finding patient
+[18:33:23] 📊 Patient Data for Processing
+     └─ First Name: Joseph
+     └─ Last Name: Blanchard
+     └─ DOB: 07/14/1944
+     └─ MRN: 000000065
+     └─ Address: 
+     └─ City: 
+     └─ State: 
+     └─ ZIP: 
+[18:33:34] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[18:33:36] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[18:33:37] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[18:33:42] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[18:33:42] 🔄 Creating new patient...
+[18:33:42] 📊 Patient Creation Request
+     └─ patientFName: Joseph
+     └─ patientLName: Blanchard
+     └─ dob: 07/14/1944
+     └─ patientSex: 
+     └─ medicalRecordNo: 000000065
+     └─ billingProvider: Labib, Ossama (MD (Dr. Alliance))
+     └─ physicianNPI: 1225033673
+     └─ nameOfAgency: Alphacare Home Health Agency
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '05/07/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'W18.12XD', 'secondDiagnosis': 'S22.41XD', 'thirdDiagnosis': 'S27.0XXD', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+     └─ companyId: a3b932d4-be57-444e-afa4-8782d93be98d
+     └─ daBackofficeID: 987434
+     └─ pgCompanyId: d10f46ad-225d-4ba2-882c-149521fcead5
+     └─ physicianGroup: Prima Care
+     └─ physicianGroupNPI: 1265422596
+[18:33:43] ℹ️  Patient creation response - Status: 201
+[18:33:43] ✅ New patient created successfully with ID: 38aca8cb-c4c2-409b-bb9e-7af8f55be3eb
+[18:33:43] [DOC: 9318216] ✅ Patient processed successfully with ID: 38aca8cb-c4c2-409b-bb9e-7af8f55be3eb
+[18:33:43] [DOC: 9318216] 📋 [5/6] Extracting order data
+[18:33:43] ⚠️  AI order extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 27
+}
+]
+[18:33:45] ⚠️  AI order extraction attempt 2 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 26
+}
+]
+[18:33:46] ⚠️  AI order extraction attempt 3 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 24
+}
+]
+[18:33:46] ❌ All AI order extraction attempts failed
+[18:33:46] ⚠️  AI order extraction failed, returning minimal order data structure
+[18:33:46] [DOC: 9318216] 📊 AI-Extracted Order Data
+     └─ orderNo: 
+     └─ orderDate: 
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: 
+     └─ mrn: 
+     └─ patientName: 
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: False
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:33:46] [DOC: 9318216] 📋 [6/6] Processing order submission
+[18:33:48] ℹ️  Using Start of Care date to derive episode dates
+[18:33:48] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: Not available
+     └─ End of Episode: Not available
+[18:33:48] [DOC: 9318216] 📊 Order Data After Date Processing
+     └─ orderNo: 
+     └─ orderDate: 
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: 
+     └─ mrn: 
+     └─ patientName: 
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: False
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:33:48] [DOC: 9318216] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 000000065
+     └─ Order MRN (extracted): None
+     └─ Final MRN: 000000065
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[18:33:48] [DOC: 9318216] ⚠️  Missing required dates: ['orderDate', 'episodeStartDate', 'episodeEndDate'], using fallbacks
+[18:33:48] [DOC: 9318216] 🔄 Preparing order for submission
+[18:33:48] [DOC: 9318216] 📊 Order Request Data
+     └─ Order No: 
+     └─ Patient ID: 38aca8cb-c4c2-409b-bb9e-7af8f55be3eb
+     └─ Company ID: a3b932d4-be57-444e-afa4-8782d93be98d
+     └─ Order Date: 05/29/2025
+     └─ Start of Care: 
+     └─ Episode Start: 05/29/2025
+     └─ Episode End: 07/28/2025
+[18:33:48] [DOC: 9318216] ℹ️  Generated fallback order number: 9318216_1
+[18:33:49] [DOC: 9318216] ✅ Order pushed successfully with ID: None
+[18:33:49] [DOC: 9318216] ✅ Order processing completed successfully
+[18:33:49] [DOC: 9318216] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318060                           ║
+================================================================================
+[18:33:49] [DOC: 9318060] ℹ️  Facility/Agency: Alphacare Home Health Agency | Received Date: 05/29/2025
+[18:33:49] [DOC: 9318060] ℹ️  Agency mapping found: Alphacare Home Health Agency -> a3b932d4-be57-444e-afa4-8782d93be98d
+[18:33:49] [DOC: 9318060] 📋 [1/6] Extracting text from PDF
+[18:33:52] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:33:52] [DOC: 9318060] ✅ Text extracted successfully using pdfplumber
+[18:33:52] [DOC: 9318060] ℹ️  Text extraction completed using pdfplumber: 1499 characters
+[18:33:52] [DOC: 9318060] ✅ Text extraction completed
+[18:33:52] [DOC: 9318060] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[18:33:52] [DOC: 9318060] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1499
+[18:33:52] [DOC: 9318060] 📋 [2/6] Extracting patient data using AI
+[18:33:53] ⚠️  AI extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 18
+}
+]
+[18:33:54] ⚠️  AI extraction attempt 2 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 16
+}
+]
+[18:33:56] ⚠️  AI extraction attempt 3 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 15
+}
+]
+[18:33:56] ❌ All AI extraction attempts failed
+[18:33:56] ⚠️  AI extraction failed, returning minimal patient data structure
+[18:33:56] [DOC: 9318060] 📊 AI-Extracted Patient Data
+     └─ patientFName: 
+     └─ patientLName: 
+     └─ dob: 
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: 
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:33:56] [DOC: 9318060] ⚠️  No critical patient identifiers found - using document ID as fallback
+[18:33:56] [DOC: 9318060] 📋 [3/6] Processing and validating dates
+[18:33:56] [DOC: 9318060] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[18:33:56] [DOC: 9318060] 📊 Patient Data After Date Processing
+     └─ None
+[18:33:56] [DOC: 9318060] 📋 [4/6] Creating or finding patient
+[18:33:56] [DOC: 9318060] ❌ Patient creation/retrieval failed: 'NoneType' object has no attribute 'get'
+[18:33:56] [DOC: 9318060] ⚠️  Using error fallback patient ID
+[18:33:56] [DOC: 9318060] 📋 [5/6] Extracting order data
+[18:33:56] ⚠️  AI order extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 15
+}
+]
+[18:33:57] ⚠️  AI order extraction attempt 2 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 13
+}
+]
+[18:33:59] ⚠️  AI order extraction attempt 3 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 12
+}
+]
+[18:33:59] ❌ All AI order extraction attempts failed
+[18:33:59] ⚠️  AI order extraction failed, returning minimal order data structure
+[18:33:59] [DOC: 9318060] 📊 AI-Extracted Order Data
+     └─ orderNo: 
+     └─ orderDate: 
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: 
+     └─ mrn: 
+     └─ patientName: 
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: False
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:33:59] [DOC: 9318060] 📋 [6/6] Processing order submission
+[18:34:00] ℹ️  Using Start of Care date to derive episode dates
+[18:34:00] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: Not available
+     └─ End of Episode: Not available
+[18:34:00] [DOC: 9318060] 📊 Order Data After Date Processing
+     └─ orderNo: 
+     └─ orderDate: 
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: 
+     └─ mrn: 
+     └─ patientName: 
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: False
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[18:34:00] [DOC: 9318060] ⚠️  MRN synchronization failed: 'NoneType' object has no attribute 'get'
+[18:34:00] [DOC: 9318060] ⚠️  Missing required dates: ['orderDate', 'episodeStartDate', 'episodeEndDate'], using fallbacks
+[18:34:00] [DOC: 9318060] 🔄 Preparing order for submission
+[18:34:00] [DOC: 9318060] 📊 Order Request Data
+     └─ Order No: 
+     └─ Patient ID: ERROR_PATIENT_9318060
+     └─ Company ID: a3b932d4-be57-444e-afa4-8782d93be98d
+     └─ Order Date: 05/29/2025
+     └─ Start of Care: 
+     └─ Episode Start: 05/29/2025
+     └─ Episode End: 07/28/2025
+[18:34:00] [DOC: 9318060] ℹ️  Generated fallback order number: 9318060_1
+[18:34:01] [DOC: 9318060] ✅ Order pushed successfully with ID: None
+[18:34:01] [DOC: 9318060] ✅ Order processing completed successfully
+[18:34:01] [DOC: 9318060] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9318054                           ║
+================================================================================
+[18:34:01] [DOC: 9318054] ℹ️  Facility/Agency: Alphacare Home Health Agency | Received Date: 05/29/2025
+[18:34:01] [DOC: 9318054] ℹ️  Agency mapping found: Alphacare Home Health Agency -> a3b932d4-be57-444e-afa4-8782d93be98d
+[18:34:01] [DOC: 9318054] 📋 [1/6] Extracting text from PDF
+[18:34:03] ℹ️  Document is text-based - using pdfplumber for extraction
+[18:34:03] [DOC: 9318054] ✅ Text extracted successfully using pdfplumber
+[18:34:03] [DOC: 9318054] ℹ️  Text extraction completed using pdfplumber: 1526 characters
+[18:34:03] [DOC: 9318054] ✅ Text extraction completed
+[18:34:03] [DOC: 9318054] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[18:34:03] [DOC: 9318054] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1526
+[18:34:03] [DOC: 9318054] 📋 [2/6] Extracting patient data using AI
+[18:34:04] ⚠️  AI extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 7
+}
+]
+[18:34:05] ⚠️  AI extraction attempt 2 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 5
+}
+]
+[18:34:07] ⚠️  AI extraction attempt 3 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 4
+}
+]
+[18:34:07] ❌ All AI extraction attempts failed
+[18:34:07] ⚠️  AI extraction failed, returning minimal patient data structure
+[18:34:07] [DOC: 9318054] 📊 AI-Extracted Patient Data
+     └─ patientFName: 
+     └─ patientLName: 
+     └─ dob: 
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: 
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[18:34:07] [DOC: 9318054] ⚠️  No critical patient identifiers found - using document ID as fallback
+[18:34:07] [DOC: 9318054] 📋 [3/6] Processing and validating dates
+[18:34:07] [DOC: 9318054] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[18:34:07] [DOC: 9318054] 📊 Patient Data After Date Processing
+     └─ None
+[18:34:07] [DOC: 9318054] 📋 [4/6] Creating or finding patient
+[18:34:07] [DOC: 9318054] ❌ Patient creation/retrieval failed: 'NoneType' object has no attribute 'get'
+[18:34:07] [DOC: 9318054] ⚠️  Using error fallback patient ID
+[18:34:07] [DOC: 9318054] 📋 [5/6] Extracting order data
+[18:34:07] ⚠️  AI order extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 3
+}
+]

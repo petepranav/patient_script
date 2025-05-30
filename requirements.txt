@@ -1,0 +1,13 @@
+google-generativeai
+requests
+python-dotenv
+pdfplumber
+PyMuPDF
+Pillow
+opencv-python
+numpy
+pytesseract
+ultralytics
+python-doctr
+selenium
+webdriver-manager

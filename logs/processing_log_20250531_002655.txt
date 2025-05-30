@@ -1,0 +1,554 @@
+================================================================================
+║                   PATIENT DATA PIPELINE - PROCESSING STARTED                   ║
+================================================================================
+[00:26:57] ℹ️  Processing CSV file: hawthorn.csv
+================================================================================
+║                          PROCESSING DOCUMENT 9314061                           ║
+================================================================================
+[00:26:57] [DOC: 9314061] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[00:26:57] [DOC: 9314061] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[00:26:57] [DOC: 9314061] 📋 [1/6] Extracting text from PDF
+[00:26:59] ℹ️  Document is text-based - using pdfplumber for extraction
+[00:26:59] [DOC: 9314061] ✅ Text extracted successfully using pdfplumber
+[00:26:59] [DOC: 9314061] ℹ️  Text extraction completed using pdfplumber: 1307 characters
+[00:26:59] [DOC: 9314061] ✅ Text extraction completed
+[00:26:59] [DOC: 9314061] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[00:26:59] [DOC: 9314061] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1307
+[00:26:59] [DOC: 9314061] 📋 [2/6] Extracting patient data using AI
+[00:27:01] ✅ AI patient data extraction completed successfully
+[00:27:01] [DOC: 9314061] 📊 AI-Extracted Patient Data
+     └─ patientFName: Joao
+     └─ patientLName: Aguiar
+     └─ dob: 08/11/1954
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2170342
+     └─ billingProvider: Gloriane Afonso-Fede, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': None, 'endOfEpisode': None, 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[00:27:01] [DOC: 9314061] 📋 [3/6] Processing and validating dates
+[00:27:01] [DOC: 9314061] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[00:27:01] [DOC: 9314061] 📊 Patient Data After Date Processing
+     └─ patientFName: Joao
+     └─ patientLName: Aguiar
+     └─ dob: 08/11/1954
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2170342
+     └─ billingProvider: Gloriane Afonso-Fede, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': None, 'endOfEpisode': None, 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[00:27:01] [DOC: 9314061] 📋 [4/6] Creating or finding patient
+[00:27:01] 📊 Patient Data for Processing
+     └─ First Name: Joao
+     └─ Last Name: Aguiar
+     └─ DOB: 08/11/1954
+     └─ MRN: 2170342
+     └─ Address: None
+     └─ City: None
+     └─ State: MA
+     └─ ZIP: 02719-5252
+[00:27:01] ✅ Patient already processed in this session: JOAO AGUIAR
+[00:27:01] [DOC: 9314061] ✅ Patient processed successfully with ID: f41aab89-225a-480a-9b25-f9b0069dd743
+[00:27:01] [DOC: 9314061] 📋 [5/6] Extracting order data
+[00:27:03] ✅ AI order data extraction completed successfully
+[00:27:03] [DOC: 9314061] 📊 AI-Extracted Order Data
+     └─ orderNo: 1095591
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: 05/13/2025
+     └─ episodeEndDate: None
+     └─ documentID: None
+     └─ mrn: 2170342
+     └─ patientName: Aguiar, Joao M
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[00:27:03] [DOC: 9314061] 📋 [6/6] Processing order submission
+[00:27:04] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/13/2025
+     └─ End of Episode: 07/11/2025
+[00:27:04] [DOC: 9314061] 📊 Order Data After Date Processing
+     └─ orderNo: 1095591
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/13/2025
+     └─ episodeStartDate: 05/13/2025
+     └─ episodeEndDate: 07/11/2025
+     └─ documentID: None
+     └─ mrn: 2170342
+     └─ patientName: Aguiar, Joao M
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[00:27:04] [DOC: 9314061] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2170342
+     └─ Order MRN (extracted): 2170342
+     └─ Final MRN: 2170342
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[00:27:04] [DOC: 9314061] 🔄 Preparing order for submission
+[00:27:04] [DOC: 9314061] 📊 Order Request Data
+     └─ Order No: 1095591
+     └─ Patient ID: f41aab89-225a-480a-9b25-f9b0069dd743
+     └─ Company ID: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 05/13/2025
+     └─ Episode Start: 05/13/2025
+     └─ Episode End: 07/11/2025
+[00:27:05] [DOC: 9314061] ✅ Order already exists in system with ID: ORD15776
+[00:27:05] [DOC: 9314061] ℹ️  This indicates the order was processed successfully in a previous run
+[00:27:05] [DOC: 9314061] ✅ Order processing completed successfully
+[00:27:05] [DOC: 9314061] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9311183                           ║
+================================================================================
+[00:27:05] [DOC: 9311183] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[00:27:05] [DOC: 9311183] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[00:27:05] [DOC: 9311183] 📋 [1/6] Extracting text from PDF
+[00:27:07] ℹ️  Document is text-based - using pdfplumber for extraction
+[00:27:07] [DOC: 9311183] ✅ Text extracted successfully using pdfplumber
+[00:27:07] [DOC: 9311183] ℹ️  Text extraction completed using pdfplumber: 2779 characters
+[00:27:07] [DOC: 9311183] ✅ Text extraction completed
+[00:27:07] [DOC: 9311183] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[00:27:07] [DOC: 9311183] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 2779
+[00:27:07] [DOC: 9311183] 📋 [2/6] Extracting patient data using AI
+[00:27:08] ✅ AI patient data extraction completed successfully
+[00:27:08] [DOC: 9311183] 📊 AI-Extracted Patient Data
+     └─ patientFName: Ronald
+     └─ patientLName: Alfonse
+     └─ dob: 03/30/1936
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2174766
+     └─ billingProvider: Jahn A. Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 200 Mill Road
+     └─ patientCity: Fairhaven
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: []
+[00:27:08] [DOC: 9311183] 📋 [3/6] Processing and validating dates
+[00:27:08] [DOC: 9311183] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[00:27:08] [DOC: 9311183] 📊 Patient Data After Date Processing
+     └─ patientFName: Ronald
+     └─ patientLName: Alfonse
+     └─ dob: 03/30/1936
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2174766
+     └─ billingProvider: Jahn A. Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 200 Mill Road
+     └─ patientCity: Fairhaven
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: [{}]
+[00:27:08] [DOC: 9311183] 📋 [4/6] Creating or finding patient
+[00:27:08] 📊 Patient Data for Processing
+     └─ First Name: Ronald
+     └─ Last Name: Alfonse
+     └─ DOB: 03/30/1936
+     └─ MRN: 2174766
+     └─ Address: 200 Mill Road
+     └─ City: Fairhaven
+     └─ State: MA
+     └─ ZIP: 02719-5252
+[00:27:08] ✅ Patient already processed in this session: RONALD ALFONSE
+[00:27:08] [DOC: 9311183] ✅ Patient processed successfully with ID: 3f5d6e63-dfea-44ab-9d02-6c07f457fa28
+[00:27:08] [DOC: 9311183] 📋 [5/6] Extracting order data
+[00:27:10] ✅ AI order data extraction completed successfully
+[00:27:10] [DOC: 9311183] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: 05/23/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: None
+     └─ episodeEndDate: None
+     └─ documentID: None
+     └─ mrn: 2174766
+     └─ patientName: Alfonse,Ronald
+     └─ sentToPhysicianDate: 05/28/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[00:27:10] [DOC: 9311183] 📋 [6/6] Processing order submission
+[00:27:11] ℹ️  Using Start of Care date to derive episode dates
+[00:27:11] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: Not available
+     └─ End of Episode: Not available
+[00:27:11] [DOC: 9311183] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: 05/23/2025
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: None
+     └─ mrn: 2174766
+     └─ patientName: Alfonse,Ronald
+     └─ sentToPhysicianDate: 05/28/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[00:27:11] [DOC: 9311183] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2174766
+     └─ Order MRN (extracted): 2174766
+     └─ Final MRN: 2174766
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[00:27:11] [DOC: 9311183] ⚠️  Missing required dates: ['episodeStartDate', 'episodeEndDate'], using fallbacks
+[00:27:11] [DOC: 9311183] 🔄 Preparing order for submission
+[00:27:11] [DOC: 9311183] 📊 Order Request Data
+     └─ Order No: Not set
+     └─ Patient ID: 3f5d6e63-dfea-44ab-9d02-6c07f457fa28
+     └─ Company ID: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ Order Date: 05/23/2025
+     └─ Start of Care: 
+     └─ Episode Start: 05/23/2025
+     └─ Episode End: 07/22/2025
+[00:27:11] [DOC: 9311183] ℹ️  Generated fallback order number: 9311183_1
+[00:27:12] [DOC: 9311183] ✅ Order already exists in system with ID: ORD15777
+[00:27:12] [DOC: 9311183] ℹ️  This indicates the order was processed successfully in a previous run
+[00:27:12] [DOC: 9311183] ✅ Order processing completed successfully
+[00:27:12] [DOC: 9311183] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9315316                           ║
+================================================================================
+[00:27:12] [DOC: 9315316] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[00:27:12] [DOC: 9315316] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[00:27:12] [DOC: 9315316] 📋 [1/6] Extracting text from PDF
+[00:27:15] ℹ️  Document is text-based - using pdfplumber for extraction
+[00:27:15] [DOC: 9315316] ✅ Text extracted successfully using pdfplumber
+[00:27:15] [DOC: 9315316] ℹ️  Text extraction completed using pdfplumber: 11411 characters
+[00:27:15] [DOC: 9315316] ✅ Text extraction completed
+[00:27:15] [DOC: 9315316] 📄 NON-FAXED DOCUMENT | Type: 485CERT
+[00:27:15] [DOC: 9315316] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485CERT
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 11411
+[00:27:15] [DOC: 9315316] 📋 [2/6] Extracting patient data using AI
+[00:27:18] ✅ AI patient data extraction completed successfully
+[00:27:18] [DOC: 9315316] 📊 AI-Extracted Patient Data
+     └─ patientFName: Francisco
+     └─ patientLName: Amarante
+     └─ dob: 11/19/1958
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2186298
+     └─ billingProvider: Justin Etter, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 154 Rotch St
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740-2455
+     └─ episodeDiagnoses: [{'startOfCare': '05/06/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'N30.00', 'secondDiagnosis': 'G93.41', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I50.32', 'fifthDiagnosis': 'E78.5', 'sixthDiagnosis': 'E03.9'}]
+[00:27:18] [DOC: 9315316] 📋 [3/6] Processing and validating dates
+[00:27:18] [DOC: 9315316] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 05/06/2025
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[00:27:18] [DOC: 9315316] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/06/2025
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[00:27:18] [DOC: 9315316] 📊 Patient Data After Date Processing
+     └─ patientFName: Francisco
+     └─ patientLName: Amarante
+     └─ dob: 11/19/1958
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2186298
+     └─ billingProvider: Justin Etter, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 154 Rotch St
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740-2455
+     └─ episodeDiagnoses: [{'startOfCare': '05/06/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'N30.00', 'secondDiagnosis': 'G93.41', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I50.32', 'fifthDiagnosis': 'E78.5', 'sixthDiagnosis': 'E03.9'}]
+[00:27:18] [DOC: 9315316] 📋 [4/6] Creating or finding patient
+[00:27:18] 📊 Patient Data for Processing
+     └─ First Name: Francisco
+     └─ Last Name: Amarante
+     └─ DOB: 11/19/1958
+     └─ MRN: 2186298
+     └─ Address: 154 Rotch St
+     └─ City: New Bedford
+     └─ State: MA
+     └─ ZIP: 02740-2455
+[00:27:18] ✅ Patient already processed in this session: FRANCISCO AMARANTE
+[00:27:18] [DOC: 9315316] ✅ Patient processed successfully with ID: 9f6a640f-9d09-4add-a5ed-300aff5ddbd1
+[00:27:18] [DOC: 9315316] 📋 [5/6] Extracting order data
+[00:27:20] ✅ AI order data extraction completed successfully
+[00:27:20] [DOC: 9315316] 📊 AI-Extracted Order Data
+     └─ orderNo: 1095435
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/06/2025
+     └─ episodeStartDate: 05/07/2025
+     └─ episodeEndDate: 07/05/2025
+     └─ documentID: None
+     └─ mrn: 2186298
+     └─ patientName: Amarante,Francisco J
+     └─ sentToPhysicianDate: 05/27/2025
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: Home Health Plan of Care
+[00:27:20] [DOC: 9315316] 📋 [6/6] Processing order submission
+[00:27:21] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[00:27:21] [DOC: 9315316] 📊 Order Data After Date Processing
+     └─ orderNo: 1095435
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/06/2025
+     └─ episodeStartDate: 05/07/2025
+     └─ episodeEndDate: 07/05/2025
+     └─ documentID: None
+     └─ mrn: 2186298
+     └─ patientName: Amarante,Francisco J
+     └─ sentToPhysicianDate: 05/27/2025
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: Home Health Plan of Care
+[00:27:21] [DOC: 9315316] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2186298
+     └─ Order MRN (extracted): 2186298
+     └─ Final MRN: 2186298
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[00:27:21] [DOC: 9315316] 🔄 Preparing order for submission
+[00:27:21] [DOC: 9315316] 📊 Order Request Data
+     └─ Order No: 1095435
+     └─ Patient ID: 9f6a640f-9d09-4add-a5ed-300aff5ddbd1
+     └─ Company ID: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 05/06/2025
+     └─ Episode Start: 05/07/2025
+     └─ Episode End: 07/05/2025
+[00:27:23] [DOC: 9315316] ✅ Order already exists in system with ID: ORD15779
+[00:27:23] [DOC: 9315316] ℹ️  This indicates the order was processed successfully in a previous run
+[00:27:23] [DOC: 9315316] ✅ Order processing completed successfully
+[00:27:23] [DOC: 9315316] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9317403                           ║
+================================================================================
+[00:27:23] [DOC: 9317403] ℹ️  Facility/Agency: Nizhoni Health Systems-Somerville | Received Date: 
+[00:27:23] [DOC: 9317403] ℹ️  Agency mapping found: Nizhoni Health Systems-Somerville -> 23756fbd-e6e1-40b7-a974-2fb31ce13d37
+[00:27:23] [DOC: 9317403] 📋 [1/6] Extracting text from PDF
+[00:27:26] ℹ️  Document is text-based - using pdfplumber for extraction
+[00:27:26] [DOC: 9317403] ✅ Text extracted successfully using pdfplumber
+[00:27:26] [DOC: 9317403] ℹ️  Text extraction completed using pdfplumber: 11090 characters
+[00:27:26] [DOC: 9317403] ✅ Text extraction completed
+[00:27:26] [DOC: 9317403] 📄 NON-FAXED DOCUMENT | Type: 485RECERT
+[00:27:26] [DOC: 9317403] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485RECERT
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 11090
+[00:27:26] [DOC: 9317403] 📋 [2/6] Extracting patient data using AI
+[00:27:29] ✅ AI patient data extraction completed successfully
+[00:27:29] [DOC: 9317403] 📊 AI-Extracted Patient Data
+     └─ patientFName: Tammy
+     └─ patientLName: Alves
+     └─ dob: 04/30/1981
+     └─ patientSex: F
+     └─ medicalRecordNo: 17207020
+     └─ billingProvider: Karmina Bautista, MD
+     └─ physicianNPI: 1000005112
+     └─ nameOfAgency: Innovive Health of Massachusetts LLC
+     └─ patientAddress: 790 Brock Avenue Apt 305
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02744
+     └─ episodeDiagnoses: [{'startOfCare': '03/26/2025', 'startOfEpisode': '03/26/2025', 'endOfEpisode': '07/23/2025', 'firstDiagnosis': 'F31.9', 'secondDiagnosis': 'F20.9', 'thirdDiagnosis': 'G80.9', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'F41.1', 'sixthDiagnosis': 'E06.3'}]
+[00:27:29] [DOC: 9317403] 📋 [3/6] Processing and validating dates
+[00:27:29] [DOC: 9317403] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 03/26/2025
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 07/23/2025
+[00:27:29] [DOC: 9317403] 📊 Parsed Episode Dates
+     └─ Start of Care: 03/26/2025
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 07/23/2025
+[00:27:29] [DOC: 9317403] 📊 Patient Data After Date Processing
+     └─ patientFName: Tammy
+     └─ patientLName: Alves
+     └─ dob: 04/30/1981
+     └─ patientSex: F
+     └─ medicalRecordNo: 17207020
+     └─ billingProvider: Karmina Bautista, MD
+     └─ physicianNPI: 1000005112
+     └─ nameOfAgency: Innovive Health of Massachusetts LLC
+     └─ patientAddress: 790 Brock Avenue Apt 305
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02744
+     └─ episodeDiagnoses: [{'startOfCare': '03/26/2025', 'startOfEpisode': '03/26/2025', 'endOfEpisode': '07/23/2025', 'firstDiagnosis': 'F31.9', 'secondDiagnosis': 'F20.9', 'thirdDiagnosis': 'G80.9', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'F41.1', 'sixthDiagnosis': 'E06.3'}]
+[00:27:29] [DOC: 9317403] 📋 [4/6] Creating or finding patient
+[00:27:29] 📊 Patient Data for Processing
+     └─ First Name: Tammy
+     └─ Last Name: Alves
+     └─ DOB: 04/30/1981
+     └─ MRN: 17207020
+     └─ Address: 790 Brock Avenue Apt 305
+     └─ City: New Bedford
+     └─ State: MA
+     └─ ZIP: 02744
+[00:27:29] ✅ Patient already processed in this session: TAMMY ALVES
+[00:27:29] [DOC: 9317403] ✅ Patient processed successfully with ID: 445d1ccc-1c69-4140-884f-454783096f66
+[00:27:29] [DOC: 9317403] 📋 [5/6] Extracting order data
+[00:27:31] ✅ AI order data extraction completed successfully
+[00:27:31] [DOC: 9317403] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 02/27/2025
+     └─ episodeStartDate: 03/26/2025
+     └─ episodeEndDate: 07/23/2025
+     └─ documentID: 17207020
+     └─ mrn: 17207020
+     └─ patientName: Alves, Tammy
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: HOME HEALTH CERTIFICATION AND PLAN OF CARE
+[00:27:31] [DOC: 9317403] 📋 [6/6] Processing order submission
+[00:27:33] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 07/23/2025
+[00:27:33] [DOC: 9317403] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 02/27/2025
+     └─ episodeStartDate: 03/26/2025
+     └─ episodeEndDate: 07/23/2025
+     └─ documentID: 17207020
+     └─ mrn: 17207020
+     └─ patientName: Alves, Tammy
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: HOME HEALTH CERTIFICATION AND PLAN OF CARE
+[00:27:33] [DOC: 9317403] ℹ️  Generated MRN: MRN512387 for patient TAMMY ALVES
+[00:27:33] [DOC: 9317403] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 17207020
+     └─ Order MRN (extracted): 17207020
+     └─ Final MRN: MRN512387
+     └─ Source: generated
+     └─ Applied to: Both patient and order
+[00:27:33] [DOC: 9317403] ❌ Order processing failed: 'NoneType' object has no attribute 'strip'
+[00:27:33] [DOC: 9317403] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9314106                           ║
+================================================================================
+[00:27:33] [DOC: 9314106] ℹ️  Facility/Agency: Fairhaven HH&H | Received Date: 
+[00:27:33] [DOC: 9314106] ℹ️  Agency mapping found: Fairhaven HH&H -> 92dd35fd-50de-4972-b9fa-9f724140de71
+[00:27:33] [DOC: 9314106] 📋 [1/6] Extracting text from PDF
+[00:27:35] ℹ️  Document is text-based - using pdfplumber for extraction
+[00:27:35] [DOC: 9314106] ✅ Text extracted successfully using pdfplumber
+[00:27:35] [DOC: 9314106] ℹ️  Text extraction completed using pdfplumber: 1158 characters
+[00:27:35] [DOC: 9314106] ✅ Text extraction completed
+[00:27:35] [DOC: 9314106] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[00:27:35] [DOC: 9314106] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1158
+[00:27:35] [DOC: 9314106] 📋 [2/6] Extracting patient data using AI
+[00:27:38] ✅ AI patient data extraction completed successfully
+[00:27:38] [DOC: 9314106] 📊 AI-Extracted Patient Data
+     └─ patientFName: Robert
+     └─ patientLName: Andrade
+     └─ dob: 06/25/1943
+     └─ patientSex: M
+     └─ medicalRecordNo: 2486002
+     └─ billingProvider: Jahn A Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 3 Orlando Ave
+     └─ patientCity: Westport
+     └─ patientState: MA
+     └─ zip: 02790
+     └─ episodeDiagnoses: [{'startOfCare': '12/19/2024', 'startOfEpisode': '03/19/2025', 'endOfEpisode': '06/16/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:27:38] [DOC: 9314106] 📋 [3/6] Processing and validating dates
+[00:27:38] [DOC: 9314106] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 12/19/2024
+     └─ Start of Episode: 03/19/2025
+     └─ End of Episode: 06/16/2025
+[00:27:38] [DOC: 9314106] 📊 Parsed Episode Dates
+     └─ Start of Care: 12/19/2024
+     └─ Start of Episode: 03/19/2025
+     └─ End of Episode: 06/16/2025
+[00:27:38] [DOC: 9314106] 📊 Patient Data After Date Processing
+     └─ patientFName: Robert
+     └─ patientLName: Andrade
+     └─ dob: 06/25/1943
+     └─ patientSex: M
+     └─ medicalRecordNo: 2486002
+     └─ billingProvider: Jahn A Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 3 Orlando Ave
+     └─ patientCity: Westport
+     └─ patientState: MA
+     └─ zip: 02790
+     └─ episodeDiagnoses: [{'startOfCare': '12/19/2024', 'startOfEpisode': '03/19/2025', 'endOfEpisode': '06/16/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:27:38] [DOC: 9314106] 📋 [4/6] Creating or finding patient
+[00:27:38] 📊 Patient Data for Processing
+     └─ First Name: Robert
+     └─ Last Name: Andrade
+     └─ DOB: 06/25/1943
+     └─ MRN: 2486002
+     └─ Address: 3 Orlando Ave
+     └─ City: Westport
+     └─ State: MA
+     └─ ZIP: 02790
+[00:27:38] ✅ Patient already processed in this session: ROBERT ANDRADE
+[00:27:38] [DOC: 9314106] ✅ Patient processed successfully with ID: e367e440-5660-423f-9c06-de94c71235ec
+[00:27:38] [DOC: 9314106] 📋 [5/6] Extracting order data

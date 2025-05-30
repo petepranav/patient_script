@@ -1,0 +1,255 @@
+================================================================================
+║                   PATIENT DATA PIPELINE - PROCESSING STARTED                   ║
+================================================================================
+[19:25:53] ℹ️  Processing CSV file: orders.csv
+================================================================================
+║                          PROCESSING DOCUMENT 9269173                           ║
+================================================================================
+[19:25:53] [DOC: 9269173] ℹ️  Facility/Agency: Brockton Home Health Care | Received Date: 04/30/2025
+[19:25:53] [DOC: 9269173] ⚠️  Agency 'Brockton Home Health Care' not found in company mapping
+[19:25:53] [DOC: 9269173] 📋 [1/4] Extracting text from PDF
+[19:25:56] ℹ️  Document appears to be scanned - using OCR pipeline
+[19:25:56] ℹ️  Document is text-based - using pdfplumber for extraction
+[19:25:56] [DOC: 9269173] ✅ Text extraction completed
+[19:25:56] [DOC: 9269173] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[19:25:56] [DOC: 9269173] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: N/A
+     └─ Document Type: ORDER
+[19:25:56] [DOC: 9269173] 📋 [2/6] Extracting patient data using AI
+[19:25:59] [DOC: 9269173] 📊 AI-Extracted Patient Data
+     └─ patientFName: Christine
+     └─ patientLName: Thompson
+     └─ dob: 08/05/1973
+     └─ patientSex: Female
+     └─ medicalRecordNo: BHHA1887826
+     └─ billingProvider: Thorpe, Bianca D.O.
+     └─ physicianNPI: 1518278449
+     └─ nameOfAgency: Brockton Home Health Agency
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': '04/09/2025', 'endOfEpisode': '06/07/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[19:25:59] [DOC: 9269173] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 04/09/2025
+     └─ End of Episode: 06/07/2025
+[19:25:59] [DOC: 9269173] 📊 Parsed Episode Dates
+     └─ Start of Care: 04/09/2025
+     └─ Start of Episode: 04/09/2025
+     └─ End of Episode: 06/07/2025
+[19:25:59] [DOC: 9269173] 📊 Patient Data After Date Processing
+     └─ patientFName: Christine
+     └─ patientLName: Thompson
+     └─ dob: 08/05/1973
+     └─ patientSex: Female
+     └─ medicalRecordNo: BHHA1887826
+     └─ billingProvider: Thorpe, Bianca D.O.
+     └─ physicianNPI: 1518278449
+     └─ nameOfAgency: Brockton Home Health Agency
+     └─ episodeDiagnoses: [{'startOfCare': '04/09/2025', 'startOfEpisode': '04/09/2025', 'endOfEpisode': '06/07/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[19:25:59] [DOC: 9269173] 📋 [3/6] Fetching accurate physician NPI using selenium
+[19:25:59] [DOC: 9269173] ℹ️  Starting selenium NPI extraction for document ID: 9269173
+[19:26:01] [DOC: 9269173] 🔄 Logging into Doctor Alliance...
+[19:26:15] [DOC: 9269173] 🔄 Navigating to search section...
+[19:26:37] [DOC: 9269173] ⚠️  Trying alternative search link selectors...
+[19:27:18] [DOC: 9269173] ❌ Selenium NPI extraction failed: Message: 
+Stacktrace:
+#0 0x5b192207d71a <unknown>
+#1 0x5b1921b200a0 <unknown>
+#2 0x5b1921b719b0 <unknown>
+#3 0x5b1921b71ba1 <unknown>
+#4 0x5b1921bbfea4 <unknown>
+#5 0x5b1921b973cd <unknown>
+#6 0x5b1921bbd2a0 <unknown>
+#7 0x5b1921b97173 <unknown>
+#8 0x5b1921b63d4b <unknown>
+#9 0x5b1921b649b1 <unknown>
+#10 0x5b19220428cb <unknown>
+#11 0x5b19220467ca <unknown>
+#12 0x5b192202a622 <unknown>
+#13 0x5b1922047354 <unknown>
+#14 0x5b192200f45f <unknown>
+#15 0x5b192206b4f8 <unknown>
+#16 0x5b192206b6d6 <unknown>
+#17 0x5b192207c586 <unknown>
+#18 0x791c370ba7eb <unknown>
+#19 0x791c3713e18c <unknown>
+
+[19:27:18] [DOC: 9269173] ⚠️  Selenium NPI extraction failed, using AI-extracted NPI
+[19:27:18] [DOC: 9269173] 📋 [4/6] Processing order data
+[19:27:20] [DOC: 9269173] 📋 [4.5/6] Synchronizing MRN between patient and order data
+[19:27:20] [DOC: 9269173] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): BHHA1887826
+     └─ Order MRN (extracted): BHHA1887826
+     └─ Final MRN: BHHA1887826
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[19:27:20] [DOC: 9269173] 📋 [5/6] Creating or finding patient
+[19:27:20] 📊 Patient Data for Processing
+     └─ First Name: Christine
+     └─ Last Name: Thompson
+     └─ DOB: 08/05/1973
+     └─ MRN: BHHA1887826
+[19:27:20] ❌ Agency 'Brockton Home Health Care' not found in company mapping
+[19:27:20] [DOC: 9269173] ✅ Patient ID obtained: None
+[19:27:20] [DOC: 9269173] 📋 [6/6] Completing order processing
+[19:27:20] [DOC: 9269173] ❌ Skipping order push - Agency 'Brockton Home Health Care' not found in company mapping
+================================================================================
+║                          PROCESSING DOCUMENT 9287534                           ║
+================================================================================
+[19:27:20] [DOC: 9287534] ℹ️  Facility/Agency: All At Home Health Care-Allston | Received Date: 05/12/2025
+[19:27:20] [DOC: 9287534] ℹ️  Agency mapping found: All At Home Health Care-Allston -> 7e086962-c3a1-4653-bcaf-f43a9213c0ae
+[19:27:20] [DOC: 9287534] 📋 [1/4] Extracting text from PDF
+[19:27:24] ℹ️  Document appears to be scanned - using OCR pipeline
+[19:27:24] ℹ️  Document is text-based - using pdfplumber for extraction
+[19:27:24] [DOC: 9287534] ✅ Text extraction completed
+[19:27:24] [DOC: 9287534] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[19:27:24] [DOC: 9287534] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: N/A
+     └─ Document Type: ORDER
+[19:27:24] [DOC: 9287534] 📋 [2/6] Extracting patient data using AI
+[19:27:27] [DOC: 9287534] 📊 AI-Extracted Patient Data
+     └─ patientFName: James
+     └─ patientLName: DeCosta
+     └─ dob: 06/03/1942
+     └─ patientSex: None
+     └─ medicalRecordNo: None
+     └─ billingProvider: Jennifer Kabak, MD
+     └─ physicianNPI: 1720386378
+     └─ nameOfAgency: All At Home Health Care
+     └─ episodeDiagnoses: [{'startOfCare': '03/29/2025', 'startOfEpisode': '03/29/2025', 'endOfEpisode': '05/27/2025', 'firstDiagnosis': 'I25.119', 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[19:27:27] [DOC: 9287534] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 03/29/2025
+     └─ Start of Episode: 03/29/2025
+     └─ End of Episode: 05/27/2025
+[19:27:27] [DOC: 9287534] 📊 Parsed Episode Dates
+     └─ Start of Care: 03/29/2025
+     └─ Start of Episode: 03/29/2025
+     └─ End of Episode: 05/27/2025
+[19:27:27] [DOC: 9287534] 📊 Patient Data After Date Processing
+     └─ patientFName: James
+     └─ patientLName: DeCosta
+     └─ dob: 06/03/1942
+     └─ patientSex: None
+     └─ medicalRecordNo: None
+     └─ billingProvider: Jennifer Kabak, MD
+     └─ physicianNPI: 1720386378
+     └─ nameOfAgency: All At Home Health Care
+     └─ episodeDiagnoses: [{'startOfCare': '03/29/2025', 'startOfEpisode': '03/29/2025', 'endOfEpisode': '05/27/2025', 'firstDiagnosis': 'I25.119', 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[19:27:27] [DOC: 9287534] 📋 [3/6] Fetching accurate physician NPI using selenium
+[19:27:27] [DOC: 9287534] ℹ️  Starting selenium NPI extraction for document ID: 9287534
+[19:27:28] [DOC: 9287534] 🔄 Logging into Doctor Alliance...
+[19:27:42] [DOC: 9287534] 🔄 Navigating to search section...
+[19:28:05] [DOC: 9287534] ⚠️  Trying alternative search link selectors...
+[19:28:46] [DOC: 9287534] ❌ Selenium NPI extraction failed: Message: 
+Stacktrace:
+#0 0x5f8a6c4d671a <unknown>
+#1 0x5f8a6bf790a0 <unknown>
+#2 0x5f8a6bfca9b0 <unknown>
+#3 0x5f8a6bfcaba1 <unknown>
+#4 0x5f8a6c018ea4 <unknown>
+#5 0x5f8a6bff03cd <unknown>
+#6 0x5f8a6c0162a0 <unknown>
+#7 0x5f8a6bff0173 <unknown>
+#8 0x5f8a6bfbcd4b <unknown>
+#9 0x5f8a6bfbd9b1 <unknown>
+#10 0x5f8a6c49b8cb <unknown>
+#11 0x5f8a6c49f7ca <unknown>
+#12 0x5f8a6c483622 <unknown>
+#13 0x5f8a6c4a0354 <unknown>
+#14 0x5f8a6c46845f <unknown>
+#15 0x5f8a6c4c44f8 <unknown>
+#16 0x5f8a6c4c46d6 <unknown>
+#17 0x5f8a6c4d5586 <unknown>
+#18 0x739b5329f7eb <unknown>
+#19 0x739b5332318c <unknown>
+
+[19:28:46] [DOC: 9287534] ⚠️  Selenium NPI extraction failed, using AI-extracted NPI
+[19:28:46] [DOC: 9287534] 📋 [4/6] Processing order data
+[19:28:48] [DOC: 9287534] 📋 [4.5/6] Synchronizing MRN between patient and order data
+[19:28:48] ❌ Error processing document 9287534: 'NoneType' object has no attribute 'strip'
+================================================================================
+║                          PROCESSING DOCUMENT 9287408                           ║
+================================================================================
+[19:28:48] [DOC: 9287408] ℹ️  Facility/Agency: All At Home Health Care-Allston | Received Date: 05/12/2025
+[19:28:48] [DOC: 9287408] ℹ️  Agency mapping found: All At Home Health Care-Allston -> 7e086962-c3a1-4653-bcaf-f43a9213c0ae
+[19:28:48] [DOC: 9287408] 📋 [1/4] Extracting text from PDF
+[19:28:53] ℹ️  Document appears to be scanned - using OCR pipeline
+[19:28:53] ℹ️  Document is text-based - using pdfplumber for extraction
+[19:28:53] [DOC: 9287408] ✅ Text extraction completed
+[19:28:53] [DOC: 9287408] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[19:28:53] [DOC: 9287408] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: N/A
+     └─ Document Type: ORDER
+[19:28:53] [DOC: 9287408] 📋 [2/6] Extracting patient data using AI
+[19:28:56] [DOC: 9287408] 📊 AI-Extracted Patient Data
+     └─ patientFName: STACY
+     └─ patientLName: HEFFNER
+     └─ dob: 09/27/1973
+     └─ patientSex: 
+     └─ medicalRecordNo: I-45668
+     └─ billingProvider: Dr. Thorpe, Bianca
+     └─ physicianNPI: 1720386378
+     └─ nameOfAgency: All At Home Health Care
+     └─ episodeDiagnoses: [{'startOfCare': '09/14/2024', 'startOfEpisode': '03/13/2025', 'endOfEpisode': '05/11/2025', 'firstDiagnosis': 'I25.118', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[19:28:56] [DOC: 9287408] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 09/14/2024
+     └─ Start of Episode: 03/13/2025
+     └─ End of Episode: 05/11/2025
+[19:28:56] [DOC: 9287408] 📊 Parsed Episode Dates
+     └─ Start of Care: 09/14/2024
+     └─ Start of Episode: 03/13/2025
+     └─ End of Episode: 05/11/2025
+[19:28:56] [DOC: 9287408] 📊 Patient Data After Date Processing
+     └─ patientFName: STACY
+     └─ patientLName: HEFFNER
+     └─ dob: 09/27/1973
+     └─ patientSex: 
+     └─ medicalRecordNo: I-45668
+     └─ billingProvider: Dr. Thorpe, Bianca
+     └─ physicianNPI: 1720386378
+     └─ nameOfAgency: All At Home Health Care
+     └─ episodeDiagnoses: [{'startOfCare': '09/14/2024', 'startOfEpisode': '03/13/2025', 'endOfEpisode': '05/11/2025', 'firstDiagnosis': 'I25.118', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[19:28:56] [DOC: 9287408] 📋 [3/6] Fetching accurate physician NPI using selenium
+[19:28:56] [DOC: 9287408] ℹ️  Starting selenium NPI extraction for document ID: 9287408
+[19:28:57] [DOC: 9287408] 🔄 Logging into Doctor Alliance...
+[19:29:13] [DOC: 9287408] 🔄 Navigating to search section...
+[19:29:35] [DOC: 9287408] ⚠️  Trying alternative search link selectors...
+[19:30:15] [DOC: 9287408] ❌ Selenium NPI extraction failed: Message: 
+Stacktrace:
+#0 0x5cbc0bcfd71a <unknown>
+#1 0x5cbc0b7a00a0 <unknown>
+#2 0x5cbc0b7f19b0 <unknown>
+#3 0x5cbc0b7f1ba1 <unknown>
+#4 0x5cbc0b83fea4 <unknown>
+#5 0x5cbc0b8173cd <unknown>
+#6 0x5cbc0b83d2a0 <unknown>
+#7 0x5cbc0b817173 <unknown>
+#8 0x5cbc0b7e3d4b <unknown>
+#9 0x5cbc0b7e49b1 <unknown>
+#10 0x5cbc0bcc28cb <unknown>
+#11 0x5cbc0bcc67ca <unknown>
+#12 0x5cbc0bcaa622 <unknown>
+#13 0x5cbc0bcc7354 <unknown>
+#14 0x5cbc0bc8f45f <unknown>
+#15 0x5cbc0bceb4f8 <unknown>
+#16 0x5cbc0bceb6d6 <unknown>
+#17 0x5cbc0bcfc586 <unknown>
+#18 0x7c7ebb6b07eb <unknown>
+#19 0x7c7ebb73418c <unknown>
+
+[19:30:15] [DOC: 9287408] ⚠️  Selenium NPI extraction failed, using AI-extracted NPI
+[19:30:15] [DOC: 9287408] 📋 [4/6] Processing order data
+[19:30:18] [DOC: 9287408] 📋 [4.5/6] Synchronizing MRN between patient and order data
+[19:30:18] ❌ Error processing document 9287408: 'NoneType' object has no attribute 'strip'
+================================================================================
+║                             PROCESSING STATISTICS                              ║
+================================================================================
+[19:30:18] 📊 Document Processing Summary
+     └─ Total Documents: 49
+     └─ Successfully Processed: 0
+     └─ Failed Documents: 3
+     └─ Success Rate: 0.0%
+================================================================================
+║                  PATIENT DATA PIPELINE - PROCESSING COMPLETED                  ║
+================================================================================

@@ -1,0 +1,1515 @@
+================================================================================
+║                   PATIENT DATA PIPELINE - PROCESSING STARTED                   ║
+================================================================================
+[22:24:56] ℹ️  Processing CSV file: hawthorn.csv
+================================================================================
+║                          PROCESSING DOCUMENT 9314061                           ║
+================================================================================
+[22:24:56] [DOC: 9314061] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[22:24:56] [DOC: 9314061] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[22:24:56] [DOC: 9314061] 📋 [1/6] Extracting text from PDF
+[22:24:57] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:24:57] [DOC: 9314061] ✅ Text extracted successfully using pdfplumber
+[22:24:57] [DOC: 9314061] ℹ️  Text extraction completed using pdfplumber: 1307 characters
+[22:24:57] [DOC: 9314061] ✅ Text extraction completed
+[22:24:57] [DOC: 9314061] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[22:24:57] [DOC: 9314061] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1307
+[22:24:57] [DOC: 9314061] 📋 [2/6] Extracting patient data using AI
+[22:25:01] ✅ AI patient data extraction completed successfully
+[22:25:01] [DOC: 9314061] 📊 AI-Extracted Patient Data
+     └─ patientFName: Joao
+     └─ patientLName: Aguiar
+     └─ dob: 08/11/1954
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2170342
+     └─ billingProvider: Gloriane Afonso-Fede, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': None, 'endOfEpisode': None, 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[22:25:01] [DOC: 9314061] 📋 [3/6] Processing and validating dates
+[22:25:01] [DOC: 9314061] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[22:25:01] [DOC: 9314061] 📊 Patient Data After Date Processing
+     └─ patientFName: Joao
+     └─ patientLName: Aguiar
+     └─ dob: 08/11/1954
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2170342
+     └─ billingProvider: Gloriane Afonso-Fede, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': None, 'endOfEpisode': None, 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[22:25:01] [DOC: 9314061] 📋 [4/6] Creating or finding patient
+[22:25:01] 📊 Patient Data for Processing
+     └─ First Name: Joao
+     └─ Last Name: Aguiar
+     └─ DOB: 08/11/1954
+     └─ MRN: 2170342
+     └─ Address: None
+     └─ City: None
+     └─ State: None
+     └─ ZIP: None
+[22:25:12] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[22:25:13] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[22:25:14] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[22:25:22] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[22:25:22] 🔄 Creating new patient...
+[22:25:22] 📊 Patient Creation Request
+     └─ patientFName: Joao
+     └─ patientLName: Aguiar
+     └─ dob: 08/11/1954
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2170342
+     └─ billingProvider: Gloriane Afonso-Fede, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast VNA – Community Office (Fairhaven)
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': None, 'endOfEpisode': None, 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+     └─ companyId: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ daBackofficeID: 885897
+     └─ pgCompanyId: 4b51c8b7-c8c4-4779-808c-038c057f026b
+     └─ physicianGroup: Hawthorn Medical Associates - Family Practice
+     └─ physicianGroupNPI: 1508825811
+[22:25:23] ℹ️  Patient creation response - Status: 201
+[22:25:23] ✅ New patient created successfully with ID: f41aab89-225a-480a-9b25-f9b0069dd743
+[22:25:23] [DOC: 9314061] ✅ Patient processed successfully with ID: f41aab89-225a-480a-9b25-f9b0069dd743
+[22:25:23] [DOC: 9314061] 📋 [5/6] Extracting order data
+[22:25:25] ✅ AI order data extraction completed successfully
+[22:25:25] [DOC: 9314061] 📊 AI-Extracted Order Data
+     └─ orderNo: 1095591
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: 05/13/2025
+     └─ episodeEndDate: None
+     └─ documentID: None
+     └─ mrn: 2170342
+     └─ patientName: Aguiar,Joao M
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:25:25] [DOC: 9314061] 📋 [6/6] Processing order submission
+[22:25:26] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/13/2025
+     └─ End of Episode: 07/11/2025
+[22:25:26] [DOC: 9314061] 📊 Order Data After Date Processing
+     └─ orderNo: 1095591
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/13/2025
+     └─ episodeStartDate: 05/13/2025
+     └─ episodeEndDate: 07/11/2025
+     └─ documentID: None
+     └─ mrn: 2170342
+     └─ patientName: Aguiar,Joao M
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:25:26] [DOC: 9314061] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2170342
+     └─ Order MRN (extracted): 2170342
+     └─ Final MRN: 2170342
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[22:25:26] [DOC: 9314061] 🔄 Preparing order for submission
+[22:25:26] [DOC: 9314061] 📊 Order Request Data
+     └─ Order No: 1095591
+     └─ Patient ID: f41aab89-225a-480a-9b25-f9b0069dd743
+     └─ Company ID: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 05/13/2025
+     └─ Episode Start: 05/13/2025
+     └─ Episode End: 07/11/2025
+[22:25:27] [DOC: 9314061] ✅ Order already exists in system with ID: ORD15776
+[22:25:27] [DOC: 9314061] ℹ️  This indicates the order was processed successfully in a previous run
+[22:25:27] [DOC: 9314061] ✅ Order processing completed successfully
+[22:25:27] [DOC: 9314061] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9311183                           ║
+================================================================================
+[22:25:27] [DOC: 9311183] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[22:25:27] [DOC: 9311183] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[22:25:27] [DOC: 9311183] 📋 [1/6] Extracting text from PDF
+[22:25:28] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:25:28] [DOC: 9311183] ✅ Text extracted successfully using pdfplumber
+[22:25:28] [DOC: 9311183] ℹ️  Text extraction completed using pdfplumber: 2779 characters
+[22:25:28] [DOC: 9311183] ✅ Text extraction completed
+[22:25:28] [DOC: 9311183] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[22:25:28] [DOC: 9311183] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 2779
+[22:25:28] [DOC: 9311183] 📋 [2/6] Extracting patient data using AI
+[22:25:30] ✅ AI patient data extraction completed successfully
+[22:25:30] [DOC: 9311183] 📊 AI-Extracted Patient Data
+     └─ patientFName: Ronald
+     └─ patientLName: Alfonse
+     └─ dob: 03/30/1936
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2174766
+     └─ billingProvider: Jahn A. Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 200 Mill Road
+     └─ patientCity: Fairhaven
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: []
+[22:25:30] [DOC: 9311183] 📋 [3/6] Processing and validating dates
+[22:25:30] [DOC: 9311183] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[22:25:30] [DOC: 9311183] 📊 Patient Data After Date Processing
+     └─ patientFName: Ronald
+     └─ patientLName: Alfonse
+     └─ dob: 03/30/1936
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2174766
+     └─ billingProvider: Jahn A. Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 200 Mill Road
+     └─ patientCity: Fairhaven
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: [{}]
+[22:25:30] [DOC: 9311183] 📋 [4/6] Creating or finding patient
+[22:25:30] 📊 Patient Data for Processing
+     └─ First Name: Ronald
+     └─ Last Name: Alfonse
+     └─ DOB: 03/30/1936
+     └─ MRN: 2174766
+     └─ Address: 200 Mill Road
+     └─ City: Fairhaven
+     └─ State: MA
+     └─ ZIP: 02719-5252
+[22:25:41] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[22:25:42] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[22:25:43] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[22:25:50] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[22:25:50] 🔄 Creating new patient...
+[22:25:50] 📊 Patient Creation Request
+     └─ patientFName: Ronald
+     └─ patientLName: Alfonse
+     └─ dob: 03/30/1936
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2174766
+     └─ billingProvider: Jahn A. Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast VNA – Community Office (Fairhaven)
+     └─ patientAddress: 200 Mill Road
+     └─ patientCity: Fairhaven
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: [{}]
+     └─ companyId: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ daBackofficeID: 1072797
+     └─ pgCompanyId: 4b51c8b7-c8c4-4779-808c-038c057f026b
+     └─ physicianGroup: Hawthorn Medical Associates - Family Practice
+     └─ physicianGroupNPI: 1508825811
+[22:25:51] ℹ️  Patient creation response - Status: 201
+[22:25:51] ✅ New patient created successfully with ID: 3f5d6e63-dfea-44ab-9d02-6c07f457fa28
+[22:25:51] [DOC: 9311183] ✅ Patient processed successfully with ID: 3f5d6e63-dfea-44ab-9d02-6c07f457fa28
+[22:25:51] [DOC: 9311183] 📋 [5/6] Extracting order data
+[22:25:53] ✅ AI order data extraction completed successfully
+[22:25:53] [DOC: 9311183] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: 05/23/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: None
+     └─ episodeEndDate: None
+     └─ documentID: None
+     └─ mrn: 2174766
+     └─ patientName: Alfonse,Ronald
+     └─ sentToPhysicianDate: 05/28/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:25:53] [DOC: 9311183] 📋 [6/6] Processing order submission
+[22:25:54] ℹ️  Using Start of Care date to derive episode dates
+[22:25:54] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: Not available
+     └─ End of Episode: Not available
+[22:25:54] [DOC: 9311183] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: 05/23/2025
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: None
+     └─ mrn: 2174766
+     └─ patientName: Alfonse,Ronald
+     └─ sentToPhysicianDate: 05/28/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:25:54] [DOC: 9311183] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2174766
+     └─ Order MRN (extracted): 2174766
+     └─ Final MRN: 2174766
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[22:25:54] [DOC: 9311183] ⚠️  Missing required dates: ['episodeStartDate', 'episodeEndDate'], using fallbacks
+[22:25:54] [DOC: 9311183] 🔄 Preparing order for submission
+[22:25:54] [DOC: 9311183] 📊 Order Request Data
+     └─ Order No: Not set
+     └─ Patient ID: 3f5d6e63-dfea-44ab-9d02-6c07f457fa28
+     └─ Company ID: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ Order Date: 05/23/2025
+     └─ Start of Care: 
+     └─ Episode Start: 05/23/2025
+     └─ Episode End: 07/22/2025
+[22:25:54] [DOC: 9311183] ℹ️  Generated fallback order number: 9311183_1
+[22:25:55] [DOC: 9311183] ✅ Order already exists in system with ID: ORD15777
+[22:25:55] [DOC: 9311183] ℹ️  This indicates the order was processed successfully in a previous run
+[22:25:55] [DOC: 9311183] ✅ Order processing completed successfully
+[22:25:55] [DOC: 9311183] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9315316                           ║
+================================================================================
+[22:25:55] [DOC: 9315316] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[22:25:55] [DOC: 9315316] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[22:25:55] [DOC: 9315316] 📋 [1/6] Extracting text from PDF
+[22:25:58] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:25:58] [DOC: 9315316] ✅ Text extracted successfully using pdfplumber
+[22:25:58] [DOC: 9315316] ℹ️  Text extraction completed using pdfplumber: 11411 characters
+[22:25:58] [DOC: 9315316] ✅ Text extraction completed
+[22:25:58] [DOC: 9315316] 📄 NON-FAXED DOCUMENT | Type: 485CERT
+[22:25:58] [DOC: 9315316] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485CERT
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 11411
+[22:25:58] [DOC: 9315316] 📋 [2/6] Extracting patient data using AI
+[22:26:01] ✅ AI patient data extraction completed successfully
+[22:26:01] [DOC: 9315316] 📊 AI-Extracted Patient Data
+     └─ patientFName: Francisco
+     └─ patientLName: Amarante
+     └─ dob: 11/19/1958
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2186298
+     └─ billingProvider: Justin Etter, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 154 Rotch St
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740-2455
+     └─ episodeDiagnoses: [{'startOfCare': '05/06/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'N30.00', 'secondDiagnosis': 'G93.41', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I50.32', 'fifthDiagnosis': 'E78.5', 'sixthDiagnosis': 'E03.9'}]
+[22:26:01] [DOC: 9315316] 📋 [3/6] Processing and validating dates
+[22:26:01] [DOC: 9315316] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 05/06/2025
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[22:26:01] [DOC: 9315316] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/06/2025
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[22:26:01] [DOC: 9315316] 📊 Patient Data After Date Processing
+     └─ patientFName: Francisco
+     └─ patientLName: Amarante
+     └─ dob: 11/19/1958
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2186298
+     └─ billingProvider: Justin Etter, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 154 Rotch St
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740-2455
+     └─ episodeDiagnoses: [{'startOfCare': '05/06/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'N30.00', 'secondDiagnosis': 'G93.41', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I50.32', 'fifthDiagnosis': 'E78.5', 'sixthDiagnosis': 'E03.9'}]
+[22:26:01] [DOC: 9315316] 📋 [4/6] Creating or finding patient
+[22:26:01] 📊 Patient Data for Processing
+     └─ First Name: Francisco
+     └─ Last Name: Amarante
+     └─ DOB: 11/19/1958
+     └─ MRN: 2186298
+     └─ Address: 154 Rotch St
+     └─ City: New Bedford
+     └─ State: MA
+     └─ ZIP: 02740-2455
+[22:26:15] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[22:26:17] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[22:26:19] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[22:26:30] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[22:26:30] 🔄 Creating new patient...
+[22:26:30] 📊 Patient Creation Request
+     └─ patientFName: Francisco
+     └─ patientLName: Amarante
+     └─ dob: 11/19/1958
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2186298
+     └─ billingProvider: Justin Etter, DO
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast VNA – Community Office (Fairhaven)
+     └─ patientAddress: 154 Rotch St
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740-2455
+     └─ episodeDiagnoses: [{'startOfCare': '05/06/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'N30.00', 'secondDiagnosis': 'G93.41', 'thirdDiagnosis': 'I11.0', 'fourthDiagnosis': 'I50.32', 'fifthDiagnosis': 'E78.5', 'sixthDiagnosis': 'E03.9'}]
+     └─ companyId: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ daBackofficeID: 1202226
+     └─ pgCompanyId: 4b51c8b7-c8c4-4779-808c-038c057f026b
+     └─ physicianGroup: Hawthorn Medical Associates - Family Practice
+     └─ physicianGroupNPI: 1508825811
+[22:26:31] ℹ️  Patient creation response - Status: 201
+[22:26:31] ✅ New patient created successfully with ID: 9f6a640f-9d09-4add-a5ed-300aff5ddbd1
+[22:26:31] [DOC: 9315316] ✅ Patient processed successfully with ID: 9f6a640f-9d09-4add-a5ed-300aff5ddbd1
+[22:26:31] [DOC: 9315316] 📋 [5/6] Extracting order data
+[22:26:33] ✅ AI order data extraction completed successfully
+[22:26:33] [DOC: 9315316] 📊 AI-Extracted Order Data
+     └─ orderNo: 1095435
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/06/2025
+     └─ episodeStartDate: 05/07/2025
+     └─ episodeEndDate: 07/05/2025
+     └─ documentID: None
+     └─ mrn: 2186298
+     └─ patientName: Amarante,Francisco J
+     └─ sentToPhysicianDate: 05/27/2025
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: Home Health Plan of Care
+[22:26:33] [DOC: 9315316] 📋 [6/6] Processing order submission
+[22:26:34] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[22:26:34] [DOC: 9315316] 📊 Order Data After Date Processing
+     └─ orderNo: 1095435
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/06/2025
+     └─ episodeStartDate: 05/07/2025
+     └─ episodeEndDate: 07/05/2025
+     └─ documentID: None
+     └─ mrn: 2186298
+     └─ patientName: Amarante,Francisco J
+     └─ sentToPhysicianDate: 05/27/2025
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: Home Health Plan of Care
+[22:26:34] [DOC: 9315316] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2186298
+     └─ Order MRN (extracted): 2186298
+     └─ Final MRN: 2186298
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[22:26:34] [DOC: 9315316] 🔄 Preparing order for submission
+[22:26:34] [DOC: 9315316] 📊 Order Request Data
+     └─ Order No: 1095435
+     └─ Patient ID: 9f6a640f-9d09-4add-a5ed-300aff5ddbd1
+     └─ Company ID: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 05/06/2025
+     └─ Episode Start: 05/07/2025
+     └─ Episode End: 07/05/2025
+[22:26:35] [DOC: 9315316] ✅ Order already exists in system with ID: ORD15779
+[22:26:35] [DOC: 9315316] ℹ️  This indicates the order was processed successfully in a previous run
+[22:26:35] [DOC: 9315316] ✅ Order processing completed successfully
+[22:26:35] [DOC: 9315316] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9317403                           ║
+================================================================================
+[22:26:35] [DOC: 9317403] ℹ️  Facility/Agency: Nizhoni Health Systems-Somerville | Received Date: 
+[22:26:35] [DOC: 9317403] ℹ️  Agency mapping found: Nizhoni Health Systems-Somerville -> 23756fbd-e6e1-40b7-a974-2fb31ce13d37
+[22:26:35] [DOC: 9317403] 📋 [1/6] Extracting text from PDF
+[22:26:40] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:26:40] [DOC: 9317403] ✅ Text extracted successfully using pdfplumber
+[22:26:40] [DOC: 9317403] ℹ️  Text extraction completed using pdfplumber: 11090 characters
+[22:26:40] [DOC: 9317403] ✅ Text extraction completed
+[22:26:40] [DOC: 9317403] 📄 NON-FAXED DOCUMENT | Type: 485RECERT
+[22:26:40] [DOC: 9317403] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485RECERT
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 11090
+[22:26:40] [DOC: 9317403] 📋 [2/6] Extracting patient data using AI
+[22:26:43] ✅ AI patient data extraction completed successfully
+[22:26:43] [DOC: 9317403] 📊 AI-Extracted Patient Data
+     └─ patientFName: Tammy
+     └─ patientLName: Alves
+     └─ dob: 04/30/1981
+     └─ patientSex: F
+     └─ medicalRecordNo: 17207020
+     └─ billingProvider: Karmina Bautista, MD
+     └─ physicianNPI: 1000005112
+     └─ nameOfAgency: Innovive Health of Massachusetts LLC
+     └─ patientAddress: 790 Brock Avenue Apt 305
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02744
+     └─ episodeDiagnoses: [{'startOfCare': '03/26/2025', 'startOfEpisode': '03/26/2025', 'endOfEpisode': '07/23/2025', 'firstDiagnosis': 'F31.9', 'secondDiagnosis': 'F20.9', 'thirdDiagnosis': 'G80.9', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'F41.1', 'sixthDiagnosis': 'E06.3'}]
+[22:26:43] [DOC: 9317403] 📋 [3/6] Processing and validating dates
+[22:26:43] [DOC: 9317403] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 03/26/2025
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 07/23/2025
+[22:26:43] [DOC: 9317403] 📊 Parsed Episode Dates
+     └─ Start of Care: 03/26/2025
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 07/23/2025
+[22:26:43] [DOC: 9317403] 📊 Patient Data After Date Processing
+     └─ patientFName: Tammy
+     └─ patientLName: Alves
+     └─ dob: 04/30/1981
+     └─ patientSex: F
+     └─ medicalRecordNo: 17207020
+     └─ billingProvider: Karmina Bautista, MD
+     └─ physicianNPI: 1000005112
+     └─ nameOfAgency: Innovive Health of Massachusetts LLC
+     └─ patientAddress: 790 Brock Avenue Apt 305
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02744
+     └─ episodeDiagnoses: [{'startOfCare': '03/26/2025', 'startOfEpisode': '03/26/2025', 'endOfEpisode': '07/23/2025', 'firstDiagnosis': 'F31.9', 'secondDiagnosis': 'F20.9', 'thirdDiagnosis': 'G80.9', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'F41.1', 'sixthDiagnosis': 'E06.3'}]
+[22:26:43] [DOC: 9317403] 📋 [4/6] Creating or finding patient
+[22:26:43] 📊 Patient Data for Processing
+     └─ First Name: Tammy
+     └─ Last Name: Alves
+     └─ DOB: 04/30/1981
+     └─ MRN: 17207020
+     └─ Address: 790 Brock Avenue Apt 305
+     └─ City: New Bedford
+     └─ State: MA
+     └─ ZIP: 02744
+[22:26:53] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[22:26:54] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[22:26:55] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[22:27:01] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[22:27:01] 🔄 Creating new patient...
+[22:27:01] 📊 Patient Creation Request
+     └─ patientFName: Tammy
+     └─ patientLName: Alves
+     └─ dob: 04/30/1981
+     └─ patientSex: F
+     └─ medicalRecordNo: 17207020
+     └─ billingProvider: Karmina Bautista, MD
+     └─ physicianNPI: 1000005112
+     └─ nameOfAgency: Nizhoni Health Systems-Somerville
+     └─ patientAddress: 790 Brock Avenue Apt 305
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02744
+     └─ episodeDiagnoses: [{'startOfCare': '03/26/2025', 'startOfEpisode': '03/26/2025', 'endOfEpisode': '07/23/2025', 'firstDiagnosis': 'F31.9', 'secondDiagnosis': 'F20.9', 'thirdDiagnosis': 'G80.9', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'F41.1', 'sixthDiagnosis': 'E06.3'}]
+     └─ companyId: 23756fbd-e6e1-40b7-a974-2fb31ce13d37
+     └─ daBackofficeID: 1202489
+     └─ pgCompanyId: 4b51c8b7-c8c4-4779-808c-038c057f026b
+     └─ physicianGroup: Hawthorn Medical Associates - Family Practice
+     └─ physicianGroupNPI: 1508825811
+[22:27:03] ℹ️  Patient creation response - Status: 201
+[22:27:03] ✅ New patient created successfully with ID: 445d1ccc-1c69-4140-884f-454783096f66
+[22:27:03] [DOC: 9317403] ✅ Patient processed successfully with ID: 445d1ccc-1c69-4140-884f-454783096f66
+[22:27:03] [DOC: 9317403] 📋 [5/6] Extracting order data
+[22:27:05] ✅ AI order data extraction completed successfully
+[22:27:05] [DOC: 9317403] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 02/27/2025
+     └─ episodeStartDate: 03/26/2025
+     └─ episodeEndDate: 07/23/2025
+     └─ documentID: 17207020
+     └─ mrn: 17207020
+     └─ patientName: Alves, Tammy
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: CMS-485 HOME HEALTH CERTIFICATION AND PLAN OF CARE
+[22:27:05] [DOC: 9317403] 📋 [6/6] Processing order submission
+[22:27:06] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 03/26/2025
+     └─ End of Episode: 07/23/2025
+[22:27:06] [DOC: 9317403] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 02/27/2025
+     └─ episodeStartDate: 03/26/2025
+     └─ episodeEndDate: 07/23/2025
+     └─ documentID: 17207020
+     └─ mrn: 17207020
+     └─ patientName: Alves, Tammy
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: CMS-485 HOME HEALTH CERTIFICATION AND PLAN OF CARE
+[22:27:06] [DOC: 9317403] ℹ️  Generated MRN: MRN015512 for patient TAMMY ALVES
+[22:27:06] [DOC: 9317403] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 17207020
+     └─ Order MRN (extracted): 17207020
+     └─ Final MRN: MRN015512
+     └─ Source: generated
+     └─ Applied to: Both patient and order
+[22:27:06] [DOC: 9317403] ❌ Order processing failed: 'NoneType' object has no attribute 'strip'
+[22:27:06] [DOC: 9317403] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9314106                           ║
+================================================================================
+[22:27:06] [DOC: 9314106] ℹ️  Facility/Agency: Fairhaven HH&H | Received Date: 
+[22:27:06] [DOC: 9314106] ℹ️  Agency mapping found: Fairhaven HH&H -> 92dd35fd-50de-4972-b9fa-9f724140de71
+[22:27:06] [DOC: 9314106] 📋 [1/6] Extracting text from PDF
+[22:27:09] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:27:09] [DOC: 9314106] ✅ Text extracted successfully using pdfplumber
+[22:27:09] [DOC: 9314106] ℹ️  Text extraction completed using pdfplumber: 1158 characters
+[22:27:09] [DOC: 9314106] ✅ Text extraction completed
+[22:27:09] [DOC: 9314106] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[22:27:09] [DOC: 9314106] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1158
+[22:27:09] [DOC: 9314106] 📋 [2/6] Extracting patient data using AI
+[22:27:12] ✅ AI patient data extraction completed successfully
+[22:27:12] [DOC: 9314106] 📊 AI-Extracted Patient Data
+     └─ patientFName: Robert
+     └─ patientLName: Andrade
+     └─ dob: 06/25/1943
+     └─ patientSex: M
+     └─ medicalRecordNo: 2486002
+     └─ billingProvider: Jahn A Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 3 Orlando Ave
+     └─ patientCity: Westport
+     └─ patientState: MA
+     └─ zip: 02790
+     └─ episodeDiagnoses: [{'startOfCare': '12/19/2024', 'startOfEpisode': '03/19/2025', 'endOfEpisode': '06/16/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:27:12] [DOC: 9314106] 📋 [3/6] Processing and validating dates
+[22:27:12] [DOC: 9314106] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 12/19/2024
+     └─ Start of Episode: 03/19/2025
+     └─ End of Episode: 06/16/2025
+[22:27:12] [DOC: 9314106] 📊 Parsed Episode Dates
+     └─ Start of Care: 12/19/2024
+     └─ Start of Episode: 03/19/2025
+     └─ End of Episode: 06/16/2025
+[22:27:12] [DOC: 9314106] 📊 Patient Data After Date Processing
+     └─ patientFName: Robert
+     └─ patientLName: Andrade
+     └─ dob: 06/25/1943
+     └─ patientSex: M
+     └─ medicalRecordNo: 2486002
+     └─ billingProvider: Jahn A Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 3 Orlando Ave
+     └─ patientCity: Westport
+     └─ patientState: MA
+     └─ zip: 02790
+     └─ episodeDiagnoses: [{'startOfCare': '12/19/2024', 'startOfEpisode': '03/19/2025', 'endOfEpisode': '06/16/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:27:12] [DOC: 9314106] 📋 [4/6] Creating or finding patient
+[22:27:12] 📊 Patient Data for Processing
+     └─ First Name: Robert
+     └─ Last Name: Andrade
+     └─ DOB: 06/25/1943
+     └─ MRN: 2486002
+     └─ Address: 3 Orlando Ave
+     └─ City: Westport
+     └─ State: MA
+     └─ ZIP: 02790
+[22:27:13] ✅ ✅ Patient found in system | ROBERT ANDRADE (DOB: 06/25/1943) | Agency: 92dd35fd-50de-4972-b9fa-9f724140de71 | Patient ID: e367e440-5660-423f-9c06-de94c71235ec
+[22:27:13] ✅ Patient found on platform: ROBERT ANDRADE, ID: e367e440-5660-423f-9c06-de94c71235ec
+[22:27:13] [DOC: 9314106] ✅ Patient processed successfully with ID: e367e440-5660-423f-9c06-de94c71235ec
+[22:27:13] [DOC: 9314106] 📋 [5/6] Extracting order data
+[22:27:15] ✅ AI order data extraction completed successfully
+[22:27:15] [DOC: 9314106] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: 05/22/2025
+     └─ startOfCare: 12/19/2024
+     └─ episodeStartDate: 03/19/2025
+     └─ episodeEndDate: 06/16/2025
+     └─ documentID: 2486002
+     └─ mrn: None
+     └─ patientName: Andrade, Robert A
+     └─ sentToPhysicianDate: 05/29/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:27:15] [DOC: 9314106] 📋 [6/6] Processing order submission
+[22:27:16] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 03/19/2025
+     └─ End of Episode: 06/16/2025
+[22:27:16] [DOC: 9314106] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: 05/22/2025
+     └─ startOfCare: 12/19/2024
+     └─ episodeStartDate: 03/19/2025
+     └─ episodeEndDate: 06/16/2025
+     └─ documentID: 2486002
+     └─ mrn: None
+     └─ patientName: Andrade, Robert A
+     └─ sentToPhysicianDate: 05/29/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:27:16] [DOC: 9314106] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2486002
+     └─ Order MRN (extracted): None
+     └─ Final MRN: 2486002
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[22:27:16] [DOC: 9314106] 🔄 Preparing order for submission
+[22:27:16] [DOC: 9314106] 📊 Order Request Data
+     └─ Order No: Not set
+     └─ Patient ID: e367e440-5660-423f-9c06-de94c71235ec
+     └─ Company ID: 92dd35fd-50de-4972-b9fa-9f724140de71
+     └─ Order Date: 05/22/2025
+     └─ Start of Care: 12/19/2024
+     └─ Episode Start: 03/19/2025
+     └─ Episode End: 06/16/2025
+[22:27:16] [DOC: 9314106] ℹ️  Generated fallback order number: 9314106_1
+[22:27:17] [DOC: 9314106] ✅ Order pushed successfully with ID: None
+[22:27:17] [DOC: 9314106] ✅ Order processing completed successfully
+[22:27:17] [DOC: 9314106] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9314072                           ║
+================================================================================
+[22:27:17] [DOC: 9314072] ℹ️  Facility/Agency: Fairhaven HH&H | Received Date: 
+[22:27:17] [DOC: 9314072] ℹ️  Agency mapping found: Fairhaven HH&H -> 92dd35fd-50de-4972-b9fa-9f724140de71
+[22:27:17] [DOC: 9314072] 📋 [1/6] Extracting text from PDF
+[22:27:19] [DOC: 9314072] ❌ Critical failure in get_pdf_text: Invalid response format: missing 'value' key
+[22:27:19] [DOC: 9314072] ✅ Text extraction completed
+[22:27:19] [DOC: 9314072] 📄 NON-FAXED DOCUMENT | Type: Unknown
+[22:27:19] [DOC: 9314072] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: Unknown
+     └─ Extraction Method: failure_fallback
+     └─ Text Length: 0
+[22:27:19] [DOC: 9314072] 📋 [2/6] Extracting patient data using AI
+[22:27:21] ✅ AI patient data extraction completed successfully
+[22:27:21] [DOC: 9314072] 📊 AI-Extracted Patient Data
+     └─ patientFName: JOHN
+     └─ patientLName: SMITH
+     └─ dob: 04/06/1965
+     └─ patientSex: M
+     └─ medicalRecordNo: 1234567
+     └─ billingProvider: Dr. Jane Doe
+     └─ physicianNPI: 1234567890
+     └─ nameOfAgency: Generic Healthcare
+     └─ patientAddress: 123 Main Street
+     └─ patientCity: Anytown
+     └─ patientState: MA
+     └─ zip: 01234
+     └─ episodeDiagnoses: [{'startOfCare': '01/01/2023', 'startOfEpisode': '02/15/2023', 'endOfEpisode': '03/15/2023', 'firstDiagnosis': 'I10', 'secondDiagnosis': 'I25.10', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:27:21] [DOC: 9314072] 📋 [3/6] Processing and validating dates
+[22:27:21] [DOC: 9314072] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 01/01/2023
+     └─ Start of Episode: 02/15/2023
+     └─ End of Episode: 03/15/2023
+[22:27:21] [DOC: 9314072] 📊 Parsed Episode Dates
+     └─ Start of Care: 01/01/2023
+     └─ Start of Episode: 02/15/2023
+     └─ End of Episode: 03/15/2023
+[22:27:21] [DOC: 9314072] 📊 Patient Data After Date Processing
+     └─ patientFName: JOHN
+     └─ patientLName: SMITH
+     └─ dob: 04/06/1965
+     └─ patientSex: M
+     └─ medicalRecordNo: 1234567
+     └─ billingProvider: Dr. Jane Doe
+     └─ physicianNPI: 1234567890
+     └─ nameOfAgency: Generic Healthcare
+     └─ patientAddress: 123 Main Street
+     └─ patientCity: Anytown
+     └─ patientState: MA
+     └─ zip: 01234
+     └─ episodeDiagnoses: [{'startOfCare': '01/01/2023', 'startOfEpisode': '02/15/2023', 'endOfEpisode': '03/15/2023', 'firstDiagnosis': 'I10', 'secondDiagnosis': 'I25.10', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:27:21] [DOC: 9314072] 📋 [4/6] Creating or finding patient
+[22:27:21] 📊 Patient Data for Processing
+     └─ First Name: JOHN
+     └─ Last Name: SMITH
+     └─ DOB: 04/06/1965
+     └─ MRN: 1234567
+     └─ Address: 123 Main Street
+     └─ City: Anytown
+     └─ State: MA
+     └─ ZIP: 01234
+[22:27:21] ✅ Patient already processed in this session: JOHN SMITH
+[22:27:21] [DOC: 9314072] ✅ Patient processed successfully with ID: 7de44214-2573-4e2e-ac06-f8880a3618d9
+[22:27:21] [DOC: 9314072] 📋 [5/6] Extracting order data
+[22:27:23] ✅ AI order data extraction completed successfully
+[22:27:23] [DOC: 9314072] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: None
+     └─ episodeStartDate: None
+     └─ episodeEndDate: None
+     └─ documentID: 9314072
+     └─ mrn: None
+     └─ patientName: None
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:27:23] [DOC: 9314072] 📋 [6/6] Processing order submission
+[22:27:24] ℹ️  Using Start of Care date to derive episode dates
+[22:27:24] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: Not available
+     └─ End of Episode: Not available
+[22:27:24] [DOC: 9314072] 📊 Order Data After Date Processing
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: 9314072
+     └─ mrn: None
+     └─ patientName: None
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:27:24] [DOC: 9314072] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 1234567
+     └─ Order MRN (extracted): None
+     └─ Final MRN: 1234567
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[22:27:24] [DOC: 9314072] ❌ Order processing failed: 'NoneType' object has no attribute 'strip'
+[22:27:24] [DOC: 9314072] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9313791                           ║
+================================================================================
+[22:27:24] [DOC: 9313791] ℹ️  Facility/Agency: Dartmouth HH | Received Date: 
+[22:27:24] [DOC: 9313791] ℹ️  Agency mapping found: Dartmouth HH -> d404757d-5027-45d2-a235-24a1fe763c9a
+[22:27:24] [DOC: 9313791] 📋 [1/6] Extracting text from PDF
+[22:27:26] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:27:26] [DOC: 9313791] ✅ Text extracted successfully using pdfplumber
+[22:27:26] [DOC: 9313791] ℹ️  Text extraction completed using pdfplumber: 2751 characters
+[22:27:26] [DOC: 9313791] ✅ Text extraction completed
+[22:27:26] [DOC: 9313791] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[22:27:26] [DOC: 9313791] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 2751
+[22:27:26] [DOC: 9313791] 📋 [2/6] Extracting patient data using AI
+[22:27:29] ✅ AI patient data extraction completed successfully
+[22:27:29] [DOC: 9313791] 📊 AI-Extracted Patient Data
+     └─ patientFName: Janice
+     └─ patientLName: Arruda
+     └─ dob: 01/24/1950
+     └─ patientSex: F
+     └─ medicalRecordNo: 5862015
+     └─ billingProvider: Sirjana Dhungana Parajuli, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 95 Highland Street 2nd floor
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740
+     └─ episodeDiagnoses: [{'startOfCare': '02/08/2025', 'startOfEpisode': '04/09/2025', 'endOfEpisode': '06/07/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:27:29] [DOC: 9313791] 📋 [3/6] Processing and validating dates
+[22:27:29] [DOC: 9313791] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 02/08/2025
+     └─ Start of Episode: 04/09/2025
+     └─ End of Episode: 06/07/2025
+[22:27:29] [DOC: 9313791] 📊 Parsed Episode Dates
+     └─ Start of Care: 02/08/2025
+     └─ Start of Episode: 04/09/2025
+     └─ End of Episode: 06/07/2025
+[22:27:29] [DOC: 9313791] 📊 Patient Data After Date Processing
+     └─ patientFName: Janice
+     └─ patientLName: Arruda
+     └─ dob: 01/24/1950
+     └─ patientSex: F
+     └─ medicalRecordNo: 5862015
+     └─ billingProvider: Sirjana Dhungana Parajuli, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ patientAddress: 95 Highland Street 2nd floor
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740
+     └─ episodeDiagnoses: [{'startOfCare': '02/08/2025', 'startOfEpisode': '04/09/2025', 'endOfEpisode': '06/07/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:27:29] [DOC: 9313791] 📋 [4/6] Creating or finding patient
+[22:27:29] 📊 Patient Data for Processing
+     └─ First Name: Janice
+     └─ Last Name: Arruda
+     └─ DOB: 01/24/1950
+     └─ MRN: 5862015
+     └─ Address: 95 Highland Street 2nd floor
+     └─ City: New Bedford
+     └─ State: MA
+     └─ ZIP: 02740
+[22:27:31] ✅ ✅ Patient found in system | JANICE ARRUDA (DOB: 01/24/1950) | Agency: d404757d-5027-45d2-a235-24a1fe763c9a | Patient ID: cc67108f-d504-4858-959a-d21d91141958
+[22:27:31] ✅ Patient found on platform: JANICE ARRUDA, ID: cc67108f-d504-4858-959a-d21d91141958
+[22:27:31] [DOC: 9313791] ✅ Patient processed successfully with ID: cc67108f-d504-4858-959a-d21d91141958
+[22:27:31] [DOC: 9313791] 📋 [5/6] Extracting order data
+[22:27:33] ✅ AI order data extraction completed successfully
+[22:27:33] [DOC: 9313791] 📊 AI-Extracted Order Data
+     └─ orderNo: 5862015
+     └─ orderDate: 05/21/2025
+     └─ startOfCare: 02/08/2025
+     └─ episodeStartDate: 04/09/2025
+     └─ episodeEndDate: 06/07/2025
+     └─ documentID: 
+     └─ mrn: 
+     └─ patientName: Arruda, Janice G
+     └─ sentToPhysicianDate: 05/28/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[22:27:33] [DOC: 9313791] 📋 [6/6] Processing order submission
+[22:27:34] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 04/09/2025
+     └─ End of Episode: 06/07/2025
+[22:27:34] [DOC: 9313791] 📊 Order Data After Date Processing
+     └─ orderNo: 5862015
+     └─ orderDate: 05/21/2025
+     └─ startOfCare: 02/08/2025
+     └─ episodeStartDate: 04/09/2025
+     └─ episodeEndDate: 06/07/2025
+     └─ documentID: 
+     └─ mrn: 
+     └─ patientName: Arruda, Janice G
+     └─ sentToPhysicianDate: 05/28/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[22:27:34] [DOC: 9313791] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 5862015
+     └─ Order MRN (extracted): None
+     └─ Final MRN: 5862015
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[22:27:34] [DOC: 9313791] 🔄 Preparing order for submission
+[22:27:34] [DOC: 9313791] 📊 Order Request Data
+     └─ Order No: 5862015
+     └─ Patient ID: cc67108f-d504-4858-959a-d21d91141958
+     └─ Company ID: d404757d-5027-45d2-a235-24a1fe763c9a
+     └─ Order Date: 05/21/2025
+     └─ Start of Care: 02/08/2025
+     └─ Episode Start: 04/09/2025
+     └─ Episode End: 06/07/2025
+[22:27:35] [DOC: 9313791] ✅ Order already exists in system with ID: ORD12954
+[22:27:35] [DOC: 9313791] ℹ️  This indicates the order was processed successfully in a previous run
+[22:27:35] [DOC: 9313791] ✅ Order processing completed successfully
+[22:27:35] [DOC: 9313791] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9315328                           ║
+================================================================================
+[22:27:35] [DOC: 9315328] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[22:27:35] [DOC: 9315328] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[22:27:35] [DOC: 9315328] 📋 [1/6] Extracting text from PDF
+[22:27:39] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:27:39] [DOC: 9315328] ✅ Text extracted successfully using pdfplumber
+[22:27:39] [DOC: 9315328] ℹ️  Text extraction completed using pdfplumber: 14348 characters
+[22:27:39] [DOC: 9315328] ✅ Text extraction completed
+[22:27:39] [DOC: 9315328] 📄 NON-FAXED DOCUMENT | Type: 485CERT
+[22:27:39] [DOC: 9315328] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485CERT
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 14348
+[22:27:39] [DOC: 9315328] 📋 [2/6] Extracting patient data using AI
+[22:27:42] ✅ AI patient data extraction completed successfully
+[22:27:42] [DOC: 9315328] 📊 AI-Extracted Patient Data
+     └─ patientFName: Herta
+     └─ patientLName: Bauer
+     └─ dob: 07/09/1938
+     └─ patientSex: Female
+     └─ medicalRecordNo: 2224673
+     └─ billingProvider: Elaine Wu, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 7 Anthony St
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740-3402
+     └─ episodeDiagnoses: [{'startOfCare': '05/06/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'I48.11', 'secondDiagnosis': 'R42', 'thirdDiagnosis': 'R79.89', 'fourthDiagnosis': 'E06.3', 'fifthDiagnosis': 'E78.5', 'sixthDiagnosis': 'R29.6'}]
+[22:27:42] [DOC: 9315328] 📋 [3/6] Processing and validating dates
+[22:27:42] [DOC: 9315328] 📊 Raw Episode Dates from Document
+     └─ Start of Care: 05/06/2025
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[22:27:42] [DOC: 9315328] 📊 Parsed Episode Dates
+     └─ Start of Care: 05/06/2025
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[22:27:42] [DOC: 9315328] 📊 Patient Data After Date Processing
+     └─ patientFName: Herta
+     └─ patientLName: Bauer
+     └─ dob: 07/09/1938
+     └─ patientSex: Female
+     └─ medicalRecordNo: 2224673
+     └─ billingProvider: Elaine Wu, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 7 Anthony St
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740-3402
+     └─ episodeDiagnoses: [{'startOfCare': '05/06/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'I48.11', 'secondDiagnosis': 'R42', 'thirdDiagnosis': 'R79.89', 'fourthDiagnosis': 'E06.3', 'fifthDiagnosis': 'E78.5', 'sixthDiagnosis': 'R29.6'}]
+[22:27:42] [DOC: 9315328] 📋 [4/6] Creating or finding patient
+[22:27:42] 📊 Patient Data for Processing
+     └─ First Name: Herta
+     └─ Last Name: Bauer
+     └─ DOB: 07/09/1938
+     └─ MRN: 2224673
+     └─ Address: 7 Anthony St
+     └─ City: New Bedford
+     └─ State: MA
+     └─ ZIP: 02740-3402
+[22:27:59] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[22:28:00] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[22:28:01] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[22:28:08] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[22:28:08] 🔄 Creating new patient...
+[22:28:08] 📊 Patient Creation Request
+     └─ patientFName: Herta
+     └─ patientLName: Bauer
+     └─ dob: 07/09/1938
+     └─ patientSex: Female
+     └─ medicalRecordNo: 2224673
+     └─ billingProvider: Elaine Wu, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast VNA – Community Office (Fairhaven)
+     └─ patientAddress: 7 Anthony St
+     └─ patientCity: New Bedford
+     └─ patientState: MA
+     └─ zip: 02740-3402
+     └─ episodeDiagnoses: [{'startOfCare': '05/06/2025', 'startOfEpisode': '05/07/2025', 'endOfEpisode': '07/05/2025', 'firstDiagnosis': 'I48.11', 'secondDiagnosis': 'R42', 'thirdDiagnosis': 'R79.89', 'fourthDiagnosis': 'E06.3', 'fifthDiagnosis': 'E78.5', 'sixthDiagnosis': 'R29.6'}]
+     └─ companyId: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ daBackofficeID: 1202227
+     └─ pgCompanyId: 4b51c8b7-c8c4-4779-808c-038c057f026b
+     └─ physicianGroup: Hawthorn Medical Associates - Family Practice
+     └─ physicianGroupNPI: 1508825811
+[22:28:10] ℹ️  Patient creation response - Status: 201
+[22:28:10] ✅ New patient created successfully with ID: 482758a0-1c80-43c4-94e2-4df3f5d15fce
+[22:28:10] [DOC: 9315328] ✅ Patient processed successfully with ID: 482758a0-1c80-43c4-94e2-4df3f5d15fce
+[22:28:10] [DOC: 9315328] 📋 [5/6] Extracting order data
+[22:28:12] ✅ AI order data extraction completed successfully
+[22:28:12] [DOC: 9315328] 📊 AI-Extracted Order Data
+     └─ orderNo: 1095437
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/06/2025
+     └─ episodeStartDate: 05/07/2025
+     └─ episodeEndDate: 07/05/2025
+     └─ documentID: 301669
+     └─ mrn: 2224673
+     └─ patientName: Bauer, Herta
+     └─ sentToPhysicianDate: 05/27/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: Home Health Plan of Care
+[22:28:12] [DOC: 9315328] 📋 [6/6] Processing order submission
+[22:28:13] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/07/2025
+     └─ End of Episode: 07/05/2025
+[22:28:13] [DOC: 9315328] 📊 Order Data After Date Processing
+     └─ orderNo: 1095437
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/06/2025
+     └─ episodeStartDate: 05/07/2025
+     └─ episodeEndDate: 07/05/2025
+     └─ documentID: 301669
+     └─ mrn: 2224673
+     └─ patientName: Bauer, Herta
+     └─ sentToPhysicianDate: 05/27/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: Home Health Plan of Care
+[22:28:13] [DOC: 9315328] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2224673
+     └─ Order MRN (extracted): 2224673
+     └─ Final MRN: 2224673
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[22:28:13] [DOC: 9315328] 🔄 Preparing order for submission
+[22:28:13] [DOC: 9315328] 📊 Order Request Data
+     └─ Order No: 1095437
+     └─ Patient ID: 482758a0-1c80-43c4-94e2-4df3f5d15fce
+     └─ Company ID: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 05/06/2025
+     └─ Episode Start: 05/07/2025
+     └─ Episode End: 07/05/2025
+[22:28:15] [DOC: 9315328] ✅ Order pushed successfully with ID: None
+[22:28:15] [DOC: 9315328] ✅ Order processing completed successfully
+[22:28:15] [DOC: 9315328] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9313765                           ║
+================================================================================
+[22:28:15] [DOC: 9313765] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[22:28:15] [DOC: 9313765] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[22:28:15] [DOC: 9313765] 📋 [1/6] Extracting text from PDF
+[22:28:16] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:28:16] [DOC: 9313765] ✅ Text extracted successfully using pdfplumber
+[22:28:16] [DOC: 9313765] ℹ️  Text extraction completed using pdfplumber: 1634 characters
+[22:28:16] [DOC: 9313765] ✅ Text extraction completed
+[22:28:16] [DOC: 9313765] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[22:28:16] [DOC: 9313765] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1634
+[22:28:16] [DOC: 9313765] 📋 [2/6] Extracting patient data using AI
+[22:28:18] ✅ AI patient data extraction completed successfully
+[22:28:18] [DOC: 9313765] 📊 AI-Extracted Patient Data
+     └─ patientFName: Eileen
+     └─ patientLName: Bettencourt
+     └─ dob: 04/20/1945
+     └─ patientSex: Female
+     └─ medicalRecordNo: 2240353
+     └─ billingProvider: Christine A. Will, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': '04/27/2025', 'endOfEpisode': None, 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[22:28:18] [DOC: 9313765] 📋 [3/6] Processing and validating dates
+[22:28:18] [DOC: 9313765] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: 04/27/2025
+     └─ End of Episode: Not found
+[22:28:18] [DOC: 9313765] 📊 Parsed Episode Dates
+     └─ Start of Care: 04/27/2025
+     └─ Start of Episode: 04/27/2025
+     └─ End of Episode: 06/25/2025
+[22:28:18] [DOC: 9313765] 📊 Patient Data After Date Processing
+     └─ patientFName: Eileen
+     └─ patientLName: Bettencourt
+     └─ dob: 04/20/1945
+     └─ patientSex: Female
+     └─ medicalRecordNo: 2240353
+     └─ billingProvider: Christine A. Will, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': '04/27/2025', 'startOfEpisode': '04/27/2025', 'endOfEpisode': '06/25/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[22:28:18] [DOC: 9313765] 📋 [4/6] Creating or finding patient
+[22:28:18] 📊 Patient Data for Processing
+     └─ First Name: Eileen
+     └─ Last Name: Bettencourt
+     └─ DOB: 04/20/1945
+     └─ MRN: 2240353
+     └─ Address: None
+     └─ City: None
+     └─ State: None
+     └─ ZIP: None
+[22:28:34] ⚠️  Unexpected error for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: 'Logger' object has no attribute 'debug'
+[22:28:36] ⚠️  Unexpected error for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: 'Logger' object has no attribute 'debug'
+[22:28:37] ⚠️  Unexpected error for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: 'Logger' object has no attribute 'debug'
+[22:28:44] ⚠️  Unexpected error for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: 'Logger' object has no attribute 'debug'
+[22:28:44] 🔄 Creating new patient...
+[22:28:44] 📊 Patient Creation Request
+     └─ patientFName: Eileen
+     └─ patientLName: Bettencourt
+     └─ dob: 04/20/1945
+     └─ patientSex: Female
+     └─ medicalRecordNo: 2240353
+     └─ billingProvider: Christine A. Will, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast VNA – Community Office (Fairhaven)
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': '04/27/2025', 'startOfEpisode': '04/27/2025', 'endOfEpisode': '06/25/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+     └─ companyId: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ daBackofficeID: 1195805
+     └─ pgCompanyId: 4b51c8b7-c8c4-4779-808c-038c057f026b
+     └─ physicianGroup: Hawthorn Medical Associates - Family Practice
+     └─ physicianGroupNPI: 1508825811
+[22:28:46] ℹ️  Patient creation response - Status: 201
+[22:28:46] ✅ New patient created successfully with ID: 7a6051af-4fb9-4b40-9fff-42f6eacce783
+[22:28:46] [DOC: 9313765] ✅ Patient processed successfully with ID: 7a6051af-4fb9-4b40-9fff-42f6eacce783
+[22:28:46] [DOC: 9313765] 📋 [5/6] Extracting order data
+[22:28:48] ✅ AI order data extraction completed successfully
+[22:28:48] [DOC: 9313765] 📊 AI-Extracted Order Data
+     └─ orderNo: 1095370
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: 06/01/2025
+     └─ episodeEndDate: 06/07/2025
+     └─ documentID: None
+     └─ mrn: 2240353
+     └─ patientName: Bettencourt,Eileen
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:28:48] [DOC: 9313765] 📋 [6/6] Processing order submission
+[22:28:49] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 06/01/2025
+     └─ End of Episode: 06/07/2025
+[22:28:49] [DOC: 9313765] 📊 Order Data After Date Processing
+     └─ orderNo: 1095370
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 06/01/2025
+     └─ episodeStartDate: 06/01/2025
+     └─ episodeEndDate: 06/07/2025
+     └─ documentID: None
+     └─ mrn: 2240353
+     └─ patientName: Bettencourt,Eileen
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[22:28:49] [DOC: 9313765] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2240353
+     └─ Order MRN (extracted): 2240353
+     └─ Final MRN: 2240353
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[22:28:49] [DOC: 9313765] 🔄 Preparing order for submission
+[22:28:49] [DOC: 9313765] 📊 Order Request Data
+     └─ Order No: 1095370
+     └─ Patient ID: 7a6051af-4fb9-4b40-9fff-42f6eacce783
+     └─ Company ID: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 06/01/2025
+     └─ Episode Start: 06/01/2025
+     └─ Episode End: 06/07/2025
+[22:28:50] [DOC: 9313765] ✅ Order pushed successfully with ID: None
+[22:28:50] [DOC: 9313765] ✅ Order processing completed successfully
+[22:28:50] [DOC: 9313765] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9313731                           ║
+================================================================================
+[22:28:50] [DOC: 9313731] ℹ️  Facility/Agency: AccentCare Fall River | Received Date: 
+[22:28:50] [DOC: 9313731] ℹ️  Agency mapping found: AccentCare Fall River -> c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+[22:28:50] [DOC: 9313731] 📋 [1/6] Extracting text from PDF
+[22:29:05] ℹ️  Document is text-based - using pdfplumber for extraction
+[22:29:05] [DOC: 9313731] ⚠️  pdfplumber extraction failed: pdfplumber extracted empty text, trying OCR...
+[22:29:30] [DOC: 9313731] ⚠️  YOLO+DocTR extraction failed: 'Line' object has no attribute 'value', trying basic OCR...
+[22:29:43] [DOC: 9313731] ✅ Text extracted successfully using tesseract_fallback
+[22:29:43] [DOC: 9313731] ℹ️  Text extraction completed using tesseract_fallback: 22261 characters
+[22:29:43] [DOC: 9313731] ✅ Text extraction completed
+[22:29:43] [DOC: 9313731] 📄 NON-FAXED DOCUMENT | Type: 485CERT
+[22:29:43] [DOC: 9313731] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: 485CERT
+     └─ Extraction Method: tesseract_fallback
+     └─ Text Length: 22261
+[22:29:43] [DOC: 9313731] 📋 [2/6] Extracting patient data using AI
+[22:39:43] ⚠️  AI extraction attempt 1 failed: 504 Deadline Exceeded
+[22:49:43] ⚠️  AI extraction attempt 2 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown
+[22:59:41] ⚠️  AI extraction attempt 3 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown
+[22:59:41] ❌ All AI extraction attempts failed
+[22:59:41] ⚠️  AI extraction failed, returning minimal patient data structure
+[22:59:41] [DOC: 9313731] 📊 AI-Extracted Patient Data
+     └─ patientFName: 
+     └─ patientLName: 
+     └─ dob: 
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: 
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:59:41] [DOC: 9313731] ⚠️  No critical patient identifiers found - using document ID as fallback
+[22:59:41] [DOC: 9313731] 📋 [3/6] Processing and validating dates
+[22:59:41] [DOC: 9313731] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[22:59:41] [DOC: 9313731] 📊 Patient Data After Date Processing
+     └─ patientFName: Unknown_9313731
+     └─ patientLName: Patient
+     └─ dob: 01/01/1900
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: 
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:59:41] [DOC: 9313731] 📋 [4/6] Creating or finding patient
+[22:59:41] 📊 Patient Data for Processing
+     └─ First Name: Unknown_9313731
+     └─ Last Name: Patient
+     └─ DOB: 01/01/1900
+     └─ MRN: 
+     └─ Address: 
+     └─ City: 
+     └─ State: 
+     └─ ZIP: 
+[22:59:46] ⚠️  Request error when checking patients for agency ID c7cc6389-e15a-468f-bfbc-bc60ac4d4e81: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/c7cc6389-e15a-468f-bfbc-bc60ac4d4e81 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID 191b161e-e825-453f-ac5b-18e0337ed21c: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/191b161e-e825-453f-ac5b-18e0337ed21c (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID d399d8df-a660-4868-a072-51f3792a5a5e: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/d399d8df-a660-4868-a072-51f3792a5a5e (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID 4390e79c-b02e-47e0-b66f-d9c93ce00fb9: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/4390e79c-b02e-47e0-b66f-d9c93ce00fb9 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID e72e7a25-4a28-489c-9eb0-fa635769afa6: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/e72e7a25-4a28-489c-9eb0-fa635769afa6 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/674cd114-c2b4-4d33-89d2-5e2bab27ac58 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/9be7cfec-e3be-4a1f-969c-21d81c417e49 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/487f61ca-95ed-444b-a638-9bbab3ddcbbd (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID 7e086962-c3a1-4653-bcaf-f43a9213c0ae: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/7e086962-c3a1-4653-bcaf-f43a9213c0ae (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID 5acdd561-ba2b-43b7-a382-8e0dd4d7fccd: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/5acdd561-ba2b-43b7-a382-8e0dd4d7fccd (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID a3b932d4-be57-444e-afa4-8782d93be98d: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/a3b932d4-be57-444e-afa4-8782d93be98d (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID 7db8a02d-48d0-4071-9afa-9d05975994e4: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/7db8a02d-48d0-4071-9afa-9d05975994e4 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] ⚠️  Request error when checking patients for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/af45b761-2491-49ab-ad5f-b4baf0ac02e2 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] 🔄 Creating new patient...
+[22:59:46] 📊 Patient Creation Request
+     └─ patientFName: Unknown_9313731
+     └─ patientLName: Patient
+     └─ dob: 01/01/1900
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: AccentCare Fall River
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+     └─ companyId: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ daBackofficeID: 1202035
+     └─ pgCompanyId: 4b51c8b7-c8c4-4779-808c-038c057f026b
+     └─ physicianGroup: Hawthorn Medical Associates - Family Practice
+     └─ physicianGroupNPI: 1508825811
+[22:59:46] [DOC: 9313731] ❌ Patient creation/retrieval failed: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/create (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[22:59:46] [DOC: 9313731] ⚠️  Using error fallback patient ID
+[22:59:46] [DOC: 9313731] 📋 [5/6] Extracting order data
+[23:09:44] ⚠️  AI order extraction attempt 1 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown
+[23:19:42] ⚠️  AI order extraction attempt 2 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown
+[23:29:39] ⚠️  AI order extraction attempt 3 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown
+[23:29:39] ❌ All AI order extraction attempts failed
+[23:29:39] ⚠️  AI order extraction failed, returning minimal order data structure
+[23:29:39] [DOC: 9313731] 📊 AI-Extracted Order Data
+     └─ orderNo: 
+     └─ orderDate: 
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: 
+     └─ mrn: 
+     └─ patientName: 
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: False
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[23:29:39] [DOC: 9313731] 📋 [6/6] Processing order submission
+[23:29:44] ⚠️  Failed to fetch patient details for patient ID: 9313731
+[23:29:44] ℹ️  Using Start of Care date to derive episode dates
+[23:29:44] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: Not available
+     └─ End of Episode: Not available
+[23:29:44] [DOC: 9313731] 📊 Order Data After Date Processing
+     └─ orderNo: 
+     └─ orderDate: 
+     └─ startOfCare: 
+     └─ episodeStartDate: 
+     └─ episodeEndDate: 
+     └─ documentID: 
+     └─ mrn: 
+     └─ patientName: 
+     └─ sentToPhysicianDate: 
+     └─ sentToPhysicianStatus: False
+     └─ patientId: 
+     └─ companyId: 
+     └─ bit64Url: 
+     └─ documentName: 
+[23:29:44] [DOC: 9313731] ℹ️  Generated MRN: MRN048226 for patient UNKNOWN_9313731 PATIENT
+[23:29:44] [DOC: 9313731] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): None
+     └─ Order MRN (extracted): None
+     └─ Final MRN: MRN048226
+     └─ Source: generated
+     └─ Applied to: Both patient and order
+[23:29:44] [DOC: 9313731] ⚠️  Missing required dates: ['orderDate', 'episodeStartDate', 'episodeEndDate'], using fallbacks
+[23:29:44] [DOC: 9313731] 🔄 Preparing order for submission
+[23:29:44] [DOC: 9313731] 📊 Order Request Data
+     └─ Order No: 
+     └─ Patient ID: ERROR_PATIENT_9313731
+     └─ Company ID: c7cc6389-e15a-468f-bfbc-bc60ac4d4e81
+     └─ Order Date: 05/30/2025
+     └─ Start of Care: 
+     └─ Episode Start: 05/30/2025
+     └─ Episode End: 07/29/2025
+[23:29:44] [DOC: 9313731] ℹ️  Generated fallback order number: 9313731_1
+[23:29:44] [DOC: 9313731] ❌ Order submission failed: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Order (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:29:44] [DOC: 9313731] ⚠️  Document processing completed with issues
+================================================================================
+║                          PROCESSING DOCUMENT 9312572                           ║
+================================================================================
+[23:29:44] [DOC: 9312572] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[23:29:44] [DOC: 9312572] ℹ️  Agency mapping found: Southcoast VNA – Community Office (Fairhaven) -> 370583e3-01c8-477e-8b6d-d3537a10c767
+[23:29:44] [DOC: 9312572] 📋 [1/6] Extracting text from PDF
+[23:29:49] [DOC: 9312572] ⚠️  Network error attempt 1: HTTPSConnectionPool(host='api.doctoralliance.com', port=443): Max retries exceeded with url: /document/getfile?docId.id=9312572 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)'))), retrying...
+[23:29:51] [DOC: 9312572] ⚠️  Network error attempt 2: HTTPSConnectionPool(host='api.doctoralliance.com', port=443): Max retries exceeded with url: /document/getfile?docId.id=9312572 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)'))), retrying...
+[23:29:53] [DOC: 9312572] ❌ Critical failure in get_pdf_text: Network error after 3 attempts: HTTPSConnectionPool(host='api.doctoralliance.com', port=443): Max retries exceeded with url: /document/getfile?docId.id=9312572 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:29:53] [DOC: 9312572] ✅ Text extraction completed
+[23:29:53] [DOC: 9312572] 📄 NON-FAXED DOCUMENT | Type: Unknown
+[23:29:53] [DOC: 9312572] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: Unknown
+     └─ Extraction Method: failure_fallback
+     └─ Text Length: 0
+[23:29:53] [DOC: 9312572] 📋 [2/6] Extracting patient data using AI
+[23:39:47] ⚠️  AI extraction attempt 1 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown
+[23:49:47] ⚠️  AI extraction attempt 2 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown
+[23:59:46] ⚠️  AI extraction attempt 3 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown
+[23:59:46] ❌ All AI extraction attempts failed
+[23:59:46] ⚠️  AI extraction failed, returning minimal patient data structure
+[23:59:46] [DOC: 9312572] 📊 AI-Extracted Patient Data
+     └─ patientFName: 
+     └─ patientLName: 
+     └─ dob: 
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: 
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[23:59:46] [DOC: 9312572] ⚠️  No critical patient identifiers found - using document ID as fallback
+[23:59:46] [DOC: 9312572] 📋 [3/6] Processing and validating dates
+[23:59:46] [DOC: 9312572] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[23:59:46] [DOC: 9312572] 📊 Patient Data After Date Processing
+     └─ patientFName: Unknown_9312572
+     └─ patientLName: Patient
+     └─ dob: 01/01/1900
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: 
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[23:59:46] [DOC: 9312572] 📋 [4/6] Creating or finding patient
+[23:59:46] 📊 Patient Data for Processing
+     └─ First Name: Unknown_9312572
+     └─ Last Name: Patient
+     └─ DOB: 01/01/1900
+     └─ MRN: 
+     └─ Address: 
+     └─ City: 
+     └─ State: 
+     └─ ZIP: 
+[23:59:51] ⚠️  Request error when checking patients for agency ID 370583e3-01c8-477e-8b6d-d3537a10c767: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/370583e3-01c8-477e-8b6d-d3537a10c767 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID 191b161e-e825-453f-ac5b-18e0337ed21c: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/191b161e-e825-453f-ac5b-18e0337ed21c (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID d399d8df-a660-4868-a072-51f3792a5a5e: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/d399d8df-a660-4868-a072-51f3792a5a5e (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID 4390e79c-b02e-47e0-b66f-d9c93ce00fb9: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/4390e79c-b02e-47e0-b66f-d9c93ce00fb9 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID c7cc6389-e15a-468f-bfbc-bc60ac4d4e81: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/c7cc6389-e15a-468f-bfbc-bc60ac4d4e81 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID e72e7a25-4a28-489c-9eb0-fa635769afa6: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/e72e7a25-4a28-489c-9eb0-fa635769afa6 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID 674cd114-c2b4-4d33-89d2-5e2bab27ac58: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/674cd114-c2b4-4d33-89d2-5e2bab27ac58 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID 9be7cfec-e3be-4a1f-969c-21d81c417e49: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/9be7cfec-e3be-4a1f-969c-21d81c417e49 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID 487f61ca-95ed-444b-a638-9bbab3ddcbbd: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/487f61ca-95ed-444b-a638-9bbab3ddcbbd (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID 7e086962-c3a1-4653-bcaf-f43a9213c0ae: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/7e086962-c3a1-4653-bcaf-f43a9213c0ae (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID 5acdd561-ba2b-43b7-a382-8e0dd4d7fccd: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/5acdd561-ba2b-43b7-a382-8e0dd4d7fccd (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID a3b932d4-be57-444e-afa4-8782d93be98d: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/a3b932d4-be57-444e-afa4-8782d93be98d (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID 7db8a02d-48d0-4071-9afa-9d05975994e4: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/7db8a02d-48d0-4071-9afa-9d05975994e4 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] ⚠️  Request error when checking patients for agency ID af45b761-2491-49ab-ad5f-b4baf0ac02e2: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/company/af45b761-2491-49ab-ad5f-b4baf0ac02e2 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] 🔄 Creating new patient...
+[23:59:51] 📊 Patient Creation Request
+     └─ patientFName: Unknown_9312572
+     └─ patientLName: Patient
+     └─ dob: 01/01/1900
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast VNA – Community Office (Fairhaven)
+     └─ patientAddress: 
+     └─ patientCity: 
+     └─ patientState: 
+     └─ zip: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+     └─ companyId: 370583e3-01c8-477e-8b6d-d3537a10c767
+     └─ daBackofficeID: UNKNOWN_9312572
+     └─ pgCompanyId: 4b51c8b7-c8c4-4779-808c-038c057f026b
+     └─ physicianGroup: Hawthorn Medical Associates - Family Practice
+     └─ physicianGroupNPI: 1508825811
+[23:59:51] [DOC: 9312572] ❌ Patient creation/retrieval failed: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Patient/create (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))
+[23:59:51] [DOC: 9312572] ⚠️  Using error fallback patient ID
+[23:59:51] [DOC: 9312572] 📋 [5/6] Extracting order data
+[00:09:49] ⚠️  AI order extraction attempt 1 failed: Timeout of 600.0s exceeded, last exception: 503 failed to connect to all addresses; last error: UNKNOWN: ipv4:142.251.221.202:443: Failed to connect to remote host: Timeout occurred: FD Shutdown

@@ -1,0 +1,40 @@
+# Advanced OCR Requirements - Enhanced with Handwriting Masking
+# Install with: pip install -r requirements_advanced_ocr.txt
+
+# Basic OCR and PDF processing
+pdfplumber>=0.8.0
+pytesseract>=0.3.10
+opencv-python>=4.8.0
+numpy>=1.21.0
+Pillow>=9.0.0
+PyMuPDF>=1.23.0
+
+# Advanced OCR engines
+easyocr>=1.7.0
+doctr[torch]>=0.7.0
+
+# AWS Textract for handwriting detection and masking
+boto3>=1.28.0
+botocore>=1.31.0
+
+# Optional: Handwriting recognition (requires GPU for best performance)
+# transformers>=4.30.0  # For TrOCR
+# torch>=2.0.0  # For TrOCR
+# paddleocr>=2.7.0  # Alternative handwriting OCR
+
+# Data processing
+typing-extensions>=4.5.0
+
+# Cloud OCR APIs (optional - uncomment if needed)
+# google-cloud-vision>=3.4.0  # For Google Cloud Vision API
+# azure-cognitiveservices-vision-computervision>=0.9.0  # For Azure Computer Vision
+
+# Advanced image processing (optional)
+# scikit-image>=0.21.0
+# matplotlib>=3.7.0
+
+# Logging and utilities
+tqdm>=4.65.0
+
+# YOLO for text detection (optional)
+# ultralytics>=8.0.0 

@@ -1,0 +1,210 @@
+================================================================================
+║                   PATIENT DATA PIPELINE - PROCESSING STARTED                   ║
+================================================================================
+[21:20:44] ℹ️  Processing CSV file: hawthorn.csv
+================================================================================
+║                          PROCESSING DOCUMENT 9314061                           ║
+================================================================================
+[21:20:44] [DOC: 9314061] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[21:20:44] [DOC: 9314061] ⚠️  Agency 'Southcoast VNA – Community Office (Fairhaven)' not found in company mapping
+[21:20:44] [DOC: 9314061] 📋 [1/6] Extracting text from PDF
+[21:20:46] ℹ️  Document is text-based - using pdfplumber for extraction
+[21:20:46] [DOC: 9314061] ✅ Text extracted successfully using pdfplumber
+[21:20:46] [DOC: 9314061] ℹ️  Text extraction completed using pdfplumber: 1307 characters
+[21:20:46] [DOC: 9314061] ✅ Text extraction completed
+[21:20:46] [DOC: 9314061] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[21:20:46] [DOC: 9314061] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 1307
+[21:20:46] [DOC: 9314061] 📋 [2/6] Extracting patient data using AI
+[21:20:49] ✅ AI patient data extraction completed successfully
+[21:20:49] [DOC: 9314061] 📊 AI-Extracted Patient Data
+     └─ patientFName: Joao
+     └─ patientLName: Aguiar
+     └─ dob: 08/11/1954
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2170342
+     └─ billingProvider: Gloriane Afonso-Fede, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': None, 'endOfEpisode': None, 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[21:20:49] [DOC: 9314061] 📋 [3/6] Processing and validating dates
+[21:20:49] [DOC: 9314061] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[21:20:49] [DOC: 9314061] 📊 Patient Data After Date Processing
+     └─ patientFName: Joao
+     └─ patientLName: Aguiar
+     └─ dob: 08/11/1954
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2170342
+     └─ billingProvider: Gloriane Afonso-Fede, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: None
+     └─ patientCity: None
+     └─ patientState: None
+     └─ zip: None
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': None, 'endOfEpisode': None, 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[21:20:49] [DOC: 9314061] 📋 [4/6] Creating or finding patient
+[21:20:49] [DOC: 9314061] ⚠️  No agency mapping for 'Southcoast VNA – Community Office (Fairhaven)', using fallback approach
+[21:20:49] [DOC: 9314061] ℹ️  Using fallback agency ID: e59b6bf5-1fe9-4d61-9ee0-54041e21e123
+[21:20:49] 📊 Patient Data for Processing
+     └─ First Name: Joao
+     └─ Last Name: Aguiar
+     └─ DOB: 08/11/1954
+     └─ MRN: 2170342
+     └─ Address: None
+     └─ City: None
+     └─ State: None
+     └─ ZIP: None
+[21:20:49] ❌ Agency 'Southcoast VNA – Community Office (Fairhaven)' not found in company mapping
+[21:20:49] [DOC: 9314061] ❌ Patient processing completely failed
+[21:20:49] [DOC: 9314061] 📋 [5/6] Extracting order data
+[21:20:51] ✅ AI order data extraction completed successfully
+[21:20:51] [DOC: 9314061] 📊 AI-Extracted Order Data
+     └─ orderNo: 1095591
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: 05/13/2025
+     └─ episodeEndDate: None
+     └─ documentID: None
+     └─ mrn: 2170342
+     └─ patientName: Aguiar,Joao M
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[21:20:51] [DOC: 9314061] 📋 [6/6] Processing order submission
+[21:20:52] 📊 Retrieved Agency Info
+     └─ Start of Care: Not available
+     └─ Start of Episode: 05/13/2025
+     └─ End of Episode: 07/11/2025
+[21:20:52] [DOC: 9314061] 📊 Order Data After Date Processing
+     └─ orderNo: 1095591
+     └─ orderDate: 05/27/2025
+     └─ startOfCare: 05/13/2025
+     └─ episodeStartDate: 05/13/2025
+     └─ episodeEndDate: 07/11/2025
+     └─ documentID: None
+     └─ mrn: 2170342
+     └─ patientName: Aguiar,Joao M
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[21:20:52] [DOC: 9314061] 📊 MRN Synchronization
+     └─ Patient MRN (extracted): 2170342
+     └─ Order MRN (extracted): 2170342
+     └─ Final MRN: 2170342
+     └─ Source: patient_extracted
+     └─ Applied to: Both patient and order
+[21:20:52] [DOC: 9314061] 🔄 Preparing order for submission
+[21:20:52] [DOC: 9314061] 📊 Order Request Data
+     └─ Order No: 1095591
+     └─ Patient ID: FALLBACK_PATIENT_9314061
+     └─ Company ID: e59b6bf5-1fe9-4d61-9ee0-54041e21e123
+     └─ Order Date: 05/27/2025
+     └─ Start of Care: 05/13/2025
+     └─ Episode Start: 05/13/2025
+     └─ Episode End: 07/11/2025
+[21:20:54] [DOC: 9314061] ✅ Order already exists in system with ID: ORD15776
+[21:20:54] [DOC: 9314061] ℹ️  This indicates the order was processed successfully in a previous run
+[21:20:54] [DOC: 9314061] ✅ Order processing completed successfully
+[21:20:54] [DOC: 9314061] ✅ Document processing completed successfully!
+================================================================================
+║                          PROCESSING DOCUMENT 9311183                           ║
+================================================================================
+[21:20:54] [DOC: 9311183] ℹ️  Facility/Agency: Southcoast VNA – Community Office (Fairhaven) | Received Date: 
+[21:20:54] [DOC: 9311183] ⚠️  Agency 'Southcoast VNA – Community Office (Fairhaven)' not found in company mapping
+[21:20:54] [DOC: 9311183] 📋 [1/6] Extracting text from PDF
+[21:20:55] ℹ️  Document is text-based - using pdfplumber for extraction
+[21:20:55] [DOC: 9311183] ✅ Text extracted successfully using pdfplumber
+[21:20:55] [DOC: 9311183] ℹ️  Text extraction completed using pdfplumber: 2779 characters
+[21:20:55] [DOC: 9311183] ✅ Text extraction completed
+[21:20:55] [DOC: 9311183] 📄 NON-FAXED DOCUMENT | Type: ORDER
+[21:20:55] [DOC: 9311183] 📊 Document Information
+     └─ Faxed: No
+     └─ Fax Source: Unknown
+     └─ Document Type: ORDER
+     └─ Extraction Method: pdfplumber
+     └─ Text Length: 2779
+[21:20:55] [DOC: 9311183] 📋 [2/6] Extracting patient data using AI
+[21:20:57] ✅ AI patient data extraction completed successfully
+[21:20:57] [DOC: 9311183] 📊 AI-Extracted Patient Data
+     └─ patientFName: Ronald
+     └─ patientLName: Alfonse
+     └─ dob: 03/30/1936
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2174766
+     └─ billingProvider: Jahn A. Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 200 Mill Road
+     └─ patientCity: Fairhaven
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: []
+[21:20:57] [DOC: 9311183] 📋 [3/6] Processing and validating dates
+[21:20:57] [DOC: 9311183] 📊 Raw Episode Dates from Document
+     └─ Start of Care: Not found
+     └─ Start of Episode: Not found
+     └─ End of Episode: Not found
+[21:20:57] [DOC: 9311183] 📊 Patient Data After Date Processing
+     └─ patientFName: Ronald
+     └─ patientLName: Alfonse
+     └─ dob: 03/30/1936
+     └─ patientSex: Male
+     └─ medicalRecordNo: 2174766
+     └─ billingProvider: Jahn A. Pothier, MD
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ patientAddress: 200 Mill Road
+     └─ patientCity: Fairhaven
+     └─ patientState: MA
+     └─ zip: 02719-5252
+     └─ episodeDiagnoses: [{}]
+[21:20:57] [DOC: 9311183] 📋 [4/6] Creating or finding patient
+[21:20:57] [DOC: 9311183] ⚠️  No agency mapping for 'Southcoast VNA – Community Office (Fairhaven)', using fallback approach
+[21:20:57] [DOC: 9311183] ℹ️  Using fallback agency ID: e59b6bf5-1fe9-4d61-9ee0-54041e21e123
+[21:20:57] 📊 Patient Data for Processing
+     └─ First Name: Ronald
+     └─ Last Name: Alfonse
+     └─ DOB: 03/30/1936
+     └─ MRN: 2174766
+     └─ Address: 200 Mill Road
+     └─ City: Fairhaven
+     └─ State: MA
+     └─ ZIP: 02719-5252
+[21:20:57] ❌ Agency 'Southcoast VNA – Community Office (Fairhaven)' not found in company mapping
+[21:20:57] [DOC: 9311183] ❌ Patient processing completely failed
+[21:20:57] [DOC: 9311183] 📋 [5/6] Extracting order data
+[21:20:59] ✅ AI order data extraction completed successfully
+[21:20:59] [DOC: 9311183] 📊 AI-Extracted Order Data
+     └─ orderNo: None
+     └─ orderDate: 05/23/2025
+     └─ startOfCare: None
+     └─ episodeStartDate: None
+     └─ episodeEndDate: None
+     └─ documentID: None
+     └─ mrn: 2174766
+     └─ patientName: Alfonse,Ronald
+     └─ sentToPhysicianDate: 05/28/2025
+     └─ sentToPhysicianStatus: True
+     └─ patientId: None
+     └─ companyId: None
+     └─ bit64Url: None
+     └─ documentName: None
+[21:20:59] [DOC: 9311183] 📋 [6/6] Processing order submission
