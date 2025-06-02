@@ -1261,19 +1261,7 @@ def check_if_patient_exists(fname, lname, dob, agency_id):
     lname = safe_strip(lname).upper()
 
     check_ids = [
-        "191b161e-e825-453f-ac5b-18e0337ed21c",
-        "d399d8df-a660-4868-a072-51f3792a5a5e",  
-        "4390e79c-b02e-47e0-b66f-d9c93ce00fb9", 
-        "c7cc6389-e15a-468f-bfbc-bc60ac4d4e81", 
-        "e72e7a25-4a28-489c-9eb0-fa635769afa6", 
-        "674cd114-c2b4-4d33-89d2-5e2bab27ac58", 
-        "9be7cfec-e3be-4a1f-969c-21d81c417e49", 
-        "487f61ca-95ed-444b-a638-9bbab3ddcbbd", 
-        "7e086962-c3a1-4653-bcaf-f43a9213c0ae", 
-        "5acdd561-ba2b-43b7-a382-8e0dd4d7fccd", 
-        "a3b932d4-be57-444e-afa4-8782d93be98d", 
-        "7db8a02d-48d0-4071-9afa-9d05975994e4", 
-        "af45b761-2491-49ab-ad5f-b4baf0ac02e2",
+        PG_ID
     ]
 
     # If agency_id is provided, search only that agency first
