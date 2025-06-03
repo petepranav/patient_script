@@ -258,9 +258,9 @@ ORDER_PUSH_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebs
 #
 # To use for a different PG, simply change these 3 values:
 # =============================================================================
-PG_ID = "4b51c8b7-c8c4-4779-808c-038c057f026b"
-PG_NAME = "Hawthorn Medical Associates - Family Practice" 
-PG_NPI = "1508825811"
+PG_ID = "161d97e7-4d84-4ed0-8d99-4147b75f8988"
+PG_NAME = "Hawthorn Medical Associates - Internal Medicine" 
+PG_NPI = "1659649853"
 
 print(f"""
 🏥 PHYSICIAN GROUP CONFIGURATION ACTIVE:
@@ -1932,8 +1932,8 @@ def process_csv(csv_path):
             
             for row in reader:
                 # Remove test limit - process all documents
-                # if i > 2:
-                #     break
+                if i > 0:
+                    break
                 i += 1
                 doc_id = row["ID"]
                 agency = safe_strip(row.get("Facility"))
@@ -2335,10 +2335,10 @@ def main():
 """)
     
     # Start processing with default CSV
-    process_csv("hawthorn.csv")
+    process_csv("intmed.csv")
 
 if __name__ == "__main__":
     main()
 else:
     # Direct call for backwards compatibility
-    process_csv("hawthorn.csv")
+    process_csv("intmed.csv")
