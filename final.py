@@ -290,8 +290,6 @@ else:
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 AUDIT_PATIENTS_FILE = "audit_patients.csv"
 AUDIT_ORDERS_FILE = "audit_orders.csv"
-# AUDIT_STATUS_SKIPPED - Used for tracking documents that are skipped during processing
-AUDIT_STATUS_SKIPPED = "SKIPPED"
 
 # --- YOLO+DocTR CONFIG ---
 YOLO_MODEL_PATH = "yolov8n.pt"
@@ -664,8 +662,7 @@ def extract_patient_data(text):
         **ABSOLUTELY FORBIDDEN PATTERNS:**
         - NEVER create patient names starting with "Unknown_" followed by any numbers
         - NEVER create patient names like "PATIENT_9284559" or "GENERATED_PATIENT"
-        - NEVER generate artificial patient names when names are not found
-        - NEVER generate fake patient names when names are not found
+        - NEVER generate synthetic patient names when names are not found
         - If you cannot find patient names, leave patientFName and patientLName as empty strings ""
         - DO NOT make up, infer, or create fallback patient names under any circumstances
         
