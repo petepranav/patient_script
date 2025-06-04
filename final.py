@@ -258,9 +258,9 @@ ORDER_PUSH_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebs
 #
 # To use for a different PG, simply change these 3 values:
 # =============================================================================
-PG_ID = "161d97e7-4d84-4ed0-8d99-4147b75f8988"
-PG_NAME = "Hawthorn Medical Associates - Internal Medicine" 
-PG_NPI = "1659649853"
+PG_ID = "d074279d-8ff6-47ab-b340-04f21c0f587e"
+PG_NAME = "Aco Health Solutions" 
+PG_NPI = "1306161443"
 
 print(f"""
 🏥 PHYSICIAN GROUP CONFIGURATION ACTIVE:
@@ -290,6 +290,8 @@ else:
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 AUDIT_PATIENTS_FILE = "audit_patients.csv"
 AUDIT_ORDERS_FILE = "audit_orders.csv"
+# AUDIT_STATUS_SKIPPED - Used for tracking documents that are skipped during processing
+AUDIT_STATUS_SKIPPED = "SKIPPED"
 
 # --- YOLO+DocTR CONFIG ---
 YOLO_MODEL_PATH = "yolov8n.pt"
@@ -512,8 +514,8 @@ def get_pdf_text(doc_id):
                         logger.error(f"All text extraction methods failed: {str(e)}", doc_id)
                         # Last resort: return minimal text to prevent complete failure
                         text = f"[EXTRACTION_FAILED] Document ID: {doc_id}"
-                        extraction_method = "fallback_placeholder"
-                        logger.warning("Using fallback placeholder text to prevent pipeline failure", doc_id)
+                        extraction_method = "error_handling"
+                        logger.warning("Text extraction failed completely - document will be skipped", doc_id)
         
         except Exception as e:
             logger.error(f"Critical error in text extraction: {str(e)}", doc_id)
@@ -551,19 +553,9 @@ def get_pdf_text(doc_id):
         
     except Exception as e:
         logger.error(f"Critical failure in get_pdf_text: {str(e)}", doc_id)
-        # Return minimal viable data to prevent complete pipeline failure
-        return [
-            f"[CRITICAL_FAILURE] Document ID: {doc_id}, Error: {str(e)}", 
-            f"UNKNOWN_{doc_id}", 
-            {
-                "isFaxed": False, 
-                "faxSource": "Unknown", 
-                "documentType": "Unknown",
-                "extractionMethod": "failure_fallback",
-                "textLength": 0,
-                "error": str(e)
-            }
-        ]
+        # SKIP PROCESSING - No fallback data creation
+        logger.warning(f"Document {doc_id} will be skipped due to text extraction failure", doc_id)
+        return None
 
 def extract_patient_data(text):
     try:
@@ -669,6 +661,14 @@ def extract_patient_data(text):
         
         CRITICAL EXTRACTION RULES:
         
+        **ABSOLUTELY FORBIDDEN PATTERNS:**
+        - NEVER create patient names starting with "Unknown_" followed by any numbers
+        - NEVER create patient names like "PATIENT_9284559" or "GENERATED_PATIENT"
+        - NEVER generate artificial patient names when names are not found
+        - NEVER generate fake patient names when names are not found
+        - If you cannot find patient names, leave patientFName and patientLName as empty strings ""
+        - DO NOT make up, infer, or create fallback patient names under any circumstances
+        
         DATE FORMATTING:
         - ALL dates must be in MM/DD/YYYY format (American standard)
         - Convert any date format to MM/DD/YYYY (e.g., "4/6/2025" → "04/06/2025", "2025-04-06" → "04/06/2025")
@@ -688,6 +688,7 @@ def extract_patient_data(text):
         - patientFName: First name only, no middle names or initials
         - patientLName: Last name only, no suffixes (Jr., Sr., etc.)
         - Look for labels: "Patient Name", "Patient", "Name", or similar
+        - CRITICAL: If no patient name is found, return empty strings "", do NOT create "Unknown_" patterns
         
         Date of Birth (dob):
         - Look for labels: "DOB", "Date of Birth", "Birth Date", "Born"
@@ -750,6 +751,7 @@ def extract_patient_data(text):
         3. Use contextual clues (headers, sections, formatting)
         4. Do NOT infer or guess values
         5. Leave fields empty if not found or unclear
+        6. NEVER create "Unknown_" or artificial fallback values
         
         If you cannot extract certain fields, leave them as empty strings rather than making up values.
         Return ONLY the JSON object with no additional text, comments, or explanations.
@@ -780,6 +782,43 @@ def extract_patient_data(text):
                             extracted_data[field] = [{"startOfCare": "", "startOfEpisode": "", "endOfEpisode": "", "firstDiagnosis": "", "secondDiagnosis": "", "thirdDiagnosis": "", "fourthDiagnosis": "", "fifthDiagnosis": "", "sixthDiagnosis": ""}]
                         else:
                             extracted_data[field] = ""
+                
+                # CRITICAL: Detect and reject Unknown patterns from AI
+                fname = safe_strip(extracted_data.get("patientFName", "")).upper()
+                lname = safe_strip(extracted_data.get("patientLName", "")).upper()
+                
+                if fname.startswith("UNKNOWN_") or lname.startswith("UNKNOWN_") or \
+                   "UNKNOWN_" in fname or "UNKNOWN_" in lname:
+                    logger.error("AI generated forbidden Unknown patient pattern - rejecting extraction")
+                    logger.error(f"Rejected name: '{fname}' '{lname}'")
+                    # Return empty structure instead of Unknown patterns
+                    return {
+                        "patientFName": "",
+                        "patientLName": "",
+                        "dob": "",
+                        "patientSex": "",
+                        "medicalRecordNo": "",
+                        "billingProvider": "",
+                        "physicianNPI": "",
+                        "nameOfAgency": "",
+                        "patientAddress": "",
+                        "patientCity": "",
+                        "patientState": "",
+                        "zip": "",
+                        "episodeDiagnoses": [
+                            {
+                                "startOfCare": "",
+                                "startOfEpisode": "",
+                                "endOfEpisode": "",
+                                "firstDiagnosis": "",
+                                "secondDiagnosis": "",
+                                "thirdDiagnosis": "",
+                                "fourthDiagnosis": "",
+                                "fifthDiagnosis": "",
+                                "sixthDiagnosis": ""
+                            }
+                        ]
+                    }
                 
                 # Add any missing optional fields
                 optional_fields = ["patientSex", "medicalRecordNo", "billingProvider", "physicianNPI", "nameOfAgency", "patientAddress", "patientCity", "patientState", "zip"]
@@ -966,7 +1005,7 @@ def extract_order_data(text):
           * Must be alphanumeric (letters and numbers only)
           * Length should be between 4-20 characters
           * Should NOT be random text, dates, or irrelevant numbers
-          * Common formats: "MRN123456", "12345", "ABC123", etc.
+          * Common formats: "REC123456", "12345", "ABC123", etc.
           * If value seems random or invalid, leave field empty
         - Do NOT extract: phone numbers, SSN, dates, or unrelated numeric sequences
 
@@ -1325,6 +1364,11 @@ def get_or_create_patient(patient_data, daId, agency):
     fname = safe_strip(patient_data.get("patientFName")).upper()
     lname = safe_strip(patient_data.get("patientLName")).upper()
 
+    # Skip if no valid patient identifiers
+    if not fname or not lname or not dob:
+        logger.error("Missing required patient identifiers - skipping document")
+        return None
+
     key = f"{fname}_{lname}_{dob}"
 
     # Get agency ID from company mapping first
@@ -1351,7 +1395,7 @@ def get_or_create_patient(patient_data, daId, agency):
     patient_data["companyId"] = agency_id
     patient_data["nameOfAgency"] = safe_strip(agency)
     
-    # Add PG-specific fields like in final1.py
+    # Add PG-specific fields
     patient_data["daBackofficeID"] = str(daId)
     patient_data["pgCompanyId"] = PG_ID
     patient_data["physicianGroup"] = PG_NAME
@@ -1360,9 +1404,6 @@ def get_or_create_patient(patient_data, daId, agency):
     logger.progress("Creating new patient...")
     logger.data("Patient Creation Request", patient_data)
     
-    # Print patient JSON for debugging (like in final1.py)
-    print(f"\n\nPatient JSON for creating patient: {patient_data}\n\n")
-
     resp = requests.post(PATIENT_CREATE_URL, headers={"Content-Type": "application/json"}, json=patient_data)
     
     logger.info(f"Patient creation response - Status: {resp.status_code}")
@@ -1374,11 +1415,10 @@ def get_or_create_patient(patient_data, daId, agency):
         logger.success(f"New patient created successfully with ID: {new_id}")
         return new_id
     elif resp.status_code == 409:
-        # Patient already exists - this is a SUCCESSFUL outcome, not an error!
+        # Patient already exists - search across all agencies
         logger.success(f"Patient already exists on platform: {fname} {lname}")
         logger.info("Searching for existing patient to retrieve their ID...")
         
-        # Try searching across all agencies since the patient might exist in a different agency
         existing_id = check_if_patient_exists(fname, lname, dob, None)  # Search all agencies
         if existing_id:
             logger.success(f"Successfully found existing patient: {fname} {lname}, ID: {existing_id}")
@@ -1389,19 +1429,11 @@ def get_or_create_patient(patient_data, daId, agency):
         else:
             logger.warning(f"Patient exists (409) but could not locate their ID in comprehensive search")
             logger.info(f"API Response: {resp.text}")
-            # Even if we can't find the ID, the patient exists, so this is still success
-            # Use a placeholder ID that indicates the patient exists but ID wasn't retrieved
-            fallback_id = f"EXISTS_{hash(key) % 1000000:06d}"
-            created_patients[key] = fallback_id
-            with open("created_patients.json", "w") as f:
-                json.dump(created_patients, f, indent=2)
-            logger.info(f"Using fallback ID for existing patient: {fallback_id}")
-            return fallback_id
+            return None
     else:
         logger.error(f"Failed to create patient - Status: {resp.status_code}")
         logger.error(f"Response: {resp.text}")
-
-    return None
+        return None
 
 def push_order(order_data, doc_id):
     logger.progress("Preparing order for submission", doc_id)
@@ -1417,8 +1449,8 @@ def push_order(order_data, doc_id):
     
     # Ensure order number exists and is non-empty
     if not order_data.get("orderNo") or not safe_strip(order_data.get("orderNo")):
-        order_data["orderNo"] = f"{doc_id}_1"
-        logger.info(f"Generated fallback order number: {order_data['orderNo']}", doc_id)
+        logger.error(f"No valid order number found - cannot process order", doc_id)
+        return "Order number missing", 400
     
     resp = requests.post(ORDER_PUSH_URL, headers={"Content-Type": "application/json"}, json=order_data)
     
@@ -1455,53 +1487,15 @@ def push_order(order_data, doc_id):
 
 
 def remove_none_fields(data):
-    required_date_fields = {'orderDate', 'startOfCare', 'episodeStartDate', 'episodeEndDate'}
-    if isinstance(data, dict):
-        return {
-            k: remove_none_fields(v)
-            for k, v in data.items()
-            if v is not None or k in required_date_fields
-        }
-    elif isinstance(data, list):
-        return [remove_none_fields(item) for item in data]
-    elif data is None:
-        return ""
-    else:
-        return data
-
-def generate_mrn(patient_data, doc_id):
-    """
-    Generate a consistent MRN based on patient data and document ID
-    Format: MRN + 6 characters (letters + numbers)
-    """
-    try:
-        # Create a seed based on patient data for consistency
-        fname = safe_strip(patient_data.get("patientFName")).upper()
-        lname = safe_strip(patient_data.get("patientLName")).upper()
-        dob = safe_strip(patient_data.get("dob")).replace("/", "").replace("-", "")
-        
-        # Create a deterministic seed
-        seed_string = f"{fname}{lname}{dob}{doc_id}"
-        seed_hash = hash(seed_string) % (10**6)  # Get last 6 digits
-        
-        # Generate MRN with format MRN + 6 characters
-        mrn = f"MRN{seed_hash:06d}"
-        
-        logger.info(f"Generated MRN: {mrn} for patient {fname} {lname}", doc_id)
-        return mrn
-        
-    except Exception as e:
-        logger.warning(f"Error generating MRN, using fallback: {str(e)}", doc_id)
-        # Fallback: simple random MRN
-        random_suffix = ''.join(random.choices(string.digits, k=6))
-        return f"MRN{random_suffix}"
+    """Remove fields with None values from dictionary"""
+    return {k: v for k, v in data.items() if v is not None}
 
 def synchronize_mrn(patient_data, order_data, doc_id):
     """
     Synchronize MRN between patient and order data
     Priority: 
     1. Use extracted MRN if valid and present in either patient or order data
-    2. Generate consistent MRN if none found
+    2. SKIP PROCESSING if no valid MRN found (NO GENERATION)
     """
     patient_mrn = safe_strip(patient_data.get("medicalRecordNo"))
     order_mrn = safe_strip(order_data.get("mrn"))
@@ -1532,9 +1526,15 @@ def synchronize_mrn(patient_data, order_data, doc_id):
         final_mrn = order_mrn
         mrn_source = "order_extracted"
     else:
-        # Generate new MRN if none found or invalid
-        final_mrn = generate_mrn(patient_data, doc_id)
-        mrn_source = "generated"
+        # NO FALLBACK - Return None to indicate processing should be skipped
+        logger.warning(f"No valid MRN found - document will be skipped", doc_id)
+        logger.data("MRN Validation Failed", {
+            "Patient MRN (extracted)": patient_mrn or "None",
+            "Order MRN (extracted)": order_mrn or "None", 
+            "Validation": "FAILED - No valid MRN found",
+            "Action": "Document will be skipped"
+        }, doc_id)
+        return None, None
     
     # Apply the final MRN to both patient and order data
     patient_data["medicalRecordNo"] = final_mrn
@@ -1897,7 +1897,6 @@ def fetch_physician_npi_selenium(doc_id):
             driver.quit()
 
 def process_csv(csv_path):
-    
     def normalize_date_string(date_str):
         try:
             # Replace hyphens with slashes if needed
@@ -1916,6 +1915,7 @@ def process_csv(csv_path):
     total_documents = 0
     processed_documents = 0
     failed_documents = 0
+    skipped_documents = 0
     successful_patients = 0
     successful_orders = 0
     patient_errors = 0
@@ -1932,7 +1932,7 @@ def process_csv(csv_path):
             
             for row in reader:
                 # Remove test limit - process all documents
-                if i > 0:
+                if i > 49:
                     break
                 i += 1
                 doc_id = row["ID"]
@@ -1950,11 +1950,13 @@ def process_csv(csv_path):
                 try:
                     # Check if agency exists in mapping
                     agency_id = company_map.get(agency.lower())
-                    if agency_id:
-                        logger.info(f"Agency mapping found: {agency} -> {agency_id}", doc_id)
-                    else:
+                    if not agency_id:
                         logger.warning(f"Agency '{agency}' not found in company mapping", doc_id)
-                        # Don't fail here - continue processing and handle later
+                        skipped_documents += 1
+                        with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                            writer = csv.writer(file)
+                            writer.writerow([doc_id, f"Agency '{agency}' not found in mapping", "SKIPPED"])
+                        continue  # Skip to next document
 
                     # Step 1: Extract text from PDF (with robust error handling)
                     logger.step(1, 6, "Extracting text from PDF", doc_id)
@@ -1964,17 +1966,36 @@ def process_csv(csv_path):
                     
                     try:
                         res = get_pdf_text(doc_id)
+                        
+                        # Check if text extraction failed (returns None)
+                        if res is None:
+                            logger.error("Text extraction failed - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "Text extraction failed", "SKIPPED"])
+                            continue  # Skip to next document
+                            
                         text = res[0]
                         daId = res[1]
                         doc_metadata = res[2]
                         
                         # Validate text extraction
                         if not text or not safe_strip(text):
-                            logger.warning("Empty text extracted, but continuing with minimal data", doc_id)
-                            text = f"[MINIMAL_TEXT] Document ID: {doc_id}"
+                            logger.warning("Empty text extracted - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "Empty text extracted", "SKIPPED"])
+                            continue  # Skip to next document
                         
                         if len(safe_strip(text)) < 50:
-                            logger.warning(f"Very short text extracted ({len(text)} chars), may impact data quality", doc_id)
+                            logger.warning(f"Very short text extracted ({len(text)} chars) - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "Text too short for processing", "SKIPPED"])
+                            continue  # Skip to next document
                         
                         logger.success("Text extraction completed", doc_id)
                         
@@ -1995,19 +2016,12 @@ def process_csv(csv_path):
                         }, doc_id)
                         
                     except Exception as e:
-                        logger.error(f"PDF extraction failed: {str(e)}", doc_id)
-                        # Don't fail completely - use fallback data
-                        text = f"[EXTRACTION_ERROR] Document ID: {doc_id}, Error: {str(e)}"
-                        daId = f"FALLBACK_{doc_id}"
-                        doc_metadata = {
-                            "isFaxed": False,
-                            "faxSource": "Unknown",
-                            "documentType": "Unknown",
-                            "extractionMethod": "error_fallback",
-                            "textLength": len(text),
-                            "error": str(e)
-                        }
-                        logger.warning("Using fallback text data to continue processing", doc_id)
+                        logger.error(f"PDF extraction failed: {str(e)} - skipping document", doc_id)
+                        skipped_documents += 1
+                        with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                            writer = csv.writer(file)
+                            writer.writerow([doc_id, f"PDF extraction failed: {str(e)}", "SKIPPED"])
+                        continue  # Skip to next document
 
                     # Step 2: Extract and process patient data (with validation)
                     logger.step(2, 6, "Extracting patient data using AI", doc_id)
@@ -2016,22 +2030,12 @@ def process_csv(csv_path):
                     try:
                         patient_data = extract_patient_data(text)
                         if not patient_data:
-                            logger.warning("No patient data extracted, using minimal structure", doc_id)
-                            patient_data = {
-                                "patientFName": "",
-                                "patientLName": "",
-                                "dob": "",
-                                "patientSex": "",
-                                "medicalRecordNo": "",
-                                "billingProvider": "",
-                                "physicianNPI": "",
-                                "nameOfAgency": "",
-                                "patientAddress": "",
-                                "patientCity": "",
-                                "patientState": "",
-                                "zip": "",
-                                "episodeDiagnoses": [{"startOfCare": "", "startOfEpisode": "", "endOfEpisode": "", "firstDiagnosis": "", "secondDiagnosis": "", "thirdDiagnosis": "", "fourthDiagnosis": "", "fifthDiagnosis": "", "sixthDiagnosis": ""}]
-                            }
+                            logger.warning("No patient data extracted - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "No patient data extracted", "SKIPPED"])
+                            continue  # Skip to next document
                         
                         logger.data("AI-Extracted Patient Data", patient_data, doc_id)
                         
@@ -2039,72 +2043,68 @@ def process_csv(csv_path):
                         has_name = bool(safe_strip(patient_data.get("patientFName")) or safe_strip(patient_data.get("patientLName")))
                         has_dob = bool(safe_strip(patient_data.get("dob")))
                         
-                        if not has_name and not has_dob:
-                            logger.warning("No critical patient identifiers found - using document ID as fallback", doc_id)
-                            patient_data["patientFName"] = f"Unknown_{doc_id}"
-                            patient_data["patientLName"] = "Patient"
-                            patient_data["dob"] = "01/01/1900"  # Placeholder DOB
+                        if not has_name or not has_dob:
+                            logger.error("Missing critical patient identifiers - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "Missing patient identifiers (name and DOB)", "SKIPPED"])
+                            continue  # Skip to next document
                         
                     except Exception as e:
-                        logger.error(f"Patient data extraction failed: {str(e)}", doc_id)
-                        # Use minimal patient structure
-                        patient_data = {
-                            "patientFName": f"Unknown_{doc_id}",
-                            "patientLName": "Patient",
-                            "dob": "01/01/1900",
-                            "patientSex": "",
-                            "medicalRecordNo": "",
-                            "billingProvider": "",
-                            "physicianNPI": "",
-                            "nameOfAgency": "",
-                            "patientAddress": "",
-                            "patientCity": "",
-                            "patientState": "",
-                            "zip": "",
-                            "episodeDiagnoses": [{"startOfCare": "", "startOfEpisode": "", "endOfEpisode": "", "firstDiagnosis": "", "secondDiagnosis": "", "thirdDiagnosis": "", "fourthDiagnosis": "", "fifthDiagnosis": "", "sixthDiagnosis": ""}]
-                        }
-                        logger.warning("Using fallback patient data structure", doc_id)
+                        logger.error(f"Patient data extraction failed: {str(e)} - skipping document", doc_id)
+                        skipped_documents += 1
+                        with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                            writer = csv.writer(file)
+                            writer.writerow([doc_id, f"Extraction failed: {str(e)}", "SKIPPED"])
+                        continue  # Skip to next document
 
                     # Step 3: Process dates with better validation
                     logger.step(3, 6, "Processing and validating dates", doc_id)
                     try:
                         patient_data = process_dates_for_patient(patient_data, doc_id)
+                        if not patient_data:
+                            logger.error("Date processing failed - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "Date processing failed", "SKIPPED"])
+                            continue  # Skip to next document
                         logger.data("Patient Data After Date Processing", patient_data, doc_id)
                     except Exception as e:
-                        logger.warning(f"Date processing failed: {str(e)}, continuing with raw dates", doc_id)
-                        # Continue without date processing if it fails
+                        logger.error(f"Date processing failed: {str(e)} - skipping document", doc_id)
+                        skipped_documents += 1
+                        with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                            writer = csv.writer(file)
+                            writer.writerow([doc_id, f"Date processing failed: {str(e)}", "SKIPPED"])
+                        continue  # Skip to next document
 
                     # Step 4: Get or create patient (with fallbacks)
                     logger.step(4, 6, "Creating or finding patient", doc_id)
                     patient_id = None
                     
                     try:
-                        # Ensure agency ID is available
-                        if not agency_id:
-                            logger.warning(f"No agency mapping for '{agency}', using fallback approach", doc_id)
-                            # Try to find a default agency or create a placeholder
-                            agency_id = list(company_map.values())[0] if company_map else "default_agency"
-                            logger.info(f"Using fallback agency ID: {agency_id}", doc_id)
-                        
                         patient_id = get_or_create_patient(patient_data, daId, agency)
                         
-                        if patient_id:
-                            # Any patient ID (new, existing, or fallback) is considered success
-                            patient_success = True
-                            successful_patients += 1
-                            logger.success(f"Patient processed successfully with ID: {patient_id}", doc_id)
-                        else:
-                            patient_success = False
-                            patient_errors += 1
-                            logger.error("Patient processing completely failed", doc_id)
-                            patient_id = f"FALLBACK_PATIENT_{doc_id}"
+                        if not patient_id:
+                            logger.error("Patient processing failed - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "Patient creation/retrieval failed", "SKIPPED"])
+                            continue  # Skip to next document
+                            
+                        patient_success = True
+                        successful_patients += 1
+                        logger.success(f"Patient processed successfully with ID: {patient_id}", doc_id)
                             
                     except Exception as e:
-                        logger.error(f"Patient creation/retrieval failed: {str(e)}", doc_id)
-                        patient_success = False
-                        patient_errors += 1
-                        patient_id = f"ERROR_PATIENT_{doc_id}"
-                        logger.warning("Using error fallback patient ID", doc_id)
+                        logger.error(f"Patient creation/retrieval failed: {str(e)} - skipping document", doc_id)
+                        skipped_documents += 1
+                        with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
+                            writer = csv.writer(file)
+                            writer.writerow([doc_id, f"Patient processing error: {str(e)}", "SKIPPED"])
+                        continue  # Skip to next document
 
                     # Step 5: Extract and process order data
                     logger.step(5, 6, "Extracting order data", doc_id)
@@ -2113,45 +2113,22 @@ def process_csv(csv_path):
                     try:
                         order_data = extract_order_data(text)
                         if not order_data:
-                            logger.warning("No order data extracted, using minimal structure", doc_id)
-                            order_data = {
-                                "orderNo": "",
-                                "orderDate": "",
-                                "startOfCare": "",
-                                "episodeStartDate": "",
-                                "episodeEndDate": "",
-                                "documentID": "",
-                                "mrn": "",
-                                "patientName": "",
-                                "sentToPhysicianDate": "",
-                                "sentToPhysicianStatus": False,
-                                "patientId": "",
-                                "companyId": "",
-                                "bit64Url": "",
-                                "documentName": ""
-                            }
+                            logger.warning("No order data extracted - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "No order data extracted", "SKIPPED"])
+                            continue  # Skip to next document
                         
                         logger.data("AI-Extracted Order Data", order_data, doc_id)
                         
                     except Exception as e:
-                        logger.error(f"Order data extraction failed: {str(e)}", doc_id)
-                        order_data = {
-                            "orderNo": f"ORDER_{doc_id}",
-                            "orderDate": received if received else "",
-                            "startOfCare": "",
-                            "episodeStartDate": "",
-                            "episodeEndDate": "",
-                            "documentID": doc_id,
-                            "mrn": "",
-                            "patientName": safe_strip(f"{patient_data.get('patientFName', '')} {patient_data.get('patientLName', '')}"),
-                            "sentToPhysicianDate": "",
-                            "sentToPhysicianStatus": False,
-                            "patientId": "",
-                            "companyId": "",
-                            "bit64Url": "",
-                            "documentName": ""
-                        }
-                        logger.warning("Using fallback order data structure", doc_id)
+                        logger.error(f"Order data extraction failed: {str(e)} - skipping document", doc_id)
+                        skipped_documents += 1
+                        with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                            writer = csv.writer(file)
+                            writer.writerow([doc_id, f"Order extraction failed: {str(e)}", "SKIPPED"])
+                        continue  # Skip to next document
 
                     # Step 6: Process order with enhanced validation
                     logger.step(6, 6, "Processing order submission", doc_id)
@@ -2159,24 +2136,55 @@ def process_csv(csv_path):
                         # Process order dates
                         try:
                             order_data = process_dates_for_order(order_data, doc_id)
+                            if not order_data:
+                                logger.error("Order date processing failed - skipping document", doc_id)
+                                skipped_documents += 1
+                                with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                                    writer = csv.writer(file)
+                                    writer.writerow([doc_id, "Order date processing failed", "SKIPPED"])
+                                continue  # Skip to next document
                             logger.data("Order Data After Date Processing", order_data, doc_id)
                         except Exception as e:
-                            logger.warning(f"Order date processing failed: {str(e)}, using raw dates", doc_id)
+                            logger.error(f"Order date processing failed: {str(e)} - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, f"Order date processing failed: {str(e)}", "SKIPPED"])
+                            continue  # Skip to next document
                         
                         # Synchronize MRN between patient and order
                         try:
-                            synchronize_mrn(patient_data, order_data, doc_id)
+                            patient_data, order_data = synchronize_mrn(patient_data, order_data, doc_id)
+                            
+                            # Check if MRN synchronization failed (returns None, None)
+                            if patient_data is None or order_data is None:
+                                logger.error("Document skipped due to missing valid MRN", doc_id)
+                                skipped_documents += 1
+                                with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                                    writer = csv.writer(file)
+                                    writer.writerow([doc_id, "Missing valid MRN", "SKIPPED"])
+                                continue  # Skip to next document
+                                
                         except Exception as e:
-                            logger.warning(f"MRN synchronization failed: {str(e)}", doc_id)
+                            logger.error(f"MRN synchronization failed: {str(e)} - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, f"MRN sync failed: {str(e)}", "SKIPPED"])
+                            continue  # Skip to next document
                         
                         # Validate required fields
                         if not agency_id:
-                            logger.warning("No agency ID available for order processing", doc_id)
-                            agency_id = "UNKNOWN_AGENCY"
+                            logger.error("No agency ID available for order processing - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, "No agency ID available", "SKIPPED"])
+                            continue  # Skip to next document
                         
                         # Set required order fields
                         order_data["companyId"] = agency_id
-                        order_data["pgCompanyId"] = PG_ID  # Fixed bug - use PG_ID not agency_id
+                        order_data["pgCompanyId"] = PG_ID
                         order_data["patientId"] = patient_id
                         order_data["documentID"] = doc_id
                         
@@ -2185,19 +2193,12 @@ def process_csv(csv_path):
                         missing_dates = [date for date in required_dates if not safe_strip(order_data.get(date))]
                         
                         if missing_dates:
-                            logger.warning(f"Missing required dates: {missing_dates}, using fallbacks", doc_id)
-                            if not order_data.get("orderDate"):
-                                order_data["orderDate"] = received if received else datetime.now().strftime("%m/%d/%Y")
-                            if not order_data.get("episodeStartDate"):
-                                order_data["episodeStartDate"] = order_data["orderDate"]
-                            if not order_data.get("episodeEndDate"):
-                                # Add 60 days to start date as fallback
-                                try:
-                                    start_date = datetime.strptime(order_data["episodeStartDate"], "%m/%d/%Y")
-                                    end_date = start_date + timedelta(days=60)
-                                    order_data["episodeEndDate"] = end_date.strftime("%m/%d/%Y")
-                                except:
-                                    order_data["episodeEndDate"] = order_data["episodeStartDate"]
+                            logger.error(f"Missing required dates: {missing_dates} - skipping document", doc_id)
+                            skipped_documents += 1
+                            with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                                writer = csv.writer(file)
+                                writer.writerow([doc_id, f"Missing required dates: {missing_dates}", "SKIPPED"])
+                            continue  # Skip to next document
                         
                         # Remove None values before submission
                         order_data = remove_none_fields(order_data)
@@ -2220,23 +2221,24 @@ def process_csv(csv_path):
                                 order_success = False
                                 order_errors += 1
                                 logger.error(f"Order submission failed with status: {status_code}", doc_id)
+                                with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
+                                    writer = csv.writer(file)
+                                    writer.writerow([doc_id, f"Order submission failed: {status_code}", "SKIPPED"])
                         except Exception as e:
                             logger.error(f"Order submission failed: {str(e)}", doc_id)
                             order_success = False
                             order_errors += 1
-                            # Don't fail the entire document for order submission issues
                             with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
                                 writer = csv.writer(file)
-                                writer.writerow([doc_id, f"Submission Failed: {str(e)}", "N/A"])
+                                writer.writerow([doc_id, f"Order submission failed: {str(e)}", "SKIPPED"])
                         
                     except Exception as e:
                         logger.error(f"Order processing failed: {str(e)}", doc_id)
                         order_success = False
                         order_errors += 1
-                        # Log to audit file
                         with open(AUDIT_ORDERS_FILE, "a", newline="") as file:
                             writer = csv.writer(file)
-                            writer.writerow([doc_id, f"Processing Failed: {str(e)}", "N/A"])
+                            writer.writerow([doc_id, f"Order processing failed: {str(e)}", "SKIPPED"])
 
                     # Document is successful if either patient or order succeeded
                     if patient_success or order_success:
@@ -2253,7 +2255,7 @@ def process_csv(csv_path):
                     # Log critical failure
                     with open(AUDIT_PATIENTS_FILE, "a", newline="") as file:
                         writer = csv.writer(file)
-                        writer.writerow([doc_id, f"Critical failure: {str(e)}"])
+                        writer.writerow([doc_id, f"Critical failure: {str(e)}", "SKIPPED"])
                     
                     # Continue to next document instead of stopping
                     continue
@@ -2265,19 +2267,22 @@ def process_csv(csv_path):
         overall_success_rate = (processed_documents/total_documents*100) if total_documents > 0 else 0
         patient_success_rate = (successful_patients/total_documents*100) if total_documents > 0 else 0
         order_success_rate = (successful_orders/total_documents*100) if total_documents > 0 else 0
+        skip_rate = (skipped_documents/total_documents*100) if total_documents > 0 else 0
         
         logger.data("Overall Document Processing", {
             "Total Documents": total_documents,
             "Successfully Processed": processed_documents,
+            "Skipped Documents": skipped_documents,
             "Failed Documents": failed_documents,
-            "Overall Success Rate": f"{overall_success_rate:.1f}%"
+            "Overall Success Rate": f"{overall_success_rate:.1f}%",
+            "Skip Rate": f"{skip_rate:.1f}%"
         })
         
         logger.data("Patient Processing Details", {
             "Successful Patients": successful_patients,
             "Patient Errors": patient_errors,
             "Patient Success Rate": f"{patient_success_rate:.1f}%",
-            "Note": "Includes new patients, existing patients, and fallback cases"
+            "Note": "Documents with missing patient data are now skipped instead of creating unknown patients"
         })
         
         logger.data("Order Processing Details", {
@@ -2335,10 +2340,10 @@ def main():
 """)
     
     # Start processing with default CSV
-    process_csv("intmed.csv")
+    process_csv("hawthorn_fam.csv")
 
 if __name__ == "__main__":
     main()
 else:
     # Direct call for backwards compatibility
-    process_csv("intmed.csv")
+    process_csv("hawthorn_fam.csv")

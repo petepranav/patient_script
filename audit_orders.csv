@@ -80,3 +80,5 @@
 9314072,Processing Failed: 'NoneType' object has no attribute 'strip',N/A
 9313731,"Submission Failed: HTTPSConnectionPool(host='dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net', port=443): Max retries exceeded with url: /api/Order (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1028)')))",N/A
 9317403,Processing Failed: 'NoneType' object has no attribute 'strip',N/A
+9283125,Missing required dates: ['orderDate'],SKIPPED
+9281158,Missing required dates: ['orderDate'],SKIPPED
