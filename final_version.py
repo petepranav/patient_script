@@ -28,6 +28,9 @@ DOC_API_URL = "https://api.doctoralliance.com/document/getfile?docId.id="
 DOC_STATUS_URL = "https://api.doctoralliance.com/document/get?docId.id="
 PATIENT_CREATE_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net/api/Patient/create"
 ORDER_PUSH_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net/api/Order"
+
+
+
 PG_ID = "4b51c8b7-c8c4-4779-808c-038c057f026b"  
 PG_NAME = "Hawthorn Medical Associates - Family Practice"
 PG_NPI = "1508825811"

@@ -1,21 +1,21 @@
 # Core dependencies for the modular patient script processor
 # Text processing and document handling
-PyMuPDF>=1.23.0
-pytesseract>=0.3.10
-Pillow>=10.0.0
+PyMuPDF
+pytesseract
+Pillow
 
 # AI and ML dependencies
-google-generativeai>=0.3.0
+google-generativeai
 
 # Web scraping for NPI lookup
-selenium==4.15.2
-webdriver-manager==4.0.1
+selenium
+webdriver-manager
 
 # API and HTTP handling
-requests>=2.31.0
+requests
 
 # Environment and configuration
-python-dotenv>=1.0.0
+python-dotenv
 
 # Date and time handling (built into Python, but listing for clarity)
 # datetime - built-in module
@@ -40,12 +40,12 @@ pathlib  # built-in in Python 3.4+
 # time - built-in module
 
 # Optional OCR dependencies (install if OCR functionality is needed)
-opencv-python>=4.8.0
-numpy>=1.24.0
+opencv-python
+numpy
 
 # Development and testing dependencies (optional)
-# pytest==7.4.3
-# pytest-cov==4.1.0
+# pytest
+# pytest-cov
 
 # Added from the code block
-pdfplumber>=0.9.0
+pdfplumber
