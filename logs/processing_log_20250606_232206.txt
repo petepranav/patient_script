@@ -1,0 +1,28 @@
+================================================================================
+║                            FINAL VERSION PROCESSOR                             ║
+================================================================================
+[23:22:06] ℹ️  CSV Data Extraction & API Push Tool
+[23:22:06] ℹ️  
+[23:22:06] ℹ️  Features:
+[23:22:06] ℹ️  - 2 Robust text extraction methods (PDFPlumber + Tesseract OCR)
+[23:22:06] ℹ️  - AI-powered patient and order data extraction
+[23:22:06] ℹ️  - Enhanced error handling and logging
+[23:22:06] ℹ️  - Full API integration (patient creation + order pushing)
+[23:22:06] ℹ️  - CSV output with comprehensive patient data
+[23:22:06] ℹ️  - Detailed API tracking with remarks for every document
+[23:22:06] ℹ️  - Complete audit trail of all processing attempts
+[23:22:06] ℹ️  
+[23:22:06] ℹ️  Starting CSV processing with API integration: hawthorn_fam.csv
+[23:22:06] ✅ Created output CSV file: csv_outputs/extracted_patients_20250606_232206.csv
+[23:22:06] ✅ Created API details CSV file: api_outputs/api_push_details_20250606_232206.csv
+================================================================================
+║                        Processing Document ID: 9259497                         ║
+================================================================================
+[23:22:07] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[23:22:07] ℹ️  Date: 04/24/2025
+[23:22:07] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[23:22:08] [DOC: 9259497] ✅ Text extracted using pdfplumber (2612 chars)
+[23:22:08] ✅    ✅ Text extracted using pdfplumber (2612 chars)
+[23:22:08] 🔄 
+🔄 Step 2: Extracting patient data...
