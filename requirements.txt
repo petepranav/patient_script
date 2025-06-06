@@ -1,13 +1,51 @@
-google-generativeai
-requests
-python-dotenv
-pdfplumber
-PyMuPDF
-Pillow
-opencv-python
-numpy
-pytesseract
-ultralytics
-python-doctr
-selenium
-webdriver-manager
+# Core dependencies for the modular patient script processor
+# Text processing and document handling
+PyMuPDF>=1.23.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# AI and ML dependencies
+google-generativeai>=0.3.0
+
+# Web scraping for NPI lookup
+selenium==4.15.2
+webdriver-manager==4.0.1
+
+# API and HTTP handling
+requests>=2.31.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+# Date and time handling (built into Python, but listing for clarity)
+# datetime - built-in module
+
+# Data handling and validation
+# json - built-in module
+# re - built-in module
+# typing - built-in module
+
+# File and path operations
+pathlib  # built-in in Python 3.4+
+
+# System and OS operations
+# os - built-in module
+# sys - built-in module
+# shutil - built-in module
+
+# Argument parsing
+# argparse - built-in module
+
+# Time operations
+# time - built-in module
+
+# Optional OCR dependencies (install if OCR functionality is needed)
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Development and testing dependencies (optional)
+# pytest==7.4.3
+# pytest-cov==4.1.0
+
+# Added from the code block
+pdfplumber>=0.9.0
