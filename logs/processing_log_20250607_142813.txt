@@ -1,0 +1,222 @@
+================================================================================
+║                            FINAL VERSION PROCESSOR                             ║
+================================================================================
+[14:28:13] ℹ️  CSV Data Extraction & API Push Tool
+[14:28:13] ℹ️  
+[14:28:13] ℹ️  Features:
+[14:28:13] ℹ️  - 2 Robust text extraction methods (PDFPlumber + Tesseract OCR)
+[14:28:13] ℹ️  - AI-powered patient and order data extraction
+[14:28:13] ℹ️  - Enhanced error handling and logging
+[14:28:13] ℹ️  - Full API integration (patient creation + order pushing)
+[14:28:13] ℹ️  - CSV output with comprehensive patient data
+[14:28:13] ℹ️  - Detailed API tracking with remarks for every document
+[14:28:13] ℹ️  - Complete audit trail of all processing attempts
+[14:28:13] ℹ️  
+[14:28:13] ℹ️  Starting CSV processing with API integration: hawthorn_fam.csv
+[14:28:13] ✅ Created output CSV file: csv_outputs/extracted_patients_20250607_142813.csv
+[14:28:13] ✅ Created API details CSV file: api_outputs/api_push_details_20250607_142813.csv
+================================================================================
+║                        Processing Document ID: 2175968                         ║
+================================================================================
+[14:28:13] ℹ️  Agency: Guardian Home Health Care LLC - West Bridgewater
+[14:28:13] ℹ️  Date: 05/09/2025
+[14:28:13] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[14:28:17] [DOC: 2175968] ❌ Critical failure in get_pdf_text: Invalid response format
+[14:28:17] ❌ Failed to extract text for Doc ID 2175968
+[14:28:17] [DOC: 2175968] ℹ️  API push details saved for document 2175968
+================================================================================
+║                        Processing Document ID: 9285144                         ║
+================================================================================
+[14:28:17] ℹ️  Agency: Dartmouth HH
+[14:28:17] ℹ️  Date: 05/09/2025
+[14:28:17] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[14:28:19] [DOC: 9285144] ✅ Text extracted using pdfplumber (1746 chars)
+[14:28:19] ✅    ✅ Text extracted using pdfplumber (1746 chars)
+[14:28:19] 🔄 
+🔄 Step 2: Extracting patient data...
+[14:28:22] ℹ️  AI extracted raw sex value: 'F'
+[14:28:22] ℹ️  AI extracted service line: 'HHA'
+[14:28:22] ℹ️  AI extracted payer source: 'Senior Whole Health'
+[14:28:22] ℹ️  AI extracted diagnoses:
+[14:28:22] ℹ️    - Diagnosis 1: ''
+[14:28:22] ℹ️    - Diagnosis 2: ''
+[14:28:22] ℹ️    - Diagnosis 3: ''
+[14:28:22] ℹ️    - Diagnosis 4: ''
+[14:28:22] ℹ️    - Diagnosis 5: ''
+[14:28:22] ℹ️    - Diagnosis 6: ''
+[14:28:22] ℹ️  Final extracted MRN: '1508015'
+[14:28:22] ℹ️  Final extracted Sex: 'FEMALE'
+[14:28:22] ℹ️  Final extracted Service Line: 'HHA'
+[14:28:22] ℹ️  Final extracted Payer Source: 'Senior Whole Health'
+[14:28:22] ✅ Patient data extraction completed successfully
+[14:28:22] ✅    ✅ Patient data extracted successfully
+[14:28:22] 📊 Patient Response
+     └─ patientFName: Paula
+     └─ patientLName: Hatch
+     └─ dob: 06/22/1940
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 1508015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 14 Twelfth St
+     └─ city: Onset
+     └─ state: MA
+     └─ zip: 02558
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: HHA
+     └─ payorSource: Senior Whole Health
+     └─ episodeDiagnoses: [{'startOfCare': '03/23/2024', 'startOfEpisode': '03/18/2025', 'endOfEpisode': '05/16/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[14:28:22] ✅    ✅ Patient identified: Paula Hatch
+[14:28:22] ✅    ✅ Patient name validation passed
+[14:28:22] 🔄 
+🔄 Step 3: Processing patient dates...
+[14:28:22] [DOC: 9285144] ℹ️  DOB normalized: 06/22/1940
+[14:28:22] [DOC: 9285144] ℹ️  Episode startOfCare normalized: 03/23/2024
+[14:28:22] [DOC: 9285144] ℹ️  Episode startOfEpisode normalized: 03/18/2025
+[14:28:22] [DOC: 9285144] ℹ️  Episode endOfEpisode normalized: 05/16/2025
+[14:28:22] [DOC: 9285144] ✅ Patient date processing completed successfully
+[14:28:22] ✅    ✅ Date processing completed
+[14:28:22] 📊 Processed Patient Data
+     └─ patientFName: Paula
+     └─ patientLName: Hatch
+     └─ dob: 06/22/1940
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 1508015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 14 Twelfth St
+     └─ city: Onset
+     └─ state: MA
+     └─ zip: 02558
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: HHA
+     └─ payorSource: Senior Whole Health
+     └─ episodeDiagnoses: [{'startOfCare': '03/23/2024', 'startOfEpisode': '03/18/2025', 'endOfEpisode': '05/16/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[14:28:22] 🔄 
+🔄 Step 4: Extracting order data...
+[14:28:23] ⚠️  AI extraction attempt 1 failed: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+[14:28:26] ℹ️  Order extraction - MRN: ''
+[14:28:26] ℹ️  Order extraction - Sex: 'FEMALE'
+[14:28:26] ℹ️  Order extraction - Service Line: ''
+[14:28:26] ℹ️  Order extraction - Payer Source: 'Senior Whole Health'
+[14:28:26] ✅ Order data extraction completed successfully
+[14:28:26] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[14:28:26] ℹ️  Using MRN from patient data: '1508015'
+[14:28:26] ℹ️  Using service line from patient data: 'HHA'
+[14:28:26] ℹ️  Payer source consistent in both sources: 'Senior Whole Health'
+[14:28:26] ✅ Patient name cross-validation successful
+[14:28:26] ✅    ✅ Data merged successfully
+[14:28:28] ✅    ✅ Order data extracted and validated
+[14:28:28] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[14:28:28] [DOC: 9285144] ✅ Patient found in local cache: Paula Hatch, ID: 7e9f0551-7213-4bc8-8b8b-ae0e8ddfecc3
+[14:28:28] ✅    ✅ Existing patient found with ID: 7e9f0551-7213-4bc8-8b8b-ae0e8ddfecc3
+[14:28:28] 🔄 
+🔄 Step 6: Pushing order to API...
+[14:28:28] [DOC: 9285144] ℹ️  Pushing order via API for patient ID: 7e9f0551-7213-4bc8-8b8b-ae0e8ddfecc3
+[14:28:29] [DOC: 9285144] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13832"}
+[14:28:29] ❌    ❌ Failed to push order
+[14:28:29] 🔄 
+🔄 Step 7: Writing to CSV...
+[14:28:29] [DOC: 9285144] ℹ️  Calculated age: 84 from DOB: 06/22/1940
+[14:28:29] [DOC: 9285144] ℹ️  Service Line extracted: 'HHA'
+[14:28:29] [DOC: 9285144] ℹ️  Payer Source extracted: 'Senior Whole Health'
+[14:28:29] [DOC: 9285144] ℹ️  Diagnosis codes being written:
+[14:28:29] [DOC: 9285144] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[14:28:29] [DOC: 9285144] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[14:28:29] [DOC: 9285144] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[14:28:29] [DOC: 9285144] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[14:28:29] [DOC: 9285144] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[14:28:29] [DOC: 9285144] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[14:28:29] [DOC: 9285144] ✅ Patient data written to CSV: Paula Hatch | Sex: FEMALE | Age: 84 | Service: HHA | Payer: Senior Whole Health | MRN: 1508015
+[14:28:29] ✅    ✅ Document 9285144 processed and saved successfully
+[14:28:29] 🔄 
+🔄 Step 8: Saving API details...
+[14:28:29] [DOC: 9285144] ℹ️  API push details saved for document 9285144
+[14:28:29] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9284891                         ║
+================================================================================
+[14:28:29] ℹ️  Agency: Dartmouth HH
+[14:28:29] ℹ️  Date: 05/09/2025
+[14:28:29] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[14:28:31] [DOC: 9284891] ✅ Text extracted using pdfplumber (1588 chars)
+[14:28:31] ✅    ✅ Text extracted using pdfplumber (1588 chars)
+[14:28:31] 🔄 
+🔄 Step 2: Extracting patient data...
+[14:28:31] ⚠️  AI extraction attempt 1 failed: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+[14:28:32] ⚠️  AI extraction attempt 2 failed: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+[14:28:34] ⚠️  AI extraction attempt 3 failed: 400 API key expired. Please renew the API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key expired. Please renew the API key."
+]
+[14:28:34] ❌ All AI extraction attempts failed
+[14:28:34] ⚠️  AI extraction failed, returning minimal patient data structure
+[14:28:34] ✅    ✅ Patient data extracted successfully
+[14:28:34] 📊 Patient Response
+     └─ patientFName: 
+     └─ patientLName: 
+     └─ dob: 
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: 
+     └─ address: 
+     └─ city: 
+     └─ state: 
+     └─ zip: 
+     └─ email: 
+     └─ phoneNumber: 
+     └─ serviceLine: 
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[14:28:34] ⚠️     ❌ Insufficient patient data extracted
+[14:28:34] [DOC: 9284891] ℹ️  API push details saved for document 9284891
+================================================================================
+║                        Processing Document ID: 9285057                         ║
+================================================================================
+[14:28:34] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[14:28:34] ℹ️  Date: 05/09/2025
+[14:28:34] 🔄 
+🔄 Step 1: Extracting text from PDF...

@@ -1,0 +1,309 @@
+================================================================================
+║                            FINAL VERSION PROCESSOR                             ║
+================================================================================
+[04:45:28] ℹ️  CSV Data Extraction & API Push Tool
+[04:45:28] ℹ️  
+[04:45:28] ℹ️  Features:
+[04:45:28] ℹ️  - 2 Robust text extraction methods (PDFPlumber + Tesseract OCR)
+[04:45:28] ℹ️  - AI-powered patient and order data extraction
+[04:45:28] ℹ️  - Enhanced error handling and logging
+[04:45:28] ℹ️  - Full API integration (patient creation + order pushing)
+[04:45:28] ℹ️  - CSV output with comprehensive patient data
+[04:45:28] ℹ️  - Detailed API tracking with remarks for every document
+[04:45:28] ℹ️  - Complete audit trail of all processing attempts
+[04:45:28] ℹ️  
+[04:45:28] ℹ️  Starting CSV processing with API integration: hawthorn_fam.csv
+[04:45:28] ✅ Created output CSV file: csv_outputs/extracted_patients_20250607_044528.csv
+[04:45:28] ✅ Created API details CSV file: api_outputs/api_push_details_20250607_044528.csv
+================================================================================
+║                        Processing Document ID: 9323602                         ║
+================================================================================
+[04:45:28] ℹ️  Agency: Dartmouth HH
+[04:45:28] ℹ️  Date: 06/03/2025
+[04:45:28] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[04:45:30] [DOC: 9323602] ✅ Text extracted using pdfplumber (2178 chars)
+[04:45:30] ✅    ✅ Text extracted using pdfplumber (2178 chars)
+[04:45:30] 🔄 
+🔄 Step 2: Extracting patient data...
+[04:45:34] ℹ️  AI extracted raw sex value: 'F'
+[04:45:34] ℹ️  AI extracted service line: 'RN'
+[04:45:34] ℹ️  AI extracted payer source: 'Medicare'
+[04:45:34] ℹ️  AI extracted diagnoses:
+[04:45:34] ℹ️    - Diagnosis 1: 'None'
+[04:45:34] ℹ️    - Diagnosis 2: 'None'
+[04:45:34] ℹ️    - Diagnosis 3: 'None'
+[04:45:34] ℹ️    - Diagnosis 4: 'None'
+[04:45:34] ℹ️    - Diagnosis 5: 'None'
+[04:45:34] ℹ️    - Diagnosis 6: 'None'
+[04:45:34] ℹ️  Final extracted MRN: '1252008'
+[04:45:34] ℹ️  Final extracted Sex: 'FEMALE'
+[04:45:34] ℹ️  Final extracted Service Line: 'RN'
+[04:45:34] ℹ️  Final extracted Payer Source: 'Medicare'
+[04:45:34] ✅ Patient data extraction completed successfully
+[04:45:34] ✅    ✅ Patient data extracted successfully
+[04:45:34] 📊 Patient Response
+     └─ patientFName: Linda
+     └─ patientLName: Sykes
+     └─ dob: 09/19/1947
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 1252008
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: None
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '04/13/2025', 'startOfEpisode': '04/13/2025', 'endOfEpisode': '06/11/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[04:45:34] ✅    ✅ Patient identified: Linda Sykes
+[04:45:34] ✅    ✅ Patient name validation passed
+[04:45:34] 🔄 
+🔄 Step 3: Processing patient dates...
+[04:45:34] [DOC: 9323602] ℹ️  DOB normalized: 09/19/1947
+[04:45:34] [DOC: 9323602] ℹ️  Episode startOfCare normalized: 04/13/2025
+[04:45:34] [DOC: 9323602] ℹ️  Episode startOfEpisode normalized: 04/13/2025
+[04:45:34] [DOC: 9323602] ℹ️  Episode endOfEpisode normalized: 06/11/2025
+[04:45:34] [DOC: 9323602] ✅ Patient date processing completed successfully
+[04:45:34] ✅    ✅ Date processing completed
+[04:45:34] 📊 Processed Patient Data
+     └─ patientFName: Linda
+     └─ patientLName: Sykes
+     └─ dob: 09/19/1947
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 1252008
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '04/13/2025', 'startOfEpisode': '04/13/2025', 'endOfEpisode': '06/11/2025'}]
+[04:45:34] 🔄 
+🔄 Step 4: Extracting order data...
+[04:45:37] ℹ️  Order extraction - MRN: ''
+[04:45:37] ℹ️  Order extraction - Sex: 'FEMALE'
+[04:45:37] ℹ️  Order extraction - Service Line: 'RN'
+[04:45:37] ℹ️  Order extraction - Payer Source: 'Medicare'
+[04:45:37] ✅ Order data extraction completed successfully
+[04:45:37] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[04:45:37] ℹ️  Using MRN from patient data: '1252008'
+[04:45:37] ℹ️  Service line consistent in both sources: 'RN'
+[04:45:37] ℹ️  Payer source consistent in both sources: 'Medicare'
+[04:45:37] ✅ Patient name cross-validation successful
+[04:45:37] ✅    ✅ Data merged successfully
+[04:45:38] ✅    ✅ Order data extracted and validated
+[04:45:38] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[04:46:08] [DOC: 9323602] ✅ Patient exists in API: Linda Sykes, ID: a10dd95f-9d80-4489-8146-b834f50f18d5
+[04:46:08] ✅    ✅ Existing patient found with ID: a10dd95f-9d80-4489-8146-b834f50f18d5
+[04:46:08] 🔄 
+🔄 Step 6: Pushing order to API...
+[04:46:08] [DOC: 9323602] ℹ️  Pushing order via API for patient ID: a10dd95f-9d80-4489-8146-b834f50f18d5
+[04:46:09] [DOC: 9323602] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[04:46:09] ❌    ❌ Failed to push order
+[04:46:09] 🔄 
+🔄 Step 7: Writing to CSV...
+[04:46:09] [DOC: 9323602] ℹ️  Calculated age: 77 from DOB: 09/19/1947
+[04:46:09] [DOC: 9323602] ℹ️  Service Line extracted: 'RN'
+[04:46:09] [DOC: 9323602] ℹ️  Payer Source extracted: 'Medicare'
+[04:46:09] [DOC: 9323602] ℹ️  Diagnosis codes being written:
+[04:46:09] [DOC: 9323602] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[04:46:09] [DOC: 9323602] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[04:46:09] [DOC: 9323602] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[04:46:09] [DOC: 9323602] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[04:46:09] [DOC: 9323602] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[04:46:09] [DOC: 9323602] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[04:46:09] [DOC: 9323602] ✅ Patient data written to CSV: Linda Sykes | Sex: FEMALE | Age: 77 | Service: RN | Payer: Medicare | MRN: 1252008
+[04:46:09] ✅    ✅ Document 9323602 processed and saved successfully
+[04:46:09] 🔄 
+🔄 Step 8: Saving API details...
+[04:46:09] [DOC: 9323602] ℹ️  API push details saved for document 9323602
+[04:46:09] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9323125                         ║
+================================================================================
+[04:46:09] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[04:46:09] ℹ️  Date: 06/02/2025
+[04:46:09] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[04:46:14] [DOC: 9323125] ✅ Text extracted using pdfplumber (26176 chars)
+[04:46:14] ✅    ✅ Text extracted using pdfplumber (26176 chars)
+[04:46:14] 🔄 
+🔄 Step 2: Extracting patient data...
+[04:46:14] ⚠️  AI extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 46
+}
+]
+[04:46:19] ℹ️  AI extracted raw sex value: 'F'
+[04:46:19] ℹ️  AI extracted service line: 'Skilled Nursing,Physical Therapy,Occupational Therapy'
+[04:46:19] ℹ️  AI extracted payer source: ''
+[04:46:19] ℹ️  AI extracted diagnoses:
+[04:46:19] ℹ️    - Diagnosis 1: 'S72.001D'
+[04:46:19] ℹ️    - Diagnosis 2: 'D62'
+[04:46:19] ℹ️    - Diagnosis 3: 'I48.0'
+[04:46:19] ℹ️    - Diagnosis 4: 'I10'
+[04:46:19] ℹ️    - Diagnosis 5: 'I25.10'
+[04:46:19] ℹ️    - Diagnosis 6: 'S50.11XD'
+[04:46:19] ℹ️  Final extracted MRN: '2611003'
+[04:46:19] ℹ️  Final extracted Sex: 'FEMALE'
+[04:46:19] ℹ️  Final extracted Service Line: 'Skilled Nursing,Physical Therapy,Occupational Therapy'
+[04:46:19] ℹ️  Final extracted Payer Source: ''
+[04:46:19] ✅ Patient data extraction completed successfully
+[04:46:19] ✅    ✅ Patient data extracted successfully
+[04:46:19] 📊 Patient Response
+     └─ patientFName: Johnnie-Ann
+     └─ patientLName: Keighley
+     └─ dob: 04/04/1945
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2611003
+     └─ billingProvider: Christine A. Will, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 39 Menton St
+     └─ city: New Bedford
+     └─ state: MA
+     └─ zip: 02745-2647
+     └─ email: 
+     └─ phoneNumber: 508-995-3323
+     └─ serviceLine: Skilled Nursing,Physical Therapy,Occupational Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '05/09/2025', 'startOfEpisode': '05/11/2025', 'endOfEpisode': '07/09/2025', 'firstDiagnosis': 'S72.001D', 'secondDiagnosis': 'D62', 'thirdDiagnosis': 'I48.0', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'S50.11XD'}]
+[04:46:19] ✅    ✅ Patient identified: Johnnie-Ann Keighley
+[04:46:19] ✅    ✅ Patient name validation passed
+[04:46:19] 🔄 
+🔄 Step 3: Processing patient dates...
+[04:46:19] [DOC: 9323125] ℹ️  DOB normalized: 04/04/1945
+[04:46:19] [DOC: 9323125] ℹ️  Episode startOfCare normalized: 05/09/2025
+[04:46:19] [DOC: 9323125] ℹ️  Episode startOfEpisode normalized: 05/11/2025
+[04:46:19] [DOC: 9323125] ℹ️  Episode endOfEpisode normalized: 07/09/2025
+[04:46:19] [DOC: 9323125] ✅ Patient date processing completed successfully
+[04:46:19] ✅    ✅ Date processing completed
+[04:46:19] 📊 Processed Patient Data
+     └─ patientFName: Johnnie-Ann
+     └─ patientLName: Keighley
+     └─ dob: 04/04/1945
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2611003
+     └─ billingProvider: Christine A. Will, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 39 Menton St
+     └─ city: New Bedford
+     └─ state: MA
+     └─ zip: 02745-2647
+     └─ email: 
+     └─ phoneNumber: 508-995-3323
+     └─ serviceLine: Skilled Nursing,Physical Therapy,Occupational Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '05/09/2025', 'startOfEpisode': '05/11/2025', 'endOfEpisode': '07/09/2025', 'firstDiagnosis': 'S72.001D', 'secondDiagnosis': 'D62', 'thirdDiagnosis': 'I48.0', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': 'I25.10', 'sixthDiagnosis': 'S50.11XD'}]
+[04:46:19] 🔄 
+🔄 Step 4: Extracting order data...
+[04:46:20] ⚠️  AI extraction attempt 1 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 41
+}
+]
+[04:46:22] ⚠️  AI extraction attempt 2 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 39
+}
+]
+[04:46:23] ⚠️  AI extraction attempt 3 failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-1.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 500
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 37
+}
+]
+[04:46:23] ❌ All AI extraction attempts failed
+[04:46:23] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[04:46:23] ℹ️  Using MRN from patient data: '2611003'
+[04:46:23] ℹ️  Using service line from patient data: 'Skilled Nursing,Physical Therapy,Occupational Therapy'
+[04:46:23] ✅    ✅ Data merged successfully
+[04:46:24] ⚠️     ❌ Skipping - missing episode start date
+[04:46:24] [DOC: 9323125] ℹ️  API push details saved for document 9323125
+================================================================================
+║                        Processing Document ID: 9323119                         ║
+================================================================================
+[04:46:24] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[04:46:24] ℹ️  Date: 06/02/2025
+[04:46:24] 🔄 
+🔄 Step 1: Extracting text from PDF...

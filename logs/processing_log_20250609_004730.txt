@@ -1,0 +1,3654 @@
+================================================================================
+║                            FINAL VERSION PROCESSOR                             ║
+================================================================================
+[00:47:30] ℹ️  CSV Data Extraction & API Push Tool
+[00:47:30] ℹ️  
+[00:47:30] ℹ️  Features:
+[00:47:30] ℹ️  - 2 Robust text extraction methods (PDFPlumber + Tesseract OCR)
+[00:47:30] ℹ️  - AI-powered patient and order data extraction
+[00:47:30] ℹ️  - Enhanced error handling and logging
+[00:47:30] ℹ️  - Full API integration (patient creation + order pushing)
+[00:47:30] ℹ️  - CSV output with comprehensive patient data
+[00:47:30] ℹ️  - Detailed API tracking with remarks for every document
+[00:47:30] ℹ️  - Complete audit trail of all processing attempts
+[00:47:30] ℹ️  
+[00:47:30] ℹ️  Starting CSV processing with API integration: nephrology - tableExport (26).csv
+[00:47:30] ✅ Created output CSV file: csv_outputs/extracted_patients_20250609_004730.csv
+[00:47:30] ✅ Created API details CSV file: api_outputs/api_push_details_20250609_004730.csv
+================================================================================
+║                        Processing Document ID: 9204192                         ║
+================================================================================
+[00:47:30] ℹ️  Agency: Dartmouth HH
+[00:47:30] ℹ️  Date: 03/26/2025
+[00:47:30] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:47:33] [DOC: 9204192] ✅ Text extracted using pdfplumber (6929 chars)
+[00:47:33] ✅    ✅ Text extracted using pdfplumber (6929 chars)
+[00:47:33] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:47:37] ℹ️  AI extracted raw sex value: 'F'
+[00:47:37] ℹ️  AI extracted service line: 'Physical Therapy, Skilled Nursing'
+[00:47:37] ℹ️  AI extracted payer source: 'Medicare'
+[00:47:37] ℹ️  AI extracted diagnoses:
+[00:47:37] ℹ️    - Diagnosis 1: 'RSV'
+[00:47:37] ℹ️    - Diagnosis 2: ''
+[00:47:37] ℹ️    - Diagnosis 3: ''
+[00:47:37] ℹ️    - Diagnosis 4: ''
+[00:47:37] ℹ️    - Diagnosis 5: ''
+[00:47:37] ℹ️    - Diagnosis 6: ''
+[00:47:37] ℹ️  Final extracted MRN: '5915015'
+[00:47:37] ℹ️  Final extracted Sex: 'FEMALE'
+[00:47:37] ℹ️  Final extracted Service Line: 'Physical Therapy, Skilled Nursing'
+[00:47:37] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:47:37] ✅ Patient data extraction completed successfully
+[00:47:37] ✅    ✅ Patient data extracted successfully
+[00:47:37] 📊 Patient Response
+     └─ patientFName: Suzanne
+     └─ patientLName: Fawcett
+     └─ dob: 12/08/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 5915015
+     └─ billingProvider: Community Nurse Inc
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Physical Therapy, Skilled Nursing
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '01/26/2025', 'startOfEpisode': '01/18/2025', 'endOfEpisode': '01/25/2025', 'firstDiagnosis': 'RSV', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}, {'startOfCare': '01/26/2025', 'startOfEpisode': '02/14/2025', 'endOfEpisode': '02/24/2025', 'firstDiagnosis': 'Acute on chronic diastolic HF', 'secondDiagnosis': 'afib', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}, {'startOfCare': '01/26/2025', 'startOfEpisode': '03/10/2025', 'endOfEpisode': '03/12/2025', 'firstDiagnosis': 'hypokalemia', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:47:37] ✅    ✅ Patient identified: Suzanne Fawcett
+[00:47:37] ✅    ✅ Patient name validation passed
+[00:47:37] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:47:37] [DOC: 9204192] ℹ️  DOB normalized: 12/08/1939
+[00:47:37] [DOC: 9204192] ℹ️  Episode startOfCare normalized: 01/26/2025
+[00:47:37] [DOC: 9204192] ℹ️  Episode startOfEpisode normalized: 01/18/2025
+[00:47:37] [DOC: 9204192] ℹ️  Episode endOfEpisode normalized: 01/25/2025
+[00:47:37] [DOC: 9204192] ✅ Patient date processing completed successfully
+[00:47:37] ✅    ✅ Date processing completed
+[00:47:37] 📊 Processed Patient Data
+     └─ patientFName: Suzanne
+     └─ patientLName: Fawcett
+     └─ dob: 12/08/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 5915015
+     └─ billingProvider: Community Nurse Inc
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Physical Therapy, Skilled Nursing
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '01/26/2025', 'startOfEpisode': '01/18/2025', 'endOfEpisode': '01/25/2025', 'firstDiagnosis': 'RSV', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}, {'startOfCare': '01/26/2025', 'startOfEpisode': '02/14/2025', 'endOfEpisode': '02/24/2025', 'firstDiagnosis': 'Acute on chronic diastolic HF', 'secondDiagnosis': 'afib', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}, {'startOfCare': '01/26/2025', 'startOfEpisode': '03/10/2025', 'endOfEpisode': '03/12/2025', 'firstDiagnosis': 'hypokalemia', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:47:37] 🔄 
+🔄 Step 4: Extracting order data...
+[00:47:40] ℹ️  Order extraction - MRN: '5915015'
+[00:47:40] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:47:40] ℹ️  Order extraction - Service Line: 'PT, SN'
+[00:47:40] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:47:40] ✅ Order data extraction completed successfully
+[00:47:40] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:47:40] ℹ️  Using MRN from patient data: '5915015' over '5915015'
+[00:47:40] ℹ️  Combined service lines: Patient='Physical Therapy, Skilled Nursing' + Order='PT, SN' = 'PT, Physical Therapy, SN, Skilled Nursing'
+[00:47:40] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:47:40] ✅ Patient name cross-validation successful
+[00:47:40] ✅    ✅ Data merged successfully
+[00:47:42] ✅    ✅ Order data extracted and validated
+[00:47:42] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:47:42] [DOC: 9204192] ✅ Patient found in local cache: Suzanne Fawcett, ID: 028c2716-dede-40f1-9f97-db8c7457c7d4
+[00:47:42] ✅    ✅ Existing patient found with ID: 028c2716-dede-40f1-9f97-db8c7457c7d4
+[00:47:42] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:47:42] [DOC: 9204192] ℹ️  Pushing order via API for patient ID: 028c2716-dede-40f1-9f97-db8c7457c7d4
+[00:47:44] [DOC: 9204192] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:47:44] ❌    ❌ Failed to push order
+[00:47:44] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:47:44] [DOC: 9204192] ℹ️  Calculated age: 85 from DOB: 12/08/1939
+[00:47:44] [DOC: 9204192] ℹ️  Service Line extracted: 'PT, Physical Therapy, SN, Skilled Nursing'
+[00:47:44] [DOC: 9204192] ℹ️  Payer Source extracted: 'Medicare'
+[00:47:44] [DOC: 9204192] ℹ️  Diagnosis codes being written:
+[00:47:44] [DOC: 9204192] ℹ️    - Latest_Episode_Firstdiagnosis: 'RSV'
+[00:47:44] [DOC: 9204192] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:47:44] [DOC: 9204192] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:47:44] [DOC: 9204192] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:47:44] [DOC: 9204192] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:47:44] [DOC: 9204192] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:47:44] [DOC: 9204192] ✅ Patient data written to CSV: Suzanne Fawcett | Sex: FEMALE | Age: 85 | Service: PT, Physical Therapy, SN, Skilled Nursing | Payer: Medicare | MRN: 5915015
+[00:47:44] ✅    ✅ Document 9204192 processed and saved successfully
+[00:47:44] 🔄 
+🔄 Step 8: Saving API details...
+[00:47:44] [DOC: 9204192] ℹ️  API push details saved for document 9204192
+[00:47:44] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9203913                         ║
+================================================================================
+[00:47:44] ℹ️  Agency: Guardian Home Health Care LLC - West Bridgewater
+[00:47:44] ℹ️  Date: 03/26/2025
+[00:47:44] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:47:49] [DOC: 9203913] ✅ Text extracted using pdfplumber (5333 chars)
+[00:47:49] ✅    ✅ Text extracted using pdfplumber (5333 chars)
+[00:47:49] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:47:52] ℹ️  AI extracted raw sex value: 'F'
+[00:47:52] ℹ️  AI extracted service line: 'Skilled Nursing'
+[00:47:52] ℹ️  AI extracted payer source: 'Fallon Navicare'
+[00:47:52] ℹ️  AI extracted diagnoses:
+[00:47:52] ℹ️    - Diagnosis 1: 'E11.22'
+[00:47:52] ℹ️    - Diagnosis 2: 'I13.0'
+[00:47:52] ℹ️    - Diagnosis 3: 'I50.32'
+[00:47:52] ℹ️    - Diagnosis 4: 'N18.30'
+[00:47:52] ℹ️    - Diagnosis 5: 'D63.1'
+[00:47:52] ℹ️    - Diagnosis 6: 'F41.8'
+[00:47:52] ℹ️  Final extracted MRN: '528005'
+[00:47:52] ℹ️  Final extracted Sex: 'FEMALE'
+[00:47:52] ℹ️  Final extracted Service Line: 'Skilled Nursing'
+[00:47:52] ℹ️  Final extracted Payer Source: 'Fallon Navicare'
+[00:47:52] ✅ Patient data extraction completed successfully
+[00:47:52] ✅    ✅ Patient data extracted successfully
+[00:47:52] 📊 Patient Response
+     └─ patientFName: Lorraine
+     └─ patientLName: Moniz
+     └─ dob: 07/18/1944
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 528005
+     └─ billingProvider: Shan Qin, MD
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Guardian Home Health Care, LLC
+     └─ address: 750 West Center St 3rd Floor
+     └─ city: W Bridgewater
+     └─ state: MA
+     └─ zip: 02379
+     └─ email: 
+     └─ phoneNumber: (508) 588-5811
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: Fallon Navicare
+     └─ episodeDiagnoses: [{'startOfCare': '04/05/2024', 'startOfEpisode': '01/30/2025', 'endOfEpisode': '03/30/2025', 'firstDiagnosis': 'E11.22', 'secondDiagnosis': 'I13.0', 'thirdDiagnosis': 'I50.32', 'fourthDiagnosis': 'N18.30', 'fifthDiagnosis': 'D63.1', 'sixthDiagnosis': 'F41.8'}]
+[00:47:52] ✅    ✅ Patient identified: Lorraine Moniz
+[00:47:52] ✅    ✅ Patient name validation passed
+[00:47:52] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:47:52] [DOC: 9203913] ℹ️  DOB normalized: 07/18/1944
+[00:47:52] [DOC: 9203913] ℹ️  Episode startOfCare normalized: 04/05/2024
+[00:47:52] [DOC: 9203913] ℹ️  Episode startOfEpisode normalized: 01/30/2025
+[00:47:52] [DOC: 9203913] ℹ️  Episode endOfEpisode normalized: 03/30/2025
+[00:47:52] [DOC: 9203913] ✅ Patient date processing completed successfully
+[00:47:52] ✅    ✅ Date processing completed
+[00:47:52] 📊 Processed Patient Data
+     └─ patientFName: Lorraine
+     └─ patientLName: Moniz
+     └─ dob: 07/18/1944
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 528005
+     └─ billingProvider: Shan Qin, MD
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Guardian Home Health Care, LLC
+     └─ address: 750 West Center St 3rd Floor
+     └─ city: W Bridgewater
+     └─ state: MA
+     └─ zip: 02379
+     └─ email: 
+     └─ phoneNumber: (508) 588-5811
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: Fallon Navicare
+     └─ episodeDiagnoses: [{'startOfCare': '04/05/2024', 'startOfEpisode': '01/30/2025', 'endOfEpisode': '03/30/2025', 'firstDiagnosis': 'E11.22', 'secondDiagnosis': 'I13.0', 'thirdDiagnosis': 'I50.32', 'fourthDiagnosis': 'N18.30', 'fifthDiagnosis': 'D63.1', 'sixthDiagnosis': 'F41.8'}]
+[00:47:52] 🔄 
+🔄 Step 4: Extracting order data...
+[00:47:54] ℹ️  Order extraction - MRN: '528005'
+[00:47:54] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:47:54] ℹ️  Order extraction - Service Line: 'Skilled Nursing'
+[00:47:54] ℹ️  Order extraction - Payer Source: 'Fallon Navicare'
+[00:47:54] ✅ Order data extraction completed successfully
+[00:47:54] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:47:54] ℹ️  Using MRN from patient data: '528005' over '528005'
+[00:47:54] ℹ️  Service line consistent in both sources: 'Skilled Nursing'
+[00:47:54] ℹ️  Payer source consistent in both sources: 'Fallon Navicare'
+[00:47:54] ✅ Patient name cross-validation successful
+[00:47:54] ✅    ✅ Data merged successfully
+[00:47:56] ✅    ✅ Order data extracted and validated
+[00:47:56] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:47:56] [DOC: 9203913] ✅ Patient found in local cache: Lorraine Moniz, ID: b3098610-b96c-4369-86de-cef67fbdc9c7
+[00:47:56] ✅    ✅ Existing patient found with ID: b3098610-b96c-4369-86de-cef67fbdc9c7
+[00:47:56] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:47:56] [DOC: 9203913] ℹ️  Pushing order via API for patient ID: b3098610-b96c-4369-86de-cef67fbdc9c7
+[00:47:57] [DOC: 9203913] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:47:57] ❌    ❌ Failed to push order
+[00:47:57] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:47:57] [DOC: 9203913] ℹ️  Calculated age: 80 from DOB: 07/18/1944
+[00:47:57] [DOC: 9203913] ℹ️  Service Line extracted: 'Skilled Nursing'
+[00:47:57] [DOC: 9203913] ℹ️  Payer Source extracted: 'Fallon Navicare'
+[00:47:57] [DOC: 9203913] ℹ️  Diagnosis codes being written:
+[00:47:57] [DOC: 9203913] ℹ️    - Latest_Episode_Firstdiagnosis: 'E11.22'
+[00:47:57] [DOC: 9203913] ℹ️    - Latest_Episode_Seconddiagnosis: 'I13.0'
+[00:47:57] [DOC: 9203913] ℹ️    - Latest_Episode_Thirddiagnosis: 'I50.32'
+[00:47:57] [DOC: 9203913] ℹ️    - Latest_Episode_Fourthdiagnosis: 'N18.30'
+[00:47:57] [DOC: 9203913] ℹ️    - Latest_Episode_Fifthdiagnosis: 'D63.1'
+[00:47:57] [DOC: 9203913] ℹ️    - Latest_Episode_Sixthdiagnosis: 'F41.8'
+[00:47:57] [DOC: 9203913] ✅ Patient data written to CSV: Lorraine Moniz | Sex: FEMALE | Age: 80 | Service: Skilled Nursing | Payer: Fallon Navicare | MRN: 528005
+[00:47:57] ✅    ✅ Document 9203913 processed and saved successfully
+[00:47:57] 🔄 
+🔄 Step 8: Saving API details...
+[00:47:57] [DOC: 9203913] ℹ️  API push details saved for document 9203913
+[00:47:57] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9203819                         ║
+================================================================================
+[00:47:57] ℹ️  Agency: Visiting Rehab & Nursing Services
+[00:47:57] ℹ️  Date: 03/26/2025
+[00:47:57] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:48:14] [DOC: 9203819] ✅ Text extracted using pdfplumber (48698 chars)
+[00:48:14] ✅    ✅ Text extracted using pdfplumber (48698 chars)
+[00:48:14] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:48:19] ℹ️  AI extracted raw sex value: 'None'
+[00:48:19] ℹ️  AI extracted service line: 'None'
+[00:48:19] ℹ️  AI extracted payer source: 'None'
+[00:48:19] ℹ️  AI extracted diagnoses:
+[00:48:19] ℹ️    - Diagnosis 1: ''
+[00:48:19] ℹ️    - Diagnosis 2: ''
+[00:48:19] ℹ️    - Diagnosis 3: ''
+[00:48:19] ℹ️    - Diagnosis 4: ''
+[00:48:19] ℹ️    - Diagnosis 5: ''
+[00:48:19] ℹ️    - Diagnosis 6: ''
+[00:48:19] ℹ️  Final extracted MRN: ''
+[00:48:19] ℹ️  Final extracted Sex: ''
+[00:48:19] ℹ️  Final extracted Service Line: ''
+[00:48:19] ℹ️  Final extracted Payer Source: ''
+[00:48:19] ✅ Patient data extraction completed successfully
+[00:48:19] ✅    ✅ Patient data extracted successfully
+[00:48:19] 📊 Patient Response
+     └─ patientFName: None
+     └─ patientLName: None
+     └─ dob: None
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: None
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: None
+     └─ address: None
+     └─ city: None
+     └─ state: None
+     └─ zip: 
+     └─ email: None
+     └─ phoneNumber: 
+     └─ serviceLine: 
+     └─ payorSource: 
+     └─ episodeDiagnoses: []
+[00:48:19] ⚠️     ❌ Insufficient patient data extracted
+[00:48:19] [DOC: 9203819] ℹ️  API push details saved for document 9203819
+================================================================================
+║                        Processing Document ID: 9203520                         ║
+================================================================================
+[00:48:19] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[00:48:19] ℹ️  Date: 03/26/2025
+[00:48:19] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:48:22] [DOC: 9203520] ✅ Text extracted using pdfplumber (1180 chars)
+[00:48:22] ✅    ✅ Text extracted using pdfplumber (1180 chars)
+[00:48:22] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:48:25] ℹ️  AI extracted raw sex value: 'M'
+[00:48:25] ℹ️  AI extracted service line: 'Home Health Aide'
+[00:48:25] ℹ️  AI extracted payer source: ''
+[00:48:25] ℹ️  AI extracted diagnoses:
+[00:48:25] ℹ️    - Diagnosis 1: ''
+[00:48:25] ℹ️    - Diagnosis 2: ''
+[00:48:25] ℹ️    - Diagnosis 3: ''
+[00:48:25] ℹ️    - Diagnosis 4: ''
+[00:48:25] ℹ️    - Diagnosis 5: ''
+[00:48:25] ℹ️    - Diagnosis 6: ''
+[00:48:25] ℹ️  Final extracted MRN: '2716471'
+[00:48:25] ℹ️  Final extracted Sex: 'MALE'
+[00:48:25] ℹ️  Final extracted Service Line: 'Home Health Aide'
+[00:48:25] ℹ️  Final extracted Payer Source: ''
+[00:48:25] ✅ Patient data extraction completed successfully
+[00:48:25] ✅    ✅ Patient data extracted successfully
+[00:48:25] 📊 Patient Response
+     └─ patientFName: Thomas
+     └─ patientLName: McCormack
+     └─ dob: 03/17/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 2716471
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: Home Health Aide
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:48:25] ✅    ✅ Patient identified: Thomas McCormack
+[00:48:25] ✅    ✅ Patient name validation passed
+[00:48:25] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:48:25] [DOC: 9203520] ℹ️  DOB normalized: 03/17/1944
+[00:48:25] [DOC: 9203520] ✅ Patient date processing completed successfully
+[00:48:25] ✅    ✅ Date processing completed
+[00:48:25] 📊 Processed Patient Data
+     └─ patientFName: Thomas
+     └─ patientLName: McCormack
+     └─ dob: 03/17/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 2716471
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: Home Health Aide
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:48:25] 🔄 
+🔄 Step 4: Extracting order data...
+[00:48:27] ℹ️  Order extraction - MRN: '2716471'
+[00:48:27] ℹ️  Order extraction - Sex: 'MALE'
+[00:48:27] ℹ️  Order extraction - Service Line: 'Home Health Aide'
+[00:48:27] ℹ️  Order extraction - Payer Source: ''
+[00:48:27] ✅ Order data extraction completed successfully
+[00:48:27] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:48:27] ℹ️  Using MRN from patient data: '2716471' over '2716471'
+[00:48:27] ℹ️  Service line consistent in both sources: 'Home Health Aide'
+[00:48:27] ✅ Patient name cross-validation successful
+[00:48:27] ✅    ✅ Data merged successfully
+[00:48:29] ✅    ✅ Order data extracted and validated
+[00:48:29] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:48:29] [DOC: 9203520] ✅ Patient found in local cache: Thomas McCormack, ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:48:29] ✅    ✅ Existing patient found with ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:48:29] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:48:29] [DOC: 9203520] ℹ️  Pushing order via API for patient ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:48:30] [DOC: 9203520] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13335"}
+[00:48:30] ❌    ❌ Failed to push order
+[00:48:30] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:48:30] [DOC: 9203520] ℹ️  Calculated age: 81 from DOB: 03/17/1944
+[00:48:30] [DOC: 9203520] ℹ️  Service Line extracted: 'Home Health Aide'
+[00:48:30] [DOC: 9203520] ℹ️  Payer Source extracted: ''
+[00:48:30] [DOC: 9203520] ℹ️  Diagnosis codes being written:
+[00:48:30] [DOC: 9203520] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:48:30] [DOC: 9203520] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:48:30] [DOC: 9203520] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:48:30] [DOC: 9203520] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:48:30] [DOC: 9203520] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:48:30] [DOC: 9203520] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:48:30] [DOC: 9203520] ✅ Patient data written to CSV: Thomas McCormack | Sex: MALE | Age: 81 | Service: Home Health Aide | Payer:  | MRN: 2716471
+[00:48:30] ✅    ✅ Document 9203520 processed and saved successfully
+[00:48:30] 🔄 
+🔄 Step 8: Saving API details...
+[00:48:30] [DOC: 9203520] ℹ️  API push details saved for document 9203520
+[00:48:30] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9194001                         ║
+================================================================================
+[00:48:30] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[00:48:30] ℹ️  Date: 03/20/2025
+[00:48:30] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:48:34] [DOC: 9194001] ✅ Text extracted using pdfplumber (14341 chars)
+[00:48:34] ✅    ✅ Text extracted using pdfplumber (14341 chars)
+[00:48:34] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:48:37] ℹ️  AI extracted raw sex value: 'F'
+[00:48:37] ℹ️  AI extracted service line: 'Skilled Nursing, Physical Therapy'
+[00:48:37] ℹ️  AI extracted payer source: ''
+[00:48:37] ℹ️  AI extracted diagnoses:
+[00:48:37] ℹ️    - Diagnosis 1: 'I26.99'
+[00:48:37] ℹ️    - Diagnosis 2: 'I10'
+[00:48:37] ℹ️    - Diagnosis 3: 'J10.1'
+[00:48:37] ℹ️    - Diagnosis 4: 'E78.00'
+[00:48:37] ℹ️    - Diagnosis 5: 'R91.1'
+[00:48:37] ℹ️    - Diagnosis 6: 'Z79.01'
+[00:48:37] ℹ️  Final extracted MRN: '2459108'
+[00:48:37] ℹ️  Final extracted Sex: 'FEMALE'
+[00:48:37] ℹ️  Final extracted Service Line: 'Skilled Nursing, Physical Therapy'
+[00:48:37] ℹ️  Final extracted Payer Source: ''
+[00:48:37] ✅ Patient data extraction completed successfully
+[00:48:37] ✅    ✅ Patient data extracted successfully
+[00:48:37] 📊 Patient Response
+     └─ patientFName: Jacqueline
+     └─ patientLName: Feener
+     └─ dob: 09/28/1944
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2459108
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: 508-973-3200
+     └─ serviceLine: Skilled Nursing, Physical Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '03/04/2025', 'startOfEpisode': '03/09/2025', 'endOfEpisode': '05/07/2025', 'firstDiagnosis': 'I26.99', 'secondDiagnosis': 'I10', 'thirdDiagnosis': 'J10.1', 'fourthDiagnosis': 'E78.00', 'fifthDiagnosis': 'R91.1', 'sixthDiagnosis': 'Z79.01'}]
+[00:48:37] ✅    ✅ Patient identified: Jacqueline Feener
+[00:48:37] ✅    ✅ Patient name validation passed
+[00:48:37] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:48:37] [DOC: 9194001] ℹ️  DOB normalized: 09/28/1944
+[00:48:37] [DOC: 9194001] ℹ️  Episode startOfCare normalized: 03/04/2025
+[00:48:37] [DOC: 9194001] ℹ️  Episode startOfEpisode normalized: 03/09/2025
+[00:48:37] [DOC: 9194001] ℹ️  Episode endOfEpisode normalized: 05/07/2025
+[00:48:37] [DOC: 9194001] ✅ Patient date processing completed successfully
+[00:48:37] ✅    ✅ Date processing completed
+[00:48:37] 📊 Processed Patient Data
+     └─ patientFName: Jacqueline
+     └─ patientLName: Feener
+     └─ dob: 09/28/1944
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2459108
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: 508-973-3200
+     └─ serviceLine: Skilled Nursing, Physical Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '03/04/2025', 'startOfEpisode': '03/09/2025', 'endOfEpisode': '05/07/2025', 'firstDiagnosis': 'I26.99', 'secondDiagnosis': 'I10', 'thirdDiagnosis': 'J10.1', 'fourthDiagnosis': 'E78.00', 'fifthDiagnosis': 'R91.1', 'sixthDiagnosis': 'Z79.01'}]
+[00:48:37] 🔄 
+🔄 Step 4: Extracting order data...
+[00:48:39] ℹ️  Order extraction - MRN: '2459108'
+[00:48:39] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:48:39] ℹ️  Order extraction - Service Line: 'Skilled Nursing, Physical Therapy'
+[00:48:39] ℹ️  Order extraction - Payer Source: ''
+[00:48:39] ✅ Order data extraction completed successfully
+[00:48:39] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:48:39] ℹ️  Using MRN from patient data: '2459108' over '2459108'
+[00:48:39] ℹ️  Service line consistent in both sources: 'Skilled Nursing, Physical Therapy'
+[00:48:39] ✅ Patient name cross-validation successful
+[00:48:39] ✅    ✅ Data merged successfully
+[00:48:41] ✅    ✅ Order data extracted and validated
+[00:48:41] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:48:43] [DOC: 9194001] ✅ Patient exists in API: Jacqueline Feener, ID: cd9d6b0b-2537-4066-a916-c47b6886baac
+[00:48:43] ✅    ✅ Existing patient found with ID: cd9d6b0b-2537-4066-a916-c47b6886baac
+[00:48:43] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:48:43] [DOC: 9194001] ℹ️  Pushing order via API for patient ID: cd9d6b0b-2537-4066-a916-c47b6886baac
+[00:48:45] [DOC: 9194001] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD14171"}
+[00:48:45] ❌    ❌ Failed to push order
+[00:48:45] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:48:45] [DOC: 9194001] ℹ️  Calculated age: 80 from DOB: 09/28/1944
+[00:48:45] [DOC: 9194001] ℹ️  Service Line extracted: 'Skilled Nursing, Physical Therapy'
+[00:48:45] [DOC: 9194001] ℹ️  Payer Source extracted: ''
+[00:48:45] [DOC: 9194001] ℹ️  Diagnosis codes being written:
+[00:48:45] [DOC: 9194001] ℹ️    - Latest_Episode_Firstdiagnosis: 'I26.99'
+[00:48:45] [DOC: 9194001] ℹ️    - Latest_Episode_Seconddiagnosis: 'I10'
+[00:48:45] [DOC: 9194001] ℹ️    - Latest_Episode_Thirddiagnosis: 'J10.1'
+[00:48:45] [DOC: 9194001] ℹ️    - Latest_Episode_Fourthdiagnosis: 'E78.00'
+[00:48:45] [DOC: 9194001] ℹ️    - Latest_Episode_Fifthdiagnosis: 'R91.1'
+[00:48:45] [DOC: 9194001] ℹ️    - Latest_Episode_Sixthdiagnosis: 'Z79.01'
+[00:48:45] [DOC: 9194001] ✅ Patient data written to CSV: Jacqueline Feener | Sex: FEMALE | Age: 80 | Service: Skilled Nursing, Physical Therapy | Payer:  | MRN: 2459108
+[00:48:45] ✅    ✅ Document 9194001 processed and saved successfully
+[00:48:45] 🔄 
+🔄 Step 8: Saving API details...
+[00:48:45] [DOC: 9194001] ℹ️  API push details saved for document 9194001
+[00:48:45] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9193975                         ║
+================================================================================
+[00:48:45] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[00:48:45] ℹ️  Date: 03/20/2025
+[00:48:45] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:48:52] [DOC: 9193975] ✅ Text extracted using pdfplumber (27280 chars)
+[00:48:52] ✅    ✅ Text extracted using pdfplumber (27280 chars)
+[00:48:52] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:48:55] ℹ️  AI extracted raw sex value: 'F'
+[00:48:55] ℹ️  AI extracted service line: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:48:55] ℹ️  AI extracted payer source: ''
+[00:48:55] ℹ️  AI extracted diagnoses:
+[00:48:55] ℹ️    - Diagnosis 1: 'K74.69'
+[00:48:55] ℹ️    - Diagnosis 2: 'R26.81'
+[00:48:55] ℹ️    - Diagnosis 3: 'D61.818'
+[00:48:55] ℹ️    - Diagnosis 4: 'I13.0'
+[00:48:55] ℹ️    - Diagnosis 5: 'I50.22'
+[00:48:55] ℹ️    - Diagnosis 6: 'E11.22'
+[00:48:55] ℹ️  Final extracted MRN: '2258674'
+[00:48:55] ℹ️  Final extracted Sex: 'FEMALE'
+[00:48:55] ℹ️  Final extracted Service Line: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:48:55] ℹ️  Final extracted Payer Source: ''
+[00:48:55] ✅ Patient data extraction completed successfully
+[00:48:55] ✅    ✅ Patient data extracted successfully
+[00:48:55] 📊 Patient Response
+     └─ patientFName: Maryann
+     └─ patientLName: Boucher
+     └─ dob: 03/22/1946
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2258674
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: 508-973-3200
+     └─ serviceLine: Skilled Nursing, Physical Therapy, Occupational Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '03/10/2025', 'startOfEpisode': '03/10/2025', 'endOfEpisode': '05/08/2025', 'firstDiagnosis': 'K74.69', 'secondDiagnosis': 'R26.81', 'thirdDiagnosis': 'D61.818', 'fourthDiagnosis': 'I13.0', 'fifthDiagnosis': 'I50.22', 'sixthDiagnosis': 'E11.22'}]
+[00:48:55] ✅    ✅ Patient identified: Maryann Boucher
+[00:48:55] ✅    ✅ Patient name validation passed
+[00:48:55] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:48:55] [DOC: 9193975] ℹ️  DOB normalized: 03/22/1946
+[00:48:55] [DOC: 9193975] ℹ️  Episode startOfCare normalized: 03/10/2025
+[00:48:55] [DOC: 9193975] ℹ️  Episode startOfEpisode normalized: 03/10/2025
+[00:48:55] [DOC: 9193975] ℹ️  Episode endOfEpisode normalized: 05/08/2025
+[00:48:55] [DOC: 9193975] ✅ Patient date processing completed successfully
+[00:48:55] ✅    ✅ Date processing completed
+[00:48:55] 📊 Processed Patient Data
+     └─ patientFName: Maryann
+     └─ patientLName: Boucher
+     └─ dob: 03/22/1946
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2258674
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: 508-973-3200
+     └─ serviceLine: Skilled Nursing, Physical Therapy, Occupational Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '03/10/2025', 'startOfEpisode': '03/10/2025', 'endOfEpisode': '05/08/2025', 'firstDiagnosis': 'K74.69', 'secondDiagnosis': 'R26.81', 'thirdDiagnosis': 'D61.818', 'fourthDiagnosis': 'I13.0', 'fifthDiagnosis': 'I50.22', 'sixthDiagnosis': 'E11.22'}]
+[00:48:55] 🔄 
+🔄 Step 4: Extracting order data...
+[00:48:58] ℹ️  Order extraction - MRN: '2258674'
+[00:48:58] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:48:58] ℹ️  Order extraction - Service Line: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:48:58] ℹ️  Order extraction - Payer Source: ''
+[00:48:58] ✅ Order data extraction completed successfully
+[00:48:58] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:48:58] ℹ️  Using MRN from patient data: '2258674' over '2258674'
+[00:48:58] ℹ️  Service line consistent in both sources: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:48:58] ✅ Patient name cross-validation successful
+[00:48:58] ✅    ✅ Data merged successfully
+[00:49:00] ✅    ✅ Order data extracted and validated
+[00:49:00] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:49:00] [DOC: 9193975] ✅ Patient found in local cache: Maryann Boucher, ID: fc56ee9a-e7cf-4d9f-9ade-acd80b0401e1
+[00:49:00] ✅    ✅ Existing patient found with ID: fc56ee9a-e7cf-4d9f-9ade-acd80b0401e1
+[00:49:00] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:49:00] [DOC: 9193975] ℹ️  Pushing order via API for patient ID: fc56ee9a-e7cf-4d9f-9ade-acd80b0401e1
+[00:49:07] [DOC: 9193975] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13310"}
+[00:49:07] ❌    ❌ Failed to push order
+[00:49:07] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:49:07] [DOC: 9193975] ℹ️  Calculated age: 79 from DOB: 03/22/1946
+[00:49:07] [DOC: 9193975] ℹ️  Service Line extracted: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:49:07] [DOC: 9193975] ℹ️  Payer Source extracted: ''
+[00:49:07] [DOC: 9193975] ℹ️  Diagnosis codes being written:
+[00:49:07] [DOC: 9193975] ℹ️    - Latest_Episode_Firstdiagnosis: 'K74.69'
+[00:49:07] [DOC: 9193975] ℹ️    - Latest_Episode_Seconddiagnosis: 'R26.81'
+[00:49:07] [DOC: 9193975] ℹ️    - Latest_Episode_Thirddiagnosis: 'D61.818'
+[00:49:07] [DOC: 9193975] ℹ️    - Latest_Episode_Fourthdiagnosis: 'I13.0'
+[00:49:07] [DOC: 9193975] ℹ️    - Latest_Episode_Fifthdiagnosis: 'I50.22'
+[00:49:07] [DOC: 9193975] ℹ️    - Latest_Episode_Sixthdiagnosis: 'E11.22'
+[00:49:07] [DOC: 9193975] ✅ Patient data written to CSV: Maryann Boucher | Sex: FEMALE | Age: 79 | Service: Skilled Nursing, Physical Therapy, Occupational Therapy | Payer:  | MRN: 2258674
+[00:49:07] ✅    ✅ Document 9193975 processed and saved successfully
+[00:49:07] 🔄 
+🔄 Step 8: Saving API details...
+[00:49:07] [DOC: 9193975] ℹ️  API push details saved for document 9193975
+[00:49:07] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9193509                         ║
+================================================================================
+[00:49:07] ℹ️  Agency: Nightingale Visiting Nurses-Taunton
+[00:49:07] ℹ️  Date: 03/20/2025
+[00:49:07] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:49:11] [DOC: 9193509] ✅ Text extracted using pdfplumber (1202 chars)
+[00:49:11] ✅    ✅ Text extracted using pdfplumber (1202 chars)
+[00:49:11] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:49:13] ℹ️  AI extracted raw sex value: ''
+[00:49:13] ℹ️  AI extracted service line: 'Skilled Nursing'
+[00:49:13] ℹ️  AI extracted payer source: ''
+[00:49:13] ℹ️  AI extracted diagnoses:
+[00:49:13] ℹ️    - Diagnosis 1: 'F39'
+[00:49:13] ℹ️    - Diagnosis 2: 'F32.A'
+[00:49:13] ℹ️    - Diagnosis 3: 'E11.42'
+[00:49:13] ℹ️    - Diagnosis 4: ''
+[00:49:13] ℹ️    - Diagnosis 5: ''
+[00:49:13] ℹ️    - Diagnosis 6: ''
+[00:49:13] ℹ️  Final extracted MRN: 'MA221103064405'
+[00:49:13] ℹ️  Final extracted Sex: ''
+[00:49:13] ℹ️  Final extracted Service Line: 'Skilled Nursing'
+[00:49:13] ℹ️  Final extracted Payer Source: ''
+[00:49:13] ✅ Patient data extraction completed successfully
+[00:49:13] ✅    ✅ Patient data extracted successfully
+[00:49:13] 📊 Patient Response
+     └─ patientFName: Marie
+     └─ patientLName: Mendoza
+     └─ dob: 06/25/1944
+     └─ patientSex: 
+     └─ medicalRecordNo: MA221103064405
+     └─ billingProvider: SHAN QIN
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: 125 County ST
+     └─ city: Taunton
+     └─ state: MA
+     └─ zip: 02780
+     └─ email: 
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '02/21/2025', 'endOfEpisode': '04/21/2025', 'firstDiagnosis': 'F39', 'secondDiagnosis': 'F32.A', 'thirdDiagnosis': 'E11.42', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:49:13] ✅    ✅ Patient identified: Marie Mendoza
+[00:49:13] ✅    ✅ Patient name validation passed
+[00:49:13] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:49:13] [DOC: 9193509] ℹ️  DOB normalized: 06/25/1944
+[00:49:13] [DOC: 9193509] ℹ️  Episode startOfEpisode normalized: 02/21/2025
+[00:49:13] [DOC: 9193509] ℹ️  Episode endOfEpisode normalized: 04/21/2025
+[00:49:13] [DOC: 9193509] ✅ Patient date processing completed successfully
+[00:49:13] ✅    ✅ Date processing completed
+[00:49:13] 📊 Processed Patient Data
+     └─ patientFName: Marie
+     └─ patientLName: Mendoza
+     └─ dob: 06/25/1944
+     └─ patientSex: 
+     └─ medicalRecordNo: MA221103064405
+     └─ billingProvider: SHAN QIN
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: 125 County ST
+     └─ city: Taunton
+     └─ state: MA
+     └─ zip: 02780
+     └─ email: 
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '02/21/2025', 'endOfEpisode': '04/21/2025', 'firstDiagnosis': 'F39', 'secondDiagnosis': 'F32.A', 'thirdDiagnosis': 'E11.42', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:49:13] 🔄 
+🔄 Step 4: Extracting order data...
+[00:49:16] ℹ️  Order extraction - MRN: 'MA221103064405'
+[00:49:16] ℹ️  Order extraction - Sex: ''
+[00:49:16] ℹ️  Order extraction - Service Line: 'Skilled Nursing'
+[00:49:16] ℹ️  Order extraction - Payer Source: ''
+[00:49:16] ✅ Order data extraction completed successfully
+[00:49:16] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:49:16] ℹ️  Using MRN from patient data: 'MA221103064405' over 'MA221103064405'
+[00:49:16] ℹ️  Inferred sex as FEMALE from name: Marie
+[00:49:16] ℹ️  Service line consistent in both sources: 'Skilled Nursing'
+[00:49:16] ✅ Patient name cross-validation successful
+[00:49:16] ✅    ✅ Data merged successfully
+[00:49:18] ✅    ✅ Order data extracted and validated
+[00:49:18] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:49:18] [DOC: 9193509] ✅ Patient found in local cache: Marie Mendoza, ID: 64382b4d-decf-4031-a04d-ca4fa8f82a37
+[00:49:18] ✅    ✅ Existing patient found with ID: 64382b4d-decf-4031-a04d-ca4fa8f82a37
+[00:49:18] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:49:18] [DOC: 9193509] ℹ️  Pushing order via API for patient ID: 64382b4d-decf-4031-a04d-ca4fa8f82a37
+[00:49:19] [DOC: 9193509] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD14099"}
+[00:49:19] ❌    ❌ Failed to push order
+[00:49:19] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:49:19] [DOC: 9193509] ℹ️  Calculated age: 80 from DOB: 06/25/1944
+[00:49:19] [DOC: 9193509] ℹ️  Service Line extracted: 'Skilled Nursing'
+[00:49:19] [DOC: 9193509] ℹ️  Payer Source extracted: ''
+[00:49:19] [DOC: 9193509] ℹ️  Diagnosis codes being written:
+[00:49:19] [DOC: 9193509] ℹ️    - Latest_Episode_Firstdiagnosis: 'F39'
+[00:49:19] [DOC: 9193509] ℹ️    - Latest_Episode_Seconddiagnosis: 'F32.A'
+[00:49:19] [DOC: 9193509] ℹ️    - Latest_Episode_Thirddiagnosis: 'E11.42'
+[00:49:19] [DOC: 9193509] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:49:19] [DOC: 9193509] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:49:19] [DOC: 9193509] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:49:19] [DOC: 9193509] ✅ Patient data written to CSV: Marie Mendoza | Sex: FEMALE | Age: 80 | Service: Skilled Nursing | Payer:  | MRN: MA221103064405
+[00:49:19] ✅    ✅ Document 9193509 processed and saved successfully
+[00:49:19] 🔄 
+🔄 Step 8: Saving API details...
+[00:49:19] [DOC: 9193509] ℹ️  API push details saved for document 9193509
+[00:49:19] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9193505                         ║
+================================================================================
+[00:49:19] ℹ️  Agency: Nightingale Visiting Nurses-Taunton
+[00:49:19] ℹ️  Date: 03/20/2025
+[00:49:19] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:49:22] [DOC: 9193505] ✅ Text extracted using pdfplumber (1085 chars)
+[00:49:22] ✅    ✅ Text extracted using pdfplumber (1073 chars)
+[00:49:22] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:49:25] ℹ️  AI extracted raw sex value: ''
+[00:49:25] ℹ️  AI extracted service line: 'RN'
+[00:49:25] ℹ️  AI extracted payer source: ''
+[00:49:25] ℹ️  AI extracted diagnoses:
+[00:49:25] ℹ️    - Diagnosis 1: 'I10'
+[00:49:25] ℹ️    - Diagnosis 2: 'E11.65'
+[00:49:25] ℹ️    - Diagnosis 3: 'E78.5'
+[00:49:25] ℹ️    - Diagnosis 4: ''
+[00:49:25] ℹ️    - Diagnosis 5: ''
+[00:49:25] ℹ️    - Diagnosis 6: ''
+[00:49:25] ℹ️  Final extracted MRN: '100993650'
+[00:49:25] ℹ️  Final extracted Sex: ''
+[00:49:25] ℹ️  Final extracted Service Line: 'RN'
+[00:49:25] ℹ️  Final extracted Payer Source: ''
+[00:49:25] ✅ Patient data extraction completed successfully
+[00:49:25] ✅    ✅ Patient data extracted successfully
+[00:49:25] 📊 Patient Response
+     └─ patientFName: Maria
+     └─ patientLName: Fernandes
+     └─ dob: 04/12/1949
+     └─ patientSex: 
+     └─ medicalRecordNo: 100993650
+     └─ billingProvider: SHAN QIN
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: 125 County ST
+     └─ city: Taunton
+     └─ state: MA
+     └─ zip: 02780
+     └─ email: 
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: RN
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '03/12/2025', 'endOfEpisode': '05/10/2025', 'firstDiagnosis': 'I10', 'secondDiagnosis': 'E11.65', 'thirdDiagnosis': 'E78.5', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:49:25] ✅    ✅ Patient identified: Maria Fernandes
+[00:49:25] ✅    ✅ Patient name validation passed
+[00:49:25] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:49:25] [DOC: 9193505] ℹ️  DOB normalized: 04/12/1949
+[00:49:25] [DOC: 9193505] ℹ️  Episode startOfEpisode normalized: 03/12/2025
+[00:49:25] [DOC: 9193505] ℹ️  Episode endOfEpisode normalized: 05/10/2025
+[00:49:25] [DOC: 9193505] ✅ Patient date processing completed successfully
+[00:49:25] ✅    ✅ Date processing completed
+[00:49:25] 📊 Processed Patient Data
+     └─ patientFName: Maria
+     └─ patientLName: Fernandes
+     └─ dob: 04/12/1949
+     └─ patientSex: 
+     └─ medicalRecordNo: 100993650
+     └─ billingProvider: SHAN QIN
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: 125 County ST
+     └─ city: Taunton
+     └─ state: MA
+     └─ zip: 02780
+     └─ email: 
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: RN
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '03/12/2025', 'endOfEpisode': '05/10/2025', 'firstDiagnosis': 'I10', 'secondDiagnosis': 'E11.65', 'thirdDiagnosis': 'E78.5', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:49:25] 🔄 
+🔄 Step 4: Extracting order data...
+[00:49:27] ℹ️  Order extraction - MRN: '100993650'
+[00:49:27] ℹ️  Order extraction - Sex: ''
+[00:49:27] ℹ️  Order extraction - Service Line: 'PCP'
+[00:49:27] ℹ️  Order extraction - Payer Source: ''
+[00:49:27] ✅ Order data extraction completed successfully
+[00:49:27] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:49:27] ℹ️  Using MRN from patient data: '100993650' over '100993650'
+[00:49:27] ℹ️  Inferred sex as FEMALE from name: Maria
+[00:49:27] ℹ️  Combined service lines: Patient='RN' + Order='PCP' = 'PCP, RN'
+[00:49:27] ✅ Patient name cross-validation successful
+[00:49:27] ✅    ✅ Data merged successfully
+[00:49:28] ✅    ✅ Order data extracted and validated
+[00:49:28] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:49:28] [DOC: 9193505] ✅ Patient found in local cache: Maria Fernandes, ID: d8e266a9-d047-44ee-a281-6fd6c44fed89
+[00:49:28] ✅    ✅ Existing patient found with ID: d8e266a9-d047-44ee-a281-6fd6c44fed89
+[00:49:28] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:49:28] [DOC: 9193505] ℹ️  Pushing order via API for patient ID: d8e266a9-d047-44ee-a281-6fd6c44fed89
+[00:49:29] [DOC: 9193505] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13969"}
+[00:49:29] ❌    ❌ Failed to push order
+[00:49:29] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:49:29] [DOC: 9193505] ℹ️  Calculated age: 76 from DOB: 04/12/1949
+[00:49:29] [DOC: 9193505] ℹ️  Service Line extracted: 'PCP, RN'
+[00:49:29] [DOC: 9193505] ℹ️  Payer Source extracted: ''
+[00:49:29] [DOC: 9193505] ℹ️  Diagnosis codes being written:
+[00:49:29] [DOC: 9193505] ℹ️    - Latest_Episode_Firstdiagnosis: 'I10'
+[00:49:29] [DOC: 9193505] ℹ️    - Latest_Episode_Seconddiagnosis: 'E11.65'
+[00:49:29] [DOC: 9193505] ℹ️    - Latest_Episode_Thirddiagnosis: 'E78.5'
+[00:49:29] [DOC: 9193505] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:49:29] [DOC: 9193505] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:49:29] [DOC: 9193505] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:49:29] [DOC: 9193505] ✅ Patient data written to CSV: Maria Fernandes | Sex: FEMALE | Age: 76 | Service: PCP, RN | Payer:  | MRN: 100993650
+[00:49:29] ✅    ✅ Document 9193505 processed and saved successfully
+[00:49:29] 🔄 
+🔄 Step 8: Saving API details...
+[00:49:29] [DOC: 9193505] ℹ️  API push details saved for document 9193505
+[00:49:29] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9193502                         ║
+================================================================================
+[00:49:29] ℹ️  Agency: Nightingale Visiting Nurses-Taunton
+[00:49:29] ℹ️  Date: 03/20/2025
+[00:49:29] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:49:31] [DOC: 9193502] ✅ Text extracted using pdfplumber (1237 chars)
+[00:49:31] ✅    ✅ Text extracted using pdfplumber (1237 chars)
+[00:49:31] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:49:34] ℹ️  AI extracted raw sex value: ''
+[00:49:34] ℹ️  AI extracted service line: 'Physical Therapy'
+[00:49:34] ℹ️  AI extracted payer source: ''
+[00:49:34] ℹ️  AI extracted diagnoses:
+[00:49:34] ℹ️    - Diagnosis 1: 'S81.801'
+[00:49:34] ℹ️    - Diagnosis 2: 'E11.51'
+[00:49:34] ℹ️    - Diagnosis 3: 'I70.209'
+[00:49:34] ℹ️    - Diagnosis 4: 'None'
+[00:49:34] ℹ️    - Diagnosis 5: 'None'
+[00:49:34] ℹ️    - Diagnosis 6: 'None'
+[00:49:34] ℹ️  Final extracted MRN: 'MA200528053701'
+[00:49:34] ℹ️  Final extracted Sex: ''
+[00:49:34] ℹ️  Final extracted Service Line: 'Physical Therapy'
+[00:49:34] ℹ️  Final extracted Payer Source: ''
+[00:49:34] ✅ Patient data extraction completed successfully
+[00:49:34] ✅    ✅ Patient data extracted successfully
+[00:49:34] 📊 Patient Response
+     └─ patientFName: Roderick
+     └─ patientLName: Lopez
+     └─ dob: 05/21/1937
+     └─ patientSex: 
+     └─ medicalRecordNo: MA200528053701
+     └─ billingProvider: SHAN QIN
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: 125 County ST
+     └─ city: Taunton
+     └─ state: MA
+     └─ zip: 02780
+     └─ email: 
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: Physical Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': '02/19/2025', 'endOfEpisode': '04/19/2025', 'firstDiagnosis': 'S81.801', 'secondDiagnosis': 'E11.51', 'thirdDiagnosis': 'I70.209', 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[00:49:34] ✅    ✅ Patient identified: Roderick Lopez
+[00:49:34] ✅    ✅ Patient name validation passed
+[00:49:34] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:49:34] [DOC: 9193502] ℹ️  DOB normalized: 05/21/1937
+[00:49:34] [DOC: 9193502] ℹ️  Episode startOfEpisode normalized: 02/19/2025
+[00:49:34] [DOC: 9193502] ℹ️  Episode endOfEpisode normalized: 04/19/2025
+[00:49:34] [DOC: 9193502] ✅ Patient date processing completed successfully
+[00:49:34] ✅    ✅ Date processing completed
+[00:49:34] 📊 Processed Patient Data
+     └─ patientFName: Roderick
+     └─ patientLName: Lopez
+     └─ dob: 05/21/1937
+     └─ patientSex: 
+     └─ medicalRecordNo: MA200528053701
+     └─ billingProvider: SHAN QIN
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: 125 County ST
+     └─ city: Taunton
+     └─ state: MA
+     └─ zip: 02780
+     └─ email: 
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: Physical Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '02/19/2025', 'endOfEpisode': '04/19/2025', 'firstDiagnosis': 'S81.801', 'secondDiagnosis': 'E11.51', 'thirdDiagnosis': 'I70.209'}]
+[00:49:34] 🔄 
+🔄 Step 4: Extracting order data...
+[00:49:36] ℹ️  Order extraction - MRN: 'MA200528053701'
+[00:49:36] ℹ️  Order extraction - Sex: ''
+[00:49:36] ℹ️  Order extraction - Service Line: 'Physical Therapy'
+[00:49:36] ℹ️  Order extraction - Payer Source: ''
+[00:49:36] ✅ Order data extraction completed successfully
+[00:49:36] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:49:36] ℹ️  Using MRN from patient data: 'MA200528053701' over 'MA200528053701'
+[00:49:36] ℹ️  Inferred sex as MALE from name: Roderick
+[00:49:36] ℹ️  Service line consistent in both sources: 'Physical Therapy'
+[00:49:36] ✅ Patient name cross-validation successful
+[00:49:36] ✅    ✅ Data merged successfully
+[00:49:38] ✅    ✅ Order data extracted and validated
+[00:49:38] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:49:38] [DOC: 9193502] ✅ Patient found in local cache: Roderick Lopez, ID: 99519ddc-34a7-4d13-b004-5e80b39c9be1
+[00:49:38] ✅    ✅ Existing patient found with ID: 99519ddc-34a7-4d13-b004-5e80b39c9be1
+[00:49:38] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:49:38] [DOC: 9193502] ℹ️  Pushing order via API for patient ID: 99519ddc-34a7-4d13-b004-5e80b39c9be1
+[00:49:39] [DOC: 9193502] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13966"}
+[00:49:39] ❌    ❌ Failed to push order
+[00:49:39] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:49:39] [DOC: 9193502] ℹ️  Calculated age: 88 from DOB: 05/21/1937
+[00:49:39] [DOC: 9193502] ℹ️  Service Line extracted: 'Physical Therapy'
+[00:49:39] [DOC: 9193502] ℹ️  Payer Source extracted: ''
+[00:49:39] [DOC: 9193502] ℹ️  Diagnosis codes being written:
+[00:49:39] [DOC: 9193502] ℹ️    - Latest_Episode_Firstdiagnosis: 'S81.801'
+[00:49:39] [DOC: 9193502] ℹ️    - Latest_Episode_Seconddiagnosis: 'E11.51'
+[00:49:39] [DOC: 9193502] ℹ️    - Latest_Episode_Thirddiagnosis: 'I70.209'
+[00:49:39] [DOC: 9193502] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:49:39] [DOC: 9193502] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:49:39] [DOC: 9193502] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:49:39] [DOC: 9193502] ✅ Patient data written to CSV: Roderick Lopez | Sex: MALE | Age: 88 | Service: Physical Therapy | Payer:  | MRN: MA200528053701
+[00:49:39] ✅    ✅ Document 9193502 processed and saved successfully
+[00:49:39] 🔄 
+🔄 Step 8: Saving API details...
+[00:49:39] [DOC: 9193502] ℹ️  API push details saved for document 9193502
+[00:49:39] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9187141                         ║
+================================================================================
+[00:49:39] ℹ️  Agency: Visiting Rehab & Nursing Services
+[00:49:39] ℹ️  Date: 03/18/2025
+[00:49:39] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:49:41] [DOC: 9187141] ✅ Text extracted using pdfplumber (3734 chars)
+[00:49:41] ✅    ✅ Text extracted using pdfplumber (3734 chars)
+[00:49:41] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:49:43] ℹ️  AI extracted raw sex value: 'None'
+[00:49:43] ℹ️  AI extracted service line: 'None'
+[00:49:43] ℹ️  AI extracted payer source: 'None'
+[00:49:43] ℹ️  AI extracted diagnoses:
+[00:49:43] ℹ️    - Diagnosis 1: ''
+[00:49:43] ℹ️    - Diagnosis 2: ''
+[00:49:43] ℹ️    - Diagnosis 3: ''
+[00:49:43] ℹ️    - Diagnosis 4: ''
+[00:49:43] ℹ️    - Diagnosis 5: ''
+[00:49:43] ℹ️    - Diagnosis 6: ''
+[00:49:43] ℹ️  Final extracted MRN: ''
+[00:49:43] ℹ️  Final extracted Sex: ''
+[00:49:43] ℹ️  Final extracted Service Line: ''
+[00:49:43] ℹ️  Final extracted Payer Source: ''
+[00:49:43] ✅ Patient data extraction completed successfully
+[00:49:43] ✅    ✅ Patient data extracted successfully
+[00:49:43] 📊 Patient Response
+     └─ patientFName: None
+     └─ patientLName: None
+     └─ dob: None
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: None
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: None
+     └─ address: None
+     └─ city: None
+     └─ state: None
+     └─ zip: 
+     └─ email: None
+     └─ phoneNumber: 
+     └─ serviceLine: 
+     └─ payorSource: 
+     └─ episodeDiagnoses: []
+[00:49:43] ⚠️     ❌ Insufficient patient data extracted
+[00:49:43] [DOC: 9187141] ℹ️  API push details saved for document 9187141
+================================================================================
+║                        Processing Document ID: 9182649                         ║
+================================================================================
+[00:49:43] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[00:49:43] ℹ️  Date: 03/14/2025
+[00:49:43] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:49:44] [DOC: 9182649] ✅ Text extracted using pdfplumber (1526 chars)
+[00:49:44] ✅    ✅ Text extracted using pdfplumber (1526 chars)
+[00:49:44] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:49:47] ℹ️  AI extracted raw sex value: 'F'
+[00:49:47] ℹ️  AI extracted service line: ''
+[00:49:47] ℹ️  AI extracted payer source: ''
+[00:49:47] ℹ️  AI extracted diagnoses:
+[00:49:47] ℹ️    - Diagnosis 1: ''
+[00:49:47] ℹ️    - Diagnosis 2: ''
+[00:49:47] ℹ️    - Diagnosis 3: ''
+[00:49:47] ℹ️    - Diagnosis 4: ''
+[00:49:47] ℹ️    - Diagnosis 5: ''
+[00:49:47] ℹ️    - Diagnosis 6: ''
+[00:49:47] ℹ️  Final extracted MRN: '2168743'
+[00:49:47] ℹ️  Final extracted Sex: 'FEMALE'
+[00:49:47] ℹ️  Final extracted Service Line: ''
+[00:49:47] ℹ️  Final extracted Payer Source: ''
+[00:49:47] ✅ Patient data extraction completed successfully
+[00:49:47] ✅    ✅ Patient data extracted successfully
+[00:49:47] 📊 Patient Response
+     └─ patientFName: Sheila
+     └─ patientLName: Adesso
+     └─ dob: 11/24/1963
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2168743
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: 
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:49:47] ✅    ✅ Patient identified: Sheila Adesso
+[00:49:47] ✅    ✅ Patient name validation passed
+[00:49:47] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:49:47] [DOC: 9182649] ℹ️  DOB normalized: 11/24/1963
+[00:49:47] [DOC: 9182649] ✅ Patient date processing completed successfully
+[00:49:47] ✅    ✅ Date processing completed
+[00:49:47] 📊 Processed Patient Data
+     └─ patientFName: Sheila
+     └─ patientLName: Adesso
+     └─ dob: 11/24/1963
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2168743
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: 
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:49:47] 🔄 
+🔄 Step 4: Extracting order data...
+[00:49:49] ℹ️  Order extraction - MRN: '2168743'
+[00:49:49] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:49:49] ℹ️  Order extraction - Service Line: ''
+[00:49:49] ℹ️  Order extraction - Payer Source: ''
+[00:49:49] ✅ Order data extraction completed successfully
+[00:49:49] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:49:49] ℹ️  Using MRN from patient data: '2168743' over '2168743'
+[00:49:49] ✅ Patient name cross-validation successful
+[00:49:49] ✅    ✅ Data merged successfully
+[00:49:50] ⚠️     ❌ Skipping - missing episode start date
+[00:49:50] [DOC: 9182649] ℹ️  API push details saved for document 9182649
+================================================================================
+║                        Processing Document ID: 9179864                         ║
+================================================================================
+[00:49:51] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[00:49:51] ℹ️  Date: 03/13/2025
+[00:49:51] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:49:52] [DOC: 9179864] ✅ Text extracted using pdfplumber (1652 chars)
+[00:49:52] ✅    ✅ Text extracted using pdfplumber (1652 chars)
+[00:49:52] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:49:54] ℹ️  AI extracted raw sex value: 'F'
+[00:49:54] ℹ️  AI extracted service line: 'Physical Therapy'
+[00:49:54] ℹ️  AI extracted payer source: ''
+[00:49:54] ℹ️  AI extracted diagnoses:
+[00:49:54] ℹ️    - Diagnosis 1: ''
+[00:49:54] ℹ️    - Diagnosis 2: ''
+[00:49:54] ℹ️    - Diagnosis 3: ''
+[00:49:54] ℹ️    - Diagnosis 4: ''
+[00:49:54] ℹ️    - Diagnosis 5: ''
+[00:49:54] ℹ️    - Diagnosis 6: ''
+[00:49:54] ℹ️  Final extracted MRN: '2168743'
+[00:49:54] ℹ️  Final extracted Sex: 'FEMALE'
+[00:49:54] ℹ️  Final extracted Service Line: 'Physical Therapy'
+[00:49:54] ℹ️  Final extracted Payer Source: ''
+[00:49:54] ✅ Patient data extraction completed successfully
+[00:49:54] ✅    ✅ Patient data extracted successfully
+[00:49:54] 📊 Patient Response
+     └─ patientFName: Sheila
+     └─ patientLName: Adesso
+     └─ dob: 11/24/1963
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2168743
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: Physical Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:49:54] ✅    ✅ Patient identified: Sheila Adesso
+[00:49:54] ✅    ✅ Patient name validation passed
+[00:49:54] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:49:54] [DOC: 9179864] ℹ️  DOB normalized: 11/24/1963
+[00:49:54] [DOC: 9179864] ✅ Patient date processing completed successfully
+[00:49:54] ✅    ✅ Date processing completed
+[00:49:54] 📊 Processed Patient Data
+     └─ patientFName: Sheila
+     └─ patientLName: Adesso
+     └─ dob: 11/24/1963
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 2168743
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: Physical Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '', 'endOfEpisode': '', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:49:54] 🔄 
+🔄 Step 4: Extracting order data...
+[00:49:57] ℹ️  Order extraction - MRN: '2168743'
+[00:49:57] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:49:57] ℹ️  Order extraction - Service Line: 'Physical Therapy'
+[00:49:57] ℹ️  Order extraction - Payer Source: ''
+[00:49:57] ✅ Order data extraction completed successfully
+[00:49:57] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:49:57] ℹ️  Using MRN from patient data: '2168743' over '2168743'
+[00:49:57] ℹ️  Service line consistent in both sources: 'Physical Therapy'
+[00:49:57] ✅ Patient name cross-validation successful
+[00:49:57] ✅    ✅ Data merged successfully
+[00:49:58] ✅    ✅ Order data extracted and validated
+[00:49:58] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:50:01] [DOC: 9179864] ℹ️  Patient not found in cache or API: Sheila Adesso
+[00:50:01] [DOC: 9179864] ℹ️  Patient not found, creating new patient via API...
+[00:50:01] [DOC: 9179864] ℹ️  Creating patient via API: Sheila Adesso
+[00:50:02] [DOC: 9179864] ❌ Patient creation failed with status 409: A patient with the same first name, last name, DOB, and Zip already exists.
+[00:50:02] ❌    ❌ Failed to create patient
+[00:50:02] [DOC: 9179864] ℹ️  API push details saved for document 9179864
+================================================================================
+║                        Processing Document ID: 9177438                         ║
+================================================================================
+[00:50:02] ℹ️  Agency: Guardian Home Health Care LLC - West Bridgewater
+[00:50:02] ℹ️  Date: 03/12/2025
+[00:50:02] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:50:05] [DOC: 9177438] ✅ Text extracted using pdfplumber (1221 chars)
+[00:50:05] ✅    ✅ Text extracted using pdfplumber (1221 chars)
+[00:50:05] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:50:08] ℹ️  AI extracted raw sex value: 'F'
+[00:50:08] ℹ️  AI extracted service line: 'HHA'
+[00:50:08] ℹ️  AI extracted payer source: 'Senior Whole Health'
+[00:50:08] ℹ️  AI extracted diagnoses:
+[00:50:08] ℹ️    - Diagnosis 1: ''
+[00:50:08] ℹ️    - Diagnosis 2: ''
+[00:50:08] ℹ️    - Diagnosis 3: ''
+[00:50:08] ℹ️    - Diagnosis 4: ''
+[00:50:08] ℹ️    - Diagnosis 5: ''
+[00:50:08] ℹ️    - Diagnosis 6: ''
+[00:50:08] ℹ️  Final extracted MRN: '225004'
+[00:50:08] ℹ️  Final extracted Sex: 'FEMALE'
+[00:50:08] ℹ️  Final extracted Service Line: 'HHA'
+[00:50:08] ℹ️  Final extracted Payer Source: 'Senior Whole Health'
+[00:50:08] ✅ Patient data extraction completed successfully
+[00:50:08] ✅    ✅ Patient data extracted successfully
+[00:50:08] 📊 Patient Response
+     └─ patientFName: Maria
+     └─ patientLName: Desousa
+     └─ dob: 01/21/1959
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 225004
+     └─ billingProvider: David J Shih, MD
+     └─ npi: 1134197429
+     └─ physicianNPI: 1134197429
+     └─ nameOfAgency: Guardian Home Health Care, LLC
+     └─ address: 750 West Center St 3rd Floor
+     └─ city: W Bridgewater
+     └─ state: MA
+     └─ zip: 02379
+     └─ email: 
+     └─ phoneNumber: (508) 588-5811
+     └─ serviceLine: HHA
+     └─ payorSource: Senior Whole Health
+     └─ episodeDiagnoses: [{'startOfCare': '09/04/2024', 'startOfEpisode': '03/03/2025', 'endOfEpisode': '05/01/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:50:08] ✅    ✅ Patient identified: Maria Desousa
+[00:50:08] ✅    ✅ Patient name validation passed
+[00:50:08] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:50:08] [DOC: 9177438] ℹ️  DOB normalized: 01/21/1959
+[00:50:08] [DOC: 9177438] ℹ️  Episode startOfCare normalized: 09/04/2024
+[00:50:08] [DOC: 9177438] ℹ️  Episode startOfEpisode normalized: 03/03/2025
+[00:50:08] [DOC: 9177438] ℹ️  Episode endOfEpisode normalized: 05/01/2025
+[00:50:08] [DOC: 9177438] ✅ Patient date processing completed successfully
+[00:50:08] ✅    ✅ Date processing completed
+[00:50:08] 📊 Processed Patient Data
+     └─ patientFName: Maria
+     └─ patientLName: Desousa
+     └─ dob: 01/21/1959
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 225004
+     └─ billingProvider: David J Shih, MD
+     └─ npi: 1134197429
+     └─ physicianNPI: 1134197429
+     └─ nameOfAgency: Guardian Home Health Care, LLC
+     └─ address: 750 West Center St 3rd Floor
+     └─ city: W Bridgewater
+     └─ state: MA
+     └─ zip: 02379
+     └─ email: 
+     └─ phoneNumber: (508) 588-5811
+     └─ serviceLine: HHA
+     └─ payorSource: Senior Whole Health
+     └─ episodeDiagnoses: [{'startOfCare': '09/04/2024', 'startOfEpisode': '03/03/2025', 'endOfEpisode': '05/01/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:50:08] 🔄 
+🔄 Step 4: Extracting order data...
+[00:50:11] ℹ️  Order extraction - MRN: '225004'
+[00:50:11] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:50:11] ℹ️  Order extraction - Service Line: ''
+[00:50:11] ℹ️  Order extraction - Payer Source: 'Senior Whole Health'
+[00:50:11] ✅ Order data extraction completed successfully
+[00:50:11] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:50:11] ℹ️  Using MRN from patient data: '225004' over '225004'
+[00:50:11] ℹ️  Using service line from patient data: 'HHA'
+[00:50:11] ℹ️  Payer source consistent in both sources: 'Senior Whole Health'
+[00:50:11] ✅ Patient name cross-validation successful
+[00:50:11] ✅    ✅ Data merged successfully
+[00:50:12] ✅    ✅ Order data extracted and validated
+[00:50:12] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:50:12] [DOC: 9177438] ✅ Patient found in local cache: Maria Desousa, ID: 4f31adf8-fa4c-403c-871b-7bf0a67dd6a6
+[00:50:12] ✅    ✅ Existing patient found with ID: 4f31adf8-fa4c-403c-871b-7bf0a67dd6a6
+[00:50:12] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:50:12] [DOC: 9177438] ℹ️  Pushing order via API for patient ID: 4f31adf8-fa4c-403c-871b-7bf0a67dd6a6
+[00:50:13] [DOC: 9177438] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:50:13] ❌    ❌ Failed to push order
+[00:50:13] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:50:13] [DOC: 9177438] ℹ️  Calculated age: 66 from DOB: 01/21/1959
+[00:50:13] [DOC: 9177438] ℹ️  Service Line extracted: 'HHA'
+[00:50:13] [DOC: 9177438] ℹ️  Payer Source extracted: 'Senior Whole Health'
+[00:50:13] [DOC: 9177438] ℹ️  Diagnosis codes being written:
+[00:50:13] [DOC: 9177438] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:50:13] [DOC: 9177438] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:50:13] [DOC: 9177438] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:50:13] [DOC: 9177438] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:50:13] [DOC: 9177438] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:50:13] [DOC: 9177438] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:50:13] [DOC: 9177438] ✅ Patient data written to CSV: Maria Desousa | Sex: FEMALE | Age: 66 | Service: HHA | Payer: Senior Whole Health | MRN: 225004
+[00:50:13] ✅    ✅ Document 9177438 processed and saved successfully
+[00:50:13] 🔄 
+🔄 Step 8: Saving API details...
+[00:50:13] [DOC: 9177438] ℹ️  API push details saved for document 9177438
+[00:50:13] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9176688                         ║
+================================================================================
+[00:50:13] ℹ️  Agency: Dartmouth HH
+[00:50:13] ℹ️  Date: 03/12/2025
+[00:50:13] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:50:15] [DOC: 9176688] ✅ Text extracted using pdfplumber (1091 chars)
+[00:50:15] ✅    ✅ Text extracted using pdfplumber (1091 chars)
+[00:50:15] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:50:18] ℹ️  AI extracted raw sex value: 'F'
+[00:50:18] ℹ️  AI extracted service line: 'Skilled Nursing'
+[00:50:18] ℹ️  AI extracted payer source: 'Medicare'
+[00:50:18] ℹ️  AI extracted diagnoses:
+[00:50:18] ℹ️    - Diagnosis 1: 'None'
+[00:50:18] ℹ️    - Diagnosis 2: 'None'
+[00:50:18] ℹ️    - Diagnosis 3: 'None'
+[00:50:18] ℹ️    - Diagnosis 4: 'None'
+[00:50:18] ℹ️    - Diagnosis 5: 'None'
+[00:50:18] ℹ️    - Diagnosis 6: 'None'
+[00:50:18] ℹ️  Final extracted MRN: '5837015'
+[00:50:18] ℹ️  Final extracted Sex: 'FEMALE'
+[00:50:18] ℹ️  Final extracted Service Line: 'Skilled Nursing'
+[00:50:18] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:50:18] ✅ Patient data extraction completed successfully
+[00:50:18] ✅    ✅ Patient data extracted successfully
+[00:50:18] 📊 Patient Response
+     └─ patientFName: Hilda
+     └─ patientLName: Correia
+     └─ dob: 05/15/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 5837015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: None
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '01/09/2025', 'startOfEpisode': '01/09/2025', 'endOfEpisode': '03/09/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[00:50:18] ✅    ✅ Patient identified: Hilda Correia
+[00:50:18] ✅    ✅ Patient name validation passed
+[00:50:18] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:50:18] [DOC: 9176688] ℹ️  DOB normalized: 05/15/1939
+[00:50:18] [DOC: 9176688] ℹ️  Episode startOfCare normalized: 01/09/2025
+[00:50:18] [DOC: 9176688] ℹ️  Episode startOfEpisode normalized: 01/09/2025
+[00:50:18] [DOC: 9176688] ℹ️  Episode endOfEpisode normalized: 03/09/2025
+[00:50:18] [DOC: 9176688] ✅ Patient date processing completed successfully
+[00:50:18] ✅    ✅ Date processing completed
+[00:50:18] 📊 Processed Patient Data
+     └─ patientFName: Hilda
+     └─ patientLName: Correia
+     └─ dob: 05/15/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 5837015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '01/09/2025', 'startOfEpisode': '01/09/2025', 'endOfEpisode': '03/09/2025'}]
+[00:50:18] 🔄 
+🔄 Step 4: Extracting order data...
+[00:50:20] ℹ️  Order extraction - MRN: '5837015'
+[00:50:20] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:50:20] ℹ️  Order extraction - Service Line: 'SN'
+[00:50:20] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:50:20] ✅ Order data extraction completed successfully
+[00:50:20] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:50:20] ℹ️  Using MRN from patient data: '5837015' over '5837015'
+[00:50:20] ℹ️  Combined service lines: Patient='Skilled Nursing' + Order='SN' = 'SN, Skilled Nursing'
+[00:50:20] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:50:20] ✅ Patient name cross-validation successful
+[00:50:20] ✅    ✅ Data merged successfully
+[00:50:21] ✅    ✅ Order data extracted and validated
+[00:50:21] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:50:24] [DOC: 9176688] ✅ Patient exists in API: Hilda Correia, ID: 49ef8b35-9eea-4200-b49a-c6c82b0be1de
+[00:50:24] ✅    ✅ Existing patient found with ID: 49ef8b35-9eea-4200-b49a-c6c82b0be1de
+[00:50:24] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:50:24] [DOC: 9176688] ℹ️  Pushing order via API for patient ID: 49ef8b35-9eea-4200-b49a-c6c82b0be1de
+[00:50:25] [DOC: 9176688] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:50:25] ❌    ❌ Failed to push order
+[00:50:25] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:50:25] [DOC: 9176688] ℹ️  Calculated age: 86 from DOB: 05/15/1939
+[00:50:25] [DOC: 9176688] ℹ️  Service Line extracted: 'SN, Skilled Nursing'
+[00:50:25] [DOC: 9176688] ℹ️  Payer Source extracted: 'Medicare'
+[00:50:25] [DOC: 9176688] ℹ️  Diagnosis codes being written:
+[00:50:25] [DOC: 9176688] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:50:25] [DOC: 9176688] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:50:25] [DOC: 9176688] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:50:25] [DOC: 9176688] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:50:25] [DOC: 9176688] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:50:25] [DOC: 9176688] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:50:25] [DOC: 9176688] ✅ Patient data written to CSV: Hilda Correia | Sex: FEMALE | Age: 86 | Service: SN, Skilled Nursing | Payer: Medicare | MRN: 5837015
+[00:50:25] ✅    ✅ Document 9176688 processed and saved successfully
+[00:50:25] 🔄 
+🔄 Step 8: Saving API details...
+[00:50:25] [DOC: 9176688] ℹ️  API push details saved for document 9176688
+[00:50:25] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9176687                         ║
+================================================================================
+[00:50:25] ℹ️  Agency: Dartmouth HH
+[00:50:25] ℹ️  Date: 03/12/2025
+[00:50:25] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:50:27] [DOC: 9176687] ✅ Text extracted using pdfplumber (1248 chars)
+[00:50:27] ✅    ✅ Text extracted using pdfplumber (1248 chars)
+[00:50:27] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:50:31] ℹ️  AI extracted raw sex value: 'F'
+[00:50:31] ℹ️  AI extracted service line: 'RN'
+[00:50:31] ℹ️  AI extracted payer source: 'Medicare'
+[00:50:31] ℹ️  AI extracted diagnoses:
+[00:50:31] ℹ️    - Diagnosis 1: 'None'
+[00:50:31] ℹ️    - Diagnosis 2: 'None'
+[00:50:31] ℹ️    - Diagnosis 3: 'None'
+[00:50:31] ℹ️    - Diagnosis 4: 'None'
+[00:50:31] ℹ️    - Diagnosis 5: 'None'
+[00:50:31] ℹ️    - Diagnosis 6: 'None'
+[00:50:31] ℹ️  Final extracted MRN: '6048015'
+[00:50:31] ℹ️  Final extracted Sex: 'FEMALE'
+[00:50:31] ℹ️  Final extracted Service Line: 'RN'
+[00:50:31] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:50:31] ✅ Patient data extraction completed successfully
+[00:50:31] ✅    ✅ Patient data extracted successfully
+[00:50:31] 📊 Patient Response
+     └─ patientFName: Cynthia
+     └─ patientLName: Sears
+     └─ dob: 03/18/1941
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 6048015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 206 Rockland Street
+     └─ city: New Bedford
+     └─ state: MA
+     └─ zip: 02740
+     └─ email: None
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '02/18/2025', 'startOfEpisode': '02/18/2025', 'endOfEpisode': '04/18/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[00:50:31] ✅    ✅ Patient identified: Cynthia Sears
+[00:50:31] ✅    ✅ Patient name validation passed
+[00:50:31] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:50:31] [DOC: 9176687] ℹ️  DOB normalized: 03/18/1941
+[00:50:31] [DOC: 9176687] ℹ️  Episode startOfCare normalized: 02/18/2025
+[00:50:31] [DOC: 9176687] ℹ️  Episode startOfEpisode normalized: 02/18/2025
+[00:50:31] [DOC: 9176687] ℹ️  Episode endOfEpisode normalized: 04/18/2025
+[00:50:31] [DOC: 9176687] ✅ Patient date processing completed successfully
+[00:50:31] ✅    ✅ Date processing completed
+[00:50:31] 📊 Processed Patient Data
+     └─ patientFName: Cynthia
+     └─ patientLName: Sears
+     └─ dob: 03/18/1941
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 6048015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 206 Rockland Street
+     └─ city: New Bedford
+     └─ state: MA
+     └─ zip: 02740
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '02/18/2025', 'startOfEpisode': '02/18/2025', 'endOfEpisode': '04/18/2025'}]
+[00:50:31] 🔄 
+🔄 Step 4: Extracting order data...
+[00:50:33] ℹ️  Order extraction - MRN: ''
+[00:50:33] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:50:33] ℹ️  Order extraction - Service Line: 'RN'
+[00:50:33] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:50:33] ✅ Order data extraction completed successfully
+[00:50:33] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:50:33] ℹ️  Using MRN from patient data: '6048015'
+[00:50:33] ℹ️  Service line consistent in both sources: 'RN'
+[00:50:33] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:50:33] ✅ Patient name cross-validation successful
+[00:50:33] ✅    ✅ Data merged successfully
+[00:50:34] ✅    ✅ Order data extracted and validated
+[00:50:34] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:50:34] [DOC: 9176687] ✅ Patient found in local cache: Cynthia Sears, ID: 7025632b-db20-4573-957f-881741894f25
+[00:50:34] ✅    ✅ Existing patient found with ID: 7025632b-db20-4573-957f-881741894f25
+[00:50:34] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:50:34] [DOC: 9176687] ℹ️  Pushing order via API for patient ID: 7025632b-db20-4573-957f-881741894f25
+[00:50:35] [DOC: 9176687] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD14389"}
+[00:50:35] ❌    ❌ Failed to push order
+[00:50:35] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:50:35] [DOC: 9176687] ℹ️  Calculated age: 84 from DOB: 03/18/1941
+[00:50:35] [DOC: 9176687] ℹ️  Service Line extracted: 'RN'
+[00:50:35] [DOC: 9176687] ℹ️  Payer Source extracted: 'Medicare'
+[00:50:35] [DOC: 9176687] ℹ️  Diagnosis codes being written:
+[00:50:35] [DOC: 9176687] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:50:35] [DOC: 9176687] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:50:35] [DOC: 9176687] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:50:35] [DOC: 9176687] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:50:35] [DOC: 9176687] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:50:35] [DOC: 9176687] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:50:35] [DOC: 9176687] ✅ Patient data written to CSV: Cynthia Sears | Sex: FEMALE | Age: 84 | Service: RN | Payer: Medicare | MRN: 6048015
+[00:50:35] ✅    ✅ Document 9176687 processed and saved successfully
+[00:50:35] 🔄 
+🔄 Step 8: Saving API details...
+[00:50:35] [DOC: 9176687] ℹ️  API push details saved for document 9176687
+[00:50:35] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9176685                         ║
+================================================================================
+[00:50:35] ℹ️  Agency: Dartmouth HH
+[00:50:35] ℹ️  Date: 03/12/2025
+[00:50:35] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:50:38] [DOC: 9176685] ✅ Text extracted using pdfplumber (11918 chars)
+[00:50:38] ✅    ✅ Text extracted using pdfplumber (11906 chars)
+[00:50:38] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:50:41] ℹ️  AI extracted raw sex value: 'F'
+[00:50:41] ℹ️  AI extracted service line: 'Skilled Nursing'
+[00:50:41] ℹ️  AI extracted payer source: 'None'
+[00:50:41] ℹ️  AI extracted diagnoses:
+[00:50:41] ℹ️    - Diagnosis 1: 'A04.72'
+[00:50:41] ℹ️    - Diagnosis 2: 'R53.83'
+[00:50:41] ℹ️    - Diagnosis 3: 'I13.0'
+[00:50:41] ℹ️    - Diagnosis 4: 'I50.32'
+[00:50:41] ℹ️    - Diagnosis 5: 'N18.30'
+[00:50:41] ℹ️    - Diagnosis 6: 'G20.A1'
+[00:50:41] ℹ️  Final extracted MRN: '6048015'
+[00:50:41] ℹ️  Final extracted Sex: 'FEMALE'
+[00:50:41] ℹ️  Final extracted Service Line: 'Skilled Nursing'
+[00:50:41] ℹ️  Final extracted Payer Source: ''
+[00:50:41] ✅ Patient data extraction completed successfully
+[00:50:41] ✅    ✅ Patient data extracted successfully
+[00:50:41] 📊 Patient Response
+     └─ patientFName: Cynthia L
+     └─ patientLName: Sears
+     └─ dob: 03/18/1941
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 6048015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: None
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '02/18/2025', 'startOfEpisode': '02/18/2025', 'endOfEpisode': '04/18/2025', 'firstDiagnosis': 'A04.72', 'secondDiagnosis': 'R53.83', 'thirdDiagnosis': 'I13.0', 'fourthDiagnosis': 'I50.32', 'fifthDiagnosis': 'N18.30', 'sixthDiagnosis': 'G20.A1'}]
+[00:50:41] ✅    ✅ Patient identified: Cynthia L Sears
+[00:50:41] ✅    ✅ Patient name validation passed
+[00:50:41] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:50:41] [DOC: 9176685] ℹ️  DOB normalized: 03/18/1941
+[00:50:41] [DOC: 9176685] ℹ️  Episode startOfCare normalized: 02/18/2025
+[00:50:41] [DOC: 9176685] ℹ️  Episode startOfEpisode normalized: 02/18/2025
+[00:50:41] [DOC: 9176685] ℹ️  Episode endOfEpisode normalized: 04/18/2025
+[00:50:41] [DOC: 9176685] ✅ Patient date processing completed successfully
+[00:50:41] ✅    ✅ Date processing completed
+[00:50:41] 📊 Processed Patient Data
+     └─ patientFName: Cynthia L
+     └─ patientLName: Sears
+     └─ dob: 03/18/1941
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 6048015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '02/18/2025', 'startOfEpisode': '02/18/2025', 'endOfEpisode': '04/18/2025', 'firstDiagnosis': 'A04.72', 'secondDiagnosis': 'R53.83', 'thirdDiagnosis': 'I13.0', 'fourthDiagnosis': 'I50.32', 'fifthDiagnosis': 'N18.30', 'sixthDiagnosis': 'G20.A1'}]
+[00:50:41] 🔄 
+🔄 Step 4: Extracting order data...
+[00:50:44] ℹ️  Order extraction - MRN: '6048015'
+[00:50:44] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:50:44] ℹ️  Order extraction - Service Line: 'RN'
+[00:50:44] ℹ️  Order extraction - Payer Source: ''
+[00:50:44] ✅ Order data extraction completed successfully
+[00:50:44] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:50:44] ℹ️  Using MRN from patient data: '6048015' over '6048015'
+[00:50:44] ℹ️  Combined service lines: Patient='Skilled Nursing' + Order='RN' = 'RN, Skilled Nursing'
+[00:50:44] ✅ Patient name cross-validation successful
+[00:50:44] ✅    ✅ Data merged successfully
+[00:50:46] ✅    ✅ Order data extracted and validated
+[00:50:46] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:50:46] [DOC: 9176685] ✅ Patient found in local cache: Cynthia L Sears, ID: 37d73460-9b60-48c0-8885-b9016c397fb8
+[00:50:46] ✅    ✅ Existing patient found with ID: 37d73460-9b60-48c0-8885-b9016c397fb8
+[00:50:46] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:50:46] [DOC: 9176685] ℹ️  Pushing order via API for patient ID: 37d73460-9b60-48c0-8885-b9016c397fb8
+[00:50:48] [DOC: 9176685] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:50:48] ❌    ❌ Failed to push order
+[00:50:48] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:50:48] [DOC: 9176685] ℹ️  Calculated age: 84 from DOB: 03/18/1941
+[00:50:48] [DOC: 9176685] ℹ️  Service Line extracted: 'RN, Skilled Nursing'
+[00:50:48] [DOC: 9176685] ℹ️  Payer Source extracted: ''
+[00:50:48] [DOC: 9176685] ℹ️  Diagnosis codes being written:
+[00:50:48] [DOC: 9176685] ℹ️    - Latest_Episode_Firstdiagnosis: 'A04.72'
+[00:50:48] [DOC: 9176685] ℹ️    - Latest_Episode_Seconddiagnosis: 'R53.83'
+[00:50:48] [DOC: 9176685] ℹ️    - Latest_Episode_Thirddiagnosis: 'I13.0'
+[00:50:48] [DOC: 9176685] ℹ️    - Latest_Episode_Fourthdiagnosis: 'I50.32'
+[00:50:48] [DOC: 9176685] ℹ️    - Latest_Episode_Fifthdiagnosis: 'N18.30'
+[00:50:48] [DOC: 9176685] ℹ️    - Latest_Episode_Sixthdiagnosis: 'G20.A1'
+[00:50:48] [DOC: 9176685] ✅ Patient data written to CSV: Cynthia L Sears | Sex: FEMALE | Age: 84 | Service: RN, Skilled Nursing | Payer:  | MRN: 6048015
+[00:50:48] ✅    ✅ Document 9176685 processed and saved successfully
+[00:50:48] 🔄 
+🔄 Step 8: Saving API details...
+[00:50:48] [DOC: 9176685] ℹ️  API push details saved for document 9176685
+[00:50:48] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9176683                         ║
+================================================================================
+[00:50:48] ℹ️  Agency: Dartmouth HH
+[00:50:48] ℹ️  Date: 03/12/2025
+[00:50:48] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:50:51] [DOC: 9176683] ✅ Text extracted using pdfplumber (7162 chars)
+[00:50:51] ✅    ✅ Text extracted using pdfplumber (7162 chars)
+[00:50:51] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:50:53] ℹ️  AI extracted raw sex value: 'F'
+[00:50:53] ℹ️  AI extracted service line: 'OT'
+[00:50:53] ℹ️  AI extracted payer source: 'Aetna- Mcare'
+[00:50:53] ℹ️  AI extracted diagnoses:
+[00:50:53] ℹ️    - Diagnosis 1: ''
+[00:50:53] ℹ️    - Diagnosis 2: ''
+[00:50:53] ℹ️    - Diagnosis 3: ''
+[00:50:53] ℹ️    - Diagnosis 4: ''
+[00:50:53] ℹ️    - Diagnosis 5: ''
+[00:50:53] ℹ️    - Diagnosis 6: ''
+[00:50:53] ℹ️  Final extracted MRN: '6082015'
+[00:50:53] ℹ️  Final extracted Sex: 'FEMALE'
+[00:50:53] ℹ️  Final extracted Service Line: 'OT'
+[00:50:53] ℹ️  Final extracted Payer Source: 'Aetna- Mcare'
+[00:50:53] ✅ Patient data extraction completed successfully
+[00:50:53] ✅    ✅ Patient data extracted successfully
+[00:50:53] 📊 Patient Response
+     └─ patientFName: Marie
+     └─ patientLName: Santos
+     └─ dob: 10/13/1952
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 6082015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: OT
+     └─ payorSource: Aetna- Mcare
+     └─ episodeDiagnoses: [{'startOfCare': '02/21/2025', 'startOfEpisode': '02/21/2025', 'endOfEpisode': '04/21/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:50:53] ✅    ✅ Patient identified: Marie Santos
+[00:50:53] ✅    ✅ Patient name validation passed
+[00:50:53] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:50:53] [DOC: 9176683] ℹ️  DOB normalized: 10/13/1952
+[00:50:53] [DOC: 9176683] ℹ️  Episode startOfCare normalized: 02/21/2025
+[00:50:53] [DOC: 9176683] ℹ️  Episode startOfEpisode normalized: 02/21/2025
+[00:50:53] [DOC: 9176683] ℹ️  Episode endOfEpisode normalized: 04/21/2025
+[00:50:53] [DOC: 9176683] ✅ Patient date processing completed successfully
+[00:50:53] ✅    ✅ Date processing completed
+[00:50:53] 📊 Processed Patient Data
+     └─ patientFName: Marie
+     └─ patientLName: Santos
+     └─ dob: 10/13/1952
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 6082015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: OT
+     └─ payorSource: Aetna- Mcare
+     └─ episodeDiagnoses: [{'startOfCare': '02/21/2025', 'startOfEpisode': '02/21/2025', 'endOfEpisode': '04/21/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:50:53] 🔄 
+🔄 Step 4: Extracting order data...
+[00:50:56] ℹ️  Order extraction - MRN: ''
+[00:50:56] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:50:56] ℹ️  Order extraction - Service Line: 'OT'
+[00:50:56] ℹ️  Order extraction - Payer Source: 'Aetna- Mcare'
+[00:50:56] ✅ Order data extraction completed successfully
+[00:50:56] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:50:56] ℹ️  Using MRN from patient data: '6082015'
+[00:50:56] ℹ️  Service line consistent in both sources: 'OT'
+[00:50:56] ℹ️  Payer source consistent in both sources: 'Aetna- Mcare'
+[00:50:56] ✅ Patient name cross-validation successful
+[00:50:56] ✅    ✅ Data merged successfully
+[00:50:58] ✅    ✅ Order data extracted and validated
+[00:50:58] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:50:58] [DOC: 9176683] ✅ Patient found in local cache: Marie Santos, ID: 1ba6b0c1-88df-466d-a896-fc1b25b88d0f
+[00:50:58] ✅    ✅ Existing patient found with ID: 1ba6b0c1-88df-466d-a896-fc1b25b88d0f
+[00:50:58] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:50:58] [DOC: 9176683] ℹ️  Pushing order via API for patient ID: 1ba6b0c1-88df-466d-a896-fc1b25b88d0f
+[00:50:59] [DOC: 9176683] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD14381"}
+[00:50:59] ❌    ❌ Failed to push order
+[00:50:59] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:50:59] [DOC: 9176683] ℹ️  Calculated age: 72 from DOB: 10/13/1952
+[00:50:59] [DOC: 9176683] ℹ️  Service Line extracted: 'OT'
+[00:50:59] [DOC: 9176683] ℹ️  Payer Source extracted: 'Aetna- Mcare'
+[00:50:59] [DOC: 9176683] ℹ️  Diagnosis codes being written:
+[00:50:59] [DOC: 9176683] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:50:59] [DOC: 9176683] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:50:59] [DOC: 9176683] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:50:59] [DOC: 9176683] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:50:59] [DOC: 9176683] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:50:59] [DOC: 9176683] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:50:59] [DOC: 9176683] ✅ Patient data written to CSV: Marie Santos | Sex: FEMALE | Age: 72 | Service: OT | Payer: Aetna- Mcare | MRN: 6082015
+[00:50:59] ✅    ✅ Document 9176683 processed and saved successfully
+[00:50:59] 🔄 
+🔄 Step 8: Saving API details...
+[00:50:59] [DOC: 9176683] ℹ️  API push details saved for document 9176683
+[00:50:59] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9170001                         ║
+================================================================================
+[00:50:59] ℹ️  Agency: Nightingale Visiting Nurses-Taunton
+[00:50:59] ℹ️  Date: 03/07/2025
+[00:50:59] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:51:02] [DOC: 9170001] ✅ Text extracted using pdfplumber (1578 chars)
+[00:51:02] ✅    ✅ Text extracted using pdfplumber (1578 chars)
+[00:51:02] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:51:05] ℹ️  AI extracted raw sex value: ''
+[00:51:05] ℹ️  AI extracted service line: 'Occupational Therapy'
+[00:51:05] ℹ️  AI extracted payer source: ''
+[00:51:05] ℹ️  AI extracted diagnoses:
+[00:51:05] ℹ️    - Diagnosis 1: 'N30.00'
+[00:51:05] ℹ️    - Diagnosis 2: 'B96.1'
+[00:51:05] ℹ️    - Diagnosis 3: 'N28.9'
+[00:51:05] ℹ️    - Diagnosis 4: ''
+[00:51:05] ℹ️    - Diagnosis 5: ''
+[00:51:05] ℹ️    - Diagnosis 6: ''
+[00:51:05] ℹ️  Final extracted MRN: 'MA200828043902'
+[00:51:05] ℹ️  Final extracted Sex: ''
+[00:51:05] ℹ️  Final extracted Service Line: 'Occupational Therapy'
+[00:51:05] ℹ️  Final extracted Payer Source: ''
+[00:51:05] ✅ Patient data extraction completed successfully
+[00:51:05] ✅    ✅ Patient data extracted successfully
+[00:51:05] 📊 Patient Response
+     └─ patientFName: Richard
+     └─ patientLName: Marden
+     └─ dob: 04/22/1939
+     └─ patientSex: 
+     └─ medicalRecordNo: MA200828043902
+     └─ billingProvider: SHAN QIN
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: 125 County ST
+     └─ city: Taunton
+     └─ state: MA
+     └─ zip: 02780
+     └─ email: 
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: Occupational Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': None, 'startOfEpisode': '09/15/2023', 'endOfEpisode': '11/13/2023', 'firstDiagnosis': 'N30.00', 'secondDiagnosis': 'B96.1', 'thirdDiagnosis': 'N28.9', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:51:05] ✅    ✅ Patient identified: Richard Marden
+[00:51:05] ✅    ✅ Patient name validation passed
+[00:51:05] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:51:05] [DOC: 9170001] ℹ️  DOB normalized: 04/22/1939
+[00:51:05] [DOC: 9170001] ℹ️  Episode startOfEpisode normalized: 09/15/2023
+[00:51:05] [DOC: 9170001] ℹ️  Episode endOfEpisode normalized: 11/13/2023
+[00:51:05] [DOC: 9170001] ✅ Patient date processing completed successfully
+[00:51:05] ✅    ✅ Date processing completed
+[00:51:05] 📊 Processed Patient Data
+     └─ patientFName: Richard
+     └─ patientLName: Marden
+     └─ dob: 04/22/1939
+     └─ patientSex: 
+     └─ medicalRecordNo: MA200828043902
+     └─ billingProvider: SHAN QIN
+     └─ npi: 1891138822
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: 125 County ST
+     └─ city: Taunton
+     └─ state: MA
+     └─ zip: 02780
+     └─ email: 
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: Occupational Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '09/15/2023', 'endOfEpisode': '11/13/2023', 'firstDiagnosis': 'N30.00', 'secondDiagnosis': 'B96.1', 'thirdDiagnosis': 'N28.9', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:51:05] 🔄 
+🔄 Step 4: Extracting order data...
+[00:51:07] ℹ️  Order extraction - MRN: 'MA200828043902'
+[00:51:07] ℹ️  Order extraction - Sex: ''
+[00:51:07] ℹ️  Order extraction - Service Line: 'Occupational Therapy'
+[00:51:07] ℹ️  Order extraction - Payer Source: ''
+[00:51:07] ✅ Order data extraction completed successfully
+[00:51:07] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:51:07] ℹ️  Using MRN from patient data: 'MA200828043902' over 'MA200828043902'
+[00:51:07] ℹ️  Inferred sex as MALE from name: Richard
+[00:51:07] ℹ️  Service line consistent in both sources: 'Occupational Therapy'
+[00:51:07] ✅ Patient name cross-validation successful
+[00:51:07] ✅    ✅ Data merged successfully
+[00:51:08] ✅    ✅ Order data extracted and validated
+[00:51:08] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:51:12] [DOC: 9170001] ✅ Patient exists in API: Richard Marden, ID: 2a9bb1ba-4799-4a2b-9c0e-edf49768b41d
+[00:51:12] ✅    ✅ Existing patient found with ID: 2a9bb1ba-4799-4a2b-9c0e-edf49768b41d
+[00:51:12] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:51:12] [DOC: 9170001] ℹ️  Pushing order via API for patient ID: 2a9bb1ba-4799-4a2b-9c0e-edf49768b41d
+[00:51:13] [DOC: 9170001] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD14021"}
+[00:51:13] ❌    ❌ Failed to push order
+[00:51:13] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:51:13] [DOC: 9170001] ℹ️  Calculated age: 86 from DOB: 04/22/1939
+[00:51:13] [DOC: 9170001] ℹ️  Service Line extracted: 'Occupational Therapy'
+[00:51:13] [DOC: 9170001] ℹ️  Payer Source extracted: ''
+[00:51:13] [DOC: 9170001] ℹ️  Diagnosis codes being written:
+[00:51:13] [DOC: 9170001] ℹ️    - Latest_Episode_Firstdiagnosis: 'N30.00'
+[00:51:13] [DOC: 9170001] ℹ️    - Latest_Episode_Seconddiagnosis: 'B96.1'
+[00:51:13] [DOC: 9170001] ℹ️    - Latest_Episode_Thirddiagnosis: 'N28.9'
+[00:51:13] [DOC: 9170001] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:51:13] [DOC: 9170001] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:51:13] [DOC: 9170001] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:51:13] [DOC: 9170001] ✅ Patient data written to CSV: Richard Marden | Sex: MALE | Age: 86 | Service: Occupational Therapy | Payer:  | MRN: MA200828043902
+[00:51:13] ✅    ✅ Document 9170001 processed and saved successfully
+[00:51:13] 🔄 
+🔄 Step 8: Saving API details...
+[00:51:13] [DOC: 9170001] ℹ️  API push details saved for document 9170001
+[00:51:13] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168584                         ║
+================================================================================
+[00:51:13] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[00:51:13] ℹ️  Date: 03/07/2025
+[00:51:13] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:51:15] [DOC: 9168584] ✅ Text extracted using pdfplumber (9492 chars)
+[00:51:15] ✅    ✅ Text extracted using pdfplumber (9492 chars)
+[00:51:15] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:51:18] ℹ️  AI extracted raw sex value: 'M'
+[00:51:18] ℹ️  AI extracted service line: 'Skilled Nursing'
+[00:51:18] ℹ️  AI extracted payer source: ''
+[00:51:18] ℹ️  AI extracted diagnoses:
+[00:51:18] ℹ️    - Diagnosis 1: 'C43.9'
+[00:51:18] ℹ️    - Diagnosis 2: 'I10'
+[00:51:18] ℹ️    - Diagnosis 3: 'E78.5'
+[00:51:18] ℹ️    - Diagnosis 4: 'E11.9'
+[00:51:18] ℹ️    - Diagnosis 5: 'N18.4'
+[00:51:18] ℹ️    - Diagnosis 6: 'K75.81'
+[00:51:18] ℹ️  Final extracted MRN: '2716471'
+[00:51:18] ℹ️  Final extracted Sex: 'MALE'
+[00:51:18] ℹ️  Final extracted Service Line: 'Skilled Nursing'
+[00:51:18] ℹ️  Final extracted Payer Source: ''
+[00:51:18] ✅ Patient data extraction completed successfully
+[00:51:18] ✅    ✅ Patient data extracted successfully
+[00:51:18] 📊 Patient Response
+     └─ patientFName: Thomas
+     └─ patientLName: McCormack
+     └─ dob: 03/17/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 2716471
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '03/05/2025', 'startOfEpisode': '03/05/2025', 'endOfEpisode': '06/02/2025', 'firstDiagnosis': 'C43.9', 'secondDiagnosis': 'I10', 'thirdDiagnosis': 'E78.5', 'fourthDiagnosis': 'E11.9', 'fifthDiagnosis': 'N18.4', 'sixthDiagnosis': 'K75.81'}]
+[00:51:18] ✅    ✅ Patient identified: Thomas McCormack
+[00:51:18] ✅    ✅ Patient name validation passed
+[00:51:18] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:51:18] [DOC: 9168584] ℹ️  DOB normalized: 03/17/1944
+[00:51:18] [DOC: 9168584] ℹ️  Episode startOfCare normalized: 03/05/2025
+[00:51:18] [DOC: 9168584] ℹ️  Episode startOfEpisode normalized: 03/05/2025
+[00:51:18] [DOC: 9168584] ℹ️  Episode endOfEpisode normalized: 06/02/2025
+[00:51:18] [DOC: 9168584] ✅ Patient date processing completed successfully
+[00:51:18] ✅    ✅ Date processing completed
+[00:51:18] 📊 Processed Patient Data
+     └─ patientFName: Thomas
+     └─ patientLName: McCormack
+     └─ dob: 03/17/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 2716471
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '03/05/2025', 'startOfEpisode': '03/05/2025', 'endOfEpisode': '06/02/2025', 'firstDiagnosis': 'C43.9', 'secondDiagnosis': 'I10', 'thirdDiagnosis': 'E78.5', 'fourthDiagnosis': 'E11.9', 'fifthDiagnosis': 'N18.4', 'sixthDiagnosis': 'K75.81'}]
+[00:51:18] 🔄 
+🔄 Step 4: Extracting order data...
+[00:51:21] ℹ️  Order extraction - MRN: '2716471'
+[00:51:21] ℹ️  Order extraction - Sex: 'MALE'
+[00:51:21] ℹ️  Order extraction - Service Line: 'Hospice'
+[00:51:21] ℹ️  Order extraction - Payer Source: ''
+[00:51:21] ✅ Order data extraction completed successfully
+[00:51:21] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:51:21] ℹ️  Using MRN from patient data: '2716471' over '2716471'
+[00:51:21] ℹ️  Combined service lines: Patient='Skilled Nursing' + Order='Hospice' = 'Hospice, Skilled Nursing'
+[00:51:21] ✅ Patient name cross-validation successful
+[00:51:21] ✅    ✅ Data merged successfully
+[00:51:22] ✅    ✅ Order data extracted and validated
+[00:51:22] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:51:22] [DOC: 9168584] ✅ Patient found in local cache: Thomas McCormack, ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:22] ✅    ✅ Existing patient found with ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:22] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:51:22] [DOC: 9168584] ℹ️  Pushing order via API for patient ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:23] [DOC: 9168584] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13336"}
+[00:51:23] ❌    ❌ Failed to push order
+[00:51:23] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:51:23] [DOC: 9168584] ℹ️  Calculated age: 81 from DOB: 03/17/1944
+[00:51:23] [DOC: 9168584] ℹ️  Service Line extracted: 'Hospice, Skilled Nursing'
+[00:51:23] [DOC: 9168584] ℹ️  Payer Source extracted: ''
+[00:51:23] [DOC: 9168584] ℹ️  Diagnosis codes being written:
+[00:51:23] [DOC: 9168584] ℹ️    - Latest_Episode_Firstdiagnosis: 'C43.9'
+[00:51:23] [DOC: 9168584] ℹ️    - Latest_Episode_Seconddiagnosis: 'I10'
+[00:51:23] [DOC: 9168584] ℹ️    - Latest_Episode_Thirddiagnosis: 'E78.5'
+[00:51:23] [DOC: 9168584] ℹ️    - Latest_Episode_Fourthdiagnosis: 'E11.9'
+[00:51:23] [DOC: 9168584] ℹ️    - Latest_Episode_Fifthdiagnosis: 'N18.4'
+[00:51:23] [DOC: 9168584] ℹ️    - Latest_Episode_Sixthdiagnosis: 'K75.81'
+[00:51:23] [DOC: 9168584] ✅ Patient data written to CSV: Thomas McCormack | Sex: MALE | Age: 81 | Service: Hospice, Skilled Nursing | Payer:  | MRN: 2716471
+[00:51:23] ✅    ✅ Document 9168584 processed and saved successfully
+[00:51:23] 🔄 
+🔄 Step 8: Saving API details...
+[00:51:23] [DOC: 9168584] ℹ️  API push details saved for document 9168584
+[00:51:23] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168580                         ║
+================================================================================
+[00:51:23] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[00:51:23] ℹ️  Date: 03/07/2025
+[00:51:23] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:51:25] [DOC: 9168580] ✅ Text extracted using pdfplumber (1096 chars)
+[00:51:25] ✅    ✅ Text extracted using pdfplumber (1096 chars)
+[00:51:25] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:51:28] ℹ️  AI extracted raw sex value: 'M'
+[00:51:28] ℹ️  AI extracted service line: 'Medical Social Work'
+[00:51:28] ℹ️  AI extracted payer source: ''
+[00:51:28] ℹ️  AI extracted diagnoses:
+[00:51:28] ℹ️    - Diagnosis 1: ''
+[00:51:28] ℹ️    - Diagnosis 2: ''
+[00:51:28] ℹ️    - Diagnosis 3: ''
+[00:51:28] ℹ️    - Diagnosis 4: ''
+[00:51:28] ℹ️    - Diagnosis 5: ''
+[00:51:28] ℹ️    - Diagnosis 6: ''
+[00:51:28] ℹ️  Final extracted MRN: '2716471'
+[00:51:28] ℹ️  Final extracted Sex: 'MALE'
+[00:51:28] ℹ️  Final extracted Service Line: 'Medical Social Work'
+[00:51:28] ℹ️  Final extracted Payer Source: ''
+[00:51:28] ✅ Patient data extraction completed successfully
+[00:51:28] ✅    ✅ Patient data extracted successfully
+[00:51:28] 📊 Patient Response
+     └─ patientFName: Thomas
+     └─ patientLName: McCormack
+     └─ dob: 03/17/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 2716471
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: Medical Social Work
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '03/06/2025', 'endOfEpisode': '05/24/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:51:28] ✅    ✅ Patient identified: Thomas McCormack
+[00:51:28] ✅    ✅ Patient name validation passed
+[00:51:28] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:51:28] [DOC: 9168580] ℹ️  DOB normalized: 03/17/1944
+[00:51:28] [DOC: 9168580] ℹ️  Episode startOfEpisode normalized: 03/06/2025
+[00:51:28] [DOC: 9168580] ℹ️  Episode endOfEpisode normalized: 05/24/2025
+[00:51:28] [DOC: 9168580] ✅ Patient date processing completed successfully
+[00:51:28] ✅    ✅ Date processing completed
+[00:51:28] 📊 Processed Patient Data
+     └─ patientFName: Thomas
+     └─ patientLName: McCormack
+     └─ dob: 03/17/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 2716471
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: (508) 973-3200
+     └─ serviceLine: Medical Social Work
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '', 'startOfEpisode': '03/06/2025', 'endOfEpisode': '05/24/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:51:28] 🔄 
+🔄 Step 4: Extracting order data...
+[00:51:30] ℹ️  Order extraction - MRN: '2716471'
+[00:51:30] ℹ️  Order extraction - Sex: 'MALE'
+[00:51:30] ℹ️  Order extraction - Service Line: 'Medical Social Work'
+[00:51:30] ℹ️  Order extraction - Payer Source: ''
+[00:51:30] ✅ Order data extraction completed successfully
+[00:51:30] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:51:30] ℹ️  Using MRN from patient data: '2716471' over '2716471'
+[00:51:30] ℹ️  Service line consistent in both sources: 'Medical Social Work'
+[00:51:30] ✅ Patient name cross-validation successful
+[00:51:30] ✅    ✅ Data merged successfully
+[00:51:32] ✅    ✅ Order data extracted and validated
+[00:51:32] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:51:32] [DOC: 9168580] ✅ Patient found in local cache: Thomas McCormack, ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:32] ✅    ✅ Existing patient found with ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:32] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:51:32] [DOC: 9168580] ℹ️  Pushing order via API for patient ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:33] [DOC: 9168580] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13337"}
+[00:51:33] ❌    ❌ Failed to push order
+[00:51:33] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:51:33] [DOC: 9168580] ℹ️  Calculated age: 81 from DOB: 03/17/1944
+[00:51:33] [DOC: 9168580] ℹ️  Service Line extracted: 'Medical Social Work'
+[00:51:33] [DOC: 9168580] ℹ️  Payer Source extracted: ''
+[00:51:33] [DOC: 9168580] ℹ️  Diagnosis codes being written:
+[00:51:33] [DOC: 9168580] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:51:33] [DOC: 9168580] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:51:33] [DOC: 9168580] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:51:33] [DOC: 9168580] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:51:33] [DOC: 9168580] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:51:33] [DOC: 9168580] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:51:33] [DOC: 9168580] ✅ Patient data written to CSV: Thomas McCormack | Sex: MALE | Age: 81 | Service: Medical Social Work | Payer:  | MRN: 2716471
+[00:51:33] ✅    ✅ Document 9168580 processed and saved successfully
+[00:51:33] 🔄 
+🔄 Step 8: Saving API details...
+[00:51:33] [DOC: 9168580] ℹ️  API push details saved for document 9168580
+[00:51:33] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168577                         ║
+================================================================================
+[00:51:33] ℹ️  Agency: Southcoast VNA – Community Office (Fairhaven)
+[00:51:33] ℹ️  Date: 03/07/2025
+[00:51:33] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:51:39] [DOC: 9168577] ✅ Text extracted using pdfplumber (34890 chars)
+[00:51:39] ✅    ✅ Text extracted using pdfplumber (34890 chars)
+[00:51:39] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:51:42] ℹ️  AI extracted raw sex value: 'M'
+[00:51:42] ℹ️  AI extracted service line: 'Skilled Nursing, MSW, Clergy, HHA'
+[00:51:42] ℹ️  AI extracted payer source: ''
+[00:51:42] ℹ️  AI extracted diagnoses:
+[00:51:42] ℹ️    - Diagnosis 1: 'C43.9'
+[00:51:42] ℹ️    - Diagnosis 2: 'I10'
+[00:51:42] ℹ️    - Diagnosis 3: 'E78.5'
+[00:51:42] ℹ️    - Diagnosis 4: 'E11.9'
+[00:51:42] ℹ️    - Diagnosis 5: 'N18.4'
+[00:51:42] ℹ️    - Diagnosis 6: 'K75.81'
+[00:51:42] ℹ️  Final extracted MRN: '2716471'
+[00:51:42] ℹ️  Final extracted Sex: 'MALE'
+[00:51:42] ℹ️  Final extracted Service Line: 'Skilled Nursing, MSW, Clergy, HHA'
+[00:51:42] ℹ️  Final extracted Payer Source: ''
+[00:51:42] ✅ Patient data extraction completed successfully
+[00:51:42] ✅    ✅ Patient data extracted successfully
+[00:51:42] 📊 Patient Response
+     └─ patientFName: Thomas
+     └─ patientLName: McCormack
+     └─ dob: 03/17/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 2716471
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: 508-973-3200
+     └─ serviceLine: Skilled Nursing, MSW, Clergy, HHA
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '03/05/2025', 'startOfEpisode': '03/05/2025', 'endOfEpisode': '06/02/2025', 'firstDiagnosis': 'C43.9', 'secondDiagnosis': 'I10', 'thirdDiagnosis': 'E78.5', 'fourthDiagnosis': 'E11.9', 'fifthDiagnosis': 'N18.4', 'sixthDiagnosis': 'K75.81'}]
+[00:51:42] ✅    ✅ Patient identified: Thomas McCormack
+[00:51:42] ✅    ✅ Patient name validation passed
+[00:51:42] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:51:42] [DOC: 9168577] ℹ️  DOB normalized: 03/17/1944
+[00:51:42] [DOC: 9168577] ℹ️  Episode startOfCare normalized: 03/05/2025
+[00:51:42] [DOC: 9168577] ℹ️  Episode startOfEpisode normalized: 03/05/2025
+[00:51:42] [DOC: 9168577] ℹ️  Episode endOfEpisode normalized: 06/02/2025
+[00:51:42] [DOC: 9168577] ✅ Patient date processing completed successfully
+[00:51:42] ✅    ✅ Date processing completed
+[00:51:42] 📊 Processed Patient Data
+     └─ patientFName: Thomas
+     └─ patientLName: McCormack
+     └─ dob: 03/17/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 2716471
+     └─ billingProvider: David J. Shih, MD
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Southcoast Visiting Nurse Association Inc.
+     └─ address: 200 Mill Road
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719-5252
+     └─ email: 
+     └─ phoneNumber: 508-973-3200
+     └─ serviceLine: Skilled Nursing, MSW, Clergy, HHA
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '03/05/2025', 'startOfEpisode': '03/05/2025', 'endOfEpisode': '06/02/2025', 'firstDiagnosis': 'C43.9', 'secondDiagnosis': 'I10', 'thirdDiagnosis': 'E78.5', 'fourthDiagnosis': 'E11.9', 'fifthDiagnosis': 'N18.4', 'sixthDiagnosis': 'K75.81'}]
+[00:51:42] 🔄 
+🔄 Step 4: Extracting order data...
+[00:51:45] ℹ️  Order extraction - MRN: '2716471'
+[00:51:45] ℹ️  Order extraction - Sex: 'MALE'
+[00:51:45] ℹ️  Order extraction - Service Line: 'Skilled Nursing, MSW, HHA'
+[00:51:45] ℹ️  Order extraction - Payer Source: ''
+[00:51:45] ✅ Order data extraction completed successfully
+[00:51:45] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:51:45] ℹ️  Using MRN from patient data: '2716471' over '2716471'
+[00:51:45] ℹ️  Combined service lines: Patient='Skilled Nursing, MSW, Clergy, HHA' + Order='Skilled Nursing, MSW, HHA' = 'Clergy, HHA, MSW, Skilled Nursing'
+[00:51:45] ✅ Patient name cross-validation successful
+[00:51:45] ✅    ✅ Data merged successfully
+[00:51:47] ✅    ✅ Order data extracted and validated
+[00:51:47] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:51:47] [DOC: 9168577] ✅ Patient found in local cache: Thomas McCormack, ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:47] ✅    ✅ Existing patient found with ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:47] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:51:47] [DOC: 9168577] ℹ️  Pushing order via API for patient ID: 1db61e7b-1106-4e8c-a39a-d34ed54ada4a
+[00:51:48] [DOC: 9168577] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13338"}
+[00:51:48] ❌    ❌ Failed to push order
+[00:51:48] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:51:48] [DOC: 9168577] ℹ️  Calculated age: 81 from DOB: 03/17/1944
+[00:51:48] [DOC: 9168577] ℹ️  Service Line extracted: 'Clergy, HHA, MSW, Skilled Nursing'
+[00:51:48] [DOC: 9168577] ℹ️  Payer Source extracted: ''
+[00:51:48] [DOC: 9168577] ℹ️  Diagnosis codes being written:
+[00:51:48] [DOC: 9168577] ℹ️    - Latest_Episode_Firstdiagnosis: 'C43.9'
+[00:51:48] [DOC: 9168577] ℹ️    - Latest_Episode_Seconddiagnosis: 'I10'
+[00:51:48] [DOC: 9168577] ℹ️    - Latest_Episode_Thirddiagnosis: 'E78.5'
+[00:51:48] [DOC: 9168577] ℹ️    - Latest_Episode_Fourthdiagnosis: 'E11.9'
+[00:51:48] [DOC: 9168577] ℹ️    - Latest_Episode_Fifthdiagnosis: 'N18.4'
+[00:51:48] [DOC: 9168577] ℹ️    - Latest_Episode_Sixthdiagnosis: 'K75.81'
+[00:51:48] [DOC: 9168577] ✅ Patient data written to CSV: Thomas McCormack | Sex: MALE | Age: 81 | Service: Clergy, HHA, MSW, Skilled Nursing | Payer:  | MRN: 2716471
+[00:51:48] ✅    ✅ Document 9168577 processed and saved successfully
+[00:51:48] 🔄 
+🔄 Step 8: Saving API details...
+[00:51:48] [DOC: 9168577] ℹ️  API push details saved for document 9168577
+[00:51:48] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168143                         ║
+================================================================================
+[00:51:48] ℹ️  Agency: Dartmouth HH
+[00:51:48] ℹ️  Date: 03/07/2025
+[00:51:48] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:51:55] [DOC: 9168143] ✅ Text extracted using pdfplumber (25185 chars)
+[00:51:55] ✅    ✅ Text extracted using pdfplumber (25173 chars)
+[00:51:55] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:51:58] ℹ️  AI extracted raw sex value: 'M'
+[00:51:58] ℹ️  AI extracted service line: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:51:58] ℹ️  AI extracted payer source: 'None'
+[00:51:58] ℹ️  AI extracted diagnoses:
+[00:51:58] ℹ️    - Diagnosis 1: 'I69.391'
+[00:51:58] ℹ️    - Diagnosis 2: 'R13.12'
+[00:51:58] ℹ️    - Diagnosis 3: 'Z43.1'
+[00:51:58] ℹ️    - Diagnosis 4: 'C15.5'
+[00:51:58] ℹ️    - Diagnosis 5: 'I69.328'
+[00:51:58] ℹ️    - Diagnosis 6: 'E11.65'
+[00:51:58] ℹ️  Final extracted MRN: '227027'
+[00:51:58] ℹ️  Final extracted Sex: 'MALE'
+[00:51:58] ℹ️  Final extracted Service Line: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:51:58] ℹ️  Final extracted Payer Source: ''
+[00:51:58] ✅ Patient data extraction completed successfully
+[00:51:58] ✅    ✅ Patient data extracted successfully
+[00:51:58] 📊 Patient Response
+     └─ patientFName: Paul
+     └─ patientLName: Los
+     └─ dob: 12/28/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 227027
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: None
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing, Physical Therapy, Occupational Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '01/03/2025', 'startOfEpisode': '01/04/2025', 'endOfEpisode': '05/03/2025', 'firstDiagnosis': 'I69.391', 'secondDiagnosis': 'R13.12', 'thirdDiagnosis': 'Z43.1', 'fourthDiagnosis': 'C15.5', 'fifthDiagnosis': 'I69.328', 'sixthDiagnosis': 'E11.65'}]
+[00:51:58] ✅    ✅ Patient identified: Paul Los
+[00:51:58] ✅    ✅ Patient name validation passed
+[00:51:58] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:51:58] [DOC: 9168143] ℹ️  DOB normalized: 12/28/1944
+[00:51:58] [DOC: 9168143] ℹ️  Episode startOfCare normalized: 01/03/2025
+[00:51:58] [DOC: 9168143] ℹ️  Episode startOfEpisode normalized: 01/04/2025
+[00:51:58] [DOC: 9168143] ℹ️  Episode endOfEpisode normalized: 05/03/2025
+[00:51:58] [DOC: 9168143] ✅ Patient date processing completed successfully
+[00:51:58] ✅    ✅ Date processing completed
+[00:51:58] 📊 Processed Patient Data
+     └─ patientFName: Paul
+     └─ patientLName: Los
+     └─ dob: 12/28/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 227027
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing, Physical Therapy, Occupational Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '01/03/2025', 'startOfEpisode': '01/04/2025', 'endOfEpisode': '05/03/2025', 'firstDiagnosis': 'I69.391', 'secondDiagnosis': 'R13.12', 'thirdDiagnosis': 'Z43.1', 'fourthDiagnosis': 'C15.5', 'fifthDiagnosis': 'I69.328', 'sixthDiagnosis': 'E11.65'}]
+[00:51:58] 🔄 
+🔄 Step 4: Extracting order data...
+[00:52:01] ℹ️  Order extraction - MRN: '227027'
+[00:52:01] ℹ️  Order extraction - Sex: 'MALE'
+[00:52:01] ℹ️  Order extraction - Service Line: 'Skilled Nursing,Physical Therapy,Occupational Therapy'
+[00:52:01] ℹ️  Order extraction - Payer Source: ''
+[00:52:01] ✅ Order data extraction completed successfully
+[00:52:01] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:52:01] ℹ️  Using MRN from patient data: '227027' over '227027'
+[00:52:01] ℹ️  Combined service lines: Patient='Skilled Nursing, Physical Therapy, Occupational Therapy' + Order='Skilled Nursing,Physical Therapy,Occupational Therapy' = 'Occupational Therapy, Physical Therapy, Skilled Nursing'
+[00:52:01] ✅ Patient name cross-validation successful
+[00:52:01] ✅    ✅ Data merged successfully
+[00:52:02] ✅    ✅ Order data extracted and validated
+[00:52:02] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:52:02] [DOC: 9168143] ✅ Patient found in local cache: Paul Los, ID: 0d013489-dcfe-4a5a-9aea-640c378b6dc0
+[00:52:02] ✅    ✅ Existing patient found with ID: 0d013489-dcfe-4a5a-9aea-640c378b6dc0
+[00:52:02] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:52:02] [DOC: 9168143] ℹ️  Pushing order via API for patient ID: 0d013489-dcfe-4a5a-9aea-640c378b6dc0
+[00:52:03] [DOC: 9168143] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:52:03] ❌    ❌ Failed to push order
+[00:52:03] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:52:03] [DOC: 9168143] ℹ️  Calculated age: 80 from DOB: 12/28/1944
+[00:52:03] [DOC: 9168143] ℹ️  Service Line extracted: 'Occupational Therapy, Physical Therapy, Skilled Nursing'
+[00:52:03] [DOC: 9168143] ℹ️  Payer Source extracted: ''
+[00:52:03] [DOC: 9168143] ℹ️  Diagnosis codes being written:
+[00:52:03] [DOC: 9168143] ℹ️    - Latest_Episode_Firstdiagnosis: 'I69.391'
+[00:52:03] [DOC: 9168143] ℹ️    - Latest_Episode_Seconddiagnosis: 'R13.12'
+[00:52:03] [DOC: 9168143] ℹ️    - Latest_Episode_Thirddiagnosis: 'Z43.1'
+[00:52:03] [DOC: 9168143] ℹ️    - Latest_Episode_Fourthdiagnosis: 'C15.5'
+[00:52:03] [DOC: 9168143] ℹ️    - Latest_Episode_Fifthdiagnosis: 'I69.328'
+[00:52:03] [DOC: 9168143] ℹ️    - Latest_Episode_Sixthdiagnosis: 'E11.65'
+[00:52:03] [DOC: 9168143] ✅ Patient data written to CSV: Paul Los | Sex: MALE | Age: 80 | Service: Occupational Therapy, Physical Therapy, Skilled Nursing | Payer:  | MRN: 227027
+[00:52:03] ✅    ✅ Document 9168143 processed and saved successfully
+[00:52:03] 🔄 
+🔄 Step 8: Saving API details...
+[00:52:03] [DOC: 9168143] ℹ️  API push details saved for document 9168143
+[00:52:03] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168138                         ║
+================================================================================
+[00:52:03] ℹ️  Agency: Dartmouth HH
+[00:52:03] ℹ️  Date: 03/07/2025
+[00:52:03] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:52:06] [DOC: 9168138] ✅ Text extracted using pdfplumber (2538 chars)
+[00:52:06] ✅    ✅ Text extracted using pdfplumber (2538 chars)
+[00:52:06] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:52:08] ℹ️  AI extracted raw sex value: 'M'
+[00:52:08] ℹ️  AI extracted service line: 'Skilled Nursing, PT'
+[00:52:08] ℹ️  AI extracted payer source: 'Medicare'
+[00:52:08] ℹ️  AI extracted diagnoses:
+[00:52:08] ℹ️    - Diagnosis 1: ''
+[00:52:08] ℹ️    - Diagnosis 2: ''
+[00:52:08] ℹ️    - Diagnosis 3: ''
+[00:52:08] ℹ️    - Diagnosis 4: ''
+[00:52:08] ℹ️    - Diagnosis 5: ''
+[00:52:08] ℹ️    - Diagnosis 6: ''
+[00:52:08] ℹ️  Final extracted MRN: '5642015'
+[00:52:08] ℹ️  Final extracted Sex: 'MALE'
+[00:52:08] ℹ️  Final extracted Service Line: 'Skilled Nursing, PT'
+[00:52:08] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:52:08] ✅ Patient data extraction completed successfully
+[00:52:08] ✅    ✅ Patient data extracted successfully
+[00:52:08] 📊 Patient Response
+     └─ patientFName: Paul
+     └─ patientLName: Los
+     └─ dob: 12/28/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 5642015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing, PT
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '01/04/2025', 'startOfEpisode': '01/04/2025', 'endOfEpisode': '03/04/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:52:08] ✅    ✅ Patient identified: Paul Los
+[00:52:08] ✅    ✅ Patient name validation passed
+[00:52:08] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:52:08] [DOC: 9168138] ℹ️  DOB normalized: 12/28/1944
+[00:52:08] [DOC: 9168138] ℹ️  Episode startOfCare normalized: 01/04/2025
+[00:52:08] [DOC: 9168138] ℹ️  Episode startOfEpisode normalized: 01/04/2025
+[00:52:08] [DOC: 9168138] ℹ️  Episode endOfEpisode normalized: 03/04/2025
+[00:52:08] [DOC: 9168138] ✅ Patient date processing completed successfully
+[00:52:08] ✅    ✅ Date processing completed
+[00:52:08] 📊 Processed Patient Data
+     └─ patientFName: Paul
+     └─ patientLName: Los
+     └─ dob: 12/28/1944
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 5642015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing, PT
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '01/04/2025', 'startOfEpisode': '01/04/2025', 'endOfEpisode': '03/04/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:52:08] 🔄 
+🔄 Step 4: Extracting order data...
+[00:52:11] ℹ️  Order extraction - MRN: ''
+[00:52:11] ℹ️  Order extraction - Sex: 'MALE'
+[00:52:11] ℹ️  Order extraction - Service Line: 'Skilled Nursing, PT'
+[00:52:11] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:52:11] ✅ Order data extraction completed successfully
+[00:52:11] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:52:11] ℹ️  Using MRN from patient data: '5642015'
+[00:52:11] ℹ️  Service line consistent in both sources: 'Skilled Nursing, PT'
+[00:52:11] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:52:11] ✅ Patient name cross-validation successful
+[00:52:11] ✅    ✅ Data merged successfully
+[00:52:12] ✅    ✅ Order data extracted and validated
+[00:52:12] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:52:12] [DOC: 9168138] ✅ Patient found in local cache: Paul Los, ID: 0d013489-dcfe-4a5a-9aea-640c378b6dc0
+[00:52:12] ✅    ✅ Existing patient found with ID: 0d013489-dcfe-4a5a-9aea-640c378b6dc0
+[00:52:12] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:52:12] [DOC: 9168138] ℹ️  Pushing order via API for patient ID: 0d013489-dcfe-4a5a-9aea-640c378b6dc0
+[00:52:13] [DOC: 9168138] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13990"}
+[00:52:13] ❌    ❌ Failed to push order
+[00:52:13] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:52:13] [DOC: 9168138] ℹ️  Calculated age: 80 from DOB: 12/28/1944
+[00:52:13] [DOC: 9168138] ℹ️  Service Line extracted: 'Skilled Nursing, PT'
+[00:52:13] [DOC: 9168138] ℹ️  Payer Source extracted: 'Medicare'
+[00:52:13] [DOC: 9168138] ℹ️  Diagnosis codes being written:
+[00:52:13] [DOC: 9168138] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:52:13] [DOC: 9168138] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:52:13] [DOC: 9168138] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:52:13] [DOC: 9168138] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:52:13] [DOC: 9168138] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:52:13] [DOC: 9168138] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:52:13] [DOC: 9168138] ✅ Patient data written to CSV: Paul Los | Sex: MALE | Age: 80 | Service: Skilled Nursing, PT | Payer: Medicare | MRN: 5642015
+[00:52:13] ✅    ✅ Document 9168138 processed and saved successfully
+[00:52:13] 🔄 
+🔄 Step 8: Saving API details...
+[00:52:13] [DOC: 9168138] ℹ️  API push details saved for document 9168138
+[00:52:13] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168135                         ║
+================================================================================
+[00:52:13] ℹ️  Agency: Dartmouth HH
+[00:52:13] ℹ️  Date: 03/07/2025
+[00:52:13] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:52:15] [DOC: 9168135] ✅ Text extracted using pdfplumber (1119 chars)
+[00:52:15] ✅    ✅ Text extracted using pdfplumber (1119 chars)
+[00:52:15] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:52:18] ℹ️  AI extracted raw sex value: 'F'
+[00:52:18] ℹ️  AI extracted service line: 'RN, LPN'
+[00:52:18] ℹ️  AI extracted payer source: 'Medicare'
+[00:52:18] ℹ️  AI extracted diagnoses:
+[00:52:18] ℹ️    - Diagnosis 1: ''
+[00:52:18] ℹ️    - Diagnosis 2: ''
+[00:52:18] ℹ️    - Diagnosis 3: ''
+[00:52:18] ℹ️    - Diagnosis 4: ''
+[00:52:18] ℹ️    - Diagnosis 5: ''
+[00:52:18] ℹ️    - Diagnosis 6: ''
+[00:52:18] ℹ️  Final extracted MRN: '5837015'
+[00:52:18] ℹ️  Final extracted Sex: 'FEMALE'
+[00:52:18] ℹ️  Final extracted Service Line: 'RN, LPN'
+[00:52:18] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:52:18] ✅ Patient data extraction completed successfully
+[00:52:18] ✅    ✅ Patient data extracted successfully
+[00:52:18] 📊 Patient Response
+     └─ patientFName: Hilda
+     └─ patientLName: Correia
+     └─ dob: 05/15/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 5837015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN, LPN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '01/09/2025', 'startOfEpisode': '01/09/2025', 'endOfEpisode': '03/09/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:52:18] ✅    ✅ Patient identified: Hilda Correia
+[00:52:18] ✅    ✅ Patient name validation passed
+[00:52:18] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:52:18] [DOC: 9168135] ℹ️  DOB normalized: 05/15/1939
+[00:52:18] [DOC: 9168135] ℹ️  Episode startOfCare normalized: 01/09/2025
+[00:52:18] [DOC: 9168135] ℹ️  Episode startOfEpisode normalized: 01/09/2025
+[00:52:18] [DOC: 9168135] ℹ️  Episode endOfEpisode normalized: 03/09/2025
+[00:52:18] [DOC: 9168135] ✅ Patient date processing completed successfully
+[00:52:18] ✅    ✅ Date processing completed
+[00:52:18] 📊 Processed Patient Data
+     └─ patientFName: Hilda
+     └─ patientLName: Correia
+     └─ dob: 05/15/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 5837015
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN, LPN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '01/09/2025', 'startOfEpisode': '01/09/2025', 'endOfEpisode': '03/09/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:52:18] 🔄 
+🔄 Step 4: Extracting order data...
+[00:52:21] ℹ️  Order extraction - MRN: ''
+[00:52:21] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:52:21] ℹ️  Order extraction - Service Line: 'RN, LPN'
+[00:52:21] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:52:21] ✅ Order data extraction completed successfully
+[00:52:21] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:52:21] ℹ️  Using MRN from patient data: '5837015'
+[00:52:21] ℹ️  Service line consistent in both sources: 'RN, LPN'
+[00:52:21] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:52:21] ✅ Patient name cross-validation successful
+[00:52:21] ✅    ✅ Data merged successfully
+[00:52:22] ✅    ✅ Order data extracted and validated
+[00:52:22] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:52:22] [DOC: 9168135] ✅ Patient found in local cache: Hilda Correia, ID: 49ef8b35-9eea-4200-b49a-c6c82b0be1de
+[00:52:22] ✅    ✅ Existing patient found with ID: 49ef8b35-9eea-4200-b49a-c6c82b0be1de
+[00:52:22] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:52:22] [DOC: 9168135] ℹ️  Pushing order via API for patient ID: 49ef8b35-9eea-4200-b49a-c6c82b0be1de
+[00:52:23] [DOC: 9168135] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:52:23] ❌    ❌ Failed to push order
+[00:52:23] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:52:23] [DOC: 9168135] ℹ️  Calculated age: 86 from DOB: 05/15/1939
+[00:52:23] [DOC: 9168135] ℹ️  Service Line extracted: 'RN, LPN'
+[00:52:23] [DOC: 9168135] ℹ️  Payer Source extracted: 'Medicare'
+[00:52:23] [DOC: 9168135] ℹ️  Diagnosis codes being written:
+[00:52:23] [DOC: 9168135] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:52:23] [DOC: 9168135] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:52:23] [DOC: 9168135] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:52:23] [DOC: 9168135] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:52:23] [DOC: 9168135] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:52:23] [DOC: 9168135] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:52:23] [DOC: 9168135] ✅ Patient data written to CSV: Hilda Correia | Sex: FEMALE | Age: 86 | Service: RN, LPN | Payer: Medicare | MRN: 5837015
+[00:52:23] ✅    ✅ Document 9168135 processed and saved successfully
+[00:52:23] 🔄 
+🔄 Step 8: Saving API details...
+[00:52:23] [DOC: 9168135] ℹ️  API push details saved for document 9168135
+[00:52:23] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168131                         ║
+================================================================================
+[00:52:23] ℹ️  Agency: Dartmouth HH
+[00:52:23] ℹ️  Date: 03/07/2025
+[00:52:23] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:52:25] [DOC: 9168131] ✅ Text extracted using pdfplumber (1635 chars)
+[00:52:25] ✅    ✅ Text extracted using pdfplumber (1635 chars)
+[00:52:25] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:52:27] ℹ️  AI extracted raw sex value: 'F'
+[00:52:27] ℹ️  AI extracted service line: 'RN'
+[00:52:27] ℹ️  AI extracted payer source: 'Medicare'
+[00:52:27] ℹ️  AI extracted diagnoses:
+[00:52:27] ℹ️    - Diagnosis 1: 'None'
+[00:52:27] ℹ️    - Diagnosis 2: 'None'
+[00:52:27] ℹ️    - Diagnosis 3: 'None'
+[00:52:27] ℹ️    - Diagnosis 4: 'None'
+[00:52:27] ℹ️    - Diagnosis 5: 'None'
+[00:52:27] ℹ️    - Diagnosis 6: 'None'
+[00:52:27] ℹ️  Final extracted MRN: '3320011'
+[00:52:27] ℹ️  Final extracted Sex: 'FEMALE'
+[00:52:27] ℹ️  Final extracted Service Line: 'RN'
+[00:52:27] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:52:27] ✅ Patient data extraction completed successfully
+[00:52:27] ✅    ✅ Patient data extracted successfully
+[00:52:27] 📊 Patient Response
+     └─ patientFName: Bonnie
+     └─ patientLName: Werly
+     └─ dob: 06/16/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 3320011
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '09/01/2024', 'startOfEpisode': None, 'endOfEpisode': '04/28/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[00:52:27] ✅    ✅ Patient identified: Bonnie Werly
+[00:52:27] ✅    ✅ Patient name validation passed
+[00:52:27] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:52:27] [DOC: 9168131] ℹ️  DOB normalized: 06/16/1939
+[00:52:27] [DOC: 9168131] ℹ️  Episode startOfCare normalized: 09/01/2024
+[00:52:27] [DOC: 9168131] ℹ️  Episode endOfEpisode normalized: 04/28/2025
+[00:52:27] [DOC: 9168131] ✅ Patient date processing completed successfully
+[00:52:27] ✅    ✅ Date processing completed
+[00:52:27] 📊 Processed Patient Data
+     └─ patientFName: Bonnie
+     └─ patientLName: Werly
+     └─ dob: 06/16/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 3320011
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '09/01/2024', 'endOfEpisode': '04/28/2025'}]
+[00:52:27] 🔄 
+🔄 Step 4: Extracting order data...
+[00:52:30] ℹ️  Order extraction - MRN: ''
+[00:52:30] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:52:30] ℹ️  Order extraction - Service Line: 'RN'
+[00:52:30] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:52:30] ✅ Order data extraction completed successfully
+[00:52:30] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:52:30] ℹ️  Using MRN from patient data: '3320011'
+[00:52:30] ℹ️  Service line consistent in both sources: 'RN'
+[00:52:30] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:52:30] ✅ Patient name cross-validation successful
+[00:52:30] ✅    ✅ Data merged successfully
+[00:52:32] ✅    ✅ Order data extracted and validated
+[00:52:32] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:52:32] [DOC: 9168131] ✅ Patient found in local cache: Bonnie Werly, ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:52:32] ✅    ✅ Existing patient found with ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:52:32] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:52:32] [DOC: 9168131] ℹ️  Pushing order via API for patient ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:52:33] [DOC: 9168131] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD14422"}
+[00:52:33] ❌    ❌ Failed to push order
+[00:52:33] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:52:33] [DOC: 9168131] ℹ️  Calculated age: 85 from DOB: 06/16/1939
+[00:52:33] [DOC: 9168131] ℹ️  Service Line extracted: 'RN'
+[00:52:33] [DOC: 9168131] ℹ️  Payer Source extracted: 'Medicare'
+[00:52:33] [DOC: 9168131] ℹ️  Diagnosis codes being written:
+[00:52:33] [DOC: 9168131] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:52:33] [DOC: 9168131] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:52:33] [DOC: 9168131] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:52:33] [DOC: 9168131] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:52:33] [DOC: 9168131] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:52:33] [DOC: 9168131] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:52:33] [DOC: 9168131] ✅ Patient data written to CSV: Bonnie Werly | Sex: FEMALE | Age: 85 | Service: RN | Payer: Medicare | MRN: 3320011
+[00:52:33] ✅    ✅ Document 9168131 processed and saved successfully
+[00:52:33] 🔄 
+🔄 Step 8: Saving API details...
+[00:52:33] [DOC: 9168131] ℹ️  API push details saved for document 9168131
+[00:52:33] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168129                         ║
+================================================================================
+[00:52:33] ℹ️  Agency: Dartmouth HH
+[00:52:33] ℹ️  Date: 03/07/2025
+[00:52:33] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:52:35] [DOC: 9168129] ✅ Text extracted using pdfplumber (2039 chars)
+[00:52:35] ✅    ✅ Text extracted using pdfplumber (2039 chars)
+[00:52:35] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:52:38] ℹ️  AI extracted raw sex value: 'M'
+[00:52:38] ℹ️  AI extracted service line: 'Skilled Nursing'
+[00:52:38] ℹ️  AI extracted payer source: 'Medicare'
+[00:52:38] ℹ️  AI extracted diagnoses:
+[00:52:38] ℹ️    - Diagnosis 1: ''
+[00:52:38] ℹ️    - Diagnosis 2: ''
+[00:52:38] ℹ️    - Diagnosis 3: ''
+[00:52:38] ℹ️    - Diagnosis 4: ''
+[00:52:38] ℹ️    - Diagnosis 5: ''
+[00:52:38] ℹ️    - Diagnosis 6: ''
+[00:52:38] ℹ️  Final extracted MRN: '460009'
+[00:52:38] ℹ️  Final extracted Sex: 'MALE'
+[00:52:38] ℹ️  Final extracted Service Line: 'Skilled Nursing'
+[00:52:38] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:52:38] ✅ Patient data extraction completed successfully
+[00:52:38] ✅    ✅ Patient data extracted successfully
+[00:52:38] 📊 Patient Response
+     └─ patientFName: Brian
+     └─ patientLName: Gonsalves
+     └─ dob: 05/21/1965
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 460009
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '09/29/2024', 'startOfEpisode': '01/27/2025', 'endOfEpisode': '03/27/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:52:38] ✅    ✅ Patient identified: Brian Gonsalves
+[00:52:38] ✅    ✅ Patient name validation passed
+[00:52:38] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:52:38] [DOC: 9168129] ℹ️  DOB normalized: 05/21/1965
+[00:52:38] [DOC: 9168129] ℹ️  Episode startOfCare normalized: 09/29/2024
+[00:52:38] [DOC: 9168129] ℹ️  Episode startOfEpisode normalized: 01/27/2025
+[00:52:38] [DOC: 9168129] ℹ️  Episode endOfEpisode normalized: 03/27/2025
+[00:52:38] [DOC: 9168129] ✅ Patient date processing completed successfully
+[00:52:38] ✅    ✅ Date processing completed
+[00:52:38] 📊 Processed Patient Data
+     └─ patientFName: Brian
+     └─ patientLName: Gonsalves
+     └─ dob: 05/21/1965
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 460009
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '09/29/2024', 'startOfEpisode': '01/27/2025', 'endOfEpisode': '03/27/2025', 'firstDiagnosis': '', 'secondDiagnosis': '', 'thirdDiagnosis': '', 'fourthDiagnosis': '', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[00:52:38] 🔄 
+🔄 Step 4: Extracting order data...
+[00:52:40] ℹ️  Order extraction - MRN: ''
+[00:52:40] ℹ️  Order extraction - Sex: 'MALE'
+[00:52:40] ℹ️  Order extraction - Service Line: 'Skilled Nursing'
+[00:52:40] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:52:40] ✅ Order data extraction completed successfully
+[00:52:40] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:52:40] ℹ️  Using MRN from patient data: '460009'
+[00:52:40] ℹ️  Service line consistent in both sources: 'Skilled Nursing'
+[00:52:40] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:52:40] ✅ Patient name cross-validation successful
+[00:52:40] ✅    ✅ Data merged successfully
+[00:52:41] ✅    ✅ Order data extracted and validated
+[00:52:41] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:52:44] [DOC: 9168129] ✅ Patient exists in API: Brian Gonsalves, ID: 5466aeb6-6ddc-4e06-8443-a4c86c0d2a2e
+[00:52:44] ✅    ✅ Existing patient found with ID: 5466aeb6-6ddc-4e06-8443-a4c86c0d2a2e
+[00:52:44] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:52:44] [DOC: 9168129] ℹ️  Pushing order via API for patient ID: 5466aeb6-6ddc-4e06-8443-a4c86c0d2a2e
+[00:52:45] [DOC: 9168129] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13812"}
+[00:52:45] ❌    ❌ Failed to push order
+[00:52:45] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:52:45] [DOC: 9168129] ℹ️  Calculated age: 60 from DOB: 05/21/1965
+[00:52:45] [DOC: 9168129] ℹ️  Service Line extracted: 'Skilled Nursing'
+[00:52:45] [DOC: 9168129] ℹ️  Payer Source extracted: 'Medicare'
+[00:52:45] [DOC: 9168129] ℹ️  Diagnosis codes being written:
+[00:52:45] [DOC: 9168129] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:52:45] [DOC: 9168129] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:52:45] [DOC: 9168129] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:52:45] [DOC: 9168129] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:52:45] [DOC: 9168129] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:52:45] [DOC: 9168129] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:52:45] [DOC: 9168129] ✅ Patient data written to CSV: Brian Gonsalves | Sex: MALE | Age: 60 | Service: Skilled Nursing | Payer: Medicare | MRN: 460009
+[00:52:45] ✅    ✅ Document 9168129 processed and saved successfully
+[00:52:45] 🔄 
+🔄 Step 8: Saving API details...
+[00:52:45] [DOC: 9168129] ℹ️  API push details saved for document 9168129
+[00:52:45] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168122                         ║
+================================================================================
+[00:52:45] ℹ️  Agency: Dartmouth HH
+[00:52:45] ℹ️  Date: 03/07/2025
+[00:52:45] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:52:48] [DOC: 9168122] ✅ Text extracted using pdfplumber (15817 chars)
+[00:52:48] ✅    ✅ Text extracted using pdfplumber (15817 chars)
+[00:52:48] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:52:52] ℹ️  AI extracted raw sex value: 'F'
+[00:52:52] ℹ️  AI extracted service line: 'Skilled Nursing, PT, OT'
+[00:52:52] ℹ️  AI extracted payer source: 'Private Pay'
+[00:52:52] ℹ️  AI extracted diagnoses:
+[00:52:52] ℹ️    - Diagnosis 1: 'G30.9'
+[00:52:52] ℹ️    - Diagnosis 2: 'F02.80'
+[00:52:52] ℹ️    - Diagnosis 3: 'I10'
+[00:52:52] ℹ️    - Diagnosis 4: 'H81.11'
+[00:52:52] ℹ️    - Diagnosis 5: 'I95.1'
+[00:52:52] ℹ️    - Diagnosis 6: 'M19.90'
+[00:52:52] ℹ️  Final extracted MRN: '305011'
+[00:52:52] ℹ️  Final extracted Sex: 'FEMALE'
+[00:52:52] ℹ️  Final extracted Service Line: 'Skilled Nursing, PT, OT'
+[00:52:52] ℹ️  Final extracted Payer Source: 'Private Pay'
+[00:52:52] ✅ Patient data extraction completed successfully
+[00:52:52] ✅    ✅ Patient data extracted successfully
+[00:52:52] 📊 Patient Response
+     └─ patientFName: Gloria
+     └─ patientLName: Medeiros
+     └─ dob: 06/03/1936
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 305011
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing, PT, OT
+     └─ payorSource: Private Pay
+     └─ episodeDiagnoses: [{'startOfCare': '03/03/2025', 'startOfEpisode': '03/03/2025', 'endOfEpisode': '05/01/2025', 'firstDiagnosis': 'G30.9', 'secondDiagnosis': 'F02.80', 'thirdDiagnosis': 'I10', 'fourthDiagnosis': 'H81.11', 'fifthDiagnosis': 'I95.1', 'sixthDiagnosis': 'M19.90'}]
+[00:52:52] ✅    ✅ Patient identified: Gloria Medeiros
+[00:52:52] ✅    ✅ Patient name validation passed
+[00:52:52] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:52:52] [DOC: 9168122] ℹ️  DOB normalized: 06/03/1936
+[00:52:52] [DOC: 9168122] ℹ️  Episode startOfCare normalized: 03/03/2025
+[00:52:52] [DOC: 9168122] ℹ️  Episode startOfEpisode normalized: 03/03/2025
+[00:52:52] [DOC: 9168122] ℹ️  Episode endOfEpisode normalized: 05/01/2025
+[00:52:52] [DOC: 9168122] ✅ Patient date processing completed successfully
+[00:52:52] ✅    ✅ Date processing completed
+[00:52:52] 📊 Processed Patient Data
+     └─ patientFName: Gloria
+     └─ patientLName: Medeiros
+     └─ dob: 06/03/1936
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 305011
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: 
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing, PT, OT
+     └─ payorSource: Private Pay
+     └─ episodeDiagnoses: [{'startOfCare': '03/03/2025', 'startOfEpisode': '03/03/2025', 'endOfEpisode': '05/01/2025', 'firstDiagnosis': 'G30.9', 'secondDiagnosis': 'F02.80', 'thirdDiagnosis': 'I10', 'fourthDiagnosis': 'H81.11', 'fifthDiagnosis': 'I95.1', 'sixthDiagnosis': 'M19.90'}]
+[00:52:52] 🔄 
+🔄 Step 4: Extracting order data...
+[00:52:54] ℹ️  Order extraction - MRN: '305011'
+[00:52:54] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:52:54] ℹ️  Order extraction - Service Line: 'Skilled Nursing, PT, OT'
+[00:52:54] ℹ️  Order extraction - Payer Source: ''
+[00:52:54] ✅ Order data extraction completed successfully
+[00:52:54] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:52:54] ℹ️  Using MRN from patient data: '305011' over '305011'
+[00:52:54] ℹ️  Service line consistent in both sources: 'Skilled Nursing, PT, OT'
+[00:52:54] ℹ️  Using payer source from patient data: 'Private Pay'
+[00:52:54] ✅ Patient name cross-validation successful
+[00:52:54] ✅    ✅ Data merged successfully
+[00:52:55] ✅    ✅ Order data extracted and validated
+[00:52:55] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:52:57] [DOC: 9168122] ✅ Patient exists in API: Gloria Medeiros, ID: ef5a5393-d07f-4cf1-a637-a2e916d26a7e
+[00:52:57] ✅    ✅ Existing patient found with ID: ef5a5393-d07f-4cf1-a637-a2e916d26a7e
+[00:52:57] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:52:57] [DOC: 9168122] ℹ️  Pushing order via API for patient ID: ef5a5393-d07f-4cf1-a637-a2e916d26a7e
+[00:52:58] [DOC: 9168122] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:52:58] ❌    ❌ Failed to push order
+[00:52:58] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:52:58] [DOC: 9168122] ℹ️  Calculated age: 89 from DOB: 06/03/1936
+[00:52:58] [DOC: 9168122] ℹ️  Service Line extracted: 'Skilled Nursing, PT, OT'
+[00:52:58] [DOC: 9168122] ℹ️  Payer Source extracted: 'Private Pay'
+[00:52:58] [DOC: 9168122] ℹ️  Diagnosis codes being written:
+[00:52:58] [DOC: 9168122] ℹ️    - Latest_Episode_Firstdiagnosis: 'G30.9'
+[00:52:58] [DOC: 9168122] ℹ️    - Latest_Episode_Seconddiagnosis: 'F02.80'
+[00:52:58] [DOC: 9168122] ℹ️    - Latest_Episode_Thirddiagnosis: 'I10'
+[00:52:58] [DOC: 9168122] ℹ️    - Latest_Episode_Fourthdiagnosis: 'H81.11'
+[00:52:58] [DOC: 9168122] ℹ️    - Latest_Episode_Fifthdiagnosis: 'I95.1'
+[00:52:58] [DOC: 9168122] ℹ️    - Latest_Episode_Sixthdiagnosis: 'M19.90'
+[00:52:58] [DOC: 9168122] ✅ Patient data written to CSV: Gloria Medeiros | Sex: FEMALE | Age: 89 | Service: Skilled Nursing, PT, OT | Payer: Private Pay | MRN: 305011
+[00:52:58] ✅    ✅ Document 9168122 processed and saved successfully
+[00:52:58] 🔄 
+🔄 Step 8: Saving API details...
+[00:52:58] [DOC: 9168122] ℹ️  API push details saved for document 9168122
+[00:52:58] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168110                         ║
+================================================================================
+[00:52:58] ℹ️  Agency: Dartmouth HH
+[00:52:58] ℹ️  Date: 03/07/2025
+[00:52:58] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:53:00] [DOC: 9168110] ✅ Text extracted using pdfplumber (1481 chars)
+[00:53:00] ✅    ✅ Text extracted using pdfplumber (1481 chars)
+[00:53:00] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:53:03] ℹ️  AI extracted raw sex value: 'F'
+[00:53:03] ℹ️  AI extracted service line: 'RN, LPN'
+[00:53:03] ℹ️  AI extracted payer source: 'Medicare'
+[00:53:03] ℹ️  AI extracted diagnoses:
+[00:53:03] ℹ️    - Diagnosis 1: 'None'
+[00:53:03] ℹ️    - Diagnosis 2: 'None'
+[00:53:03] ℹ️    - Diagnosis 3: 'None'
+[00:53:03] ℹ️    - Diagnosis 4: 'None'
+[00:53:03] ℹ️    - Diagnosis 5: 'None'
+[00:53:03] ℹ️    - Diagnosis 6: 'None'
+[00:53:03] ℹ️  Final extracted MRN: '323014'
+[00:53:03] ℹ️  Final extracted Sex: 'FEMALE'
+[00:53:03] ℹ️  Final extracted Service Line: 'RN, LPN'
+[00:53:03] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:53:03] ✅ Patient data extraction completed successfully
+[00:53:03] ✅    ✅ Patient data extracted successfully
+[00:53:03] 📊 Patient Response
+     └─ patientFName: Sandra
+     └─ patientLName: Plissey
+     └─ dob: 11/19/1943
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 323014
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: None
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN, LPN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '10/07/2024', 'startOfEpisode': '02/04/2025', 'endOfEpisode': '04/04/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[00:53:03] ✅    ✅ Patient identified: Sandra Plissey
+[00:53:03] ✅    ✅ Patient name validation passed
+[00:53:03] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:53:03] [DOC: 9168110] ℹ️  DOB normalized: 11/19/1943
+[00:53:03] [DOC: 9168110] ℹ️  Episode startOfCare normalized: 10/07/2024
+[00:53:03] [DOC: 9168110] ℹ️  Episode startOfEpisode normalized: 02/04/2025
+[00:53:03] [DOC: 9168110] ℹ️  Episode endOfEpisode normalized: 04/04/2025
+[00:53:03] [DOC: 9168110] ✅ Patient date processing completed successfully
+[00:53:03] ✅    ✅ Date processing completed
+[00:53:03] 📊 Processed Patient Data
+     └─ patientFName: Sandra
+     └─ patientLName: Plissey
+     └─ dob: 11/19/1943
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 323014
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN, LPN
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '10/07/2024', 'startOfEpisode': '02/04/2025', 'endOfEpisode': '04/04/2025'}]
+[00:53:03] 🔄 
+🔄 Step 4: Extracting order data...
+[00:53:05] ℹ️  Order extraction - MRN: ''
+[00:53:05] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:53:05] ℹ️  Order extraction - Service Line: 'RN'
+[00:53:05] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:53:05] ✅ Order data extraction completed successfully
+[00:53:05] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:53:05] ℹ️  Using MRN from patient data: '323014'
+[00:53:05] ℹ️  Combined service lines: Patient='RN, LPN' + Order='RN' = 'LPN, RN'
+[00:53:05] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:53:05] ✅ Patient name cross-validation successful
+[00:53:05] ✅    ✅ Data merged successfully
+[00:53:06] ✅    ✅ Order data extracted and validated
+[00:53:06] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:53:06] [DOC: 9168110] ✅ Patient found in local cache: Sandra Plissey, ID: 89dd9480-4975-4667-be64-0e2aac1bbc23
+[00:53:06] ✅    ✅ Existing patient found with ID: 89dd9480-4975-4667-be64-0e2aac1bbc23
+[00:53:06] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:53:06] [DOC: 9168110] ℹ️  Pushing order via API for patient ID: 89dd9480-4975-4667-be64-0e2aac1bbc23
+[00:53:08] [DOC: 9168110] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD13081"}
+[00:53:08] ❌    ❌ Failed to push order
+[00:53:08] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:53:08] [DOC: 9168110] ℹ️  Calculated age: 81 from DOB: 11/19/1943
+[00:53:08] [DOC: 9168110] ℹ️  Service Line extracted: 'LPN, RN'
+[00:53:08] [DOC: 9168110] ℹ️  Payer Source extracted: 'Medicare'
+[00:53:08] [DOC: 9168110] ℹ️  Diagnosis codes being written:
+[00:53:08] [DOC: 9168110] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:53:08] [DOC: 9168110] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:53:08] [DOC: 9168110] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:53:08] [DOC: 9168110] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:53:08] [DOC: 9168110] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:53:08] [DOC: 9168110] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:53:08] [DOC: 9168110] ✅ Patient data written to CSV: Sandra Plissey | Sex: FEMALE | Age: 81 | Service: LPN, RN | Payer: Medicare | MRN: 323014
+[00:53:08] ✅    ✅ Document 9168110 processed and saved successfully
+[00:53:08] 🔄 
+🔄 Step 8: Saving API details...
+[00:53:08] [DOC: 9168110] ℹ️  API push details saved for document 9168110
+[00:53:08] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168106                         ║
+================================================================================
+[00:53:08] ℹ️  Agency: Dartmouth HH
+[00:53:08] ℹ️  Date: 03/07/2025
+[00:53:08] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:53:11] [DOC: 9168106] ✅ Text extracted using pdfplumber (18279 chars)
+[00:53:11] ✅    ✅ Text extracted using pdfplumber (18267 chars)
+[00:53:11] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:53:14] ℹ️  AI extracted raw sex value: 'F'
+[00:53:14] ℹ️  AI extracted service line: 'Skilled Nursing, Physical Therapy'
+[00:53:14] ℹ️  AI extracted payer source: 'None'
+[00:53:14] ℹ️  AI extracted diagnoses:
+[00:53:14] ℹ️    - Diagnosis 1: 'E10.65'
+[00:53:14] ℹ️    - Diagnosis 2: 'I10'
+[00:53:14] ℹ️    - Diagnosis 3: 'E10.40'
+[00:53:14] ℹ️    - Diagnosis 4: 'E83.52'
+[00:53:14] ℹ️    - Diagnosis 5: 'N39.41'
+[00:53:14] ℹ️    - Diagnosis 6: 'M41.86'
+[00:53:14] ℹ️  Final extracted MRN: '3320011'
+[00:53:14] ℹ️  Final extracted Sex: 'FEMALE'
+[00:53:14] ℹ️  Final extracted Service Line: 'Skilled Nursing, Physical Therapy'
+[00:53:14] ℹ️  Final extracted Payer Source: ''
+[00:53:14] ✅ Patient data extraction completed successfully
+[00:53:14] ✅    ✅ Patient data extracted successfully
+[00:53:14] 📊 Patient Response
+     └─ patientFName: Bonnie
+     └─ patientLName: Werly
+     └─ dob: 06/16/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 3320011
+     └─ billingProvider: Community Nurse Inc
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: None
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing, Physical Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '09/01/2024', 'startOfEpisode': '09/01/2024', 'endOfEpisode': '04/28/2025', 'firstDiagnosis': 'E10.65', 'secondDiagnosis': 'I10', 'thirdDiagnosis': 'E10.40', 'fourthDiagnosis': 'E83.52', 'fifthDiagnosis': 'N39.41', 'sixthDiagnosis': 'M41.86'}]
+[00:53:14] ✅    ✅ Patient identified: Bonnie Werly
+[00:53:14] ✅    ✅ Patient name validation passed
+[00:53:14] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:53:14] [DOC: 9168106] ℹ️  DOB normalized: 06/16/1939
+[00:53:14] [DOC: 9168106] ℹ️  Episode startOfCare normalized: 09/01/2024
+[00:53:14] [DOC: 9168106] ℹ️  Episode startOfEpisode normalized: 09/01/2024
+[00:53:14] [DOC: 9168106] ℹ️  Episode endOfEpisode normalized: 04/28/2025
+[00:53:14] [DOC: 9168106] ✅ Patient date processing completed successfully
+[00:53:14] ✅    ✅ Date processing completed
+[00:53:14] 📊 Processed Patient Data
+     └─ patientFName: Bonnie
+     └─ patientLName: Werly
+     └─ dob: 06/16/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 3320011
+     └─ billingProvider: Community Nurse Inc
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: Skilled Nursing, Physical Therapy
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '09/01/2024', 'startOfEpisode': '09/01/2024', 'endOfEpisode': '04/28/2025', 'firstDiagnosis': 'E10.65', 'secondDiagnosis': 'I10', 'thirdDiagnosis': 'E10.40', 'fourthDiagnosis': 'E83.52', 'fifthDiagnosis': 'N39.41', 'sixthDiagnosis': 'M41.86'}]
+[00:53:14] 🔄 
+🔄 Step 4: Extracting order data...
+[00:53:16] ℹ️  Order extraction - MRN: '3320011'
+[00:53:16] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:53:16] ℹ️  Order extraction - Service Line: 'Skilled Nursing, Physical Therapy'
+[00:53:16] ℹ️  Order extraction - Payer Source: ''
+[00:53:16] ✅ Order data extraction completed successfully
+[00:53:16] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:53:16] ℹ️  Using MRN from patient data: '3320011' over '3320011'
+[00:53:16] ℹ️  Service line consistent in both sources: 'Skilled Nursing, Physical Therapy'
+[00:53:16] ✅ Patient name cross-validation successful
+[00:53:16] ✅    ✅ Data merged successfully
+[00:53:18] ✅    ✅ Order data extracted and validated
+[00:53:18] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:53:18] [DOC: 9168106] ✅ Patient found in local cache: Bonnie Werly, ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:53:18] ✅    ✅ Existing patient found with ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:53:18] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:53:18] [DOC: 9168106] ℹ️  Pushing order via API for patient ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:53:19] [DOC: 9168106] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:53:19] ❌    ❌ Failed to push order
+[00:53:19] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:53:19] [DOC: 9168106] ℹ️  Calculated age: 85 from DOB: 06/16/1939
+[00:53:19] [DOC: 9168106] ℹ️  Service Line extracted: 'Skilled Nursing, Physical Therapy'
+[00:53:19] [DOC: 9168106] ℹ️  Payer Source extracted: ''
+[00:53:19] [DOC: 9168106] ℹ️  Diagnosis codes being written:
+[00:53:19] [DOC: 9168106] ℹ️    - Latest_Episode_Firstdiagnosis: 'E10.65'
+[00:53:19] [DOC: 9168106] ℹ️    - Latest_Episode_Seconddiagnosis: 'I10'
+[00:53:19] [DOC: 9168106] ℹ️    - Latest_Episode_Thirddiagnosis: 'E10.40'
+[00:53:19] [DOC: 9168106] ℹ️    - Latest_Episode_Fourthdiagnosis: 'E83.52'
+[00:53:19] [DOC: 9168106] ℹ️    - Latest_Episode_Fifthdiagnosis: 'N39.41'
+[00:53:19] [DOC: 9168106] ℹ️    - Latest_Episode_Sixthdiagnosis: 'M41.86'
+[00:53:19] [DOC: 9168106] ✅ Patient data written to CSV: Bonnie Werly | Sex: FEMALE | Age: 85 | Service: Skilled Nursing, Physical Therapy | Payer:  | MRN: 3320011
+[00:53:19] ✅    ✅ Document 9168106 processed and saved successfully
+[00:53:19] 🔄 
+🔄 Step 8: Saving API details...
+[00:53:19] [DOC: 9168106] ℹ️  API push details saved for document 9168106
+[00:53:19] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9168101                         ║
+================================================================================
+[00:53:19] ℹ️  Agency: Dartmouth HH
+[00:53:19] ℹ️  Date: 03/07/2025
+[00:53:19] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:53:22] [DOC: 9168101] ✅ Text extracted using pdfplumber (1906 chars)
+[00:53:22] ✅    ✅ Text extracted using pdfplumber (1906 chars)
+[00:53:22] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:53:24] ℹ️  AI extracted raw sex value: 'F'
+[00:53:24] ℹ️  AI extracted service line: 'RN, PT'
+[00:53:24] ℹ️  AI extracted payer source: 'Medicare'
+[00:53:24] ℹ️  AI extracted diagnoses:
+[00:53:24] ℹ️    - Diagnosis 1: 'None'
+[00:53:24] ℹ️    - Diagnosis 2: 'None'
+[00:53:24] ℹ️    - Diagnosis 3: 'None'
+[00:53:24] ℹ️    - Diagnosis 4: 'None'
+[00:53:24] ℹ️    - Diagnosis 5: 'None'
+[00:53:24] ℹ️    - Diagnosis 6: 'None'
+[00:53:24] ℹ️  Final extracted MRN: '3320011'
+[00:53:24] ℹ️  Final extracted Sex: 'FEMALE'
+[00:53:24] ℹ️  Final extracted Service Line: 'RN, PT'
+[00:53:24] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:53:24] ✅ Patient data extraction completed successfully
+[00:53:24] ✅    ✅ Patient data extracted successfully
+[00:53:24] 📊 Patient Response
+     └─ patientFName: Bonnie
+     └─ patientLName: Werly
+     └─ dob: 06/16/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 3320011
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ email: None
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN, PT
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '09/01/2024', 'startOfEpisode': '09/01/2024', 'endOfEpisode': '02/27/2025', 'firstDiagnosis': None, 'secondDiagnosis': None, 'thirdDiagnosis': None, 'fourthDiagnosis': None, 'fifthDiagnosis': None, 'sixthDiagnosis': None}]
+[00:53:24] ✅    ✅ Patient identified: Bonnie Werly
+[00:53:24] ✅    ✅ Patient name validation passed
+[00:53:24] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:53:24] [DOC: 9168101] ℹ️  DOB normalized: 06/16/1939
+[00:53:24] [DOC: 9168101] ℹ️  Episode startOfCare normalized: 09/01/2024
+[00:53:24] [DOC: 9168101] ℹ️  Episode startOfEpisode normalized: 09/01/2024
+[00:53:24] [DOC: 9168101] ℹ️  Episode endOfEpisode normalized: 02/27/2025
+[00:53:24] [DOC: 9168101] ✅ Patient date processing completed successfully
+[00:53:24] ✅    ✅ Date processing completed
+[00:53:24] 📊 Processed Patient Data
+     └─ patientFName: Bonnie
+     └─ patientLName: Werly
+     └─ dob: 06/16/1939
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 3320011
+     └─ billingProvider: Hawthorn Medical Associates
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: Community Nurse Inc
+     └─ address: 62 Center Street
+     └─ city: Fairhaven
+     └─ state: MA
+     └─ zip: 02719
+     └─ phoneNumber: (508) 992-6278
+     └─ serviceLine: RN, PT
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '09/01/2024', 'startOfEpisode': '09/01/2024', 'endOfEpisode': '02/27/2025'}]
+[00:53:24] 🔄 
+🔄 Step 4: Extracting order data...
+[00:53:27] ℹ️  Order extraction - MRN: ''
+[00:53:27] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:53:27] ℹ️  Order extraction - Service Line: 'PT, RN'
+[00:53:27] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:53:27] ✅ Order data extraction completed successfully
+[00:53:27] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:53:27] ℹ️  Using MRN from patient data: '3320011'
+[00:53:27] ℹ️  Combined service lines: Patient='RN, PT' + Order='PT, RN' = 'PT, RN'
+[00:53:27] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:53:27] ✅ Patient name cross-validation successful
+[00:53:27] ✅    ✅ Data merged successfully
+[00:53:28] ✅    ✅ Order data extracted and validated
+[00:53:28] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:53:28] [DOC: 9168101] ✅ Patient found in local cache: Bonnie Werly, ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:53:28] ✅    ✅ Existing patient found with ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:53:28] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:53:28] [DOC: 9168101] ℹ️  Pushing order via API for patient ID: 24e0626e-85c6-49fe-aa51-0da969434f71
+[00:53:29] [DOC: 9168101] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD14422"}
+[00:53:29] ❌    ❌ Failed to push order
+[00:53:29] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:53:29] [DOC: 9168101] ℹ️  Calculated age: 85 from DOB: 06/16/1939
+[00:53:29] [DOC: 9168101] ℹ️  Service Line extracted: 'PT, RN'
+[00:53:29] [DOC: 9168101] ℹ️  Payer Source extracted: 'Medicare'
+[00:53:29] [DOC: 9168101] ℹ️  Diagnosis codes being written:
+[00:53:29] [DOC: 9168101] ℹ️    - Latest_Episode_Firstdiagnosis: ''
+[00:53:29] [DOC: 9168101] ℹ️    - Latest_Episode_Seconddiagnosis: ''
+[00:53:29] [DOC: 9168101] ℹ️    - Latest_Episode_Thirddiagnosis: ''
+[00:53:29] [DOC: 9168101] ℹ️    - Latest_Episode_Fourthdiagnosis: ''
+[00:53:29] [DOC: 9168101] ℹ️    - Latest_Episode_Fifthdiagnosis: ''
+[00:53:29] [DOC: 9168101] ℹ️    - Latest_Episode_Sixthdiagnosis: ''
+[00:53:29] [DOC: 9168101] ✅ Patient data written to CSV: Bonnie Werly | Sex: FEMALE | Age: 85 | Service: PT, RN | Payer: Medicare | MRN: 3320011
+[00:53:29] ✅    ✅ Document 9168101 processed and saved successfully
+[00:53:29] 🔄 
+🔄 Step 8: Saving API details...
+[00:53:29] [DOC: 9168101] ℹ️  API push details saved for document 9168101
+[00:53:29] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9167902                         ║
+================================================================================
+[00:53:29] ℹ️  Agency: Visiting Rehab & Nursing Services
+[00:53:29] ℹ️  Date: 03/07/2025
+[00:53:29] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:53:35] [DOC: 9167902] ✅ Text extracted using pdfplumber (44965 chars)
+[00:53:35] ✅    ✅ Text extracted using pdfplumber (44965 chars)
+[00:53:35] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:53:39] ℹ️  AI extracted raw sex value: ''
+[00:53:39] ℹ️  AI extracted service line: ''
+[00:53:39] ℹ️  AI extracted payer source: ''
+[00:53:39] ℹ️  AI extracted diagnoses:
+[00:53:39] ℹ️    - Diagnosis 1: ''
+[00:53:39] ℹ️    - Diagnosis 2: ''
+[00:53:39] ℹ️    - Diagnosis 3: ''
+[00:53:39] ℹ️    - Diagnosis 4: ''
+[00:53:39] ℹ️    - Diagnosis 5: ''
+[00:53:39] ℹ️    - Diagnosis 6: ''
+[00:53:39] ℹ️  Final extracted MRN: ''
+[00:53:39] ℹ️  Final extracted Sex: ''
+[00:53:39] ℹ️  Final extracted Service Line: ''
+[00:53:39] ℹ️  Final extracted Payer Source: ''
+[00:53:39] ✅ Patient data extraction completed successfully
+[00:53:39] ✅    ✅ Patient data extracted successfully
+[00:53:39] 📊 Patient Response
+     └─ patientFName: 
+     └─ patientLName: 
+     └─ dob: 
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: 
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: 
+     └─ address: 
+     └─ city: 
+     └─ state: 
+     └─ zip: 
+     └─ email: 
+     └─ phoneNumber: 
+     └─ serviceLine: 
+     └─ payorSource: 
+     └─ episodeDiagnoses: []
+[00:53:39] ⚠️     ❌ Insufficient patient data extracted
+[00:53:39] [DOC: 9167902] ℹ️  API push details saved for document 9167902
+================================================================================
+║                        Processing Document ID: 9167901                         ║
+================================================================================
+[00:53:39] ℹ️  Agency: Visiting Rehab & Nursing Services
+[00:53:39] ℹ️  Date: 03/07/2025
+[00:53:39] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:53:52] [DOC: 9167901] ✅ Text extracted using pdfplumber (44097 chars)
+[00:53:52] ✅    ✅ Text extracted using pdfplumber (44097 chars)
+[00:53:52] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:53:55] ℹ️  AI extracted raw sex value: 'None'
+[00:53:55] ℹ️  AI extracted service line: 'None'
+[00:53:55] ℹ️  AI extracted payer source: 'None'
+[00:53:55] ℹ️  AI extracted diagnoses:
+[00:53:55] ℹ️    - Diagnosis 1: ''
+[00:53:55] ℹ️    - Diagnosis 2: ''
+[00:53:55] ℹ️    - Diagnosis 3: ''
+[00:53:55] ℹ️    - Diagnosis 4: ''
+[00:53:55] ℹ️    - Diagnosis 5: ''
+[00:53:55] ℹ️    - Diagnosis 6: ''
+[00:53:55] ℹ️  Final extracted MRN: ''
+[00:53:55] ℹ️  Final extracted Sex: ''
+[00:53:55] ℹ️  Final extracted Service Line: ''
+[00:53:55] ℹ️  Final extracted Payer Source: ''
+[00:53:55] ✅ Patient data extraction completed successfully
+[00:53:55] ✅    ✅ Patient data extracted successfully
+[00:53:55] 📊 Patient Response
+     └─ patientFName: None
+     └─ patientLName: None
+     └─ dob: None
+     └─ patientSex: 
+     └─ medicalRecordNo: 
+     └─ billingProvider: None
+     └─ npi: 
+     └─ physicianNPI: 
+     └─ nameOfAgency: None
+     └─ address: None
+     └─ city: None
+     └─ state: None
+     └─ zip: 
+     └─ email: None
+     └─ phoneNumber: 
+     └─ serviceLine: 
+     └─ payorSource: 
+     └─ episodeDiagnoses: []
+[00:53:55] ⚠️     ❌ Insufficient patient data extracted
+[00:53:55] [DOC: 9167901] ℹ️  API push details saved for document 9167901
+================================================================================
+║                        Processing Document ID: 9161207                         ║
+================================================================================
+[00:53:55] ℹ️  Agency: Guardian Home Health Care LLC - West Bridgewater
+[00:53:55] ℹ️  Date: 03/04/2025
+[00:53:55] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:53:59] [DOC: 9161207] ✅ Text extracted using pdfplumber (10333 chars)
+[00:53:59] ✅    ✅ Text extracted using pdfplumber (10333 chars)
+[00:53:59] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:54:02] ℹ️  AI extracted raw sex value: 'M'
+[00:54:02] ℹ️  AI extracted service line: 'Skilled Nursing'
+[00:54:02] ℹ️  AI extracted payer source: ''
+[00:54:02] ℹ️  AI extracted diagnoses:
+[00:54:02] ℹ️    - Diagnosis 1: 'E11.43'
+[00:54:02] ℹ️    - Diagnosis 2: 'K31.84'
+[00:54:02] ℹ️    - Diagnosis 3: 'K59.89'
+[00:54:02] ℹ️    - Diagnosis 4: 'F20.0'
+[00:54:02] ℹ️    - Diagnosis 5: 'I10'
+[00:54:02] ℹ️    - Diagnosis 6: 'E66.01'
+[00:54:02] ℹ️  Final extracted MRN: '457'
+[00:54:02] ℹ️  Final extracted Sex: 'MALE'
+[00:54:02] ℹ️  Final extracted Service Line: 'Skilled Nursing'
+[00:54:02] ℹ️  Final extracted Payer Source: ''
+[00:54:02] ✅ Patient data extraction completed successfully
+[00:54:02] ✅    ✅ Patient data extracted successfully
+[00:54:02] 📊 Patient Response
+     └─ patientFName: Manuel
+     └─ patientLName: Varela
+     └─ dob: 02/08/1969
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 457
+     └─ billingProvider: Guardian Home Health Care, LLC
+     └─ npi: 100012143937
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Guardian Home Health Care, LLC
+     └─ address: 750 West Center St 3rd Floor
+     └─ city: W Bridgewater
+     └─ state: MA
+     └─ zip: 02379
+     └─ email: 
+     └─ phoneNumber: (508) 588-5811
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '11/07/2024', 'startOfEpisode': '11/07/2024', 'endOfEpisode': '05/05/2025', 'firstDiagnosis': 'E11.43', 'secondDiagnosis': 'K31.84', 'thirdDiagnosis': 'K59.89', 'fourthDiagnosis': 'F20.0', 'fifthDiagnosis': 'I10', 'sixthDiagnosis': 'E66.01'}]
+[00:54:02] ✅    ✅ Patient identified: Manuel Varela
+[00:54:02] ✅    ✅ Patient name validation passed
+[00:54:02] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:54:02] [DOC: 9161207] ℹ️  DOB normalized: 02/08/1969
+[00:54:02] [DOC: 9161207] ℹ️  Episode startOfCare normalized: 11/07/2024
+[00:54:02] [DOC: 9161207] ℹ️  Episode startOfEpisode normalized: 11/07/2024
+[00:54:02] [DOC: 9161207] ℹ️  Episode endOfEpisode normalized: 05/05/2025
+[00:54:02] [DOC: 9161207] ✅ Patient date processing completed successfully
+[00:54:02] ✅    ✅ Date processing completed
+[00:54:02] 📊 Processed Patient Data
+     └─ patientFName: Manuel
+     └─ patientLName: Varela
+     └─ dob: 02/08/1969
+     └─ patientSex: MALE
+     └─ medicalRecordNo: 457
+     └─ billingProvider: Guardian Home Health Care, LLC
+     └─ npi: 100012143937
+     └─ physicianNPI: 1891138822
+     └─ nameOfAgency: Guardian Home Health Care, LLC
+     └─ address: 750 West Center St 3rd Floor
+     └─ city: W Bridgewater
+     └─ state: MA
+     └─ zip: 02379
+     └─ email: 
+     └─ phoneNumber: (508) 588-5811
+     └─ serviceLine: Skilled Nursing
+     └─ payorSource: 
+     └─ episodeDiagnoses: [{'startOfCare': '11/07/2024', 'startOfEpisode': '11/07/2024', 'endOfEpisode': '05/05/2025', 'firstDiagnosis': 'E11.43', 'secondDiagnosis': 'K31.84', 'thirdDiagnosis': 'K59.89', 'fourthDiagnosis': 'F20.0', 'fifthDiagnosis': 'I10', 'sixthDiagnosis': 'E66.01'}]
+[00:54:02] 🔄 
+🔄 Step 4: Extracting order data...
+[00:54:05] ℹ️  Order extraction - MRN: '457'
+[00:54:05] ℹ️  Order extraction - Sex: 'MALE'
+[00:54:05] ℹ️  Order extraction - Service Line: 'Skilled Nursing'
+[00:54:05] ℹ️  Order extraction - Payer Source: ''
+[00:54:05] ✅ Order data extraction completed successfully
+[00:54:05] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:54:05] ℹ️  Using MRN from patient data: '457' over '457'
+[00:54:05] ℹ️  Service line consistent in both sources: 'Skilled Nursing'
+[00:54:05] ✅ Patient name cross-validation successful
+[00:54:05] ✅    ✅ Data merged successfully
+[00:54:06] ✅    ✅ Order data extracted and validated
+[00:54:06] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:54:06] [DOC: 9161207] ✅ Patient found in local cache: Manuel Varela, ID: 6ec91961-51c9-48ba-b65d-0c658baaac01
+[00:54:06] ✅    ✅ Existing patient found with ID: 6ec91961-51c9-48ba-b65d-0c658baaac01
+[00:54:06] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:54:06] [DOC: 9161207] ℹ️  Pushing order via API for patient ID: 6ec91961-51c9-48ba-b65d-0c658baaac01
+[00:54:08] [DOC: 9161207] ❌ Order push failed with status 409: {"message":"Duplicate order found","orderId":"ORD12965"}
+[00:54:08] ❌    ❌ Failed to push order
+[00:54:08] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:54:08] [DOC: 9161207] ℹ️  Calculated age: 56 from DOB: 02/08/1969
+[00:54:08] [DOC: 9161207] ℹ️  Service Line extracted: 'Skilled Nursing'
+[00:54:08] [DOC: 9161207] ℹ️  Payer Source extracted: ''
+[00:54:08] [DOC: 9161207] ℹ️  Diagnosis codes being written:
+[00:54:08] [DOC: 9161207] ℹ️    - Latest_Episode_Firstdiagnosis: 'E11.43'
+[00:54:08] [DOC: 9161207] ℹ️    - Latest_Episode_Seconddiagnosis: 'K31.84'
+[00:54:08] [DOC: 9161207] ℹ️    - Latest_Episode_Thirddiagnosis: 'K59.89'
+[00:54:08] [DOC: 9161207] ℹ️    - Latest_Episode_Fourthdiagnosis: 'F20.0'
+[00:54:08] [DOC: 9161207] ℹ️    - Latest_Episode_Fifthdiagnosis: 'I10'
+[00:54:08] [DOC: 9161207] ℹ️    - Latest_Episode_Sixthdiagnosis: 'E66.01'
+[00:54:08] [DOC: 9161207] ✅ Patient data written to CSV: Manuel Varela | Sex: MALE | Age: 56 | Service: Skilled Nursing | Payer:  | MRN: 457
+[00:54:08] ✅    ✅ Document 9161207 processed and saved successfully
+[00:54:08] 🔄 
+🔄 Step 8: Saving API details...
+[00:54:08] [DOC: 9161207] ℹ️  API push details saved for document 9161207
+[00:54:08] ✅    ✅ API details saved
+================================================================================
+║                        Processing Document ID: 9159964                         ║
+================================================================================
+[00:54:08] ℹ️  Agency: Bayada Home Health Care-Dartmouth
+[00:54:08] ℹ️  Date: 03/03/2025
+[00:54:08] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[00:54:12] [DOC: 9159964] ✅ Text extracted using pdfplumber (31236 chars)
+[00:54:12] ✅    ✅ Text extracted using pdfplumber (31140 chars)
+[00:54:12] 🔄 
+🔄 Step 2: Extracting patient data...
+[00:54:16] ℹ️  AI extracted raw sex value: 'F'
+[00:54:16] ℹ️  AI extracted service line: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:54:16] ℹ️  AI extracted payer source: 'Medicare'
+[00:54:16] ℹ️  AI extracted diagnoses:
+[00:54:16] ℹ️    - Diagnosis 1: 'I26.02'
+[00:54:16] ℹ️    - Diagnosis 2: 'Z48.812'
+[00:54:16] ℹ️    - Diagnosis 3: 'S22.41XD'
+[00:54:16] ℹ️    - Diagnosis 4: 'M34.9'
+[00:54:16] ℹ️    - Diagnosis 5: 'I47.20'
+[00:54:16] ℹ️    - Diagnosis 6: 'I10'
+[00:54:16] ℹ️  Final extracted MRN: '28700164317501'
+[00:54:16] ℹ️  Final extracted Sex: 'FEMALE'
+[00:54:16] ℹ️  Final extracted Service Line: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:54:16] ℹ️  Final extracted Payer Source: 'Medicare'
+[00:54:16] ✅ Patient data extraction completed successfully
+[00:54:16] ✅    ✅ Patient data extracted successfully
+[00:54:16] 📊 Patient Response
+     └─ patientFName: MARIE
+     └─ patientLName: STRAWN
+     └─ dob: 10/24/1935
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 28700164317501
+     └─ billingProvider: BAYADA HOME HEALTH CARE INC
+     └─ npi: 227539
+     └─ physicianNPI: 
+     └─ nameOfAgency: BAYADA HOME HEALTH CARE INC
+     └─ address: 42 HIGHLAND AVE
+     └─ city: ONSET
+     └─ state: MA
+     └─ zip: 02558
+     └─ email: 
+     └─ phoneNumber: (508) 994-1003
+     └─ serviceLine: Skilled Nursing, Physical Therapy, Occupational Therapy
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '02/17/2025', 'startOfEpisode': '02/17/2025', 'endOfEpisode': '04/17/2025', 'firstDiagnosis': 'I26.02', 'secondDiagnosis': 'Z48.812', 'thirdDiagnosis': 'S22.41XD', 'fourthDiagnosis': 'M34.9', 'fifthDiagnosis': 'I47.20', 'sixthDiagnosis': 'I10'}]
+[00:54:16] ✅    ✅ Patient identified: MARIE STRAWN
+[00:54:16] ✅    ✅ Patient name validation passed
+[00:54:16] 🔄 
+🔄 Step 3: Processing patient dates...
+[00:54:16] [DOC: 9159964] ℹ️  DOB normalized: 10/24/1935
+[00:54:16] [DOC: 9159964] ℹ️  Episode startOfCare normalized: 02/17/2025
+[00:54:16] [DOC: 9159964] ℹ️  Episode startOfEpisode normalized: 02/17/2025
+[00:54:16] [DOC: 9159964] ℹ️  Episode endOfEpisode normalized: 04/17/2025
+[00:54:16] [DOC: 9159964] ✅ Patient date processing completed successfully
+[00:54:16] ✅    ✅ Date processing completed
+[00:54:16] 📊 Processed Patient Data
+     └─ patientFName: MARIE
+     └─ patientLName: STRAWN
+     └─ dob: 10/24/1935
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: 28700164317501
+     └─ billingProvider: BAYADA HOME HEALTH CARE INC
+     └─ npi: 227539
+     └─ physicianNPI: 
+     └─ nameOfAgency: BAYADA HOME HEALTH CARE INC
+     └─ address: 42 HIGHLAND AVE
+     └─ city: ONSET
+     └─ state: MA
+     └─ zip: 02558
+     └─ email: 
+     └─ phoneNumber: (508) 994-1003
+     └─ serviceLine: Skilled Nursing, Physical Therapy, Occupational Therapy
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '02/17/2025', 'startOfEpisode': '02/17/2025', 'endOfEpisode': '04/17/2025', 'firstDiagnosis': 'I26.02', 'secondDiagnosis': 'Z48.812', 'thirdDiagnosis': 'S22.41XD', 'fourthDiagnosis': 'M34.9', 'fifthDiagnosis': 'I47.20', 'sixthDiagnosis': 'I10'}]
+[00:54:16] 🔄 
+🔄 Step 4: Extracting order data...
+[00:54:19] ℹ️  Order extraction - MRN: '28700164317501'
+[00:54:19] ℹ️  Order extraction - Sex: 'FEMALE'
+[00:54:19] ℹ️  Order extraction - Service Line: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:54:19] ℹ️  Order extraction - Payer Source: 'Medicare'
+[00:54:19] ✅ Order data extraction completed successfully
+[00:54:19] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[00:54:19] ℹ️  Using MRN from patient data: '28700164317501' over '28700164317501'
+[00:54:19] ℹ️  Service line consistent in both sources: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:54:19] ℹ️  Payer source consistent in both sources: 'Medicare'
+[00:54:19] ✅ Patient name cross-validation successful
+[00:54:19] ✅    ✅ Data merged successfully
+[00:54:21] ✅    ✅ Order data extracted and validated
+[00:54:21] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[00:54:23] [DOC: 9159964] ✅ Patient exists in API: MARIE STRAWN, ID: 3e0c3197-d69b-4162-bf4b-705ac573598e
+[00:54:23] ✅    ✅ Existing patient found with ID: 3e0c3197-d69b-4162-bf4b-705ac573598e
+[00:54:23] 🔄 
+🔄 Step 6: Pushing order to API...
+[00:54:23] [DOC: 9159964] ℹ️  Pushing order via API for patient ID: 3e0c3197-d69b-4162-bf4b-705ac573598e
+[00:54:24] [DOC: 9159964] ❌ Order push failed with status 201: {"id":"6ad6b1c9-17d5-42be-84a0-cf3dc9025587","orderWAVId":"ORD20090","orderNo":"HOME HEALTH CERTIFICATION AND PLAN OF CARE 12149990","orderDate":"02/17/2025","startOfCare":"02/17/2025","episodeStartDate":"02/17/2025","episodeEndDate":"04/17/2025","documentID":"9159964","mrn":"28700164317501","patientName":"MARIE E STRAWN","sentToPhysicianDate":"03/03/2025","sentToPhysicianStatus":true,"signedByPhysicianDate":"03/06/2025","signedByPhysicianStatus":true,"uploadedSignedOrderDate":null,"uploadedSignedOrderStatus":false,"uploadedSignedPgOrderDate":null,"uploadedSignedPgOrderStatus":false,"cpoMinutes":null,"orderUrl":null,"documentName":"HOME HEALTH CERTIFICATION AND PLAN OF CARE","ehr":null,"account":null,"location":null,"remarks":null,"patientId":"3e0c3197-d69b-4162-bf4b-705ac573598e","companyId":"532ae690-17f2-4fb0-b9ec-e3ef8634f57d","pgCompanyId":"3bef7fdb-bf2d-49d6-944c-4edfecd704b7","entityType":null,"clinicalJustification":null,"billingProvider":null,"billingProviderNPI":null,"supervisingProvider":null,"supervisingProviderNPI":null,"bit64Url":null,"daOrderType":null,"daUploadSuccess":null,"daResponseStatusCode":null,"daResponseDetails":null}
+[00:54:24] ❌    ❌ Failed to push order
+[00:54:24] 🔄 
+🔄 Step 7: Writing to CSV...
+[00:54:24] [DOC: 9159964] ℹ️  Calculated age: 89 from DOB: 10/24/1935
+[00:54:24] [DOC: 9159964] ℹ️  Service Line extracted: 'Skilled Nursing, Physical Therapy, Occupational Therapy'
+[00:54:24] [DOC: 9159964] ℹ️  Payer Source extracted: 'Medicare'
+[00:54:24] [DOC: 9159964] ℹ️  Diagnosis codes being written:
+[00:54:24] [DOC: 9159964] ℹ️    - Latest_Episode_Firstdiagnosis: 'I26.02'
+[00:54:24] [DOC: 9159964] ℹ️    - Latest_Episode_Seconddiagnosis: 'Z48.812'
+[00:54:24] [DOC: 9159964] ℹ️    - Latest_Episode_Thirddiagnosis: 'S22.41XD'
+[00:54:24] [DOC: 9159964] ℹ️    - Latest_Episode_Fourthdiagnosis: 'M34.9'
+[00:54:24] [DOC: 9159964] ℹ️    - Latest_Episode_Fifthdiagnosis: 'I47.20'
+[00:54:24] [DOC: 9159964] ℹ️    - Latest_Episode_Sixthdiagnosis: 'I10'
+[00:54:24] [DOC: 9159964] ✅ Patient data written to CSV: MARIE STRAWN | Sex: FEMALE | Age: 89 | Service: Skilled Nursing, Physical Therapy, Occupational Therapy | Payer: Medicare | MRN: 28700164317501
+[00:54:24] ✅    ✅ Document 9159964 processed and saved successfully
+[00:54:24] 🔄 
+🔄 Step 8: Saving API details...
+[00:54:24] [DOC: 9159964] ℹ️  API push details saved for document 9159964
+[00:54:24] ✅    ✅ API details saved
+================================================================================
+║                               PROCESSING SUMMARY                               ║
+================================================================================
+[00:54:24] ℹ️  Total Processed: 34
+[00:54:24] ℹ️  CSV Success: 28
+[00:54:24] ℹ️  CSV Errors: 5
+[00:54:24] ℹ️  API Success: 0
+[00:54:24] ℹ️  API Errors: 29
+[00:54:24] ℹ️  CSV Success Rate: 82.4%
+[00:54:24] ℹ️  API Success Rate: 0.0%
+[00:54:24] ℹ️  Output CSV File: csv_outputs/extracted_patients_20250609_004730.csv
+[00:54:24] ℹ️  API Details File: api_outputs/api_push_details_20250609_004730.csv
+================================================================================
+║          ============================================================          ║
+================================================================================

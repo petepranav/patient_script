@@ -30,9 +30,9 @@ PATIENT_CREATE_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azure
 ORDER_PUSH_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net/api/Order"
 
 
-PG_ID = "d10f46ad-225d-4ba2-882c-149521fcead5"  
-PG_NAME = "Prima Care"
-PG_NPI = ""
+PG_ID = "8669b221-8ff2-476d-a160-fdd9ad22215e"  
+PG_NAME = "Hawthorn Medical Associates-Cardiology"
+PG_NPI = "1659649853"
 
 # Load mappings
 with open("output.json") as f:
@@ -1631,7 +1631,7 @@ def process_csv(csv_path):
                 
                 for row in reader:
                     # Limit processing: only process first 10 documents
-                    if i >= 5:
+                    if i >= :
                         break
                     i += 1
                     processed_count += 1
@@ -2073,7 +2073,24 @@ def process_dates_for_order(order_data, patient_id):
     soe_dt = parse_date(soe)
     eoe_dt = parse_date(eoe)
 
-    # Fill missing dates
+    # Get patient details from API if patient_id is provided
+    patient_details = get_patient_details_from_api(patient_id) if patient_id else None
+    agency_info = patient_details.get("agencyInfo", {}) if patient_details else {}
+
+    # If no order dates are available, try to use agency info dates
+    if not soc_dt and not soe_dt and not eoe_dt:
+        soc_dt = parse_date(agency_info.get("startOfCare"))
+        soe_dt = parse_date(agency_info.get("startOfEpisode"))
+        eoe_dt = parse_date(agency_info.get("endOfEpisode"))
+
+    # If SOE and EOE are missing but we have agency SOC, use that
+    if not soe_dt and not eoe_dt:
+        soc_dt = parse_date(agency_info.get("startOfCare"))
+        if soc_dt:
+            soe_dt = soc_dt
+            eoe_dt = soe_dt + timedelta(days=59)
+
+    # Fill missing dates using available information
     if not soc_dt and soe_dt:
         soc_dt = soe_dt
 
@@ -2082,11 +2099,8 @@ def process_dates_for_order(order_data, patient_id):
 
     if not eoe_dt and soe_dt:
         eoe_dt = soe_dt + timedelta(days=59)
-        
-    if not soc_dt and soe_dt:
-        soc_dt = soe_dt
 
-    # Update order data
+    # Update order data with processed dates
     order_data["startOfCare"] = format_date(soc_dt)
     order_data["episodeStartDate"] = format_date(soe_dt)
     order_data["episodeEndDate"] = format_date(eoe_dt)
@@ -2111,7 +2125,7 @@ def main():
     
     try:
         # Process the CSV file
-        process_csv("hawthorn_fam.csv")
+        process_csv("rheumatology - tableExport (28).csv")
     finally:
         # Ensure logger is properly closed
         logger.close()

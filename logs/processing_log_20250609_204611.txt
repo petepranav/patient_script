@@ -1,0 +1,26 @@
+================================================================================
+║                            FINAL VERSION PROCESSOR                             ║
+================================================================================
+[20:46:11] ℹ️  CSV Data Extraction & API Push Tool
+[20:46:11] ℹ️  
+[20:46:11] ℹ️  Features:
+[20:46:11] ℹ️  - 2 Robust text extraction methods (PDFPlumber + Tesseract OCR)
+[20:46:11] ℹ️  - AI-powered patient and order data extraction
+[20:46:11] ℹ️  - Enhanced error handling and logging
+[20:46:11] ℹ️  - Full API integration (patient creation + order pushing)
+[20:46:11] ℹ️  - CSV output with comprehensive patient data
+[20:46:11] ℹ️  - Detailed API tracking with remarks for every document
+[20:46:11] ℹ️  - Complete audit trail of all processing attempts
+[20:46:11] ℹ️  
+[20:46:11] ℹ️  Starting CSV processing with API integration: rheumatology - tableExport (28).csv
+[20:46:11] ✅ Created output CSV file: csv_outputs/extracted_patients_20250609_204611.csv
+[20:46:11] ✅ Created API details CSV file: api_outputs/api_push_details_20250609_204611.csv
+================================================================================
+║                        Processing Document ID: 9331702                         ║
+================================================================================
+[20:46:11] ℹ️  Agency: Relief Home Health Services
+[20:46:11] ℹ️  Date: 06/06/2025
+[20:46:11] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[20:46:13] [DOC: 9331702] ⚠️  Document fetch attempt 1 failed, retrying...
+[20:46:16] [DOC: 9331702] ⚠️  Document fetch attempt 2 failed, retrying...
