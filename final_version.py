@@ -1631,7 +1631,7 @@ def process_csv(csv_path):
                 
                 for row in reader:
                     # Limit processing: only process first 10 documents
-                    if i >= :
+                    if i >= 1:
                         break
                     i += 1
                     processed_count += 1
@@ -2125,7 +2125,7 @@ def main():
     
     try:
         # Process the CSV file
-        process_csv("rheumatology - tableExport (28).csv")
+        process_csv("prima - tableExport (22).csv")
     finally:
         # Ensure logger is properly closed
         logger.close()
