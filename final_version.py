@@ -30,9 +30,10 @@ PATIENT_CREATE_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azure
 ORDER_PUSH_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net/api/Order"
 
 
-PG_ID = "8669b221-8ff2-476d-a160-fdd9ad22215e"  
-PG_NAME = "Hawthorn Medical Associates-Cardiology"
-PG_NPI = "1659649853"
+
+PG_ID = "4b51c8b7-c8c4-4779-808c-038c057f026b"  
+PG_NAME = "Hawthorn Medical Associates - Family Practice"
+PG_NPI = "1508825811"
 
 # Load mappings
 with open("output.json") as f:
