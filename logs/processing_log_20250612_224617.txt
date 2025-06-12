@@ -1,0 +1,130 @@
+================================================================================
+║                            FINAL VERSION PROCESSOR                             ║
+================================================================================
+[22:46:17] ℹ️  CSV Data Extraction & API Push Tool
+[22:46:17] ℹ️  
+[22:46:17] ℹ️  Features:
+[22:46:17] ℹ️  - 2 Robust text extraction methods (PDFPlumber + Tesseract OCR)
+[22:46:17] ℹ️  - AI-powered patient and order data extraction
+[22:46:17] ℹ️  - Enhanced error handling and logging
+[22:46:17] ℹ️  - Full API integration (patient creation + order pushing)
+[22:46:17] ℹ️  - CSV output with comprehensive patient data
+[22:46:17] ℹ️  - Detailed API tracking with remarks for every document
+[22:46:17] ℹ️  - Complete audit trail of all processing attempts
+[22:46:17] ℹ️  
+[22:46:17] ℹ️  Starting CSV processing with API integration: prima.csv
+[22:46:17] ✅ Created output CSV file: csv_outputs/extracted_patients_20250612_224617.csv
+[22:46:17] ✅ Created API details CSV file: api_outputs/api_push_details_20250612_224617.csv
+================================================================================
+║                        Processing Document ID: 9334583                         ║
+================================================================================
+[22:46:17] ℹ️  Agency: Brookdale Home Health Rhode Island(Nurse on call)
+[22:46:17] ℹ️  Date: 
+[22:46:17] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[22:46:20] [DOC: 9334583] ✅ Text extracted using pdfplumber (9691 chars)
+[22:46:20] ✅    ✅ Text extracted using pdfplumber (9655 chars)
+[22:46:20] 🔄 
+🔄 Step 2: Extracting patient data...
+[22:46:25] ℹ️  AI extracted raw sex value: 'F'
+[22:46:25] ℹ️  AI extracted service line: 'Physical Therapy'
+[22:46:25] ℹ️  AI extracted payer source: 'Medicare'
+[22:46:25] ℹ️  AI extracted diagnoses:
+[22:46:25] ℹ️    - Diagnosis 1: 'G30.9'
+[22:46:25] ℹ️    - Diagnosis 2: 'F02.83'
+[22:46:25] ℹ️    - Diagnosis 3: 'F32.A'
+[22:46:25] ℹ️    - Diagnosis 4: 'I10'
+[22:46:25] ℹ️    - Diagnosis 5: ''
+[22:46:25] ℹ️    - Diagnosis 6: ''
+[22:46:25] ℹ️  Final extracted MRN: 'RLN00427863201'
+[22:46:25] ℹ️  Final extracted Sex: 'FEMALE'
+[22:46:25] ℹ️  Final extracted Service Line: 'Physical Therapy'
+[22:46:25] ℹ️  Final extracted Payer Source: 'Medicare'
+[22:46:25] ✅ Patient data extraction completed successfully
+[22:46:25] ✅    ✅ Patient data extracted successfully
+[22:46:25] 📊 Patient Response
+     └─ patientFName: BARBARA
+     └─ patientLName: BRADSHAW
+     └─ dob: 12/09/1942
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: RLN00427863201
+     └─ billingProvider: NURSE ON CALL - LINCOLN
+     └─ npi: 417059
+     └─ physicianNPI: 
+     └─ nameOfAgency: NURSE ON CALL - LINCOLN
+     └─ address: 1215 MAIN ROAD
+     └─ city: TIVERTON
+     └─ state: RI
+     └─ zip: 02878
+     └─ email: 
+     └─ phoneNumber: (401) 726-7744
+     └─ serviceLine: Physical Therapy
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '06/01/2025', 'startOfEpisode': '06/01/2025', 'endOfEpisode': '07/30/2025', 'firstDiagnosis': 'G30.9', 'secondDiagnosis': 'F02.83', 'thirdDiagnosis': 'F32.A', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:46:25] ✅    ✅ Patient identified: BARBARA BRADSHAW
+[22:46:25] ✅    ✅ Patient name validation passed
+[22:46:25] 🔄 
+🔄 Step 3: Processing patient dates...
+[22:46:25] [DOC: 9334583] ℹ️  DOB normalized: 12/09/1942
+[22:46:25] [DOC: 9334583] ℹ️  Episode startOfCare normalized: 06/01/2025
+[22:46:25] [DOC: 9334583] ℹ️  Episode startOfEpisode normalized: 06/01/2025
+[22:46:25] [DOC: 9334583] ℹ️  Episode endOfEpisode normalized: 07/30/2025
+[22:46:25] [DOC: 9334583] ✅ Patient date processing completed successfully
+[22:46:25] ✅    ✅ Date processing completed
+[22:46:25] 📊 Processed Patient Data
+     └─ patientFName: BARBARA
+     └─ patientLName: BRADSHAW
+     └─ dob: 12/09/1942
+     └─ patientSex: FEMALE
+     └─ medicalRecordNo: RLN00427863201
+     └─ billingProvider: NURSE ON CALL - LINCOLN
+     └─ npi: 417059
+     └─ physicianNPI: 
+     └─ nameOfAgency: NURSE ON CALL - LINCOLN
+     └─ address: 1215 MAIN ROAD
+     └─ city: TIVERTON
+     └─ state: RI
+     └─ zip: 02878
+     └─ email: 
+     └─ phoneNumber: (401) 726-7744
+     └─ serviceLine: Physical Therapy
+     └─ payorSource: Medicare
+     └─ episodeDiagnoses: [{'startOfCare': '06/01/2025', 'startOfEpisode': '06/01/2025', 'endOfEpisode': '07/30/2025', 'firstDiagnosis': 'G30.9', 'secondDiagnosis': 'F02.83', 'thirdDiagnosis': 'F32.A', 'fourthDiagnosis': 'I10', 'fifthDiagnosis': '', 'sixthDiagnosis': ''}]
+[22:46:25] 🔄 
+🔄 Step 4: Extracting order data...
+[22:46:28] ℹ️  Order extraction - MRN: 'RLN00427863201'
+[22:46:28] ℹ️  Order extraction - Sex: 'FEMALE'
+[22:46:28] ℹ️  Order extraction - Service Line: 'PT'
+[22:46:28] ℹ️  Order extraction - Payer Source: 'Medicare'
+[22:46:28] ✅ Order data extraction completed successfully
+[22:46:28] 🔄 
+🔄 Step 4.5: Merging patient and order data...
+[22:46:28] ℹ️  Using MRN from patient data: 'RLN00427863201' over 'RLN00427863201'
+[22:46:28] ℹ️  Combined service lines: Patient='Physical Therapy' + Order='PT' = 'PT, Physical Therapy'
+[22:46:28] ℹ️  Payer source consistent in both sources: 'Medicare'
+[22:46:28] ✅ Patient name cross-validation successful
+[22:46:28] ✅    ✅ Data merged successfully
+[22:46:29] ✅    ✅ Order data extracted and validated
+[22:46:29] 🔄 
+🔄 Step 5: Checking/Creating patient...
+[22:46:33] [DOC: 9334583] ℹ️  Patient not found in cache or API: BARBARA BRADSHAW
+[22:46:33] [DOC: 9334583] ℹ️  Patient not found, creating new patient via API...
+[22:46:33] [DOC: 9334583] ℹ️  Creating patient via API: BARBARA BRADSHAW
+[22:46:34] [DOC: 9334583] ❌ Patient creation failed with status 409: A patient with the same first name, last name, DOB, and Zip already exists.
+[22:46:34] ❌    ❌ Failed to create patient
+[22:46:34] [DOC: 9334583] ℹ️  API push details saved for document 9334583
+================================================================================
+║                               PROCESSING SUMMARY                               ║
+================================================================================
+[22:46:34] ℹ️  Total Processed: 1
+[22:46:34] ℹ️  CSV Success: 0
+[22:46:34] ℹ️  CSV Errors: 0
+[22:46:34] ℹ️  API Success: 0
+[22:46:34] ℹ️  API Errors: 1
+[22:46:34] ℹ️  CSV Success Rate: 0.0%
+[22:46:34] ℹ️  API Success Rate: 0.0%
+[22:46:34] ℹ️  Output CSV File: csv_outputs/extracted_patients_20250612_224617.csv
+[22:46:34] ℹ️  API Details File: api_outputs/api_push_details_20250612_224617.csv
+================================================================================
+║          ============================================================          ║
+================================================================================

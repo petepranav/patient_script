@@ -29,11 +29,9 @@ DOC_STATUS_URL = "https://api.doctoralliance.com/document/get?docId.id="
 PATIENT_CREATE_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net/api/Patient/create"
 ORDER_PUSH_URL = "https://dawavorderpatient-hqe2apddbje9gte0.eastus-01.azurewebsites.net/api/Order"
 
-
-
-PG_ID = "4b51c8b7-c8c4-4779-808c-038c057f026b"  
-PG_NAME = "Hawthorn Medical Associates - Family Practice"
-PG_NPI = "1508825811"
+PG_ID = "d10f46ad-225d-4ba2-882c-149521fcead5"  
+PG_NAME = "Prima Care"
+PG_NPI = "1265422596"
 
 # Load mappings
 with open("output.json") as f:
@@ -2126,7 +2124,7 @@ def main():
     
     try:
         # Process the CSV file
-        process_csv("prima - tableExport (22).csv")
+        process_csv("prima.csv")
     finally:
         # Ensure logger is properly closed
         logger.close()

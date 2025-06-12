@@ -1,0 +1,28 @@
+================================================================================
+║                            FINAL VERSION PROCESSOR                             ║
+================================================================================
+[22:44:33] ℹ️  CSV Data Extraction & API Push Tool
+[22:44:33] ℹ️  
+[22:44:33] ℹ️  Features:
+[22:44:33] ℹ️  - 2 Robust text extraction methods (PDFPlumber + Tesseract OCR)
+[22:44:33] ℹ️  - AI-powered patient and order data extraction
+[22:44:33] ℹ️  - Enhanced error handling and logging
+[22:44:33] ℹ️  - Full API integration (patient creation + order pushing)
+[22:44:33] ℹ️  - CSV output with comprehensive patient data
+[22:44:33] ℹ️  - Detailed API tracking with remarks for every document
+[22:44:33] ℹ️  - Complete audit trail of all processing attempts
+[22:44:33] ℹ️  
+[22:44:33] ℹ️  Starting CSV processing with API integration: prima.csv
+[22:44:33] ✅ Created output CSV file: csv_outputs/extracted_patients_20250612_224433.csv
+[22:44:33] ✅ Created API details CSV file: api_outputs/api_push_details_20250612_224433.csv
+================================================================================
+║                        Processing Document ID: 9334583                         ║
+================================================================================
+[22:44:33] ℹ️  Agency: Brookdale Home Health Rhode Island(Nurse on call)
+[22:44:33] ℹ️  Date: 
+[22:44:33] 🔄 
+🔄 Step 1: Extracting text from PDF...
+[22:44:37] [DOC: 9334583] ✅ Text extracted using pdfplumber (9691 chars)
+[22:44:37] ✅    ✅ Text extracted using pdfplumber (9655 chars)
+[22:44:37] 🔄 
+🔄 Step 2: Extracting patient data...
