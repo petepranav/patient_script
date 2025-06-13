@@ -1,237 +1,856 @@
-Unnamed: 0,Physician,Doc Type,Facility,Facility Type,Patient,Status,Received On,ID
-9334583,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"BRADSHAW, BARBARA",Prepared,2025-06-09,9334583
-9336228,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Barrette, Janice J.",Prepared,2025-06-10,9336228
-9326600,"Dr. MAINALI, PRAJEENA",Order,Dartmouth HH,Homecare,"Bergeron, Diane",Prepared,2025-06-04,9326600
-9339372,"Dr. Mendes, Manuela M.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Berrios, Lillian",Prepared,2025-06-11,9339372
-9339946,"Dr. Mistikawy, Hany A.",485 Recert,AccentCare Fall River,Homecare,"Bird, Barry",New,2025-06-11,9339946
-9326561,"Dr. Joncas, Christopher S.",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Botelho, Barbara",Prepared,2025-06-04,9326561
-9339977,"Dr. Hinedi, Tamim B.",485 Cert,AccentCare Fall River,Homecare,"Branco JR, Richard J.",New,2025-06-11,9339977
-9338485,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,2025-06-11,9338485
-9338489,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,2025-06-11,9338489
-9338490,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,2025-06-11,9338490
-9338481,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,2025-06-11,9338481
-9338480,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,2025-06-11,9338480
-9338487,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,2025-06-11,9338487
-9338482,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,2025-06-11,9338482
-9340913,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"CAMPOS, HENRIQUE",New,2025-06-12,9340913
-9333985,"Dr. Sorial, Ehab N.",Other,AccentCare Fall River,Homecare,"CARVALHO, CARL",Prepared,2025-06-09,9333985
-9333984,"Dr. Sorial, Ehab N.",Other,AccentCare Fall River,Homecare,"CARVALHO, CARL",Prepared,2025-06-09,9333984
-9334761,"Dr. Sorial, Ehab N.",485 Cert,AccentCare Fall River,Homecare,"CARVALHO, CARL",Prepared,2025-06-09,9334761
-9338407,"Dr. Thorpe, Bianca",Order,Visiting Rehab & Nursing Services,Homecare,"CHADWICK, JANICE",Prepared,2025-06-11,9338407
-2192503,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"CHADWICK, JANICE",Unread,2025-06-11,2192503
-2192398,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"CHADWICK, JANICE",Unread,2025-06-11,2192398
-9330090,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,2025-06-05,9330090
-9331715,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,2025-06-06,9331715
-9330088,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,2025-06-05,9330088
-9331718,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,2025-06-06,9331718
-9336724,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,2025-06-10,9336724
-9340289,"Dr. Thorpe, Bianca",485 Cert,AccentCare Fall River,Homecare,"COLEMAN, RUTH",New,2025-06-11,9340289
-9327294,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"COLUCCI, CHRISTOPHER M.",Prepared,2025-06-04,9327294
-9331721,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"COOKSON, ELIZABETH M.",Prepared,2025-06-06,9331721
-9337599,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"COSTA, ARMANDA",Prepared,2025-06-10,9337599
-9337588,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"COSTA, ARMANDA",Prepared,2025-06-10,9337588
-9337592,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"COSTA, ARMANDA",Prepared,2025-06-10,9337592
-9340071,"Dr. Joncas, Christopher S.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"COSTA, MARIA C.",New,2025-06-11,9340071
-9326582,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"COUTURE, ANNETTE",Prepared,2025-06-04,9326582
-9338958,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"COUTURE, ANNETTE",Prepared,2025-06-11,9338958
-9322519,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"COUTURE, ANNETTE",Prepared,2025-06-02,9322519
-9337460,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cabral, Sara",Prepared,2025-06-10,9337460
-9337451,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cabral, Sara",Prepared,2025-06-10,9337451
-9337457,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cabral, Sara",Prepared,2025-06-10,9337457
-9337454,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cabral, Sara",Prepared,2025-06-10,9337454
-9336397,"Dr. MAINALI, PRAJEENA",Order,Dartmouth HH,Homecare,"Cinquini, Karen",Prepared,2025-06-10,9336397
-9337405,"Dr. Campbell, Michael A.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Clemons, Ginger",Prepared,2025-06-10,9337405
-9339578,"Dr. Hinedi, Tamim B.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Coe, David S.",Prepared,2025-06-11,9339578
-9338661,"Dr. Hinedi, Tamim B.",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Coe, David S.",Prepared,2025-06-11,9338661
-9340168,"Dr. Kabak, Jennifer A.",485 Cert,AccentCare Fall River,Homecare,"DALEY, LISA",New,2025-06-11,9340168
-9340159,"Dr. Kabak, Jennifer A.",Other,AccentCare Fall River,Homecare,"DALEY, LISA",New,2025-06-11,9340159
-9328542,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"DAMICO, ANN D",Prepared,2025-06-05,9328542
-9329067,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"DAMICO, ANN D",Prepared,2025-06-05,9329067
-9329056,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"DAMICO, ANN D",Prepared,2025-06-05,9329056
-9323112,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,2025-06-02,9323112
-9331726,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,2025-06-06,9331726
-9330104,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,2025-06-05,9330104
-9325161,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,2025-06-03,9325161
-9327295,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,2025-06-04,9327295
-9330850,"Dr. Cummings, Charles H.",Order,Bayada Home Health Care-Cuyahoga Falls,Homecare,"DELISLE, JANICE",Reviewing,2025-06-05,9330850
-9340743,"Dr. Cummings, Charles H.",Order,Bayada Home Health Care-Dartmouth,Homecare,"DELISLE, JANICE",New,2025-06-11,9340743
-9339575,"Dr. Cummings, Charles H.",Order,Bayada Home Health Care-Dartmouth,Homecare,"DELISLE, JANICE",Prepared,2025-06-11,9339575
-9334943,"Dr. DELACUADRA, CHARLES",485 Recert,Brigham Home Care Services.Inc,Homecare,"DIAZ, SHARON",New,2025-06-11,9334943
-9334933,"Dr. DELACUADRA, CHARLES",Order,Brigham Home Care Services.Inc,Homecare,"DIAZ, SHARON",New,2025-06-11,9334933
-9336063,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Dacosta, Jose A.",Prepared,2025-06-10,9336063
-9336064,"Dr. Thorpe, Bianca",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Dacosta, Jose A.",Prepared,2025-06-10,9336064
-9336062,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Dacosta, Jose A.",Prepared,2025-06-10,9336062
-9340875,"Dr. Thorpe, Bianca",Order,Elara Caring - Worcester,Homecare,"Depina, Idalina",New,2025-06-12,9340875
-9341127,"Dr. Mistikawy, Hany A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Desimas, Guilhermina",New,2025-06-12,9341127
-9340230,"Dr. Labib, Ossama W.",485 Cert,AccentCare Fall River,Homecare,"Desousa, John",New,2025-06-11,9340230
-9339001,"Dr. FARHAT, ZEIN A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Dessert, Kermeth C.",Prepared,2025-06-11,9339001
-9336544,"Dr. Thorpe, Bianca",Order,Dartmouth HH,Homecare,"Dias, Maria L.",Prepared,2025-06-10,9336544
-9337619,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Dudek, Joseph",Prepared,2025-06-10,9337619
-9336231,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Duvarney, Theodore",Prepared,2025-06-10,9336231
-9332147,"Dr. Groskin, Stephen D.",485 Cert,Enhabit - Riverside,Homecare,"EOLIN, SUZANNE",Prepared,2025-06-06,9332147
-9332159,"Dr. Groskin, Stephen D.",Order,Enhabit - Riverside,Homecare,"EOLIN, SUZANNE",Prepared,2025-06-06,9332159
-9332154,"Dr. Groskin, Stephen D.",Order,Enhabit - Riverside,Homecare,"EOLIN, SUZANNE",Prepared,2025-06-06,9332154
-9322680,"Dr. DELACUADRA, CHARLES",Other,AccentCare Fall River,Homecare,"ESTRELLA, EDWARD",Prepared,2025-06-02,9322680
-9327318,"Dr. Sorial, Ehab N.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"FARIS  SR., THOMAS J.",Prepared,2025-06-04,9327318
-9323060,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"FERRAZ, CARMEN",Prepared,2025-06-02,9323060
-9328700,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"FERRAZ, CARMEN",Prepared,2025-06-05,9328700
-9340744,"Dr. Singla, Raju",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"FREITAS, MARY M.",New,2025-06-11,9340744
-9334593,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"FRYZEL, ELEANOR",Prepared,2025-06-09,9334593
-9331224,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"FRYZEL, ELEANOR",Prepared,2025-06-06,9331224
-9340745,"Dr. Nakda, Joseph",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"FURTADO, ANTHONY",New,2025-06-11,9340745
-9328127,"Dr. DELACUADRA, CHARLES",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Feliciano, Ivette",Prepared,2025-06-04,9328127
-9338951,"Dr. FARHAT, ZEIN A.",485 Cert,Dartmouth HH,Homecare,"Ford, Tom D.",Prepared,2025-06-11,9338951
-9338355,"Dr. Sherlock, Mary E.",485 Cert,Bayada Home Health Care Inc-Plymouth,Homecare,"GIVENS, SANDRA G.",Prepared,2025-06-10,9338355
-9338353,"Dr. Sherlock, Mary E.",Order,Bayada Home Health Care Inc-Plymouth,Homecare,"GIVENS, SANDRA G.",Prepared,2025-06-10,9338353
-9339706,"Dr. Kabak, Jennifer A.",Other,AccentCare Fall River,Homecare,"GRACIA, BARBARA",New,2025-06-11,9339706
-9339929,"Dr. Kabak, Jennifer A.",485 Recert,AccentCare Fall River,Homecare,"GRACIA, BARBARA",New,2025-06-11,9339929
-9341553,"Dr. Grady, Ann E.",Other,AccentCare Fall River,Homecare,"GREENHALGH, BARBARA",New,2025-06-12,9341553
-9330856,"Dr. Joncas, Christopher S.",Order,Nurse On Call Port St Lucie,Homecare,"GRIFFITHS, THOMAS",Reviewing,2025-06-05,9330856
-9330935,"Dr. Joncas, Christopher S.",Order,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"GRIFFITHS, THOMAS",Reviewing,2025-06-05,9330935
-9340214,"Dr. Mistikawy, Hany A.",Other,AccentCare Fall River,Homecare,"Gagnon, Dawn",New,2025-06-11,9340214
-9337569,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Galvagno, J William",Prepared,2025-06-10,9337569
-9337565,"Dr. Campbell, Michael A.",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Galvagno, J William",Reviewing,2025-06-10,9337565
-9337929,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Goncalo, Maria",Prepared,2025-06-10,9337929
-9328610,"Dr. Joncas, Christopher S.",Other,Visiting Nurse Hospice-Portsmouth,Hospice,"HEADY, JOHN",Prepared,2025-06-05,9328610
-9328603,"Dr. Joncas, Christopher S.",Other,Visiting Nurse Hospice-Portsmouth,Hospice,"HEADY, JOHN",Prepared,2025-06-05,9328603
-9336810,"Dr. Sorial, Ehab N.",POT Recert,Fairhaven HH&H,Hospice,"Hough, Dorothy",Prepared,2025-06-10,9336810
-9339708,"Dr. Sorial, Ehab N.",Other,AccentCare Fall River,Homecare,"Isidor, Bruce",New,2025-06-11,9339708
-9340220,"Dr. Sorial, Ehab N.",485 Recert,AccentCare Fall River,Homecare,"Isidor, Bruce",New,2025-06-11,9340220
-9337641,"Dr. DELACUADRA, CHARLES",Other,Nightingale Visiting Nurses-Taunton,Homecare,"JIMENEZ LOPEZ, LUIS",Prepared,2025-06-10,9337641
-9340930,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"JOHNSON, TRACY",New,2025-06-12,9340930
-9340956,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"JOHNSON, TRACY",New,2025-06-12,9340956
-9336215,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Koelsch, Roland C.",Prepared,2025-06-10,9336215
-9336220,"Dr. FARHAT, ZEIN A.",485 Recert,Dartmouth HH,Homecare,"Koelsch, Roland C.",Prepared,2025-06-10,9336220
-9336226,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Koelsch, Roland C.",Prepared,2025-06-10,9336226
-9327375,"Dr. Sorial, Ehab N.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"LANDRY, DAVID J.",Prepared,2025-06-04,9327375
-9335899,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LANDRY, DAVID J.",Prepared,2025-06-10,9335899
-9330114,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LANDRY, DAVID J.",Prepared,2025-06-05,9330114
-9334812,"Dr. Sorial, Ehab N.",485 Recert,Southcoast VNA – Community Office (Fairhaven),Homecare,"LEARY, CARLOTA F.",Prepared,2025-06-09,9334812
-9339815,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LEARY, CARLOTA F.",New,2025-06-11,9339815
-9327306,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"LEBLANC, LUCILLE",Prepared,2025-06-04,9327306
-9330943,"Dr. Mendes, Manuela M.",Order,Amedisys Home Health Care (4410) Fall River,Homecare,"LEDO, MARIA D.",Reviewing,2025-06-05,9330943
-2191243,"Dr. Mendes, Manuela M.",Conversation,Amedisys Home Health Care (4410) Fall River,Homecare,"LEDO, MARIA D.",Unread,2025-06-05,2191243
-2191244,"Dr. Mendes, Manuela M.",Conversation,Amedisys Home Health Care (4410) Fall River,Homecare,"LEDO, MARIA D.",Unread,2025-06-05,2191244
-9338609,"Dr. Cummings, Charles H.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"LEWIS, DONNA L.",Prepared,2025-06-11,9338609
-9340957,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"LILLEY, SHIRLEY",New,2025-06-12,9340957
-9331731,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LILLEY, SHIRLEY",Prepared,2025-06-06,9331731
-9341147,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"LINHARES, DANIEL F.",New,2025-06-12,9341147
-9340958,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"LONERGAN, KERRY",New,2025-06-12,9340958
-9339781,"Dr. ARAUJO, MELANIE B.",485 Recert,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",New,2025-06-11,9339781
-9339773,"Dr. ARAUJO, MELANIE B.",Order,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",New,2025-06-11,9339773
-9334825,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",Prepared,2025-06-09,9334825
-9334829,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",Prepared,2025-06-09,9334829
-9340075,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",New,2025-06-11,9340075
-9335901,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",Prepared,2025-06-10,9335901
-9336729,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",Prepared,2025-06-10,9336729
-9335903,"Dr. Sherlock, Mary E.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"MACEDO, MAKAYLA R.",Prepared,2025-06-10,9335903
-9340746,"Dr. Singla, Raju",Order,Bayada Home Health Care-Dartmouth,Homecare,"MARTIN, ROBERT B.",New,2025-06-11,9340746
-9340747,"Dr. Singla, Raju",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"MARTIN, ROBERT B.",New,2025-06-11,9340747
-9328717,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"MASCIARELLI, ALFRED",Prepared,2025-06-05,9328717
-9340893,"Dr. Grady, Ann E.",Other,AccentCare Fall River,Homecare,"MCGUINESS, NANCY",New,2025-06-12,9340893
-9340919,"Dr. Kabak, Jennifer A.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"MCNULTY, JENA",New,2025-06-12,9340919
-9331704,"Dr. Campbell, Michael A.",Order,Relief Home Health Services,Homecare,"MEDEIROS, JORDAN",Prepared,2025-06-06,9331704
-9331707,"Dr. Campbell, Michael A.",Order,Relief Home Health Services,Homecare,"MEDEIROS, JORDAN",Prepared,2025-06-06,9331707
-9335911,"Dr. Thorpe, Bianca",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"MEDEIROS, RUTH",Prepared,2025-06-10,9335911
-9334840,"Dr. Thorpe, Bianca",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"MEDEIROS, RUTH",Prepared,2025-06-09,9334840
-9339648,"Dr. Joncas, Christopher S.",Order,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,2025-06-11,9339648
-9339645,"Dr. Joncas, Christopher S.",Order,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,2025-06-11,9339645
-9339643,"Dr. Joncas, Christopher S.",Order,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,2025-06-11,9339643
-9340749,"Dr. Joncas, Christopher S.",Order,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,2025-06-11,9340749
-9339651,"Dr. Joncas, Christopher S.",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,2025-06-11,9339651
-9332414,"Dr. Thorpe, Bianca",Other,Elmwood Home Care,Homecare,"Mccombs, Christine",Prepared,2025-06-06,9332414
-9330918,"Dr. Bassaly, Neveen N.",Order,Elmwood Home Care,Homecare,"Mcphail, Krystal",Reviewing,2025-06-05,9330918
-9330900,"Dr. Thorpe, Bianca",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Edith",Reviewing,2025-06-05,9330900
-9334716,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,2025-06-09,9334716
-9334690,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,2025-06-09,9334690
-9338513,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Menezes, Maria",Prepared,2025-06-11,9338513
-9341192,"Dr. Kabak, Jennifer A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Moore, Helen",New,2025-06-12,9341192
-9337649,"Dr. DELACUADRA, CHARLES",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Mota, Maria",Prepared,2025-06-10,9337649
-9337651,"Dr. DELACUADRA, CHARLES",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Mota, Maria",Prepared,2025-06-10,9337651
-9337652,"Dr. DELACUADRA, CHARLES",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Mota, Maria",Prepared,2025-06-10,9337652
-9340940,"Dr. Harrison, Joan T.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NASCIMENTO, LORRAINE",New,2025-06-12,9340940
-9334853,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOBLES, FREDERICK",Prepared,2025-06-09,9334853
-9335914,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOBLES, FREDERICK",Prepared,2025-06-10,9335914
-9336736,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOBLES, FREDERICK",Prepared,2025-06-10,9336736
-9340084,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOBLES, FREDERICK",New,2025-06-11,9340084
-9328549,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"NOREEN, AUCLAIR",Prepared,2025-06-05,9328549
-9331744,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOVERCA, LIDUINA",Prepared,2025-06-06,9331744
-9336738,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOVERCA, LIDUINA",Prepared,2025-06-10,9336738
-9340959,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOVERCA, LIDUINA",New,2025-06-12,9340959
-9322899,"Dr. Joncas, Christopher S.",Other,Visiting Rehab & Nursing Services,Homecare,"Nadeau, Marcel",Prepared,2025-06-02,9322899
-2192500,"Dr. Joncas, Christopher S.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Nadeau, Marcel",Unread,2025-06-11,2192500
-9329073,"Dr. Joncas, Christopher S.",Other,Visiting Nurse Hospice-Portsmouth,Hospice,"OCONNELL, JANE B",Prepared,2025-06-05,9329073
-9328546,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"OCONNELL, JANE B",Prepared,2025-06-05,9328546
-9325702,"Dr. Campbell, Michael A.",Other,AccentCare Fall River,Homecare,"OLIVEIRA, EDUARDA",Prepared,2025-06-03,9325702
-9340092,"Dr. Joncas, Christopher S.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"OLIVEIRA, JULIA R.",New,2025-06-11,9340092
-9322521,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,2025-06-02,9322521
-9335046,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,2025-06-09,9335046
-9335049,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,2025-06-09,9335049
-9335045,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,2025-06-09,9335045
-9334585,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,2025-06-09,9334585
-9335057,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,2025-06-09,9335057
-9327401,"Dr. Joncas, Christopher S.",485 Recert,Southcoast VNA – Community Office (Fairhaven),Homecare,"PIMENTEL, JAMES",Prepared,2025-06-04,9327401
-9339844,"Dr. Hinedi, Tamim B.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"PINE, EVELYN",New,2025-06-11,9339844
-9339596,"Dr. Cummings, Charles H.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Pacheco, Donald",New,2025-06-11,9339596
-9330915,"Dr. Cummings, Charles H.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Pacheco, Donald",Reviewing,2025-06-05,9330915
-9340922,"Dr. Singla, Raju",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"REBELLO, JAMES E.",New,2025-06-12,9340922
-9321913,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"REBELLO, LEONEL",Prepared,2025-06-02,9321913
-9325187,"Dr. MAINALI, PRAJEENA",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"RESENDES, MARIA L.",Prepared,2025-06-03,9325187
-9339849,"Dr. MAINALI, PRAJEENA",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"RESENDES, MARIA L.",New,2025-06-11,9339849
-9337219,"Dr. Harrison, Joan T.",Other,AccentCare Fall River,Homecare,"RHOADS, GEORGE A.",Prepared,2025-06-10,9337219
-9337239,"Dr. Harrison, Joan T.",Other,AccentCare Fall River,Homecare,"RHOADS, GEORGE A.",Prepared,2025-06-10,9337239
-9327043,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"RILEY, ALAN",Prepared,2025-06-04,9327043
-9328543,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"RODERICK, CHRISTINE",Prepared,2025-06-05,9328543
-9331750,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"ROSS, SYLVIA L.",Prepared,2025-06-06,9331750
-9323727,"Dr. Joncas, Christopher S.",Order,Dartmouth HH,Homecare,"Raposa, Joseph K.",Prepared,2025-06-03,9323727
-9330926,"Dr. Joncas, Christopher S.",Order,Dartmouth HH,Homecare,"Rebello, Joseph",Reviewing,2025-06-05,9330926
-9324952,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,2025-06-03,9324952
-9339488,"Dr. Tweedie, Patricia A.",Order,Enhabit - Riverside,Homecare,"Richards, Donna",Prepared,2025-06-11,9339488
-9339491,"Dr. Tweedie, Patricia A.",Order,Enhabit - Riverside,Homecare,"Richards, Donna",Prepared,2025-06-11,9339491
-9334118,"Dr. Tweedie, Patricia A.",485 Recert,Enhabit - Riverside,Homecare,"Richards, Donna",Prepared,2025-06-09,9334118
-9337613,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rocha, Tiago",Prepared,2025-06-10,9337613
-9337610,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rocha, Tiago",Prepared,2025-06-10,9337610
-9330687,"Dr. Harrison, Joan T.",Order,"Concord Health Services,Inc",Homecare,"Rose, Theresa",Reviewing,2025-06-05,9330687
-2190654,"Dr. MENDIETA HERNANDEZ, JUAN C.",Conversation,Enhabit OF NEW ENGLAND - (SPR),Homecare,"Ruest, Shirley A.",Unread,2025-06-03,2190654
-9339719,"Dr. Thorpe, Bianca",Other,AccentCare Fall River,Homecare,"SANTOS, JANICE",New,2025-06-11,9339719
-9335958,"Dr. Thorpe, Bianca",Other,AccentCare Fall River,Homecare,"SANTOS, JANICE",Prepared,2025-06-10,9335958
-9340753,"Dr. Butler, Stephen R.",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"SMITH, ELEANOR",New,2025-06-11,9340753
-9340751,"Dr. Butler, Stephen R.",Order,Bayada Home Health Care-Dartmouth,Homecare,"SMITH, ELEANOR",New,2025-06-11,9340751
-9339852,"Dr. Bassaly, Neveen N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"SMITH, GERARD",New,2025-06-11,9339852
-9335922,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"SOARES, ROSA",Prepared,2025-06-10,9335922
-9335890,"Dr. Pedrotty, John C.",Order,Elara Caring - Worcester,Homecare,"SORRENTINO, CATELLO A.",Prepared,2025-06-10,9335890
-9338967,"Dr. FARHAT, ZEIN A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"SOUZA, CARL",Prepared,2025-06-11,9338967
-9336545,"Dr. Thorpe, Bianca",Order,Dartmouth HH,Homecare,"Senra, Umberto C.",Prepared,2025-06-10,9336545
-9338544,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Silva, Maria",Prepared,2025-06-11,9338544
-9338545,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Silva, Maria",Prepared,2025-06-11,9338545
-9335929,"Dr. Sorial, Ehab N.",485 Recert,AccentCare Fall River,Homecare,"Sirois, Maurice",Prepared,2025-06-10,9335929
-9336213,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Small, Ronald W.",Prepared,2025-06-10,9336213
-9332470,"Dr. Joncas, Christopher S.",485 Cert,AccentCare Fall River,Homecare,"Souza, Maria",Prepared,2025-06-06,9332470
-9337817,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Swauger, Virginia",Prepared,2025-06-10,9337817
-9325197,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"THIBAULT, HENRIETTA A.",Prepared,2025-06-03,9325197
-9335924,"Dr. Thorpe, Bianca",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"THOMAS, CHARLOTTE",Prepared,2025-06-10,9335924
-9338995,"Dr. FARHAT, ZEIN A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Tavares, Alice",Prepared,2025-06-11,9338995
-9338989,"Dr. FARHAT, ZEIN A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Tavares, Alice",Prepared,2025-06-11,9338989
-9339857,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VADEBONCOEUR, CAROL M.",New,2025-06-11,9339857
-9330199,"Dr. Joncas, Christopher S.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"VADEBONCOEUR, CAROL M.",Prepared,2025-06-05,9330199
-9328569,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"VADEBONCOEUR, NORMAND J.",Prepared,2025-06-05,9328569
-9328592,"Dr. Joncas, Christopher S.",CTI Cert,Visiting Nurse Hospice-Portsmouth,Hospice,"VADEBONCOEUR, NORMAND J.",Prepared,2025-06-05,9328592
-9335919,"Dr. Thorpe, Bianca",Other,AccentCare Fall River,Homecare,"VIEGAS, ODETE R.",Prepared,2025-06-10,9335919
-9334901,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,2025-06-09,9334901
-9336742,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,2025-06-10,9336742
-9334899,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,2025-06-09,9334899
-9331767,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,2025-06-06,9331767
-9331769,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,2025-06-06,9331769
-9323151,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,2025-06-02,9323151
-9327412,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,2025-06-04,9327412
-9325200,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,2025-06-03,9325200
-9325202,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,2025-06-03,9325202
-9331771,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,2025-06-06,9331771
-9340339,"Dr. Tweedie, Patricia A.",485 Cert,AccentCare Fall River,Homecare,"VOISINE, EDWARD",New,2025-06-11,9340339
-9322516,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"VUOLO, CONSTANCE",Prepared,2025-06-02,9322516
-9322518,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"VUOLO, CONSTANCE",Prepared,2025-06-02,9322518
-9336293,"Dr. Harrison, Joan T.",Order,Dartmouth HH,Homecare,"Valley, Linda M.",Prepared,2025-06-10,9336293
-2192502,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"WARING, CHRISTOPHER",Unread,2025-06-11,2192502
-9336745,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"WHIPP, AMY M.",Prepared,2025-06-10,9336745
-9327419,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"WHITMARSH, DOUGLAS P.",Prepared,2025-06-04,9327419
-9337614,"Dr. Hinedi, Tamim B.",Order,Amedisys Home Health Warwick RI 4901,Homecare,"morrissette, constance",Prepared,2025-06-10,9337614
+,Physician,Doc Type,Facility,Facility Type,Patient,Status,Received On,ID
+8461903,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,03/04/2024,8461903
+8423708,"Dr. Carty, Tricia A. MD",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,02/13/2024,8423708
+8384680,"Dr. Carty, Tricia A. MD",PT,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,01/25/2024,8384680
+8380004,"Dr. Carty, Tricia A. MD",Order,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,01/23/2024,8380004
+8224923,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,10/31/2023,8224923
+8224920,"Dr. Carty, Tricia A. MD",PT,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,10/31/2023,8224920
+8180305,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,10/06/2023,8180305
+8180304,"Dr. Carty, Tricia A. MD",Order,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,10/06/2023,8180304
+8180303,"Dr. Carty, Tricia A. MD",PT,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,10/06/2023,8180303
+8138601,"Dr. Carty, Tricia A. MD",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Signed,09/20/2023,8138601
+6857610,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Martin, Sharon L.",Signed,01/10/2022,6857610
+6841933,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Martin, Sharon L.",Signed,01/03/2022,6841933
+6838678,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Martin, Sharon L.",Signed,12/30/2021,6838678
+6828827,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Martin, Sharon L.",Signed,12/27/2021,6828827
+6826865,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Martin, Sharon L.",Signed,12/23/2021,6826865
+6799147,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Martin, Sharon L.",Signed,12/13/2021,6799147
+6768812,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Martin, Sharon L.",Signed,12/03/2021,6768812
+6751221,"Dr. Carty, Tricia A. MD",485 Cert,Dartmouth HH,Homecare,"Martin, Sharon L.",Signed,11/24/2021,6751221
+6487181,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Lapointe, Janet M.",Signed,08/16/2021,6487181
+6417361,"Dr. Carty, Tricia A. MD",485 Cert,Dartmouth HH,Homecare,"Lapointe, Janet M.",Signed,07/25/2021,6417361
+6337667,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Blaser, Patricia",Signed,06/28/2021,6337667
+6329938,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Cordeiro, Marylou",Signed,06/24/2021,6329938
+6329639,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Blaser, Patricia",Signed,06/24/2021,6329639
+6326418,"Dr. Carty, Tricia A. MD",485 Cert,Dartmouth HH,Homecare,"Blaser, Patricia",Signed,06/23/2021,6326418
+6313491,"Dr. Carty, Tricia A. MD",485 Cert,Dartmouth HH,Homecare,"Cordeiro, Marylou",Signed,06/18/2021,6313491
+5987922,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,03/03/2021,5987922
+5970722,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,02/25/2021,5970722
+5900618,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,02/04/2021,5900618
+5871311,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,01/26/2021,5871311
+5817734,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,01/07/2021,5817734
+5805097,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,01/04/2021,5805097
+5800540,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,12/31/2020,5800540
+5788887,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,12/28/2020,5788887
+5788917,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,12/28/2020,5788917
+5788860,"Dr. Carty, Tricia A. MD",485 Recert,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,12/28/2020,5788860
+5735401,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,12/14/2020,5735401
+5744629,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,12/14/2020,5744629
+5724959,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,12/04/2020,5724959
+5695951,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,11/19/2020,5695951
+5651042,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,11/05/2020,5651042
+5649322,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,11/04/2020,5649322
+5634386,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,10/29/2020,5634386
+5614936,"Dr. Carty, Tricia A. MD",485 Recert,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,10/22/2020,5614936
+5615746,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,10/22/2020,5615746
+5596794,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,10/15/2020,5596794
+5578249,"Dr. Carty, Tricia A. MD",485 Cert,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,10/07/2020,5578249
+5527566,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",Signed,09/19/2020,5527566
+5466462,"Dr. Carty, Tricia A. MD",CTI Cert,Fairhaven HH&H,Hospice,"Pacheco, Evelyn",Signed,08/26/2020,5466462
+5224232,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Routhier, Virginia V.",Signed,05/13/2020,5224232
+9341553,"Dr. Grady, Ann E.",Other,AccentCare Fall River,Homecare,"GREENHALGH, BARBARA",New,06/12/2025,9341553
+9341192,"Dr. Kabak, Jennifer A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Moore, Helen",New,06/12/2025,9341192
+9341147,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"LINHARES, DANIEL F.",New,06/12/2025,9341147
+9341127,"Dr. Mistikawy, Hany A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Desimas, Guilhermina",New,06/12/2025,9341127
+9340959,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOVERCA, LIDUINA",New,06/12/2025,9340959
+9340958,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"LONERGAN, KERRY",New,06/12/2025,9340958
+9340957,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"LILLEY, SHIRLEY",New,06/12/2025,9340957
+9340956,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"JOHNSON, TRACY",New,06/12/2025,9340956
+9340940,"Dr. Harrison, Joan T.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NASCIMENTO, LORRAINE",New,06/12/2025,9340940
+9340930,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"JOHNSON, TRACY",New,06/12/2025,9340930
+9340928,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"BLACKBURN, LUCILLE J.",New,06/12/2025,9340928
+9340925,"Dr. Pedrotty, John C.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"BARBOZA, PAUL M.",New,06/12/2025,9340925
+9340922,"Dr. Singla, Raju",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"REBELLO, JAMES E.",New,06/12/2025,9340922
+9340919,"Dr. Kabak, Jennifer A.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"MCNULTY, JENA",New,06/12/2025,9340919
+9340913,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"CAMPOS, HENRIQUE",New,06/12/2025,9340913
+9340902,"Dr. Joncas, Christopher S.",Order,Compassionate Care Hospice-Taunton,Hospice,"Arruda, Laura",New,06/12/2025,9340902
+9340893,"Dr. Grady, Ann E.",Other,AccentCare Fall River,Homecare,"MCGUINESS, NANCY",New,06/12/2025,9340893
+9340875,"Dr. Thorpe, Bianca",Order,Elara Caring - Worcester,Homecare,"Depina, Idalina",New,06/12/2025,9340875
+9340753,"Dr. Butler, Stephen R.",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"SMITH, ELEANOR",New,06/11/2025,9340753
+9340751,"Dr. Butler, Stephen R.",Order,Bayada Home Health Care-Dartmouth,Homecare,"SMITH, ELEANOR",New,06/11/2025,9340751
+9340749,"Dr. Joncas, Christopher S.",Order,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,06/11/2025,9340749
+9340747,"Dr. Singla, Raju",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"MARTIN, ROBERT B.",New,06/11/2025,9340747
+9340746,"Dr. Singla, Raju",Order,Bayada Home Health Care-Dartmouth,Homecare,"MARTIN, ROBERT B.",New,06/11/2025,9340746
+9340745,"Dr. Nakda, Joseph",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"FURTADO, ANTHONY",New,06/11/2025,9340745
+9340744,"Dr. Singla, Raju",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"FREITAS, MARY M.",New,06/11/2025,9340744
+9340743,"Dr. Cummings, Charles H.",Order,Bayada Home Health Care-Dartmouth,Homecare,"DELISLE, JANICE",New,06/11/2025,9340743
+9340339,"Dr. Tweedie, Patricia A.",485 Cert,AccentCare Fall River,Homecare,"VOISINE, EDWARD",New,06/11/2025,9340339
+9340289,"Dr. Thorpe, Bianca",485 Cert,AccentCare Fall River,Homecare,"COLEMAN, RUTH",New,06/11/2025,9340289
+9340230,"Dr. Labib, Ossama W.",485 Cert,AccentCare Fall River,Homecare,"Desousa, John",New,06/11/2025,9340230
+9340220,"Dr. Sorial, Ehab N.",485 Recert,AccentCare Fall River,Homecare,"Isidor, Bruce",New,06/11/2025,9340220
+9340214,"Dr. Mistikawy, Hany A.",Other,AccentCare Fall River,Homecare,"Gagnon, Dawn",New,06/11/2025,9340214
+9340168,"Dr. Kabak, Jennifer A.",485 Cert,AccentCare Fall River,Homecare,"DALEY, LISA",New,06/11/2025,9340168
+9340159,"Dr. Kabak, Jennifer A.",Other,AccentCare Fall River,Homecare,"DALEY, LISA",New,06/11/2025,9340159
+9334933,"Dr. DELACUADRA, CHARLES",Order,Brigham Home Care Services.Inc,Homecare,"DIAZ, SHARON",New,06/11/2025,9334933
+9334943,"Dr. DELACUADRA, CHARLES",485 Recert,Brigham Home Care Services.Inc,Homecare,"DIAZ, SHARON",New,06/11/2025,9334943
+9339773,"Dr. ARAUJO, MELANIE B.",Order,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",New,06/11/2025,9339773
+9339781,"Dr. ARAUJO, MELANIE B.",485 Recert,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",New,06/11/2025,9339781
+9340092,"Dr. Joncas, Christopher S.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"OLIVEIRA, JULIA R.",New,06/11/2025,9340092
+9340084,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOBLES, FREDERICK",New,06/11/2025,9340084
+9340075,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",New,06/11/2025,9340075
+9340071,"Dr. Joncas, Christopher S.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"COSTA, MARIA C.",New,06/11/2025,9340071
+9339977,"Dr. Hinedi, Tamim B.",485 Cert,AccentCare Fall River,Homecare,"Branco JR, Richard J.",New,06/11/2025,9339977
+9339946,"Dr. Mistikawy, Hany A.",485 Recert,AccentCare Fall River,Homecare,"Bird, Barry",New,06/11/2025,9339946
+9339929,"Dr. Kabak, Jennifer A.",485 Recert,AccentCare Fall River,Homecare,"GRACIA, BARBARA",New,06/11/2025,9339929
+9339857,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VADEBONCOEUR, CAROL M.",New,06/11/2025,9339857
+9339852,"Dr. Bassaly, Neveen N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"SMITH, GERARD",New,06/11/2025,9339852
+9339849,"Dr. MAINALI, PRAJEENA",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"RESENDES, MARIA L.",New,06/11/2025,9339849
+9339844,"Dr. Hinedi, Tamim B.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"PINE, EVELYN",New,06/11/2025,9339844
+2192503,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"CHADWICK, JANICE",Unread,06/11/2025,2192503
+9339815,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LEARY, CARLOTA F.",New,06/11/2025,9339815
+2192502,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"WARING, CHRISTOPHER",Unread,06/11/2025,2192502
+2192500,"Dr. Joncas, Christopher S.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Nadeau, Marcel",Unread,06/11/2025,2192500
+9339719,"Dr. Thorpe, Bianca",Other,AccentCare Fall River,Homecare,"SANTOS, JANICE",New,06/11/2025,9339719
+9339708,"Dr. Sorial, Ehab N.",Other,AccentCare Fall River,Homecare,"Isidor, Bruce",New,06/11/2025,9339708
+9339706,"Dr. Kabak, Jennifer A.",Other,AccentCare Fall River,Homecare,"GRACIA, BARBARA",New,06/11/2025,9339706
+9339651,"Dr. Joncas, Christopher S.",485 Cert,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,06/11/2025,9339651
+9339648,"Dr. Joncas, Christopher S.",Order,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,06/11/2025,9339648
+9339645,"Dr. Joncas, Christopher S.",Order,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,06/11/2025,9339645
+9339643,"Dr. Joncas, Christopher S.",Order,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, INES A",New,06/11/2025,9339643
+9339596,"Dr. Cummings, Charles H.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Pacheco, Donald",New,06/11/2025,9339596
+9339578,"Dr. Hinedi, Tamim B.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Coe, David S.",Prepared,06/11/2025,9339578
+9339575,"Dr. Cummings, Charles H.",Order,Bayada Home Health Care-Dartmouth,Homecare,"DELISLE, JANICE",Prepared,06/11/2025,9339575
+9339491,"Dr. Tweedie, Patricia A.",Order,Enhabit - Riverside,Homecare,"Richards, Donna",Prepared,06/11/2025,9339491
+9339488,"Dr. Tweedie, Patricia A.",Order,Enhabit - Riverside,Homecare,"Richards, Donna",Prepared,06/11/2025,9339488
+9339372,"Dr. Mendes, Manuela M.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Berrios, Lillian",Prepared,06/11/2025,9339372
+9339001,"Dr. FARHAT, ZEIN A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Dessert, Kermeth C.",Prepared,06/11/2025,9339001
+9338995,"Dr. FARHAT, ZEIN A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Tavares, Alice",Prepared,06/11/2025,9338995
+9338989,"Dr. FARHAT, ZEIN A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Tavares, Alice",Prepared,06/11/2025,9338989
+9338967,"Dr. FARHAT, ZEIN A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"SOUZA, CARL",Prepared,06/11/2025,9338967
+9338958,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"COUTURE, ANNETTE",Prepared,06/11/2025,9338958
+9338951,"Dr. FARHAT, ZEIN A.",485 Cert,Dartmouth HH,Homecare,"Ford, Tom D.",Prepared,06/11/2025,9338951
+2192398,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"CHADWICK, JANICE",Unread,06/11/2025,2192398
+9338661,"Dr. Hinedi, Tamim B.",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Coe, David S.",Prepared,06/11/2025,9338661
+9338609,"Dr. Cummings, Charles H.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"LEWIS, DONNA L.",Prepared,06/11/2025,9338609
+9338545,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Silva, Maria",Prepared,06/11/2025,9338545
+9338544,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Silva, Maria",Prepared,06/11/2025,9338544
+9338513,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Menezes, Maria",Prepared,06/11/2025,9338513
+9338490,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,06/11/2025,9338490
+9338489,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,06/11/2025,9338489
+9338487,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,06/11/2025,9338487
+9338485,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,06/11/2025,9338485
+9338482,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,06/11/2025,9338482
+9338481,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,06/11/2025,9338481
+9338480,"Dr. Mendes, Manuela M.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Brissette, Harriet",Prepared,06/11/2025,9338480
+9338407,"Dr. Thorpe, Bianca",Order,Visiting Rehab & Nursing Services,Homecare,"CHADWICK, JANICE",Prepared,06/11/2025,9338407
+9338355,"Dr. Sherlock, Mary E.",485 Cert,Bayada Home Health Care Inc-Plymouth,Homecare,"GIVENS, SANDRA G.",Prepared,06/10/2025,9338355
+9338353,"Dr. Sherlock, Mary E.",Order,Bayada Home Health Care Inc-Plymouth,Homecare,"GIVENS, SANDRA G.",Prepared,06/10/2025,9338353
+9337929,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Goncalo, Maria",Prepared,06/10/2025,9337929
+9337817,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Swauger, Virginia",Prepared,06/10/2025,9337817
+9337652,"Dr. DELACUADRA, CHARLES",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Mota, Maria",Prepared,06/10/2025,9337652
+9337651,"Dr. DELACUADRA, CHARLES",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Mota, Maria",Prepared,06/10/2025,9337651
+9337649,"Dr. DELACUADRA, CHARLES",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Mota, Maria",Prepared,06/10/2025,9337649
+9337641,"Dr. DELACUADRA, CHARLES",Other,Nightingale Visiting Nurses-Taunton,Homecare,"JIMENEZ LOPEZ, LUIS",Prepared,06/10/2025,9337641
+9337619,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Dudek, Joseph",Prepared,06/10/2025,9337619
+9337614,"Dr. Hinedi, Tamim B.",Order,Amedisys Home Health Warwick RI 4901,Homecare,"morrissette, constance",Prepared,06/10/2025,9337614
+9337613,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rocha, Tiago",Prepared,06/10/2025,9337613
+9337610,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rocha, Tiago",Prepared,06/10/2025,9337610
+9337599,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"COSTA, ARMANDA",Prepared,06/10/2025,9337599
+9337592,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"COSTA, ARMANDA",Prepared,06/10/2025,9337592
+9337588,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"COSTA, ARMANDA",Prepared,06/10/2025,9337588
+9337569,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Galvagno, J William",Prepared,06/10/2025,9337569
+9337565,"Dr. Campbell, Michael A.",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Galvagno, J William",Reviewing,06/10/2025,9337565
+9337460,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cabral, Sara",Prepared,06/10/2025,9337460
+9337457,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cabral, Sara",Prepared,06/10/2025,9337457
+9337454,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cabral, Sara",Prepared,06/10/2025,9337454
+9337451,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cabral, Sara",Prepared,06/10/2025,9337451
+9337405,"Dr. Campbell, Michael A.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Clemons, Ginger",Prepared,06/10/2025,9337405
+9337380,"Dr. WILSON-BYRNE, TIMOTHY",Other,AccentCare Fall River,Homecare,"ALIAJ, BEHARE",Prepared,06/10/2025,9337380
+9337239,"Dr. Harrison, Joan T.",Other,AccentCare Fall River,Homecare,"RHOADS, GEORGE A.",Prepared,06/10/2025,9337239
+9337219,"Dr. Harrison, Joan T.",Other,AccentCare Fall River,Homecare,"RHOADS, GEORGE A.",Prepared,06/10/2025,9337219
+9336810,"Dr. Sorial, Ehab N.",POT Recert,Fairhaven HH&H,Hospice,"Hough, Dorothy",Prepared,06/10/2025,9336810
+9336745,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"WHIPP, AMY M.",Prepared,06/10/2025,9336745
+9336742,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,06/10/2025,9336742
+9336738,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOVERCA, LIDUINA",Prepared,06/10/2025,9336738
+9336736,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOBLES, FREDERICK",Prepared,06/10/2025,9336736
+9336729,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",Prepared,06/10/2025,9336729
+9336724,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,06/10/2025,9336724
+9336545,"Dr. Thorpe, Bianca",Order,Dartmouth HH,Homecare,"Senra, Umberto C.",Prepared,06/10/2025,9336545
+9336544,"Dr. Thorpe, Bianca",Order,Dartmouth HH,Homecare,"Dias, Maria L.",Prepared,06/10/2025,9336544
+9336397,"Dr. MAINALI, PRAJEENA",Order,Dartmouth HH,Homecare,"Cinquini, Karen",Prepared,06/10/2025,9336397
+9336293,"Dr. Harrison, Joan T.",Order,Dartmouth HH,Homecare,"Valley, Linda M.",Prepared,06/10/2025,9336293
+9336231,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Duvarney, Theodore",Prepared,06/10/2025,9336231
+9336228,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Barrette, Janice J.",Prepared,06/10/2025,9336228
+9336226,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Koelsch, Roland C.",Prepared,06/10/2025,9336226
+9336220,"Dr. FARHAT, ZEIN A.",485 Recert,Dartmouth HH,Homecare,"Koelsch, Roland C.",Prepared,06/10/2025,9336220
+9336215,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Koelsch, Roland C.",Prepared,06/10/2025,9336215
+9336213,"Dr. FARHAT, ZEIN A.",Order,Dartmouth HH,Homecare,"Small, Ronald W.",Prepared,06/10/2025,9336213
+9336064,"Dr. Thorpe, Bianca",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Dacosta, Jose A.",Prepared,06/10/2025,9336064
+9336063,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Dacosta, Jose A.",Prepared,06/10/2025,9336063
+9336062,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Dacosta, Jose A.",Prepared,06/10/2025,9336062
+9335958,"Dr. Thorpe, Bianca",Other,AccentCare Fall River,Homecare,"SANTOS, JANICE",Prepared,06/10/2025,9335958
+9335929,"Dr. Sorial, Ehab N.",485 Recert,AccentCare Fall River,Homecare,"Sirois, Maurice",Prepared,06/10/2025,9335929
+9335924,"Dr. Thorpe, Bianca",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"THOMAS, CHARLOTTE",Prepared,06/10/2025,9335924
+9335922,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"SOARES, ROSA",Prepared,06/10/2025,9335922
+9335919,"Dr. Thorpe, Bianca",Other,AccentCare Fall River,Homecare,"VIEGAS, ODETE R.",Prepared,06/10/2025,9335919
+9335914,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOBLES, FREDERICK",Prepared,06/10/2025,9335914
+9335911,"Dr. Thorpe, Bianca",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"MEDEIROS, RUTH",Prepared,06/10/2025,9335911
+9335903,"Dr. Sherlock, Mary E.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"MACEDO, MAKAYLA R.",Prepared,06/10/2025,9335903
+9335901,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",Prepared,06/10/2025,9335901
+9335899,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LANDRY, DAVID J.",Prepared,06/10/2025,9335899
+9335890,"Dr. Pedrotty, John C.",Order,Elara Caring - Worcester,Homecare,"SORRENTINO, CATELLO A.",Prepared,06/10/2025,9335890
+9335057,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,06/09/2025,9335057
+9335049,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,06/09/2025,9335049
+9335046,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,06/09/2025,9335046
+9335045,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,06/09/2025,9335045
+9334901,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,06/09/2025,9334901
+9334899,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,06/09/2025,9334899
+9334853,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOBLES, FREDERICK",Prepared,06/09/2025,9334853
+9334840,"Dr. Thorpe, Bianca",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"MEDEIROS, RUTH",Prepared,06/09/2025,9334840
+9334829,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",Prepared,06/09/2025,9334829
+9334825,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LOTHROP, MARJORIE H.",Prepared,06/09/2025,9334825
+9334812,"Dr. Sorial, Ehab N.",485 Recert,Southcoast VNA – Community Office (Fairhaven),Homecare,"LEARY, CARLOTA F.",Prepared,06/09/2025,9334812
+9334761,"Dr. Sorial, Ehab N.",485 Cert,AccentCare Fall River,Homecare,"CARVALHO, CARL",Prepared,06/09/2025,9334761
+9334716,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,06/09/2025,9334716
+9334690,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,06/09/2025,9334690
+9334593,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"FRYZEL, ELEANOR",Prepared,06/09/2025,9334593
+9334585,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,06/09/2025,9334585
+9334583,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"BRADSHAW, BARBARA",Prepared,06/09/2025,9334583
+9334118,"Dr. Tweedie, Patricia A.",485 Recert,Enhabit - Riverside,Homecare,"Richards, Donna",Prepared,06/09/2025,9334118
+9333985,"Dr. Sorial, Ehab N.",Other,AccentCare Fall River,Homecare,"CARVALHO, CARL",Prepared,06/09/2025,9333985
+9333984,"Dr. Sorial, Ehab N.",Other,AccentCare Fall River,Homecare,"CARVALHO, CARL",Prepared,06/09/2025,9333984
+9333810,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"BEEBE, ADA",Prepared,06/09/2025,9333810
+9332470,"Dr. Joncas, Christopher S.",485 Cert,AccentCare Fall River,Homecare,"Souza, Maria",Prepared,06/06/2025,9332470
+9332414,"Dr. Thorpe, Bianca",Other,Elmwood Home Care,Homecare,"Mccombs, Christine",Prepared,06/06/2025,9332414
+9332159,"Dr. Groskin, Stephen D.",Order,Enhabit - Riverside,Homecare,"EOLIN, SUZANNE",Prepared,06/06/2025,9332159
+9332154,"Dr. Groskin, Stephen D.",Order,Enhabit - Riverside,Homecare,"EOLIN, SUZANNE",Prepared,06/06/2025,9332154
+9332147,"Dr. Groskin, Stephen D.",485 Cert,Enhabit - Riverside,Homecare,"EOLIN, SUZANNE",Prepared,06/06/2025,9332147
+9331771,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,06/06/2025,9331771
+9331769,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,06/06/2025,9331769
+9331767,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIEIRA, GALE",Prepared,06/06/2025,9331767
+9331750,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"ROSS, SYLVIA L.",Prepared,06/06/2025,9331750
+9331744,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"NOVERCA, LIDUINA",Prepared,06/06/2025,9331744
+9331731,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LILLEY, SHIRLEY",Prepared,06/06/2025,9331731
+9331726,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,06/06/2025,9331726
+9331721,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"COOKSON, ELIZABETH M.",Prepared,06/06/2025,9331721
+9331718,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,06/06/2025,9331718
+9331715,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,06/06/2025,9331715
+9331707,"Dr. Campbell, Michael A.",Order,Relief Home Health Services,Homecare,"MEDEIROS, JORDAN",Prepared,06/06/2025,9331707
+9331704,"Dr. Campbell, Michael A.",Order,Relief Home Health Services,Homecare,"MEDEIROS, JORDAN",Prepared,06/06/2025,9331704
+9331224,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"FRYZEL, ELEANOR",Prepared,06/06/2025,9331224
+9330943,"Dr. Mendes, Manuela M.",Order,Amedisys Home Health Care (4410) Fall River,Homecare,"LEDO, MARIA D.",Reviewing,06/05/2025,9330943
+9330935,"Dr. Joncas, Christopher S.",Order,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"GRIFFITHS, THOMAS",Reviewing,06/05/2025,9330935
+9330926,"Dr. Joncas, Christopher S.",Order,Dartmouth HH,Homecare,"Rebello, Joseph",Reviewing,06/05/2025,9330926
+9330918,"Dr. Bassaly, Neveen N.",Order,Elmwood Home Care,Homecare,"Mcphail, Krystal",Reviewing,06/05/2025,9330918
+9330915,"Dr. Cummings, Charles H.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Pacheco, Donald",Reviewing,06/05/2025,9330915
+9330900,"Dr. Thorpe, Bianca",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Edith",Reviewing,06/05/2025,9330900
+9330861,"Dr. Thorpe, Bianca",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"ALMEIDA, JOAN J.",Reviewing,06/05/2025,9330861
+9330856,"Dr. Joncas, Christopher S.",Order,Nurse On Call Port St Lucie,Homecare,"GRIFFITHS, THOMAS",Reviewing,06/05/2025,9330856
+9330850,"Dr. Cummings, Charles H.",Order,Bayada Home Health Care-Cuyahoga Falls,Homecare,"DELISLE, JANICE",Reviewing,06/05/2025,9330850
+9330687,"Dr. Harrison, Joan T.",Order,"Concord Health Services,Inc",Homecare,"Rose, Theresa",Reviewing,06/05/2025,9330687
+9330199,"Dr. Joncas, Christopher S.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"VADEBONCOEUR, CAROL M.",Prepared,06/05/2025,9330199
+9330114,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"LANDRY, DAVID J.",Prepared,06/05/2025,9330114
+9330104,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,06/05/2025,9330104
+9330090,"Dr. Sorial, Ehab N.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,06/05/2025,9330090
+9330088,"Dr. Sorial, Ehab N.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"CHAMBERS, ROBERT C.",Prepared,06/05/2025,9330088
+9329073,"Dr. Joncas, Christopher S.",Other,Visiting Nurse Hospice-Portsmouth,Hospice,"OCONNELL, JANE B",Prepared,06/05/2025,9329073
+9329067,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"DAMICO, ANN D",Prepared,06/05/2025,9329067
+9329056,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"DAMICO, ANN D",Prepared,06/05/2025,9329056
+9328759,"Dr. Joncas, Christopher S.",CTI Cert,Visiting Nurse Hospice-Portsmouth,Hospice,"Augusto, Elizabeth",Prepared,06/05/2025,9328759
+9328548,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"Augusto, Elizabeth",Prepared,06/05/2025,9328548
+9328757,"Dr. Joncas, Christopher S.",Other,Visiting Nurse Hospice-Portsmouth,Hospice,"Augusto, Elizabeth",Prepared,06/05/2025,9328757
+9328717,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"MASCIARELLI, ALFRED",Prepared,06/05/2025,9328717
+9328700,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"FERRAZ, CARMEN",Prepared,06/05/2025,9328700
+9328610,"Dr. Joncas, Christopher S.",Other,Visiting Nurse Hospice-Portsmouth,Hospice,"HEADY, JOHN",Prepared,06/05/2025,9328610
+9328603,"Dr. Joncas, Christopher S.",Other,Visiting Nurse Hospice-Portsmouth,Hospice,"HEADY, JOHN",Prepared,06/05/2025,9328603
+9328592,"Dr. Joncas, Christopher S.",CTI Cert,Visiting Nurse Hospice-Portsmouth,Hospice,"VADEBONCOEUR, NORMAND J.",Prepared,06/05/2025,9328592
+2191244,"Dr. Mendes, Manuela M.",Conversation,Amedisys Home Health Care (4410) Fall River,Homecare,"LEDO, MARIA D.",Unread,06/05/2025,2191244
+2191243,"Dr. Mendes, Manuela M.",Conversation,Amedisys Home Health Care (4410) Fall River,Homecare,"LEDO, MARIA D.",Unread,06/05/2025,2191243
+9328569,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"VADEBONCOEUR, NORMAND J.",Prepared,06/05/2025,9328569
+9328549,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"NOREEN, AUCLAIR",Prepared,06/05/2025,9328549
+9328547,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"BLUMENTHAL, FRANCES A.",Prepared,06/05/2025,9328547
+9328546,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"OCONNELL, JANE B",Prepared,06/05/2025,9328546
+9328543,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"RODERICK, CHRISTINE",Prepared,06/05/2025,9328543
+9328542,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"DAMICO, ANN D",Prepared,06/05/2025,9328542
+9328127,"Dr. DELACUADRA, CHARLES",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Feliciano, Ivette",Prepared,06/04/2025,9328127
+9327419,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"WHITMARSH, DOUGLAS P.",Prepared,06/04/2025,9327419
+9327412,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,06/04/2025,9327412
+9327401,"Dr. Joncas, Christopher S.",485 Recert,Southcoast VNA – Community Office (Fairhaven),Homecare,"PIMENTEL, JAMES",Prepared,06/04/2025,9327401
+9327375,"Dr. Sorial, Ehab N.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"LANDRY, DAVID J.",Prepared,06/04/2025,9327375
+9327318,"Dr. Sorial, Ehab N.",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"FARIS  SR., THOMAS J.",Prepared,06/04/2025,9327318
+9327306,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"LEBLANC, LUCILLE",Prepared,06/04/2025,9327306
+9327295,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,06/04/2025,9327295
+9327294,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"COLUCCI, CHRISTOPHER M.",Prepared,06/04/2025,9327294
+9327043,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"RILEY, ALAN",Prepared,06/04/2025,9327043
+9326600,"Dr. MAINALI, PRAJEENA",Order,Dartmouth HH,Homecare,"Bergeron, Diane",Prepared,06/04/2025,9326600
+9326582,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"COUTURE, ANNETTE",Prepared,06/04/2025,9326582
+9326579,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"BENEDICT, RUTH",Prepared,06/04/2025,9326579
+9326561,"Dr. Joncas, Christopher S.",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Botelho, Barbara",Prepared,06/04/2025,9326561
+9325702,"Dr. Campbell, Michael A.",Other,AccentCare Fall River,Homecare,"OLIVEIRA, EDUARDA",Prepared,06/03/2025,9325702
+9325202,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,06/03/2025,9325202
+9325200,"Dr. Joncas, Christopher S.",Other,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,06/03/2025,9325200
+9325197,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"THIBAULT, HENRIETTA A.",Prepared,06/03/2025,9325197
+9325187,"Dr. MAINALI, PRAJEENA",485 Cert,Southcoast VNA – Community Office (Fairhaven),Homecare,"RESENDES, MARIA L.",Prepared,06/03/2025,9325187
+9325161,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,06/03/2025,9325161
+9324952,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,06/03/2025,9324952
+2190654,"Dr. MENDIETA HERNANDEZ, JUAN C.",Conversation,Enhabit OF NEW ENGLAND - (SPR),Homecare,"Ruest, Shirley A.",Unread,06/03/2025,2190654
+9323727,"Dr. Joncas, Christopher S.",Order,Dartmouth HH,Homecare,"Raposa, Joseph K.",Prepared,06/03/2025,9323727
+9323151,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"VIVEIROS, GILDA C.",Prepared,06/02/2025,9323151
+9323112,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"DELANO, ARTHUR",Prepared,06/02/2025,9323112
+9323060,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"FERRAZ, CARMEN",Prepared,06/02/2025,9323060
+9322899,"Dr. Joncas, Christopher S.",Other,Visiting Rehab & Nursing Services,Homecare,"Nadeau, Marcel",Prepared,06/02/2025,9322899
+9322680,"Dr. DELACUADRA, CHARLES",Other,AccentCare Fall River,Homecare,"ESTRELLA, EDWARD",Prepared,06/02/2025,9322680
+9322521,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"PACHECO, DOLORES",Prepared,06/02/2025,9322521
+9322519,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"COUTURE, ANNETTE",Prepared,06/02/2025,9322519
+9322518,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"VUOLO, CONSTANCE",Prepared,06/02/2025,9322518
+9322516,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"VUOLO, CONSTANCE",Prepared,06/02/2025,9322516
+9321913,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"REBELLO, LEONEL",Prepared,06/02/2025,9321913
+9321338,"Dr. Dubler, Glenn",Order,Bayada Home Health Care-Dartmouth,Homecare,"ARSENAULT, JEANNE",Prepared,05/30/2025,9321338
+9320727,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"SILVA, EVELYN",Prepared,05/30/2025,9320727
+9320258,"Dr. Campbell, Michael A.",Order,Alphacare Home Health Agency,Homecare,"Raposo, Paulo",Prepared,05/30/2025,9320258
+9320210,"Dr. Joncas, Christopher S.",Order,Visiting Nurse Hospice-Portsmouth,Hospice,"MASCIARELLI, ALFRED",Prepared,05/30/2025,9320210
+9320169,"Dr. Campbell, Michael A.",Order,Alphacare Home Health Agency,Homecare,"Raposo, Paulo",Prepared,05/30/2025,9320169
+9320141,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Rita",Prepared,05/30/2025,9320141
+9320130,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria L.",Prepared,05/30/2025,9320130
+9320104,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Diniz, Patricia",Prepared,05/30/2025,9320104
+9320064,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Almas, Maria",Prepared,05/30/2025,9320064
+9320062,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Almas, Maria",Prepared,05/30/2025,9320062
+9320053,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Valerio, Ana",Prepared,05/30/2025,9320053
+9320052,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Valerio, Ana",Prepared,05/30/2025,9320052
+9320050,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Ossick, Dale",Prepared,05/30/2025,9320050
+9320049,"Dr. Joncas, Christopher S.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Ossick, Dale",Prepared,05/30/2025,9320049
+9320028,"Dr. Campbell, Michael A.",Other,AccentCare Fall River,Homecare,"OLIVEIRA, EDUARDA",Prepared,05/30/2025,9320028
+9319580,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"GANCARSKI, PETER",Prepared,05/30/2025,9319580
+9319132,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"BENEDICT, RUTH",Prepared,05/30/2025,9319132
+9319129,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"DUFOUR, PAULINE",Prepared,05/30/2025,9319129
+9319128,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"andersen, lydia",Prepared,05/30/2025,9319128
+9319123,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"AUGUSTO, ELIZABETH",Prepared,05/30/2025,9319123
+9319121,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"GRIFFITHS, THOMAS",Prepared,05/30/2025,9319121
+9319120,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"VUOLO, CONSTANCE",Prepared,05/30/2025,9319120
+9318953,"Dr. Joncas, Christopher S.",Order,Dartmouth HH,Homecare,"Raposa, Joseph K.",Prepared,05/30/2025,9318953
+9318490,"Dr. MAINALI, PRAJEENA",Other,AccentCare Fall River,Homecare,"Devlin, Clarissa",Prepared,05/29/2025,9318490
+9317892,"Dr. Campbell, Michael A.",Other,Alphacare Home Health Agency,Homecare,"Raposo, Paulo",Prepared,05/29/2025,9317892
+9317646,"Dr. Zak, Eugene",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Dunn, Janet",Prepared,05/29/2025,9317646
+9317389,"Dr. Joncas, Christopher S.",Other,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"GRIFFITHS, THOMAS",Prepared,05/29/2025,9317389
+9317152,"Dr. Joncas, Christopher S.",485 Cert,Brookdale Home Health Rhode Island(Nurse on call),Homecare,"BENEDICT, RUTH",Prepared,05/29/2025,9317152
+9316815,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"ROSS, SYLVIA L.",Prepared,05/29/2025,9316815
+9316760,"Dr. Campbell, Michael A.",Other,AccentCare Fall River,Homecare,"OLIVEIRA, EDUARDA",Prepared,05/29/2025,9316760
+9315079,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Silva, Maria",Prepared,05/28/2025,9315079
+9315074,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Silva, Maria",Prepared,05/28/2025,9315074
+2179491,"Dr. MENDIETA HERNANDEZ, JUAN C.",Conversation,Enhabit OF NEW ENGLAND - (SPR),Homecare,"Ruest, Shirley A.",Unread,05/28/2025,2179491
+9315012,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Galvagno, J William",Prepared,05/28/2025,9315012
+9314989,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Galvagno, J William",Prepared,05/28/2025,9314989
+9314985,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Clemons, Ginger",Prepared,05/28/2025,9314985
+9313780,"Dr. Campbell, Michael A.",Order,Dartmouth HH,Homecare,"Letourneau, Steven D.",Prepared,05/28/2025,9313780
+9313779,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"FERRAZ, CARMEN",Prepared,05/28/2025,9313779
+9313777,"Dr. Campbell, Michael A.",485 Recert,Dartmouth HH,Homecare,"Letourneau, Steven D.",Prepared,05/28/2025,9313777
+9313693,"Dr. Joncas, Christopher S.",PT,Visiting Rehab & Nursing Services,Homecare,"Nadeau, Marcel",Prepared,05/28/2025,9313693
+9313685,"Dr. Thorpe, Bianca",Other,Visiting Rehab & Nursing Services,Homecare,"CHADWICK, JANICE",Reviewing,05/28/2025,9313685
+9313071,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,05/27/2025,9313071
+9313065,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,05/27/2025,9313065
+9312815,"Dr. Joncas, Christopher S.",Other,AccentCare Fall River,Homecare,"FERRAZ, CARMEN",Prepared,05/27/2025,9312815
+9312554,"Dr. Campbell, Michael A.",Order,Relief Home Health Services,Homecare,"MEDEIROS, JORDAN",Prepared,05/27/2025,9312554
+9311232,"Dr. Joncas, Christopher S.",Order,Southcoast VNA – Community Office (Fairhaven),Homecare,"WHITMARSH, DOUGLAS P.",Prepared,05/27/2025,9311232
+9310263,"Dr. Campbell, Michael A.",Order,Alphacare Home Health Agency,Homecare,"Vieira, Claudette",Prepared,05/23/2025,9310263
+9310259,"Dr. Campbell, Michael A.",485 Cert,Alphacare Home Health Agency,Homecare,"Vieira, Claudette",Prepared,05/23/2025,9310259
+9310253,"Dr. Campbell, Michael A.",PT,Alphacare Home Health Agency,Homecare,"Vieira, Claudette",Prepared,05/23/2025,9310253
+9310244,"Dr. Campbell, Michael A.",Order,Alphacare Home Health Agency,Homecare,"Vieira, Claudette",Prepared,05/23/2025,9310244
+9304083,"Dr. Spirito, Joseph A.",Other,Visiting Rehab & Nursing Services,Homecare,"Munroe, Dustin",Prepared,05/21/2025,9304083
+2178038,"Dr. Mendes, Manuela M.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Machado, Maria",Unread,05/20/2025,2178038
+9302300,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Cordeiro, Ilda",Prepared,05/20/2025,9302300
+2177773,"Dr. Mendes, Manuela M.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Machado, Maria",Unread,05/19/2025,2177773
+9299284,"Dr. Campbell, Michael A.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"COSTA, ARMANDA",Prepared,05/19/2025,9299284
+9298855,"Dr. Campbell, Michael A.",PT,Alphacare Home Health Agency,Homecare,"Raposo, Paulo",Prepared,05/18/2025,9298855
+9295320,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,05/15/2025,9295320
+9293079,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Jones, Nancy",ChangeRequested,05/14/2025,9293079
+9293076,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Jones, Nancy",ChangeRequested,05/14/2025,9293076
+9293073,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Jones, Nancy",ChangeRequested,05/14/2025,9293073
+9293071,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Jones, Nancy",ChangeRequested,05/14/2025,9293071
+2176756,"Dr. MENDIETA HERNANDEZ, JUAN C.",Conversation,Enhabit OF NEW ENGLAND - (SPR),Homecare,"Ruest, Shirley A.",Unread,05/14/2025,2176756
+2175444,"Dr. Tweedie, Patricia A.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Cousineau, Jamie",Unread,05/07/2025,2175444
+2175120,"Dr. MENDIETA HERNANDEZ, JUAN C.",Conversation,Enhabit OF NEW ENGLAND - (SPR),Homecare,"Ruest, Shirley A.",Unread,05/06/2025,2175120
+2174990,"Dr. Thorpe, Bianca",Conversation,Brockton Home Health Care,Homecare,"Thompson, Christine M.",Unread,05/06/2025,2174990
+2174987,"Dr. Thorpe, Bianca",Conversation,Brockton Home Health Care,Homecare,"Thompson, Christine M.",Unread,05/06/2025,2174987
+2174963,"Dr. Thorpe, Bianca",Conversation,Brockton Home Health Care,Homecare,"Thompson, Christine M.",Unread,05/06/2025,2174963
+9271844,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,05/01/2025,9271844
+9271120,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,05/01/2025,9271120
+9268256,"Dr. Rumsey, Maria P.",Order,Nizhoni Health-Fall River,Homecare,"Boyd, Matthew W",Prepared,04/30/2025,9268256
+2172437,"Dr. Tweedie, Patricia A.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Cousineau, Jamie",Unread,04/24/2025,2172437
+9257287,"Dr. Zak, Eugene",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Dunn, Janet",Prepared,04/23/2025,9257287
+9250621,"Dr. Thorpe, Bianca",Face To Face,Convenient Homecare Services Inc.,Homecare,"MAO, SIV",Reviewing,04/21/2025,9250621
+9250611,"Dr. Thorpe, Bianca",Face To Face,Convenient Homecare Services Inc.,Homecare,"MAO, SIV",Reviewing,04/21/2025,9250611
+2171299,"Dr. Tweedie, Patricia A.",Conversation,Alphacare Home Health Agency,Homecare,"Charron, Christine",Unread,04/21/2025,2171299
+2171293,"Dr. Bassaly, Neveen N.",Conversation,Alphacare Home Health Agency,Homecare,"Davis, Jean",Unread,04/21/2025,2171293
+9248190,"Dr. Thorpe, Bianca",Face To Face,Convenient Homecare Services Inc.,Homecare,"HONG, SORINMONNY",Reviewing,04/18/2025,9248190
+9246123,"Dr. MENDIETA HERNANDEZ, JUAN C.",Order,Enhabit OF NEW ENGLAND - (SPR),Homecare,"Ruest, Shirley A.",Prepared,04/17/2025,9246123
+9242757,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,04/16/2025,9242757
+9237555,"Dr. Hinedi, Tamim B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Paige, Constance",ChangeRequested,04/14/2025,9237555
+9235247,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,04/11/2025,9235247
+9235173,"Dr. Zak, Eugene",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Dunn, Janet",Prepared,04/11/2025,9235173
+9235124,"Dr. Zak, Eugene",485 Cert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Dunn, Janet",Prepared,04/11/2025,9235124
+9235047,"Dr. ARAUJO, MELANIE B.",485 Recert,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",Prepared,04/11/2025,9235047
+9235024,"Dr. ARAUJO, MELANIE B.",Order,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",Prepared,04/11/2025,9235024
+9232609,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Goncalves, Maria",ChangeRequested,04/10/2025,9232609
+9232601,"Dr. Thorpe, Bianca",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Goncalves, Maria",ChangeRequested,04/10/2025,9232601
+2169154,"Dr. Tweedie, Patricia A.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Cousineau, Jamie",Unread,04/09/2025,2169154
+9228548,"Dr. Sherlock, Mary E.",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ledoux, Roxanna",Prepared,04/08/2025,9228548
+9220245,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,04/03/2025,9220245
+2167692,"Dr. Tweedie, Patricia A.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Cousineau, Jamie",Unread,04/02/2025,2167692
+9212139,"Dr. Melnick, Simon",Order,Dartmouth HH,Homecare,"Medeiros, David",Prepared,03/31/2025,9212139
+9212137,"Dr. Melnick, Simon",485 Cert,Dartmouth HH,Homecare,"Medeiros, David",Prepared,03/31/2025,9212137
+9203926,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,03/26/2025,9203926
+2162779,"Dr. Mendes, Manuela M.",Conversation,Nightingale Visiting Nurses-Taunton,Homecare,"MENDES, ISAURA",Unread,03/26/2025,2162779
+2165521,"Dr. Campbell, Michael A.",Conversation,Enhabit OF NEW ENGLAND - (SPR),Homecare,"Rogers, Francis M.",Unread,03/25/2025,2165521
+9199887,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/24/2025,9199887
+9199884,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/24/2025,9199884
+9199882,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/24/2025,9199882
+9199880,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/24/2025,9199880
+9199876,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/24/2025,9199876
+2164605,"Dr. Campbell, Michael A.",Conversation,Enhabit OF NEW ENGLAND - (SPR),Homecare,"Rogers, Francis M.",Unread,03/20/2025,2164605
+9187812,"Dr. Rumsey, Maria P.",Order,Dartmouth HH,Homecare,"Couto, Sheila",Prepared,03/18/2025,9187812
+9180884,"Dr. Mistikawy, Hany A.",485 Cert,Visiting Nurse Home -Portsmouth,Homecare,"LEVESQUE, MARILYN",ChangeRequested,03/13/2025,9180884
+9175641,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Bigda, William",Prepared,03/11/2025,9175641
+9175637,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Bigda, William",Prepared,03/11/2025,9175637
+9173953,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,03/11/2025,9173953
+9173792,"Dr. Dubler, Glenn",Order,Bayada Home Health Care-Dartmouth,Homecare,"ARSENAULT, JEANNE",Prepared,03/10/2025,9173792
+9171939,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Mello, Mary Jane",Prepared,03/10/2025,9171939
+9163401,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,03/05/2025,9163401
+9161134,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,03/04/2025,9161134
+9151062,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,02/26/2025,9151062
+9150303,"Dr. Bassaly, Neveen N.",485 Cert,V01	WORCESTER HH,Homecare,"RIOS, CARMEN",ChangeRequested,02/26/2025,9150303
+9150027,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Bigda, William",Prepared,02/26/2025,9150027
+9149919,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,02/26/2025,9149919
+2158488,"Dr. Douglas, Farrel",Conversation,Alphacare Home Health Agency,Homecare,"Maynard, Richard T.",Unread,02/21/2025,2158488
+9142922,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,02/21/2025,9142922
+9142920,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,02/21/2025,9142920
+2147810,"Dr. Mendes, Manuela M.",Conversation,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Unread,02/20/2025,2147810
+9139519,"Dr. Manyan, Jessica C.",PT,Brockton Home Health Care,Homecare,"BONES, GEOCONDA",Prepared,02/19/2025,9139519
+9139516,"Dr. Manyan, Jessica C.",Discharge,Brockton Home Health Care,Homecare,"BONES, GEOCONDA",Prepared,02/19/2025,9139516
+9139479,"Dr. Dubler, Glenn",Order,Bayada Home Health Care-Dartmouth,Homecare,"ARSENAULT, JEANNE",Prepared,02/19/2025,9139479
+9138545,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,02/19/2025,9138545
+9137576,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/19/2025,9137576
+9137573,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/19/2025,9137573
+9129616,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Bigda, William",Prepared,02/14/2025,9129616
+9124247,"Dr. Dubler, Glenn",Order,Bayada Home Health Care-Dartmouth,Homecare,"ARSENAULT, JEANNE",Prepared,02/11/2025,9124247
+9123507,"Dr. ARAUJO, MELANIE B.",Order,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",Prepared,02/11/2025,9123507
+9123491,"Dr. ARAUJO, MELANIE B.",Order,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",Prepared,02/11/2025,9123491
+9122631,"Dr. Chander, Ravi B.",Order,Dartmouth HH,Homecare,"Shaw, Roland",Prepared,02/11/2025,9122631
+2150829,"Dr. Thorpe, Bianca",Conversation,Elmwood Home Care,Homecare,"Rosario, Luis",Unread,02/07/2025,2150829
+9111026,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,02/05/2025,9111026
+9107311,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/03/2025,9107311
+9106030,"Dr. Melnick, Simon",Order,Dartmouth HH,Homecare,"Medeiros, David",Prepared,02/03/2025,9106030
+9095264,"Dr. Melnick, Simon",485 Cert,Dartmouth HH,Homecare,"Medeiros, David",Prepared,01/28/2025,9095264
+9087166,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/23/2025,9087166
+9081516,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Hansen, Sandra",Prepared,01/20/2025,9081516
+2143359,"Dr. Melnick, Simon",Conversation,Visiting Rehab & Nursing Services,Homecare,"LOUCKS, NICHOLAS D.",Unread,01/17/2025,2143359
+9076218,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,01/16/2025,9076218
+9076212,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,01/16/2025,9076212
+9076206,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,01/16/2025,9076206
+9076202,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,01/16/2025,9076202
+9076198,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,01/16/2025,9076198
+9076194,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,01/16/2025,9076194
+9076191,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,01/16/2025,9076191
+9076190,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,01/16/2025,9076190
+2142956,"Dr. Bassaly, Neveen N.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Davis, Jean",Unread,01/16/2025,2142956
+2141323,"Dr. Bassaly, Neveen N.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Davis, Jean",Unread,01/10/2025,2141323
+2140984,"Dr. Labib, Ossama W.",Conversation,Fall River Hospice,Hospice,"Pacheco, Germina",Unread,01/09/2025,2140984
+2140914,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"Park, Robert",Unread,01/09/2025,2140914
+2140911,"Dr. Melnick, Simon",Conversation,Visiting Rehab & Nursing Services,Homecare,"LOUCKS, NICHOLAS D.",Unread,01/09/2025,2140911
+9059959,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,01/08/2025,9059959
+2140438,"Dr. Bassaly, Neveen N.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Davis, Jean",Unread,01/07/2025,2140438
+9055460,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,01/07/2025,9055460
+9050923,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,01/03/2025,9050923
+9050832,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,01/03/2025,9050832
+9044870,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,12/31/2024,9044870
+2138377,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"Park, Robert",Unread,12/27/2024,2138377
+2138235,"Dr. Mendes, Manuela M.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Machado, Maria",Unread,12/26/2024,2138235
+2138231,"Dr. Bassaly, Neveen N.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Davis, Jean",Unread,12/26/2024,2138231
+2137561,"Dr. Thorpe, Bianca",Conversation,Fairhaven HH&H,Hospice,"Senra, Nazaria T.",Unread,12/23/2024,2137561
+2137552,"Dr. Patel, Rajendra",Conversation,WALPOLE AREA VISITING NURSE ASSOCIATION,Homecare,"Marcelino, Teddy  .",Unread,12/23/2024,2137552
+2137466,"Dr. Labib, Ossama W.",Conversation,Relief Home Health Services,Homecare,"KRUEGER, ERIKA",Unread,12/23/2024,2137466
+2137316,"Dr. Thorpe, Bianca",Conversation,Visiting Rehab & Nursing Services,Homecare,"Park, Robert",Unread,12/20/2024,2137316
+2137315,"Dr. Melnick, Simon",Conversation,Visiting Rehab & Nursing Services,Homecare,"LOUCKS, NICHOLAS D.",Unread,12/20/2024,2137315
+2136769,"Dr. Labib, Ossama W.",Conversation,"Beacon Hospice Care, an Amedisys Company (4420) Fall River",Hospice,"Counter, James",Unread,12/18/2024,2136769
+9026161,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,12/18/2024,9026161
+9019953,"Dr. MENDIETA HERNANDEZ, JUAN C.",Order,Bayada Home Health Care-Dartmouth,Homecare,"BAVOUX, ROGER C.",Prepared,12/15/2024,9019953
+9017853,"Dr. ARAUJO, MELANIE B.",485 Recert,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",ChangeRequested,12/13/2024,9017853
+2135747,"Dr. Patel, Rajendra",Conversation,WALPOLE AREA VISITING NURSE ASSOCIATION,Homecare,"Marcelino, Teddy  .",Unread,12/13/2024,2135747
+9014616,"Dr. ARAUJO, MELANIE B.",Order,Brigham Home Care Services.Inc,Homecare,"LOPES, , MARIA",Prepared,12/11/2024,9014616
+2135226,"Dr. Bassaly, Neveen N.",Conversation,Visiting Rehab & Nursing Services,Homecare,"Davis, Jean",Unread,12/11/2024,2135226
+9011471,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,12/11/2024,9011471
+9011467,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,12/11/2024,9011467
+2134513,"Dr. Labib, Ossama W.",Conversation,Relief Home Health Services,Homecare,"KRUEGER, ERIKA",Unread,12/09/2024,2134513
+2133608,"Dr. Patel, Rajendra",Conversation,WALPOLE AREA VISITING NURSE ASSOCIATION,Homecare,"Marcelino, Teddy  .",Unread,12/04/2024,2133608
+8996695,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,12/03/2024,8996695
+8994016,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,12/02/2024,8994016
+8993717,"Dr. Baker, Richard E.",Order,Mass General Brigham Home Care - Newton,Homecare,"GARNETT, GILBERT H",Prepared,12/02/2024,8993717
+2132903,"Dr. Patel, Rajendra",Conversation,WALPOLE AREA VISITING NURSE ASSOCIATION,Homecare,"Marcelino, Teddy  .",Unread,12/02/2024,2132903
+2132899,"Dr. Patel, Rajendra",Conversation,WALPOLE AREA VISITING NURSE ASSOCIATION,Homecare,"Marcelino, Teddy  .",Unread,12/02/2024,2132899
+8987230,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/26/2024,8987230
+8987229,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/26/2024,8987229
+8987227,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/26/2024,8987227
+8987224,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/26/2024,8987224
+8987211,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/26/2024,8987211
+8987205,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/26/2024,8987205
+2132075,"Dr. Patel, Rajendra",Conversation,WALPOLE AREA VISITING NURSE ASSOCIATION,Homecare,"Marcelino, Teddy  .",Unread,11/26/2024,2132075
+2132069,"Dr. Patel, Rajendra",Conversation,WALPOLE AREA VISITING NURSE ASSOCIATION,Homecare,"Marcelino, Teddy  .",Unread,11/26/2024,2132069
+2131911,"Dr. Bassaly, Neveen N.",Conversation,Alphacare Home Health Agency,Homecare,"Copley, Jacklyn",Unread,11/25/2024,2131911
+2129994,"Dr. Labib, Ossama W.",Conversation,Relief Home Health Services,Homecare,"KRUEGER, ERIKA",Unread,11/18/2024,2129994
+8963780,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,11/14/2024,8963780
+8958785,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/12/2024,8958785
+8958783,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/12/2024,8958783
+8958781,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,11/12/2024,8958781
+8952859,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,11/08/2024,8952859
+2127581,"Dr. Mendes, Manuela M.",Conversation,Alphacare Home Health Agency,Homecare,"Tavares, Manuel M.",Unread,11/06/2024,2127581
+8946854,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,11/05/2024,8946854
+8943776,"Dr. Baker, Richard E.",Order,Mass General Brigham Home Care - Newton,Homecare,"GARNETT, GILBERT H",Prepared,11/04/2024,8943776
+2126190,"Dr. Mendes, Manuela M.",Conversation,Relief Home Health Services,Homecare,"SOUSA, LAUREANA",Unread,10/31/2024,2126190
+8933722,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,10/29/2024,8933722
+8933718,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Furtado, John",Prepared,10/29/2024,8933718
+8931139,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,10/28/2024,8931139
+8931137,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,10/28/2024,8931137
+2125049,"Dr. Patel, Rajendra",Conversation,WALPOLE AREA VISITING NURSE ASSOCIATION,Homecare,"Marcelino, Teddy  .",Unread,10/25/2024,2125049
+2124337,"Dr. MAINALI, PRAJEENA",Conversation,Bayada Home Health Care-Dartmouth,Homecare,"MONIZ, CHEYANNE",Unread,10/22/2024,2124337
+8919254,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,10/22/2024,8919254
+2122269,"Dr. Thorpe, Bianca",Conversation,Southcoast VNA – Community Office (Fairhaven),Homecare,"RAMALHO, MARIA M.",Unread,10/11/2024,2122269
+8891086,"Dr. Baker, Richard E.",Order,Mass General Brigham Home Care - Newton,Homecare,"GARNETT, GILBERT H",Prepared,10/07/2024,8891086
+8885425,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,10/03/2024,8885425
+8872643,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,09/26/2024,8872643
+8865638,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Bigda, William",Prepared,09/24/2024,8865638
+8840931,"Dr. Thorpe, Bianca",Face To Face,Convenient Homecare Services Inc.,Homecare,"HONG, SORINMONNY",Reviewing,09/11/2024,8840931
+8840671,"Dr. Melnick, Simon",485 Cert,Dartmouth HH,Homecare,"Joerres, Kevin",Prepared,09/11/2024,8840671
+8834719,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,09/09/2024,8834719
+8829731,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Furtado, John",Prepared,09/05/2024,8829731
+8829534,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,09/05/2024,8829534
+8829361,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,09/05/2024,8829361
+8827360,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,09/04/2024,8827360
+8826417,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Wiles, Richard",Prepared,09/04/2024,8826417
+8803909,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Wiles, Richard",Prepared,08/21/2024,8803909
+8802954,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,08/21/2024,8802954
+8801098,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,08/20/2024,8801098
+8775404,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Wiles, Richard",Prepared,08/06/2024,8775404
+8775400,"Dr. Kundo, Krzysztof K.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Wiles, Richard",Prepared,08/06/2024,8775400
+8770733,"Dr. STEINBERG, JEFFREY J.",Order,Nizhoni Health-Fall River,Homecare,"Tetreault, Albert",Prepared,08/05/2024,8770733
+8752375,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"REBELO, ANA",Prepared,07/24/2024,8752375
+8740885,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",ChangeRequested,07/18/2024,8740885
+8740017,"Dr. MAINALI, PRAJEENA",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Haskins, Marguerite",Reviewing,07/18/2024,8740017
+8739890,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,07/18/2024,8739890
+8736458,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,07/16/2024,8736458
+8731053,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,07/12/2024,8731053
+8717537,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,07/05/2024,8717537
+8717534,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,07/05/2024,8717534
+8717531,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"REBELO, ANA",Prepared,07/05/2024,8717531
+8717529,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"REBELO, ANA",Prepared,07/05/2024,8717529
+8673188,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,06/12/2024,8673188
+8659986,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,06/05/2024,8659986
+8643605,"Dr. STEINBERG, JEFFREY J.",Order,Nizhoni Health-Fall River,Homecare,"Tetreault, Albert",Prepared,05/29/2024,8643605
+8635267,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,05/23/2024,8635267
+8625807,"Dr. STEINBERG, JEFFREY J.",Order,Nizhoni Health-Fall River,Homecare,"Tetreault, Albert",Prepared,05/17/2024,8625807
+8615696,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,05/14/2024,8615696
+8607462,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,05/09/2024,8607462
+8603252,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"FONTAINE, DONNA",ChangeRequested,05/07/2024,8603252
+8595301,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,05/03/2024,8595301
+8591545,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,05/02/2024,8591545
+8591267,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,05/01/2024,8591267
+8588156,"Dr. ARAUJO, MELANIE B.",Other,Coram CVS Infusion Specialty-Arizona Phoenix,DME,"Bergeron, Rebecca",Prepared,04/30/2024,8588156
+8581657,"Dr. STEINBERG, JEFFREY J.",Order,Nizhoni Health-Fall River,Homecare,"Tetreault, Albert",Prepared,04/29/2024,8581657
+8566960,"Dr. Labib, Ossama W.",485 Cert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Brenda",ChangeRequested,04/25/2024,8566960
+8566259,"Dr. MAINALI, PRAJEENA",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Haskins, Marguerite",Reviewing,04/24/2024,8566259
+8565589,"Dr. Mendes, Manuela M.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Farias, John",Reviewing,04/24/2024,8565589
+8560052,"Dr. Labib, Ossama W.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"COSTA, MARIA",ChangeRequested,04/22/2024,8560052
+8546049,"Dr. Mendes, Manuela M.",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"MENDES, ISAURA",ChangeRequested,04/16/2024,8546049
+8539798,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,04/12/2024,8539798
+8538003,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,04/11/2024,8538003
+8537571,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,04/11/2024,8537571
+8534878,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,04/10/2024,8534878
+8534831,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Mello, Mary Jane",Prepared,04/10/2024,8534831
+8516444,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"GALVAO, MAXIMINO",Prepared,04/01/2024,8516444
+8516435,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"GALVAO, MAXIMINO",Prepared,04/01/2024,8516435
+8516407,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"GALVAO, MAXIMINO",Prepared,04/01/2024,8516407
+8513820,"Dr. Mendes, Manuela M.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"DEANDRADE, MANUEL",Reviewing,03/29/2024,8513820
+8513805,"Dr. Melnick, Simon",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"GALVAO, MAXIMINO",Prepared,03/29/2024,8513805
+8511321,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/28/2024,8511321
+8497012,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,03/21/2024,8497012
+8496746,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/21/2024,8496746
+8490810,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,03/19/2024,8490810
+8490256,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,03/18/2024,8490256
+8487340,"Dr. Averback, Randy J.",Order,Bayada Home Health Care-Dartmouth,Homecare,"RODRIGUEZ RIVERA, JOVITA",Prepared,03/15/2024,8487340
+8485165,"Dr. Rumsey, Maria P.",Order,Visiting Nurse Home -Portsmouth,Homecare,"SOUZA, JOHN",Prepared,03/14/2024,8485165
+8485164,"Dr. Rumsey, Maria P.",Order,Visiting Nurse Home -Portsmouth,Homecare,"FEZETTE, STEVEN",Prepared,03/14/2024,8485164
+8484871,"Dr. Carty, Tricia A. MD",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Prepared,03/14/2024,8484871
+8480926,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,03/13/2024,8480926
+8478103,"Dr. Carty, Tricia A. MD",Other,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Prepared,03/12/2024,8478103
+8462451,"Dr. Carty, Tricia A. MD",PT,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Prepared,03/04/2024,8462451
+8459111,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/01/2024,8459111
+8458845,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/01/2024,8458845
+8458758,"Dr. Carty, Tricia A. MD",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Prepared,03/01/2024,8458758
+8458749,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/01/2024,8458749
+8445889,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/26/2024,8445889
+8438031,"Dr. ARAUJO, MELANIE B.",485 Recert,Nizhoni Health-Fall River,Homecare,"Nogueira, Maria",Prepared,02/21/2024,8438031
+8435608,"Dr. Dubler, Glenn",Discharge,Nightingale Visiting Nurses-Taunton,Homecare,"Healey, John",Prepared,02/20/2024,8435608
+8433893,"Dr. ARAUJO, MELANIE B.",Discharge,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/19/2024,8433893
+8427262,"Dr. ARAUJO, MELANIE B.",485 Recert,Nizhoni Health-Fall River,Homecare,"Nogueira, Maria",Prepared,02/15/2024,8427262
+8423120,"Dr. Melnick, Simon",Discharge,Nightingale Visiting Nurses-Taunton,Homecare,"Aiken Rinaldi, Victoria",Prepared,02/13/2024,8423120
+8414187,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,02/08/2024,8414187
+8413886,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Mello, Mary Jane",Prepared,02/08/2024,8413886
+8413040,"Dr. STEINBERG, JEFFREY J.",Order,Nizhoni Health-Fall River,Homecare,"Leblanc, Michael",Prepared,02/08/2024,8413040
+8402283,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,02/02/2024,8402283
+8402266,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,02/02/2024,8402266
+8402109,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,02/02/2024,8402109
+8401931,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/02/2024,8401931
+8399314,"Dr. Melnick, Simon",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Aiken Rinaldi, Victoria",Prepared,02/01/2024,8399314
+8398425,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,02/01/2024,8398425
+8397257,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,01/31/2024,8397257
+8396573,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Mello, Mary Jane",Prepared,01/31/2024,8396573
+8395752,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,01/31/2024,8395752
+8395024,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Aiken Rinaldi, Victoria",Prepared,01/30/2024,8395024
+8394074,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,01/30/2024,8394074
+8384799,"Dr. Melnick, Simon",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Gobern, April",Prepared,01/25/2024,8384799
+8384775,"Dr. Melnick, Simon",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Aiken Rinaldi, Victoria",Prepared,01/25/2024,8384775
+8384706,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,01/25/2024,8384706
+8384662,"Dr. Carty, Tricia A. MD",Order,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Prepared,01/25/2024,8384662
+8384257,"Dr. ARAUJO, MELANIE B.",Order,Nizhoni Health-Fall River,Homecare,"Nogueira, Maria",Prepared,01/25/2024,8384257
+8383951,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,01/25/2024,8383951
+8383941,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,01/25/2024,8383941
+8378167,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/22/2024,8378167
+8378164,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/22/2024,8378164
+8375786,"Dr. Melnick, Simon",485 Cert,Dartmouth HH,Homecare,"Rabbitt, Michael",Prepared,01/22/2024,8375786
+8370526,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/18/2024,8370526
+8370517,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/18/2024,8370517
+8369746,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/17/2024,8369746
+8366433,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/16/2024,8366433
+8366432,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/16/2024,8366432
+8366431,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/16/2024,8366431
+8366294,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"REBELO, ANA",Prepared,01/16/2024,8366294
+8362097,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,01/15/2024,8362097
+8360173,"Dr. Rumsey, Maria P.",Order,Dartmouth HH,Homecare,"Correia, Renato",Prepared,01/12/2024,8360173
+8360076,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,01/12/2024,8360076
+8358705,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,01/11/2024,8358705
+8356192,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,01/10/2024,8356192
+8345625,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/05/2024,8345625
+8345619,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/05/2024,8345619
+8345593,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/05/2024,8345593
+8343105,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,01/04/2024,8343105
+8342679,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,01/04/2024,8342679
+8337380,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/02/2024,8337380
+8337359,"Dr. Carty, Tricia A. MD",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",Prepared,01/02/2024,8337359
+8334014,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,12/29/2023,8334014
+8333426,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,12/28/2023,8333426
+8333421,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,12/28/2023,8333421
+8333238,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"REBELO, ANA",Prepared,12/28/2023,8333238
+8332609,"Dr. Rumsey, Maria P.",Order,Dartmouth HH,Homecare,"Lajoie, Elizabeth",Prepared,12/28/2023,8332609
+8323665,"Dr. Rumsey, Maria P.",Order,Dartmouth HH,Homecare,"Medeiros, Richard R.",Prepared,12/22/2023,8323665
+8323664,"Dr. Rumsey, Maria P.",Order,Dartmouth HH,Homecare,"Medeiros, Richard R.",Prepared,12/22/2023,8323664
+8321775,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,12/21/2023,8321775
+8318333,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,12/20/2023,8318333
+8318162,"Dr. ARAUJO, MELANIE B.",485 Recert,Nizhoni Health-Fall River,Homecare,"Nogueira, Maria",Prepared,12/20/2023,8318162
+8317054,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Mello, Mary Jane",Prepared,12/19/2023,8317054
+8315209,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,12/19/2023,8315209
+8306266,"Dr. Morcos, Zeyad",Order,Nizhoni Health-Fall River,Homecare,"Forman, Christianne",Prepared,12/13/2023,8306266
+8301657,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,12/12/2023,8301657
+8292620,"Dr. Melnick, Simon",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"REBELO, ANA",Prepared,12/06/2023,8292620
+8291590,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,12/06/2023,8291590
+8290880,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,12/06/2023,8290880
+8280684,"Dr. ARAUJO, MELANIE B.",Discharge,Nightingale Visiting Nurses-Taunton,Homecare,"Rosa, Maria",Prepared,11/30/2023,8280684
+8279906,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,11/30/2023,8279906
+8277155,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,11/29/2023,8277155
+8273656,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,11/27/2023,8273656
+8273652,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,11/27/2023,8273652
+8273643,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,11/27/2023,8273643
+8273641,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,11/27/2023,8273641
+8273638,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"Jones, Sean",Prepared,11/27/2023,8273638
+8270847,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Mello, Mary Jane",Prepared,11/24/2023,8270847
+8270809,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Mello, Mary Jane",Prepared,11/24/2023,8270809
+8269407,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,11/22/2023,8269407
+8269399,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,11/22/2023,8269399
+8269382,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,11/22/2023,8269382
+8266929,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,11/22/2023,8266929
+8264056,"Dr. Averback, Randy J.",Order,Dartmouth HH,Homecare,"Perry, Marie E.",Prepared,11/21/2023,8264056
+8261511,"Dr. ARAUJO, MELANIE B.",485 Recert,Nizhoni Health-Fall River,Homecare,"Nogueira, Maria",Prepared,11/20/2023,8261511
+8254835,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Bliss, Linda",Prepared,11/15/2023,8254835
+8251298,"Dr. ARAUJO, MELANIE B.",Order,Nizhoni Health-Fall River,Homecare,"Nogueira, Maria",Prepared,11/14/2023,8251298
+8246649,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,11/10/2023,8246649
+8246483,"Dr. PANT, SADIP",Order,Nizhoni Health-Fall River,Homecare,"Gray, Lois",Prepared,11/10/2023,8246483
+8239333,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,11/07/2023,8239333
+8238892,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,11/07/2023,8238892
+8237718,"Dr. Averback, Randy J.",Order,Dartmouth HH,Homecare,"Perry, Marie E.",Prepared,11/07/2023,8237718
+8228841,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Manso, Neil",Prepared,11/01/2023,8228841
+8228819,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,11/01/2023,8228819
+8228794,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,11/01/2023,8228794
+8228046,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,11/01/2023,8228046
+8224235,"Dr. ARAUJO, MELANIE B.",Order,Nizhoni Health-Fall River,Homecare,"Nogueira, Maria",Prepared,10/31/2023,8224235
+8219689,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Bliss, Linda",Prepared,10/27/2023,8219689
+8219676,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Bliss, Linda",Prepared,10/27/2023,8219676
+8219648,"Dr. Melnick, Simon",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Baran, Richard",Prepared,10/27/2023,8219648
+8215639,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,10/25/2023,8215639
+8215577,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,10/25/2023,8215577
+8205512,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,10/19/2023,8205512
+8202891,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Baran, Richard",Prepared,10/18/2023,8202891
+8202566,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,10/18/2023,8202566
+8202027,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,10/18/2023,8202027
+8199029,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,10/17/2023,8199029
+8199023,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,10/17/2023,8199023
+8199017,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,10/17/2023,8199017
+8199009,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,10/17/2023,8199009
+8198995,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,10/17/2023,8198995
+8198978,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,10/17/2023,8198978
+8198957,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,10/17/2023,8198957
+8198945,"Dr. ARAUJO, MELANIE B.",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,10/17/2023,8198945
+8192623,"Dr. Melnick, Simon",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,10/13/2023,8192623
+8190929,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,10/12/2023,8190929
+8190899,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Bliss, Linda",Prepared,10/12/2023,8190899
+8190878,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,10/12/2023,8190878
+8188557,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,10/11/2023,8188557
+8174960,"Dr. Wang, Xiaodan",Other,Enhabit - WESTPORT,Homecare,"Welch, Patricia",Prepared,10/04/2023,8174960
+8166093,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,09/29/2023,8166093
+8166091,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,09/29/2023,8166091
+8163355,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Nunes, Maria G",Prepared,09/27/2023,8163355
+8162979,"Dr. Carty, Tricia A. MD",Order,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",New,09/27/2023,8162979
+8162049,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Bliss, Linda",Prepared,09/27/2023,8162049
+8148458,"Dr. Morcos, Zeyad",Order,Nizhoni Health-Fall River,Homecare,"Calderon, Iris",Prepared,09/26/2023,8148458
+8144389,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Bliss, Linda",Prepared,09/22/2023,8144389
+8142165,"Dr. Melnick, Simon",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Bliss, Linda",Prepared,09/21/2023,8142165
+8139110,"Dr. ARAUJO, MELANIE B.",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Rosa, Maria",Prepared,09/20/2023,8139110
+8134074,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Rosa, Maria",Prepared,09/18/2023,8134074
+8132389,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,09/18/2023,8132389
+8131298,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,09/15/2023,8131298
+8126193,"Dr. Carty, Tricia A. MD",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"MARTIN, SHARON",New,09/13/2023,8126193
+8125077,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,09/13/2023,8125077
+8124921,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,09/13/2023,8124921
+8124845,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,09/13/2023,8124845
+8119392,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,09/11/2023,8119392
+8118800,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,09/11/2023,8118800
+8115608,"Dr. Rumsey, Maria P.",Order,Nizhoni Health-Fall River,Homecare,"Dowty, Gordon",Prepared,09/08/2023,8115608
+8111689,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,09/06/2023,8111689
+8103716,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,09/01/2023,8103716
+8100063,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Hansen, Sandra",Prepared,08/30/2023,8100063
+8091172,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rosa, Maria",Prepared,08/25/2023,8091172
+8074734,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,08/17/2023,8074734
+8070770,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,08/16/2023,8070770
+8062751,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"MOTA, OSCAR",Prepared,08/11/2023,8062751
+8056167,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Hansen, Sandra",Prepared,08/08/2023,8056167
+8050408,"Dr. Melnick, Simon",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Dollar, , Henry",Prepared,08/04/2023,8050408
+8050398,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,08/04/2023,8050398
+8050382,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,08/04/2023,8050382
+8046832,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Rosa, Maria",Prepared,08/03/2023,8046832
+8044645,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,08/02/2023,8044645
+8039550,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,07/31/2023,8039550
+8038674,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,07/31/2023,8038674
+8035865,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,07/27/2023,8035865
+8035742,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,07/27/2023,8035742
+8034032,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,07/27/2023,8034032
+8028849,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rosa, Maria",Prepared,07/25/2023,8028849
+8022446,"Dr. Melnick, Simon",Discharge,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,07/20/2023,8022446
+8021065,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,07/20/2023,8021065
+8021057,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,07/20/2023,8021057
+8018856,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,07/19/2023,8018856
+8017534,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,07/18/2023,8017534
+8017503,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,07/18/2023,8017503
+8008968,"Dr. Rumsey, Maria P.",Order,Visiting Nurse Home -Portsmouth,Homecare,"SOUZA, JOHN",Prepared,07/14/2023,8008968
+8006966,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,07/12/2023,8006966
+8004400,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,07/11/2023,8004400
+8002897,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,07/11/2023,8002897
+7996646,"Dr. Morcos, Zeyad",Order,Nizhoni Health-Fall River,Homecare,"Tucker, Malynda",Prepared,07/07/2023,7996646
+7995975,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,07/06/2023,7995975
+7995919,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,07/06/2023,7995919
+7988801,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,07/03/2023,7988801
+7988388,"Dr. Melnick, Simon",Discharge,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,07/01/2023,7988388
+7988385,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,07/01/2023,7988385
+7985325,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,06/29/2023,7985325
+7985315,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,06/29/2023,7985315
+7985303,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,06/29/2023,7985303
+7984703,"Dr. Rumsey, Maria P.",Order,Visiting Nurse Home -Portsmouth,Homecare,"SOUZA, JOHN",Prepared,06/29/2023,7984703
+7982586,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,06/28/2023,7982586
+7981197,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,06/28/2023,7981197
+7976710,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,06/26/2023,7976710
+7971424,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,06/22/2023,7971424
+7971305,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,06/22/2023,7971305
+7970345,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,06/22/2023,7970345
+7968019,"Dr. Melnick, Simon",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,06/21/2023,7968019
+7967058,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,06/20/2023,7967058
+7966942,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,06/20/2023,7966942
+7960156,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,06/16/2023,7960156
+7956584,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,06/14/2023,7956584
+7956553,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,06/14/2023,7956553
+7955696,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,06/14/2023,7955696
+7955679,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,06/14/2023,7955679
+7953916,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,06/13/2023,7953916
+7953909,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,06/13/2023,7953909
+7953839,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,06/13/2023,7953839
+7952535,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,06/13/2023,7952535
+7952534,"Dr. Melnick, Simon",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,06/13/2023,7952534
+7934115,"Dr. ARAUJO, MELANIE B.",Discharge,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,06/02/2023,7934115
+7933430,"Dr. Melnick, Simon",485 Recert,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,06/02/2023,7933430
+7928868,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,05/31/2023,7928868
+7925486,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,05/30/2023,7925486
+7924108,"Dr. Melnick, Simon",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Correira, Patricia",Prepared,05/26/2023,7924108
+7916108,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,05/23/2023,7916108
+7913690,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,05/22/2023,7913690
+7913559,"Dr. Melnick, Simon",PT,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/22/2023,7913559
+7913502,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/22/2023,7913502
+7906470,"Dr. Melnick, Simon",Order,Nizhoni Health-Fall River,Homecare,"FORMAN, CHRISTIANNE",Prepared,05/18/2023,7906470
+7905356,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,05/17/2023,7905356
+7905349,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Alves, Arline",Prepared,05/17/2023,7905349
+7904560,"Dr. Melnick, Simon",485 Recert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Gaskell,  Maryann",Prepared,05/17/2023,7904560
+7903756,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/16/2023,7903756
+7900849,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/15/2023,7900849
+7899407,"Dr. Melnick, Simon",Other,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/15/2023,7899407
+7897036,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/12/2023,7897036
+7897035,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/12/2023,7897035
+7893465,"Dr. Melnick, Simon",Order,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/11/2023,7893465
+7892089,"Dr. Melnick, Simon",Order,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,05/10/2023,7892089
+7890029,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"St George, Ellen",Prepared,05/09/2023,7890029
+7880421,"Dr. Melnick, Simon",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Walker, Josephine",Prepared,05/04/2023,7880421
+7880057,"Dr. Melnick, Simon",485 Cert,Guardian Home Health Care LLC - West Bridgewater,Homecare,"Ricci, Edmund",Prepared,05/04/2023,7880057
+7850009,"Dr. Dubler, Glenn",Other,Enhabit - WESTPORT,Homecare,"Correia, Beverly A.",Prepared,04/19/2023,7850009
+7816101,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,04/03/2023,7816101
+7815371,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,04/03/2023,7815371
+7814252,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/31/2023,7814252
+7810253,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/30/2023,7810253
+7810169,"Dr. ARAUJO, MELANIE B.",485 Recert,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/30/2023,7810169
+7810157,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/30/2023,7810157
+7779001,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/15/2023,7779001
+7776055,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/14/2023,7776055
+7762042,"Dr. Dubler, Glenn",Other,Enhabit - WESTPORT,Homecare,"MORALES QUINONEZ, MARIA D.",Prepared,03/07/2023,7762042
+7761686,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Homem, Maria",Prepared,03/07/2023,7761686
+7761274,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/07/2023,7761274
+7759450,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/06/2023,7759450
+7756581,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/03/2023,7756581
+7754382,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/02/2023,7754382
+7754381,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/02/2023,7754381
+7754368,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/02/2023,7754368
+7754358,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/02/2023,7754358
+7754357,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,03/02/2023,7754357
+7750838,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,03/01/2023,7750838
+7746504,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/27/2023,7746504
+7746503,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/27/2023,7746503
+7746502,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/27/2023,7746502
+7739273,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Rodrigues, Liliana",Prepared,02/23/2023,7739273
+7739053,"Dr. MENDIETA HERNANDEZ, JUAN C.",Order,Nizhoni Health-Fall River,Homecare,"Rivera-Maldonado, Javier",Prepared,02/23/2023,7739053
+7736464,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/22/2023,7736464
+7727572,"Dr. MENDIETA HERNANDEZ, JUAN C.",Order,Nizhoni Health-Fall River,Homecare,"Rivera-Maldonado, Javier",Prepared,02/17/2023,7727572
+7722711,"Dr. ARAUJO, MELANIE B.",485 Cert,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/15/2023,7722711
+7710513,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/09/2023,7710513
+7703979,"Dr. ARAUJO, MELANIE B.",PT,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/06/2023,7703979
+7703949,"Dr. ARAUJO, MELANIE B.",Other,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,02/06/2023,7703949
+7695904,"Dr. Rumsey, Maria P.",Order,Visiting Nurse Home -Portsmouth,Homecare,"SOUZA, JOHN",Prepared,02/02/2023,7695904
+7691339,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,01/31/2023,7691339
+7492849,"Dr. Bassaly, Neveen N.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Morin, , Jeanine",ChangeRequested,10/27/2022,7492849
+7473213,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,10/18/2022,7473213
+7472965,"Dr. ARAUJO, MELANIE B.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Homem, Maria",Prepared,10/18/2022,7472965
+7471869,"Dr. Tweedie, Patricia A.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Souza, , Leonard",ChangeRequested,10/18/2022,7471869
+7471644,"Dr. Thorpe, Bianca",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Rego,  Valdemar",ChangeRequested,10/18/2022,7471644
+7471641,"Dr. Joncas, Christopher S.",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"Connell , Michael J",ChangeRequested,10/18/2022,7471641
+7396128,"Dr. Singla, Raju",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Pavao, Benilde",Prepared,09/08/2022,7396128
+7395917,"Dr. Singla, Raju",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Dacosta, Gail M.",Prepared,09/08/2022,7395917
+7395916,"Dr. Singla, Raju",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Dacosta, Gail M.",Prepared,09/08/2022,7395916
+7395592,"Dr. Mendes, Manuela M.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rego, Dalia",Prepared,09/08/2022,7395592
+7393849,"Dr. Mendes, Manuela M.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Rego, Dalia",Prepared,09/07/2022,7393849
+7372341,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Ward, Annmarie",New,08/26/2022,7372341
+7367876,"Dr. Carty, Tricia A. MD",485 Cert,Community Nurse Home Care-Fairhaven,Homecare,"Corral, , Barbara",New,08/24/2022,7367876
+7363402,"Dr. Carty, Tricia A. MD",Order,Community Nurse Home Care-Fairhaven,Homecare,"Ward,,  Annmarie",New,08/23/2022,7363402
+7358748,"Dr. ARAUJO, MELANIE B.",Order,Nightingale Visiting Nurses-Taunton,Homecare,"Medeiros, Maria",Prepared,08/19/2022,7358748
+7352863,"Dr. Carty, Tricia A. MD",485 Cert,Community Nurse Home Care-Fairhaven,Homecare,"Ward,,  Annmarie",New,08/17/2022,7352863
+7314382,"Dr. Melnick, Simon",PT/INR,Nightingale Visiting Nurses-Taunton,Homecare,"Letourneau, Florence",ChangeRequested,07/28/2022,7314382
+7302723,"Dr. Thorpe, Bianca",Face To Face,Nightingale Visiting Nurses-Taunton,Homecare,"JACKSON, VICKIE",ChangeRequested,07/22/2022,7302723
+7100314,"Dr. Melnick, Simon",485 Recert,Brigham Home Care Services.Inc,Homecare,"WINSLOW, LAUREN",ChangeRequested,04/19/2022,7100314
+6893533,"Dr. Melnick, Simon",485 Cert,Century Homecare.LLC Brockton,Homecare,"FRANK, RENAE",Prepared,01/25/2022,6893533
+6550287,"Dr. Melnick, Simon",Face To Face,Brigham Home Care Services.Inc,Homecare,"SAUNDERS, JEFFREY A.",Prepared,09/08/2021,6550287
+6008708,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",New,03/10/2021,6008708
+5969880,"Dr. Carty, Tricia A. MD",485 Recert,Dartmouth HH,Homecare,"Pacheco, Evelyn",Reviewing,02/25/2021,5969880
+5745823,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",New,12/09/2020,5745823
+5676060,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",New,11/13/2020,5676060
+5676063,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",New,11/13/2020,5676063
+5637774,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Pacheco, Evelyn",New,10/30/2020,5637774
+5194573,"Dr. Carty, Tricia A. MD",485 Cert,Dartmouth HH,Homecare,"Routhier, Virginia V.",New,04/29/2020,5194573
+5185446,"Dr. Carty, Tricia A. MD",Order,Dartmouth HH,Homecare,"Routhier, Virginia V.",Reviewing,04/24/2020,5185446

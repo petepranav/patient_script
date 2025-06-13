@@ -1,0 +1,87 @@
+
+================================================================================
+                            FINAL VERSION PROCESSOR                             
+================================================================================
+[18:50:56] ℹ️  CSV Data Extraction & API Push Tool
+[18:50:56] ℹ️  
+[18:50:56] ℹ️  Features:
+[18:50:56] ℹ️  - 2 Robust text extraction methods (PDFPlumber + Tesseract OCR)
+[18:50:56] ℹ️  - AI-powered patient and order data extraction
+[18:50:56] ℹ️  - Enhanced error handling and logging
+[18:50:56] ℹ️  - Full API integration (patient creation + order pushing)
+[18:50:56] ℹ️  - CSV output with comprehensive patient data
+[18:50:56] ℹ️  - Detailed API tracking with remarks for every document
+[18:50:56] ℹ️  - Complete audit trail of all processing attempts
+[18:50:56] ℹ️  
+[18:50:56] ✅ Created output CSV file: csv_outputs/extracted_patients_20250613_185056.csv
+[18:50:56] ✅ Created API details CSV file: api_outputs/api_push_details_20250613_185056.csv
+[18:50:56] [DOC: 8461903] ℹ️  Processing Document ID: 8461903 for Agency: Nightingale Visiting Nurses-Taunton date : 03/04/2024
+[18:50:56] [DOC: 8461903] 🔄 Step 1: Fetching and extracting PDF text
+[18:50:59] [DOC: 8461903] ℹ️  Document appears to be scanned, using OCR
+[18:50:59] [DOC: 8461903] 🔄 Using OCR to extract text from scanned document
+[18:51:11] [DOC: 8461903] 📊 OCR extracted text (truncated)
+     └─ 03-25-° 24 14:33 FROM- T-376 P0003/0006 F-334 From: Nightingale Visiting NU Fax: Loyyyesnesy tu. itaiteclome apie ieeaems 3/4/24, 9:34 AM Print Preview Discharge Summaty : 02/28/2024 (1133755103) Nightingale Visiting Nurses Martin, Sharon ( MA230911056203 ) ad reali Pr or80 Date of Birth: 05/21/1962 aunton , : , Phone: (508) 967-0761 SOC Date: 01/12/2024 . Fun (608) Reel Date Completed: 02/28/2024 Discharge Date: 02/28/2024 Diagnosis Code 1CD-10 Diagnosis: Primary Diagnosis A - 67: £871 Other Di
+[18:51:11] [DOC: 8461903] 📊 Extracted PDF text (truncated)
+     └─ 03-25-° 24 14:33 FROM- T-376 P0003/0006 F-334 From: Nightingale Visiting NU Fax: Loyyyesnesy tu. itaiteclome apie ieeaems 3/4/24, 9:34 AM Print Preview Discharge Summaty : 02/28/2024 (1133755103) Nightingale Visiting Nurses Martin, Sharon ( MA230911056203 ) ad reali Pr or80 Date of Birth: 05/21/1962 aunton , : , Phone: (508) 967-0761 SOC Date: 01/12/2024 . Fun (608) Reel Date Completed: 02/28/2024 Discharge Date: 02/28/2024 Diagnosis Code 1CD-10 Diagnosis: Primary Diagnosis A - 67: £871 Other Di
+[18:51:11] [DOC: 8461903] 🔄 Step 2: Extracting patient data using Gemini
+[18:51:15] [DOC: 8461903] 📊 Extracted patient data
+     └─ patientFName: Sharon
+     └─ patientLName: Martin
+     └─ dob: 05/21/1962
+     └─ patientSex: None
+     └─ medicalRecordNo: MA230911056203
+     └─ billingProvider: Nightingale Visiting Nurses
+     └─ npi: None
+     └─ physicianNPI: None
+     └─ nameOfAgency: Nightingale Visiting Nurses
+     └─ address: None
+     └─ city: None
+     └─ state: None
+     └─ zip: None
+     └─ email: None
+     └─ phoneNumber: (508) 967-0761
+     └─ serviceLine: None
+     └─ payorSource: Insurance change
+     └─ episodeDiagnoses: [{'startOfCare': '01/12/2024', 'startOfEpisode': None, 'endOfEpisode': '02/28/2024', 'firstDiagnosis': 'I67', 'secondDiagnosis': 'N179', 'thirdDiagnosis': 'U189', 'fourthDiagnosis': 'D632', 'fifthDiagnosis': '2876', 'sixthDiagnosis': 'B46'}]
+[18:51:15] [DOC: 8461903] ℹ️  Response from gemini for patient: {'patientFName': 'Sharon', 'patientLName': 'Martin', 'dob': '05/21/1962', 'patientSex': None, 'medicalRecordNo': 'MA230911056203', 'billingProvider': 'Nightingale Visiting Nurses', 'npi': None, 'physicianNPI': None, 'nameOfAgency': 'Nightingale Visiting Nurses', 'address': None, 'city': None, 'state': None, 'zip': None, 'email': None, 'phoneNumber': '(508) 967-0761', 'serviceLine': None, 'payorSource': 'Insurance change', 'episodeDiagnoses': [{'startOfCare': '01/12/2024', 'startOfEpisode': None, 'endOfEpisode': '02/28/2024', 'firstDiagnosis': 'I67', 'secondDiagnosis': 'N179', 'thirdDiagnosis': 'U189', 'fourthDiagnosis': 'D632', 'fifthDiagnosis': '2876', 'sixthDiagnosis': 'B46'}]}
+[18:51:15] [DOC: 8461903] ℹ️  Parsed Dates - SOC: 2024-01-12 00:00:00, SOE: None, EOE: 2024-02-28 00:00:00
+[18:51:15] [DOC: 8461903] ℹ️  Patient data after setting dates : {'patientFName': 'Sharon', 'patientLName': 'Martin', 'dob': '05/21/1962', 'patientSex': None, 'medicalRecordNo': 'MA230911056203', 'billingProvider': 'Nightingale Visiting Nurses', 'npi': None, 'physicianNPI': None, 'nameOfAgency': 'Nightingale Visiting Nurses', 'address': None, 'city': None, 'state': None, 'zip': None, 'email': None, 'phoneNumber': '(508) 967-0761', 'serviceLine': None, 'payorSource': 'Insurance change', 'episodeDiagnoses': [{'startOfCare': '01/12/2024', 'startOfEpisode': '12/31/2023', 'endOfEpisode': '02/28/2024', 'firstDiagnosis': 'I67', 'secondDiagnosis': 'N179', 'thirdDiagnosis': 'U189', 'fourthDiagnosis': 'D632', 'fifthDiagnosis': '2876', 'sixthDiagnosis': 'B46'}]}
+[18:51:19] [DOC: 8461903] ✅ Patient exists: SHARON MARTIN, DOB: 05/21/1962, ID: 6242e7fd-0049-449d-b930-1f2ea79e08db
+[18:51:19] [DOC: 8461903] ✅ Patient exists on platform: SHARON_MARTIN_05/21/1962, ID: 6242e7fd-0049-449d-b930-1f2ea79e08db
+[18:51:19] [DOC: 8461903] ℹ️  Patient Created : 6242e7fd-0049-449d-b930-1f2ea79e08db
+[18:51:19] [DOC: 8461903] 🔄 Step 3: Extracting order data using Gemini
+[18:51:22] [DOC: 8461903] 📊 Extracted order data
+     └─ orderNo: None
+     └─ orderDate: None
+     └─ startOfCare: 01/12/2024
+     └─ episodeStartDate: 01/12/2024
+     └─ episodeEndDate: 02/28/2024
+     └─ documentID: 1133755103
+     └─ mrn: MA230911056203
+     └─ patientName: Martin, Sharon
+     └─ sentToPhysicianDate: None
+     └─ sentToPhysicianStatus: False
+     └─ signedByPhysicianDate: None
+     └─ signedByPhysicianStatus: False
+     └─ patientId: None
+     └─ companyId: None
+     └─ pgCompanyId: None
+     └─ bit64Url: None
+     └─ documentName: Discharge Summary
+     └─ serviceLine: None
+     └─ payorSource: Insurance change
+     └─ patientSex: None
+     └─ patientAddress: aunton
+     └─ patientCity: None
+     └─ patientState: None
+     └─ patientZip: None
+     └─ patientPhone: (508) 967-0761
+[18:51:26] [DOC: 8461903] ℹ️  Order push status code: 201
+[18:51:26] [DOC: 8461903] ℹ️  Order push response: {"id":"28262950-88da-4804-b184-1c9ab25bfe38","orderWAVId":"ORD20508","orderNo":"84619031","orderDate":"03/04/2024","startOfCare":"01/12/2024","episodeStartDate":"01/12/2024","episodeEndDate":"02/28/2024","documentID":"8461903","mrn":"MA230911056203","patientName":"Martin, Sharon","sentToPhysicianDate":"03/04/2024","sentToPhysicianStatus":true,"signedByPhysicianDate":"03/25/2024","signedByPhysicianStatus":true,"uploadedSignedOrderDate":null,"uploadedSignedOrderStatus":false,"uploadedSignedPgOrderDate":null,"uploadedSignedPgOrderStatus":false,"cpoMinutes":null,"orderUrl":null,"documentName":"Discharge Summary","ehr":null,"account":null,"location":null,"remarks":null,"patientId":"6242e7fd-0049-449d-b930-1f2ea79e08db","companyId":"b2d6c486-d448-45bc-91ac-8e3e898a1620","pgCompanyId":"d10f46ad-225d-4ba2-882c-149521fcead5","entityType":null,"clinicalJustification":null,"billingProvider":null,"billingProviderNPI":null,"supervisingProvider":null,"supervisingProviderNPI":null,"bit64Url":null,"daOrderType":null,"daUploadSuccess":null,"daResponseStatusCode":null,"daResponseDetails":null}
+[18:51:26] [DOC: 8461903] ✅ Order pushed successfully for patient ID: 6242e7fd-0049-449d-b930-1f2ea79e08db
+[18:51:26] [DOC: 8461903] ✅ Order Push Response: Success
+[18:51:26] ✅ Data written to CSV for Doc ID: 8461903
+[18:51:26] ✅ API details saved for Doc ID: 8461903
+[18:51:26] ✅ Processing completed. Output files:
+[18:51:26] ✅ - Patient data CSV: csv_outputs/extracted_patients_20250613_185056.csv
+[18:51:26] ✅ - API tracking CSV: api_outputs/api_push_details_20250613_185056.csv
